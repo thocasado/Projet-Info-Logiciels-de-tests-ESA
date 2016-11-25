@@ -18,10 +18,13 @@ namespace Projet_GenieLog.View
             InitializeComponent();
         }
 
-        private void createCircle()
+        private void createCircle(int x, int y, int width, int height)
         {
-            System.Drawing.Graphics graphics = this.CreateGraphics();
-            graphics.DrawEllipse(Pens.Black, 20, 20, 10, 10);
+            SolidBrush myBrush = new SolidBrush(Color.Blue);
+            Graphics formGraphics = this.CreateGraphics();
+            formGraphics.FillEllipse(myBrush, new Rectangle(x, y, width, height));
+            myBrush.Dispose();
+            formGraphics.Dispose();
         }
 
         private void createSquare(int x, int y, int width, int height)
@@ -37,10 +40,8 @@ namespace Projet_GenieLog.View
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            createSquare(30, 30, 50, 50)
-;
-            
-           
+            createSquare(30, 30, 50, 50);
+            createCircle(60, 60, 50, 50);      
         }
 
     }
