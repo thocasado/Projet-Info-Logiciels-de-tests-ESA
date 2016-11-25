@@ -1,6 +1,6 @@
 ﻿namespace Projet_GenieLog
 {
-    partial class Menu
+    partial class MainMenu
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -58,7 +58,6 @@
             this.btnConcentration.TabIndex = 1;
             this.btnConcentration.Text = "Concentration";
             this.btnConcentration.UseVisualStyleBackColor = true;
-            this.btnConcentration.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnCalcul
             // 
@@ -69,7 +68,6 @@
             this.btnCalcul.TabIndex = 2;
             this.btnCalcul.Text = "Calcul Mental";
             this.btnCalcul.UseVisualStyleBackColor = true;
-            this.btnCalcul.Click += new System.EventHandler(this.button3_Click);
             // 
             // btn_maths
             // 
@@ -80,7 +78,6 @@
             this.btn_maths.TabIndex = 3;
             this.btn_maths.Text = "Mathématiques";
             this.btn_maths.UseVisualStyleBackColor = true;
-            this.btn_maths.Click += new System.EventHandler(this.button4_Click);
             // 
             // btn_physique
             // 
@@ -91,7 +88,6 @@
             this.btn_physique.TabIndex = 4;
             this.btn_physique.Text = "Physique";
             this.btn_physique.UseVisualStyleBackColor = true;
-            this.btn_physique.Click += new System.EventHandler(this.button5_Click);
             // 
             // radio_facile
             // 
@@ -105,7 +101,6 @@
             this.radio_facile.TabStop = true;
             this.radio_facile.Text = "Facile";
             this.radio_facile.UseVisualStyleBackColor = true;
-            this.radio_facile.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radio_difficile
             // 
@@ -128,7 +123,7 @@
             this.label_difficulte.TabIndex = 7;
             this.label_difficulte.Text = "Difficulté";
             // 
-            // Menu
+            // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,7 +136,7 @@
             this.Controls.Add(this.btnCalcul);
             this.Controls.Add(this.btnConcentration);
             this.Controls.Add(this.btnPerception);
-            this.Name = "Menu";
+            this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
             this.ResumeLayout(false);

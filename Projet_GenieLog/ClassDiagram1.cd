@@ -11,7 +11,7 @@
     <Position X="3.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAIAAAAAAAAAIAAAAAAAACAAAA=</HashCode>
-      <FileName>Tests.cs</FileName>
+      <FileName>Tests\Tests.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Projet_GenieLog.Perception">

@@ -7,14 +7,6 @@ namespace Projet_GenieLog
 {
     public class CalculMental : Tests
     {
-        public string afficheRegle()
-        {
-            throw new System.NotImplementedException();
-        }
 
-        public String afficheResultat()
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

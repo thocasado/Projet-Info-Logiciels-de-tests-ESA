@@ -3,24 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Projet_GenieLog.Presenter
+namespace Projet_GenieLog
 {
-    class Presenter
+    public class Presenter
     {
-        private View.MyView view { get; set; }
+        private MyView view { get; set; }
         private Tests tests { get; set; }
         public Niveau difficile = Niveau.Difficile;
         public Niveau facile = Niveau.Facile;
 
-        public Presenter()
-        {
 
-        }
-        public Presenter (View.MyView v)
+        public Presenter (MyView v)
         {
             view = v;
             
+        }
+        public void loadTest(object sender, EventArgs eventargs)
+        {
+            switch (((Button)sender).Name)
+            {
+                case "btnPerception": View.FormPerception formP = new View.FormPerception();
+                        formP.Show();
+                    break;
+                case "btnConcentration":
+                case "btnCalcul":
+                case "btnMathematiques":
+                case "btnPhysique": break;
+
+            }
         }
 
 

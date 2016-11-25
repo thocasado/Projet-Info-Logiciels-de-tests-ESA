@@ -49,13 +49,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presenter\Presenter.cs" />
     <Compile Include="Tests\CalculMental.cs" />
     <Compile Include="Tests\Concentration.cs" />
-    <Compile Include="Menu.cs">
+    <Compile Include="View\FormPerception.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="View\FormPerception.Designer.cs">
+      <DependentUpon>FormPerception.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Tests\Maths.cs" />
     <Compile Include="MenuPrincipal.cs" />
@@ -64,9 +71,14 @@
     <Compile Include="Tests\Physique.cs" />
     <Compile Include="Tests\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests.cs" />
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="Tests\Tests.cs" />
+    <Compile Include="View\MyView.cs" />
+    <Compile Include="XML\XMLMaths.cs" />
+    <EmbeddedResource Include="View\FormPerception.resx">
+      <DependentUpon>FormPerception.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

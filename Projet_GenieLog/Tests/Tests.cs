@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 namespace Projet_GenieLog
 {
     public class Tests
@@ -10,25 +11,27 @@ namespace Projet_GenieLog
 
         public Tests()
         {
-            throw new System.NotImplementedException();
+            
         }
 
-        public string afficheRegle()
+
+
+        public string showRule()
         {
             throw new System.NotImplementedException();
         }
 
-        public string afficheResultat()
+        public string showResults()
         {
             throw new System.NotImplementedException();
         }
 
-        public void chargeXML()
+        public void loadXML()
         {
             throw new System.NotImplementedException();
         }
 
-        public void recupereReponse()
+        public void getResponse()
         {
             throw new System.NotImplementedException();
         }

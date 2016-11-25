@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projet_GenieLog.View
+namespace Projet_GenieLog
 {
-    class View
+    public class MyView
     {
+        public Presenter p;
     }
 }
