@@ -12,8 +12,6 @@ namespace Projet_GenieLog.View
 {
     public partial class FormPerception : Form
     {
-        SolidBrush blueBrush = new SolidBrush(Color.Blue);
-        SolidBrush yellowBrush = new SolidBrush(Color.Yellow);
 
         public FormPerception()
         {
@@ -100,5 +98,10 @@ namespace Projet_GenieLog.View
             
         }
 
+        private void FormPerception_Load(object sender, EventArgs e)
+        {
+
+            
+        }
     }
 }

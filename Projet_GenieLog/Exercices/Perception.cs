@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Projet_GenieLog
 {
-    public class Perception : Tests
+    public class Perception : Exercices
     {
         
     }

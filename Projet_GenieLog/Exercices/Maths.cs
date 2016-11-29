@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Projet_GenieLog
 {
-    public class Physique : Tests
+    public class Maths : Exercices
     {
 
     }

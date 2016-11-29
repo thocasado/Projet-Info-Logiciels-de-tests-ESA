@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Projet_GenieLog
 {
-    public class CalculMental : Tests
+    public class CalculMental : Exercices
     {
 
     }
