@@ -68,6 +68,7 @@
             this.btnCalcul.TabIndex = 2;
             this.btnCalcul.Text = "Calcul Mental";
             this.btnCalcul.UseVisualStyleBackColor = true;
+            this.btnCalcul.Click += new System.EventHandler(this.btnCalcul_Click);
             // 
             // btn_maths
             // 

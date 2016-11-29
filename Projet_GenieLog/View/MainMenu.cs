@@ -25,5 +25,11 @@ namespace Projet_GenieLog
             
         }
 
+        private void btnCalcul_Click(object sender, EventArgs e)
+        {
+            View.FormCalculMental f = new View.FormCalculMental();
+            f.Show();
+        }
+
     }
 }
