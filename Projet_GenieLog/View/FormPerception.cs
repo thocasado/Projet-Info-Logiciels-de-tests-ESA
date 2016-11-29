@@ -20,7 +20,7 @@ namespace Projet_GenieLog.View
             InitializeComponent();
         }
 
-        private void createCircle(int x, int y, int width, int height) // permet de creer un cercle 
+        private void createBlueCircle(int x, int y, int width, int height) // permet de creer un cercle bleu
         {
             SolidBrush blueBrush = new SolidBrush(Color.Blue);
             Graphics formGraphics = this.CreateGraphics();
@@ -29,7 +29,16 @@ namespace Projet_GenieLog.View
             formGraphics.Dispose();
         }
 
-        private void createSquare(int x, int y, int width, int height) // permet de creer un carré
+        private void createYellowCircle(int x, int y, int width, int height) // permet de creer un cercle  jaune
+        {
+            SolidBrush yellowBrush = new SolidBrush(Color.Yellow);
+            Graphics formGraphics = this.CreateGraphics();
+            formGraphics.FillEllipse(yellowBrush, new Rectangle(x, y, width, height));
+            yellowBrush.Dispose();
+            formGraphics.Dispose();
+        }
+
+        private void createYellowSquare(int x, int y, int width, int height) // permet de creer un carré jaune
         {
             SolidBrush yellowBrush = new SolidBrush(Color.Yellow);
             Graphics formGraphics = this.CreateGraphics();
@@ -37,26 +46,33 @@ namespace Projet_GenieLog.View
             yellowBrush.Dispose();
             formGraphics.Dispose();
         }
-
+        private void createBlueSquare(int x, int y, int width, int height) // permet de creer un carré bleu
+        {
+            SolidBrush blueBrush = new SolidBrush(Color.Blue);
+            Graphics formGraphics = this.CreateGraphics();
+            formGraphics.FillRectangle(blueBrush, new Rectangle(x, y, width, height));
+            blueBrush.Dispose();
+            formGraphics.Dispose();
+        }
         private void randomizeShapes()
         {
             Random rnd = new Random();
             int nbr;
             int color;
 
-            for (int i=1; i<=3;i++)
+            for (int i=1; i<=3;i++) // on parcourt les emplacements des formes (3 lignes x 4 colonnes)
             {
                 for (int j=1;j<=4;j++)
                 {
                     nbr = rnd.Next(1, 3);
-                    if(nbr ==1)
+                    if(nbr == 1) //1 -> carré
                     {
                         color = rnd.Next(0, 2);
-                        if(color==0)
-                        { createSquare(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50); }
-                        else
+                        if(color==0) // 0 -> bleu
+                        { createBlueSquare(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50); }
+                        else // 1 -> jaune
                         {
-                            createSquare(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
+                            createYellowSquare(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
                         }
                         
                     }
@@ -64,10 +80,10 @@ namespace Projet_GenieLog.View
                     {
                         color = rnd.Next(0, 2);
                         if (color == 0)
-                        { createCircle(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50); }
+                        { createBlueCircle(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50); }
                         else
                         {
-                            createCircle(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
+                            createYellowCircle(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
                         }
                         
                     }

@@ -6,15 +6,13 @@ using System.Text;
 
 namespace Projet_GenieLog
 {
-    public class Tests
+    public class Tests 
     {
 
         public Tests()
         {
             
         }
-
-
 
         public string showRule()
         {
