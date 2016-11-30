@@ -39,10 +39,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(12, 57);
-            this.label1.MaximumSize = new System.Drawing.Size(508, 0);
+            this.label1.Location = new System.Drawing.Point(16, 70);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.MaximumSize = new System.Drawing.Size(677, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(459, 34);
+            this.label1.Size = new System.Drawing.Size(627, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Vous allez devoir réaliser des calculs mentaux. Sélectionner l\'opération souhaité" +
     "e !";
@@ -50,9 +51,10 @@
             // additionButton
             // 
             this.additionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.additionButton.Location = new System.Drawing.Point(63, 140);
+            this.additionButton.Location = new System.Drawing.Point(84, 172);
+            this.additionButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.additionButton.Name = "additionButton";
-            this.additionButton.Size = new System.Drawing.Size(102, 79);
+            this.additionButton.Size = new System.Drawing.Size(136, 97);
             this.additionButton.TabIndex = 1;
             this.additionButton.Text = "+";
             this.additionButton.UseVisualStyleBackColor = true;
@@ -61,43 +63,50 @@
             // sousButton
             // 
             this.sousButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.sousButton.Location = new System.Drawing.Point(301, 140);
+            this.sousButton.Location = new System.Drawing.Point(401, 172);
+            this.sousButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sousButton.Name = "sousButton";
-            this.sousButton.Size = new System.Drawing.Size(102, 79);
+            this.sousButton.Size = new System.Drawing.Size(136, 97);
             this.sousButton.TabIndex = 2;
             this.sousButton.Text = "-";
             this.sousButton.UseVisualStyleBackColor = true;
+            this.sousButton.Click += new System.EventHandler(this.sousButton_Click);
             // 
             // multButton
             // 
             this.multButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.multButton.Location = new System.Drawing.Point(63, 272);
+            this.multButton.Location = new System.Drawing.Point(84, 335);
+            this.multButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.multButton.Name = "multButton";
-            this.multButton.Size = new System.Drawing.Size(102, 79);
+            this.multButton.Size = new System.Drawing.Size(136, 97);
             this.multButton.TabIndex = 1;
             this.multButton.Text = "x";
             this.multButton.UseVisualStyleBackColor = true;
+            this.multButton.Click += new System.EventHandler(this.multButton_Click);
             // 
             // divButton
             // 
             this.divButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.divButton.Location = new System.Drawing.Point(301, 272);
+            this.divButton.Location = new System.Drawing.Point(401, 335);
+            this.divButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.divButton.Name = "divButton";
-            this.divButton.Size = new System.Drawing.Size(102, 79);
+            this.divButton.Size = new System.Drawing.Size(136, 97);
             this.divButton.TabIndex = 2;
             this.divButton.Text = "/";
             this.divButton.UseVisualStyleBackColor = true;
+            this.divButton.Click += new System.EventHandler(this.divButton_Click);
             // 
             // FormCalculMental
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 407);
+            this.ClientSize = new System.Drawing.Size(656, 501);
             this.Controls.Add(this.divButton);
             this.Controls.Add(this.sousButton);
             this.Controls.Add(this.multButton);
             this.Controls.Add(this.additionButton);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormCalculMental";
             this.Text = "FormCalculMental";
             this.ResumeLayout(false);

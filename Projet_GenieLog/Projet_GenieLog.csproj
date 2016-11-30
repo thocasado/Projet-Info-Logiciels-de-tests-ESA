@@ -104,8 +104,20 @@
     <Compile Include="Exercices\Exercices.cs" />
     <Compile Include="View\MyView.cs" />
     <Compile Include="XML\XMLMaths.cs" />
+    <EmbeddedResource Include="View\CalculMental\FormAddition.resx">
+      <DependentUpon>FormAddition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CalculMental\FormCalculMental.resx">
       <DependentUpon>FormCalculMental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CalculMental\FormDivision.resx">
+      <DependentUpon>FormDivision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CalculMental\FormMultiplication.resx">
+      <DependentUpon>FormMultiplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CalculMental\FormSoustraction.resx">
+      <DependentUpon>FormSoustraction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormPerception.resx">
       <DependentUpon>FormPerception.cs</DependentUpon>

@@ -22,6 +22,27 @@ namespace Projet_GenieLog.View
             f.Show();
         }
 
+        private void sousButton_Click(object sender, EventArgs e)
+        {
+            View.CalculMental.FormSoustraction f = new View.CalculMental.FormSoustraction();
+            f.Show();
+        }
+
+        private void multButton_Click(object sender, EventArgs e)
+        {
+            View.CalculMental.FormMultiplication f = new View.CalculMental.FormMultiplication();
+            f.Show();
+        }
+
+        private void divButton_Click(object sender, EventArgs e)
+        {
+            View.CalculMental.FormDivision f = new View.CalculMental.FormDivision();
+            f.Show();
+        }
+
+
+
+
         
 
        
