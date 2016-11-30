@@ -55,36 +55,161 @@ namespace Projet_GenieLog.View
         private void randomizeShapes()
         {
             Random rnd = new Random();
-            int nbr;
-            int color;
+            int nbr; //nbr aleatoire pour choisir la forme
+            int color; // nbr aleatoire pour choisir la couleur
+            int cpt = 0; // compteur de formes pour la règle choisie
+            int maxShapes;
+            string ruleNumber = "Regle3";
+            maxShapes = rnd.Next(3, 5);  // 3 ou 4 formes max
 
             for (int i=1; i<=3;i++) // on parcourt les emplacements des formes (3 lignes x 4 colonnes)
             {
                 for (int j=1;j<=4;j++)
                 {
-                    nbr = rnd.Next(1, 3);
-                    if(nbr == 1) //1 -> carré
+                    
+                    switch (ruleNumber)
                     {
-                        color = rnd.Next(0, 2);
-                        if(color==0) // 0 -> bleu
-                        { createBlueSquare(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50); }
-                        else // 1 -> jaune
-                        {
-                            createYellowSquare(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
-                        }
                         
+                        case "1": // l'utilisateur doit regarder les carrés jaunes
+                        case "Regle1":
+                            nbr = rnd.Next(1, 3);
+                            if (nbr == 1) //1 -> carré
+                            {
+                                color = rnd.Next(0, 2);
+                                if (color == 0 || cpt == maxShapes) // 0 -> bleu
+                                { createBlueSquare(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50); }
+                                else  // 1 -> jaune
+                                {
+                                    createYellowSquare(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
+                                    cpt++;
+                                }
+
+                            }
+                            else
+                            {
+                                color = rnd.Next(0, 2);
+                                if (color == 0)
+                                { createBlueCircle(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50); }
+                                else
+                                {
+                                    createYellowCircle(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
+                                }
+
+                            }
+                            break;
+                        case "2": // L'utilisateur doit regarder les carrés bleus
+                        case "Regle2":
+                            nbr = rnd.Next(1, 3);
+                            if (nbr == 1) //1 -> carré
+                            {
+                                color = rnd.Next(0, 2);
+                                if (color == 1 || cpt == maxShapes) // 1 -> jaune
+                                { createYellowSquare(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50); }
+                                else  // 0 -> bleu
+                                {
+                                    createBlueSquare(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
+                                    cpt++;
+                                }
+
+                            }
+                            else
+                            {
+                                color = rnd.Next(0, 2);
+                                if (color == 0)
+                                { createBlueCircle(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50); }
+                                else
+                                {
+                                    createYellowCircle(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
+                                }
+
+                            }
+                            break;
+
+                        case "3": // L'utilisateur doit regarder les ronds jaunes
+                        case "Regle3":
+                            nbr = rnd.Next(1, 3);
+                            if (nbr == 1) //1 -> carré
+                            {
+                                color = rnd.Next(0, 2);
+                                if (color == 0 ) // 0 -> bleu
+                                { createBlueSquare(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50); }
+                                else  // 1 -> jaune
+                                {
+                                    createYellowSquare(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
+                                }
+
+                            }
+                            else
+                            {
+                                color = rnd.Next(0, 2);
+                                if (color == 0 || cpt == maxShapes)
+                                { createBlueCircle(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50); }
+                                else
+                                {
+                                    createYellowCircle(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
+                                    cpt++;
+                                }
+
+                            }
+                            break;
+
+                        case "4": // L'utilisateur doit regarder les ronds bleus
+                        case "Regle4":
+                            nbr = rnd.Next(1, 3);
+                            if (nbr == 1) //1 -> carré
+                            {
+                                color = rnd.Next(0, 2);
+                                if (color == 0) // 0 -> bleu
+                                { createBlueSquare(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50); }
+                                else  // 1 -> jaune
+                                {
+                                    createYellowSquare(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
+                                }
+
+                            }
+                            else
+                            {
+                                color = rnd.Next(0, 2);
+                                if (color == 1 || cpt == maxShapes)
+                                { 
+                                    createYellowCircle(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
+                                }
+                                else
+                                {
+                                    createBlueCircle(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
+                                    cpt++;
+
+                                }
+
+                            }
+                            break;
+
+
+
                     }
-                    else
-                    {
-                        color = rnd.Next(0, 2);
-                        if (color == 0)
-                        { createBlueCircle(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50); }
-                        else
-                        {
-                            createYellowCircle(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
-                        }
+                    //nbr = rnd.Next(1, 3);
+                    //if(nbr == 1) //1 -> carré
+                    //{
+                    //    color = rnd.Next(0, 2);
+                    //    if(color==0) // 0 -> bleu
+                    //    { createBlueSquare(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50); }
+                    //    else // 1 -> jaune
+                    //    {
+                    //        createYellowSquare(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
+                    //    }
                         
-                    }
+                    //}
+                    //else
+                    //{
+                    //    color = rnd.Next(0, 2);
+                    //    if (color == 0)
+                    //    { createBlueCircle(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50); }
+                    //    else
+                    //    {
+                    //        createYellowCircle(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50);
+                    //    }
+                        
+                    //}
                     
                 }
             }
