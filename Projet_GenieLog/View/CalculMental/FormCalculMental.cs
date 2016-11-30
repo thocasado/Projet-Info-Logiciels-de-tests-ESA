@@ -11,7 +11,8 @@ namespace Projet_GenieLog.View
 {
     public partial class FormCalculMental : Form
     {
-        //Essayer de tout gérer à partir d'un seul et meme autre form puisque seul les conditions sur les variables, le signe et le résultat vont différer de l'interface (cf Jean) 
+        string type;
+        
         public FormCalculMental()
         {
             InitializeComponent();
@@ -19,13 +20,15 @@ namespace Projet_GenieLog.View
 
         private void additionButton_Click(object sender, EventArgs e)
         {
-            View.CalculMental.FormAddition f = new View.CalculMental.FormAddition();
+            type = ((Button)(sender)).Text;
+            View.CalculMental.FormOperation f = new View.CalculMental.FormOperation(type);
             f.Show();
             this.Close();
         }
 
-        private void sousButton_Click(object sender, EventArgs e)
+        /*private void sousButton_Click(object sender, EventArgs e)
         {
+            type = "-";
             View.CalculMental.FormSoustraction f = new View.CalculMental.FormSoustraction();
             f.Show();
             this.Close();
@@ -33,6 +36,7 @@ namespace Projet_GenieLog.View
 
         private void multButton_Click(object sender, EventArgs e)
         {
+            type = "x";
             View.CalculMental.FormMultiplication f = new View.CalculMental.FormMultiplication();
             f.Show();
             this.Close();
@@ -40,10 +44,11 @@ namespace Projet_GenieLog.View
 
         private void divButton_Click(object sender, EventArgs e)
         {
+            type = "/";
             View.CalculMental.FormDivision f = new View.CalculMental.FormDivision();
             f.Show();
             this.Close();
-        }
+        }*/
 
 
 

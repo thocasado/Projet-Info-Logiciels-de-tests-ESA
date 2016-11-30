@@ -52,35 +52,17 @@
     <Compile Include="Presenter\Presenter.cs" />
     <Compile Include="Exercices\CalculMental.cs" />
     <Compile Include="Exercices\Concentration.cs" />
-    <Compile Include="View\CalculMental\FormAddition.cs">
+    <Compile Include="View\CalculMental\FormOperation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\CalculMental\FormAddition.Designer.cs">
-      <DependentUpon>FormAddition.cs</DependentUpon>
+    <Compile Include="View\CalculMental\FormOperation.Designer.cs">
+      <DependentUpon>FormOperation.cs</DependentUpon>
     </Compile>
     <Compile Include="View\CalculMental\FormCalculMental.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\CalculMental\FormCalculMental.Designer.cs">
       <DependentUpon>FormCalculMental.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\CalculMental\FormDivision.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\CalculMental\FormDivision.Designer.cs">
-      <DependentUpon>FormDivision.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\CalculMental\FormMultiplication.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\CalculMental\FormMultiplication.Designer.cs">
-      <DependentUpon>FormMultiplication.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\CalculMental\FormSoustraction.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\CalculMental\FormSoustraction.Designer.cs">
-      <DependentUpon>FormSoustraction.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormPerception.cs">
       <SubType>Form</SubType>
@@ -104,20 +86,11 @@
     <Compile Include="Exercices\Exercices.cs" />
     <Compile Include="View\MyView.cs" />
     <Compile Include="XML\XMLMaths.cs" />
-    <EmbeddedResource Include="View\CalculMental\FormAddition.resx">
-      <DependentUpon>FormAddition.cs</DependentUpon>
+    <EmbeddedResource Include="View\CalculMental\FormOperation.resx">
+      <DependentUpon>FormOperation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CalculMental\FormCalculMental.resx">
       <DependentUpon>FormCalculMental.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\CalculMental\FormDivision.resx">
-      <DependentUpon>FormDivision.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\CalculMental\FormMultiplication.resx">
-      <DependentUpon>FormMultiplication.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\CalculMental\FormSoustraction.resx">
-      <DependentUpon>FormSoustraction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormPerception.resx">
       <DependentUpon>FormPerception.cs</DependentUpon>

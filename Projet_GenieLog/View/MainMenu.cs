@@ -12,9 +12,11 @@ namespace Projet_GenieLog
 {
     public partial class MainMenu : Form
     {
+        //voir comment récupérer la difficulté dans les autres form 
+        bool difficile = false;
         public MainMenu()
         {
-            InitializeComponent();      
+            InitializeComponent();
             
         }
 
@@ -29,6 +31,14 @@ namespace Projet_GenieLog
         {
             View.FormCalculMental f = new View.FormCalculMental();
             f.Show();
+        }
+
+        private void radio_difficile_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radio_difficile.Checked == true)
+            {
+                difficile = true;
+            }
         }
 
     }

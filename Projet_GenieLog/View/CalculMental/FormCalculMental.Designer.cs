@@ -52,7 +52,7 @@
             // 
             this.additionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
             this.additionButton.Location = new System.Drawing.Point(84, 172);
-            this.additionButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.additionButton.Margin = new System.Windows.Forms.Padding(4);
             this.additionButton.Name = "additionButton";
             this.additionButton.Size = new System.Drawing.Size(136, 97);
             this.additionButton.TabIndex = 1;
@@ -64,37 +64,37 @@
             // 
             this.sousButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
             this.sousButton.Location = new System.Drawing.Point(401, 172);
-            this.sousButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sousButton.Margin = new System.Windows.Forms.Padding(4);
             this.sousButton.Name = "sousButton";
             this.sousButton.Size = new System.Drawing.Size(136, 97);
             this.sousButton.TabIndex = 2;
             this.sousButton.Text = "-";
             this.sousButton.UseVisualStyleBackColor = true;
-            this.sousButton.Click += new System.EventHandler(this.sousButton_Click);
+            this.sousButton.Click += new System.EventHandler(this.additionButton_Click);
             // 
             // multButton
             // 
             this.multButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
             this.multButton.Location = new System.Drawing.Point(84, 335);
-            this.multButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.multButton.Margin = new System.Windows.Forms.Padding(4);
             this.multButton.Name = "multButton";
             this.multButton.Size = new System.Drawing.Size(136, 97);
             this.multButton.TabIndex = 1;
             this.multButton.Text = "x";
             this.multButton.UseVisualStyleBackColor = true;
-            this.multButton.Click += new System.EventHandler(this.multButton_Click);
+            this.multButton.Click += new System.EventHandler(this.additionButton_Click);
             // 
             // divButton
             // 
             this.divButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
             this.divButton.Location = new System.Drawing.Point(401, 335);
-            this.divButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.divButton.Margin = new System.Windows.Forms.Padding(4);
             this.divButton.Name = "divButton";
             this.divButton.Size = new System.Drawing.Size(136, 97);
             this.divButton.TabIndex = 2;
             this.divButton.Text = "/";
             this.divButton.UseVisualStyleBackColor = true;
-            this.divButton.Click += new System.EventHandler(this.divButton_Click);
+            this.divButton.Click += new System.EventHandler(this.additionButton_Click);
             // 
             // FormCalculMental
             // 
@@ -106,7 +106,7 @@
             this.Controls.Add(this.multButton);
             this.Controls.Add(this.additionButton);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCalculMental";
             this.Text = "FormCalculMental";
             this.ResumeLayout(false);

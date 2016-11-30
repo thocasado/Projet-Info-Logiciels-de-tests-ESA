@@ -1,6 +1,6 @@
 ﻿namespace Projet_GenieLog.View.CalculMental
 {
-    partial class FormAddition
+    partial class FormOperation
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            this.labelSigne = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.chiffre1 = new System.Windows.Forms.Label();
             this.chiffre2 = new System.Windows.Forms.Label();
@@ -36,17 +37,19 @@
             this.saisieResultat = new System.Windows.Forms.TextBox();
             this.validButton = new System.Windows.Forms.Button();
             this.count = new System.Windows.Forms.Label();
+            this.timerDifficile = new System.Windows.Forms.Timer(this.components);
+            this.timerAfficheResultat = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // label1
+            // labelSigne
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(283, 185);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 69);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "+";
+            this.labelSigne.AutoSize = true;
+            this.labelSigne.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSigne.Location = new System.Drawing.Point(283, 185);
+            this.labelSigne.Name = "labelSigne";
+            this.labelSigne.Size = new System.Drawing.Size(60, 69);
+            this.labelSigne.TabIndex = 0;
+            this.labelSigne.Text = "s";
             // 
             // label2
             // 
@@ -116,6 +119,10 @@
             this.count.TabIndex = 7;
             this.count.Text = "compteur";
             // 
+            // timerDifficile
+            // 
+            this.timerDifficile.Tick += new System.EventHandler(this.timerDifficile_Tick);
+            // 
             // FormAddition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -128,7 +135,7 @@
             this.Controls.Add(this.chiffre2);
             this.Controls.Add(this.chiffre1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelSigne);
             this.Name = "FormAddition";
             this.Text = "FormAddition";
             this.ResumeLayout(false);
@@ -138,7 +145,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelSigne;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label chiffre1;
         private System.Windows.Forms.Label chiffre2;
@@ -146,5 +153,7 @@
         private System.Windows.Forms.TextBox saisieResultat;
         private System.Windows.Forms.Button validButton;
         private System.Windows.Forms.Label count;
+        private System.Windows.Forms.Timer timerDifficile;
+        private System.Windows.Forms.Timer timerAfficheResultat;
     }
 }
