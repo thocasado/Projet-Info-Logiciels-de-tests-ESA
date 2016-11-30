@@ -8,8 +8,8 @@ namespace Projet_GenieLog
 {
     public class Rule
     {
-        private string Text { get; set; }
-        private int Number { get; set; }
+        public string Text { get; set; }
+        public int Number { get; set; }
 
         public Rule()
         {

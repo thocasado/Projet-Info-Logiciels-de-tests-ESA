@@ -14,6 +14,7 @@ using System.Xml.Serialization;
 
 namespace Projet_GenieLog
 {
+    [Serializable()]
     public class Perception : Exercices
     {
             
@@ -33,8 +34,9 @@ namespace Projet_GenieLog
             Perception p = new Perception();
             p.RuleList.Add(new Rule(1, "Regle 1 haha"));
             p.RuleList.Add(new Rule(2, "Regle 2 hiihih"));
+            p.RuleList.Add(new Rule(5, "Regle 5 hiihih"));
 
-            // Sauvegarde l'objet hotel dans le fichier "hotel.xml"
+            // Sauvegarde l'objet hotel dans le fichier "rulePerception.xml"
             StreamWriter writer = new StreamWriter("rulePerception.xml");
             new XmlSerializer(typeof(Perception)).Serialize(writer, p);
             writer.Close();

@@ -7,6 +7,7 @@ using System.Text;
 
 namespace Projet_GenieLog
 {
+    [Serializable()]
     public class Exercices 
     {
         public List<Rule> RuleList = new List<Rule>();
