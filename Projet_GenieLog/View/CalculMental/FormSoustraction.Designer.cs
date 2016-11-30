@@ -35,6 +35,7 @@
             this.chiffre1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.count = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // validButton
@@ -106,11 +107,22 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "-";
             // 
+            // count
+            // 
+            this.count.AutoSize = true;
+            this.count.Location = new System.Drawing.Point(556, 430);
+            this.count.Name = "count";
+            this.count.Size = new System.Drawing.Size(67, 17);
+            this.count.TabIndex = 14;
+            this.count.Text = "compteur";
+            
+            // 
             // FormSoustraction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 501);
+            this.Controls.Add(this.count);
             this.Controls.Add(this.validButton);
             this.Controls.Add(this.saisieResultat);
             this.Controls.Add(this.label3);
@@ -135,5 +147,6 @@
         private System.Windows.Forms.Label chiffre1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label count;
     }
 }

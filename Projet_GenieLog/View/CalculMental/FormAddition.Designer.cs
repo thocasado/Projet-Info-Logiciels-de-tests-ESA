@@ -35,6 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.saisieResultat = new System.Windows.Forms.TextBox();
             this.validButton = new System.Windows.Forms.Button();
+            this.count = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -95,8 +96,6 @@
             this.saisieResultat.Size = new System.Drawing.Size(283, 45);
             this.saisieResultat.TabIndex = 5;
             this.saisieResultat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            
-            
             // 
             // validButton
             // 
@@ -108,11 +107,21 @@
             this.validButton.UseVisualStyleBackColor = true;
             this.validButton.Click += new System.EventHandler(this.validButton_Click);
             // 
+            // count
+            // 
+            this.count.AutoSize = true;
+            this.count.Location = new System.Drawing.Point(571, 432);
+            this.count.Name = "count";
+            this.count.Size = new System.Drawing.Size(67, 17);
+            this.count.TabIndex = 7;
+            this.count.Text = "compteur";
+            // 
             // FormAddition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 501);
+            this.Controls.Add(this.count);
             this.Controls.Add(this.validButton);
             this.Controls.Add(this.saisieResultat);
             this.Controls.Add(this.label3);
@@ -136,5 +145,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox saisieResultat;
         private System.Windows.Forms.Button validButton;
+        private System.Windows.Forms.Label count;
     }
 }
