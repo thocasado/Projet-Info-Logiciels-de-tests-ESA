@@ -52,7 +52,14 @@ namespace Projet_GenieLog.View.CalculMental
                 MessageBox.Show("Faux.." + result);
             }
             compteur++;
-
+            if (compteur != 10)
+            {
+                lancerTest();
+            }
+            else
+            {
+                MessageBox.Show("Vous avez eu un total de"+cpt + "/10");
+            }
         }
     
 

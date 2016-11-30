@@ -51,7 +51,6 @@
             this.labelA.Size = new System.Drawing.Size(14, 13);
             this.labelA.TabIndex = 0;
             this.labelA.Text = "A";
-            
             // 
             // labelB
             // 
