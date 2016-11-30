@@ -7,6 +7,6 @@ namespace Projet_GenieLog
 {
     public class Physique : Exercices
     {
-
+        
     }
 }

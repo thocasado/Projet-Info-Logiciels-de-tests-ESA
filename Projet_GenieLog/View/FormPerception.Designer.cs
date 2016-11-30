@@ -179,6 +179,7 @@
             this.Controls.Add(this.labelI);
             this.Controls.Add(this.labelE);
             this.Controls.Add(this.labelA);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormPerception";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Test de perception";
