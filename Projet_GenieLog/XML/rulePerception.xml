@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Perception xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Rules>
+    <Rule>
+      <Text>Observez et m&#233;morisez les chiffres &#224; l'int&#233;rieur des carr&#233;s jaunes</Text>
+      <Number>1</Number>
+    </Rule>
+    <Rule>
+      <Text>Observez et m&#233;morisez les chiffres &#224; l'int&#233;rieur des carr&#233;s bleus</Text>
+      <Number>2</Number>
+    </Rule>
+    <Rule>
+      <Text>Observez et m&#233;morisez les chiffres &#224; l'int&#233;rieur des ronds jaunes</Text>
+      <Number>3</Number>
+    </Rule>
+    <Rule>
+      <Text>Observez et m&#233;morisez les chiffres &#224; l'int&#233;rieur des ronds bleus</Text>
+      <Number>4</Number>
+    </Rule>   
+  </Rules>
+</Perception>

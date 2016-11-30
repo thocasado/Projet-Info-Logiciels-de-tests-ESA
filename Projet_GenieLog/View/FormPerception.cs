@@ -16,6 +16,7 @@ namespace Projet_GenieLog.View
         public FormPerception()
         {
             InitializeComponent();
+            Perception.deserializeXML();
         }
 
        
@@ -23,7 +24,9 @@ namespace Projet_GenieLog.View
         {
             base.OnPaint(e);
             Perception.generateShapes();
-            Perception.generateXML();
+            //Perception.generateXML();
+
+
             //Perception.generateRandomArray();
         }
 

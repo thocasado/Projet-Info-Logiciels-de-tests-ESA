@@ -10,16 +10,16 @@ namespace Projet_GenieLog
     [Serializable()]
     public class Exercices 
     {
-        public List<Rule> RuleList = new List<Rule>();
+        public List<Rule> Rules{ get; set; }
       
         public Exercices()
         {
-            
+            this.Rules = new List<Rule>();
         }
 
-        public Exercices(List<Rule> ruleList)
+        public Exercices(List<Rule> rules)
         {
-            RuleList = ruleList;
+            Rules = rules;
         }
 
         public string showRule()

@@ -29,18 +29,27 @@ namespace Projet_GenieLog
 
         }
         
-        public static void generateXML()
-        {
-            Perception p = new Perception();
-            p.RuleList.Add(new Rule(1, "Regle 1 haha"));
-            p.RuleList.Add(new Rule(2, "Regle 2 hiihih"));
-            p.RuleList.Add(new Rule(5, "Regle 5 hiihih"));
 
+        public static void deserializeXML()
+        {
             // Sauvegarde l'objet hotel dans le fichier "rulePerception.xml"
-            StreamWriter writer = new StreamWriter("rulePerception.xml");
-            new XmlSerializer(typeof(Perception)).Serialize(writer, p);
-            writer.Close();
+            StreamReader reader = new StreamReader("rulePerception.xml");
+            Perception p = (Perception) new XmlSerializer(typeof(Perception)).Deserialize(reader);            
+            reader.Close();
+            MessageBox.Show(p.Rules[3].Text.ToString());
         }
+        //public static void generateXML()
+        //{
+        //    Perception p = new Perception();
+        //    p.Rules.Add(new Rule(1, "Regle 1 haha"));
+        //    p.Rules.Add(new Rule(2, "Regle 2 hiihih"));
+        //    p.Rules.Add(new Rule(5, "Regle 5 hiihih"));
+
+        //    // Sauvegarde l'objet hotel dans le fichier "rulePerception.xml"
+        //    StreamWriter writer = new StreamWriter("rulePerception.xml");
+        //    new XmlSerializer(typeof(Perception)).Serialize(writer, p);
+        //    writer.Close();
+        //}
         public static void generateRandomArray() // méthode static pour pouvoir l'appeler dans FormPerception
         {
             Random rnd = new Random();
