@@ -8,17 +8,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace Projet_GenieLog
 {
     public class Perception : Exercices
     {
+            
 
         public Perception()
         {
             
         }
+
+        public Perception(List<Rule> ruleList):base(ruleList)
+        {
+
+        }
         
+        public static void generateXML()
+        {
+            Perception p = new Perception();
+            p.RuleList.Add(new Rule(1, "Regle 1 haha"));
+            p.RuleList.Add(new Rule(2, "Regle 2 hiihih"));
+
+            // Sauvegarde l'objet hotel dans le fichier "hotel.xml"
+            StreamWriter writer = new StreamWriter("rulePerception.xml");
+            new XmlSerializer(typeof(Perception)).Serialize(writer, p);
+            writer.Close();
+        }
         public static void generateRandomArray() // méthode static pour pouvoir l'appeler dans FormPerception
         {
             Random rnd = new Random();

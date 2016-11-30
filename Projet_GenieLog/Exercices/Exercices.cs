@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,16 @@ namespace Projet_GenieLog
 {
     public class Exercices 
     {
-
+        public List<Rule> RuleList = new List<Rule>();
+      
         public Exercices()
         {
             
+        }
+
+        public Exercices(List<Rule> ruleList)
+        {
+            RuleList = ruleList;
         }
 
         public string showRule()
@@ -33,5 +40,7 @@ namespace Projet_GenieLog
         {
             throw new System.NotImplementedException();
         }
+
+        
     }
 }

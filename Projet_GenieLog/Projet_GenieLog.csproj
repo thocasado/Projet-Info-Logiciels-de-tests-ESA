@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Projet_GenieLog</RootNamespace>
     <AssemblyName>Projet_GenieLog</AssemblyName>
-    <TargetFrameworkVersion>v4.0.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exercices\Rule.cs" />
     <Compile Include="Presenter\Presenter.cs" />
     <Compile Include="Exercices\CalculMental.cs" />
     <Compile Include="Exercices\Concentration.cs" />

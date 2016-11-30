@@ -17,11 +17,13 @@ namespace Projet_GenieLog.View
         {
             InitializeComponent();
         }
+
        
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             Perception.generateShapes();
+            //Perception.generateXML();
             //Perception.generateRandomArray();
         }
 
