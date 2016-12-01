@@ -19,10 +19,11 @@ namespace Projet_GenieLog
         public string _choix3 { get; set; }
         public string _choix4 { get; set; }
         public string _bonneRep { get; set; }
+        public string _image { get; set; }
         //image
         
 
-        public Probleme(int id, string consigne, string c1, string c2, string c3, string c4, string br/*,image image*/)
+        public Probleme(int id, string consigne, string c1, string c2, string c3, string c4, string br,string image)
         {
             _id = id;
             _consigne = consigne;
@@ -31,6 +32,7 @@ namespace Projet_GenieLog
             _choix3 = c3;
             _choix4 = c4;
             _bonneRep = br;
+            _image = image;
         }
 
         public  static Probleme[]  selectionPbm(string matiere)
@@ -54,7 +56,7 @@ namespace Projet_GenieLog
 
             foreach (var p in pbm)
             {
-                problemes[(int)p.Attribute("id")-1] = new Probleme((int)p.Attribute("id"), (string)p.Attribute("consigne"), (string)p.Attribute("choix1"), (string)p.Attribute("choix2"), (string)p.Attribute("choix3"), (string)p.Attribute("choix4"), (string)p.Attribute("bonnereponse"));
+                problemes[(int)p.Attribute("id")-1] = new Probleme((int)p.Attribute("id"), (string)p.Attribute("consigne"), (string)p.Attribute("choix1"), (string)p.Attribute("choix2"), (string)p.Attribute("choix3"), (string)p.Attribute("choix4"), (string)p.Attribute("bonnereponse"),(string)p.Attribute("image"));
             }
             Random r=new Random();
             Probleme [] selectionPbm= new Probleme[nbDePbmAselectionner];

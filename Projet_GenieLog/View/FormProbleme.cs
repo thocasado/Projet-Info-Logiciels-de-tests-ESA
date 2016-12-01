@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
+
 namespace Projet_GenieLog.View
 {
 
@@ -15,15 +17,17 @@ namespace Projet_GenieLog.View
         //gerer le cas facile/difficile + ajout image 
         int compteur = 0;//compte à quel test on est
         int cpt = 0;//compte le nombre de bonnes réponses
+        
         Probleme [] pbm;
         string bonneRep;
         string repUtilisateur;
-        
-        
-   
-   
-        
 
+        
+       
+        
+        
+        
+        
         public FormProbleme(string matiere)
         {
             InitializeComponent();
@@ -34,11 +38,14 @@ namespace Projet_GenieLog.View
 
         public void lancerTest()
         {
-
+            
             groupBoxRb.Controls.Add(rbChoix1);
             groupBoxRb.Controls.Add(rbChoix2);
             groupBoxRb.Controls.Add(rbChoix3);
             groupBoxRb.Controls.Add(rbChoix4);
+            string image = "Images/";//on accede au dossier image du Debug
+            image += pbm[compteur]._image;
+            pictureBox.Image = new Bitmap(image);
             labelConsigne.Text = pbm[compteur]._consigne;
             rbChoix1.Text = pbm[compteur]._choix1;
             rbChoix2.Text = pbm[compteur]._choix2;

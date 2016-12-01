@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.labelConsigne = new System.Windows.Forms.Label();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.rbChoix4 = new System.Windows.Forms.RadioButton();
             this.validButton = new System.Windows.Forms.Button();
             this.count = new System.Windows.Forms.Label();
@@ -37,8 +36,9 @@
             this.rbChoix2 = new System.Windows.Forms.RadioButton();
             this.rbChoix3 = new System.Windows.Forms.RadioButton();
             this.groupBoxRb = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.groupBoxRb.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // labelConsigne
@@ -51,14 +51,6 @@
             this.labelConsigne.Size = new System.Drawing.Size(128, 29);
             this.labelConsigne.TabIndex = 0;
             this.labelConsigne.Text = "Consignes";
-            // 
-            // pictureBox
-            // 
-            this.pictureBox.Location = new System.Drawing.Point(220, 117);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox.TabIndex = 1;
-            this.pictureBox.TabStop = false;
             // 
             // rbChoix4
             // 
@@ -136,7 +128,17 @@
             this.groupBoxRb.TabStop = false;
             this.groupBoxRb.Text = "groupBoxRb";
             // 
-            // FormMaths
+            // pictureBox
+            // 
+            this.pictureBox.ErrorImage = null;
+            this.pictureBox.Location = new System.Drawing.Point(110, 84);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(345, 215);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 1;
+            this.pictureBox.TabStop = false;
+            // 
+            // FormProbleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -146,11 +148,11 @@
             this.Controls.Add(this.validButton);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.labelConsigne);
-            this.Name = "FormMaths";
+            this.Name = "FormProbleme";
             this.Text = "FormMaths";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.groupBoxRb.ResumeLayout(false);
             this.groupBoxRb.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
