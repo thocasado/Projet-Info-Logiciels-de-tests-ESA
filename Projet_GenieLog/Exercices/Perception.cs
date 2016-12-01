@@ -17,6 +17,8 @@ namespace Projet_GenieLog
     [Serializable()]
     public class Perception : Exercices
     {
+        static Random rnd = new Random();
+        static string ruleNumber;
             
 
         public Perception()
@@ -36,20 +38,22 @@ namespace Projet_GenieLog
             StreamReader reader = new StreamReader("rulePerception.xml");
             Perception p = (Perception) new XmlSerializer(typeof(Perception)).Deserialize(reader);            
             reader.Close();
+
             return p;
 
         }
 
         public static string generateRule()
         {
-            Random rnd = new Random();
             int tmp = rnd.Next(0, 4);
             Perception p = deserializeXML();
             string rule = p.Rules[tmp].Text.ToString();
-            string ruleNumber = p.Rules[tmp].Number.ToString();
-            return rule;
+            ruleNumber = p.Rules[tmp].Number.ToString();
 
+            return rule;
         }
+
+
         //public static void generateXML()
         //{
         //    Perception p = new Perception();
@@ -64,7 +68,6 @@ namespace Projet_GenieLog
         //}
         public static int [,] generateRandomArray() // méthode static pour pouvoir l'appeler dans FormPerception
         {
-            Random rnd = new Random();
             int[,] randomNumbers = new int[3, 4];
 
             for (int i= 0; i<3; i++) // génère un tableau 3*4 d'entiers aléatoires
@@ -79,7 +82,7 @@ namespace Projet_GenieLog
 
         }
 
-        public static void drawNumbers(PaintEventArgs e)
+        public static void drawNumbers(PaintEventArgs e) // dessine des chiffres aléatoires 
         {
             int[,] myArray = generateRandomArray();
             for (int i=0; i<3; i++)
@@ -88,9 +91,7 @@ namespace Projet_GenieLog
                 {
                     e.Graphics.DrawString(myArray[i,j].ToString(), new Font("Arial", 12), new SolidBrush(Color.Black), new PointF(43.0F + 105.0F*j, 43.0F + 95.0F *i));
                 }
-            }
-            
-
+            }           
         }
 
         public static void createColoredShape(int x, int y, int width, int height, string color, string shape,Form form) // permet de créer soit un rectangle soit un rond de couleur bleue ou jaune
@@ -136,12 +137,11 @@ namespace Projet_GenieLog
 
         public static void generateShapes() // génère les formes aléatoirement en fonction de la règle
         {
-            Random rnd = new Random();
             int nbr; //nbr aleatoire pour choisir la forme
             int color; // nbr aleatoire pour choisir la couleur
             int cpt = 0; // compteur de formes pour la règle choisie
             int nbrShapes;
-            string ruleNumber = "1"; // on appelle generateRule donc nouvel entier aleatoire :/
+            //string ruleNumber = ruleNumber; // on appelle generateRule donc nouvel entier aleatoire :/
             nbrShapes = rnd.Next(3, 5);  // 3 ou 4 formes max
 
             for (int i = 1; i <= 3; i++) // on parcourt les emplacements des formes (3 lignes x 4 colonnes)
