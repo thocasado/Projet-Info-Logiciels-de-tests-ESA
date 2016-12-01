@@ -1,0 +1,11 @@
+
+
+
+
+<problemesMaths>
+			<pbm id="1" consigne="Comment ca va ? " choix1="Bien" choix2="mal" choix3="ca va" choix4="tb" bonnereponse="tb" image=""/>
+			<pbm id="2" consigne="Comment ca va ?2 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image=""/>
+			<pbm id="3" consigne="Comment ca va ?3 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image=""/>
+</problemesMaths>
+
+

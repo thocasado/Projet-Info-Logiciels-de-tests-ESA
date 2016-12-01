@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Projet_GenieLog</RootNamespace>
     <AssemblyName>Projet_GenieLog</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -65,6 +65,12 @@
     <Compile Include="View\CalculMental\FormCalculMental.Designer.cs">
       <DependentUpon>FormCalculMental.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormMaths.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormMaths.Designer.cs">
+      <DependentUpon>FormMaths.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormPerception.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\CalculMental\FormCalculMental.resx">
       <DependentUpon>FormCalculMental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormMaths.resx">
+      <DependentUpon>FormMaths.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormPerception.resx">
       <DependentUpon>FormPerception.cs</DependentUpon>

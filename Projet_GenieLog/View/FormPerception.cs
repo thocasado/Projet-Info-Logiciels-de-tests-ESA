@@ -17,6 +17,7 @@ namespace Projet_GenieLog.View
         {
             InitializeComponent();
             Perception.deserializeXML();
+           
         }
 
        

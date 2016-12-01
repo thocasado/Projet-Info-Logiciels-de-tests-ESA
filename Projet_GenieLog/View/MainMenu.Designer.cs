@@ -42,7 +42,7 @@
             // 
             this.btnPerception.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPerception.Location = new System.Drawing.Point(231, 95);
-            this.btnPerception.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPerception.Margin = new System.Windows.Forms.Padding(4);
             this.btnPerception.Name = "btnPerception";
             this.btnPerception.Size = new System.Drawing.Size(179, 50);
             this.btnPerception.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             this.btnConcentration.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnConcentration.Location = new System.Drawing.Point(231, 153);
-            this.btnConcentration.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConcentration.Margin = new System.Windows.Forms.Padding(4);
             this.btnConcentration.Name = "btnConcentration";
             this.btnConcentration.Size = new System.Drawing.Size(179, 50);
             this.btnConcentration.TabIndex = 1;
@@ -65,7 +65,7 @@
             // 
             this.btnCalcul.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCalcul.Location = new System.Drawing.Point(231, 210);
-            this.btnCalcul.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCalcul.Margin = new System.Windows.Forms.Padding(4);
             this.btnCalcul.Name = "btnCalcul";
             this.btnCalcul.Size = new System.Drawing.Size(179, 50);
             this.btnCalcul.TabIndex = 2;
@@ -77,18 +77,19 @@
             // 
             this.btn_maths.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_maths.Location = new System.Drawing.Point(231, 268);
-            this.btn_maths.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_maths.Margin = new System.Windows.Forms.Padding(4);
             this.btn_maths.Name = "btn_maths";
             this.btn_maths.Size = new System.Drawing.Size(179, 50);
             this.btn_maths.TabIndex = 3;
             this.btn_maths.Text = "Mathématiques";
             this.btn_maths.UseVisualStyleBackColor = true;
+            this.btn_maths.Click += new System.EventHandler(this.btn_maths_Click);
             // 
             // btn_physique
             // 
             this.btn_physique.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_physique.Location = new System.Drawing.Point(231, 326);
-            this.btn_physique.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_physique.Margin = new System.Windows.Forms.Padding(4);
             this.btn_physique.Name = "btn_physique";
             this.btn_physique.Size = new System.Drawing.Size(179, 50);
             this.btn_physique.TabIndex = 4;
@@ -101,7 +102,7 @@
             this.radio_facile.AutoSize = true;
             this.radio_facile.Checked = true;
             this.radio_facile.Location = new System.Drawing.Point(231, 430);
-            this.radio_facile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radio_facile.Margin = new System.Windows.Forms.Padding(4);
             this.radio_facile.Name = "radio_facile";
             this.radio_facile.Size = new System.Drawing.Size(66, 21);
             this.radio_facile.TabIndex = 5;
@@ -114,7 +115,7 @@
             this.radio_difficile.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radio_difficile.AutoSize = true;
             this.radio_difficile.Location = new System.Drawing.Point(333, 430);
-            this.radio_difficile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radio_difficile.Margin = new System.Windows.Forms.Padding(4);
             this.radio_difficile.Name = "radio_difficile";
             this.radio_difficile.Size = new System.Drawing.Size(71, 21);
             this.radio_difficile.TabIndex = 6;
@@ -146,7 +147,7 @@
             this.Controls.Add(this.btnCalcul);
             this.Controls.Add(this.btnConcentration);
             this.Controls.Add(this.btnPerception);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
