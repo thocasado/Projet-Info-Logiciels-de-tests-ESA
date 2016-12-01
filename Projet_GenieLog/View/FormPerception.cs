@@ -16,7 +16,8 @@ namespace Projet_GenieLog.View
         public FormPerception()
         {
             InitializeComponent();
-            Perception.deserializeXML();
+            string randomRule = Perception.generateRule();
+            MessageBox.Show(randomRule);            
         }
 
        
@@ -24,10 +25,7 @@ namespace Projet_GenieLog.View
         {
             base.OnPaint(e);
             Perception.generateShapes();
-            //Perception.generateXML();
 
-
-            //Perception.generateRandomArray();
         }
 
         private void FormPerception_Load(object sender, EventArgs e)

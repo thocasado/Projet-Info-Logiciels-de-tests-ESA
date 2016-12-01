@@ -30,13 +30,25 @@ namespace Projet_GenieLog
         }
         
 
-        public static void deserializeXML()
+        public static Perception deserializeXML()
         {
-            // Sauvegarde l'objet hotel dans le fichier "rulePerception.xml"
+            // Lit le fichier "rulePerception.xml et le cast dans un objet perception"
             StreamReader reader = new StreamReader("rulePerception.xml");
             Perception p = (Perception) new XmlSerializer(typeof(Perception)).Deserialize(reader);            
             reader.Close();
-            MessageBox.Show(p.Rules[3].Text.ToString());
+            return p;
+
+        }
+
+        public static string generateRule()
+        {
+            Random rnd = new Random();
+            int tmp = rnd.Next(0, 4);
+            Perception p = deserializeXML();
+            string rule = p.Rules[tmp].Text.ToString();
+            string ruleNumber = p.Rules[tmp].Number.ToString();
+            return rule;
+
         }
         //public static void generateXML()
         //{
@@ -55,7 +67,7 @@ namespace Projet_GenieLog
             Random rnd = new Random();
             int[,] randomNumbers = new int[3, 4];
 
-            for (int i= 0; i<3; i++)
+            for (int i= 0; i<3; i++) // génère un tableau 3*4 d'entiers aléatoires
             {
                 for (int j=0; j<4; j++)
                 {
@@ -65,7 +77,7 @@ namespace Projet_GenieLog
 
         }
 
-        public static void createColoredShape(int x, int y, int width, int height, string color, string shape,Form form)
+        public static void createColoredShape(int x, int y, int width, int height, string color, string shape,Form form) // permet de créer soit un rectangle soit un rond de couleur bleue ou jaune
         {
             SolidBrush blueBrush = new SolidBrush(Color.Blue);
             SolidBrush yellowBrush = new SolidBrush(Color.Yellow);
@@ -106,14 +118,14 @@ namespace Projet_GenieLog
         }
 
 
-        public static void generateShapes()
+        public static void generateShapes() // génère les formes aléatoirement en fonction de la règle
         {
             Random rnd = new Random();
             int nbr; //nbr aleatoire pour choisir la forme
             int color; // nbr aleatoire pour choisir la couleur
             int cpt = 0; // compteur de formes pour la règle choisie
             int nbrShapes;
-            string ruleNumber = "Regle4";
+            string ruleNumber = ""; // on appelle generateRule donc nouvel entier aleatoire :/
             nbrShapes = rnd.Next(3, 5);  // 3 ou 4 formes max
 
             for (int i = 1; i <= 3; i++) // on parcourt les emplacements des formes (3 lignes x 4 colonnes)
