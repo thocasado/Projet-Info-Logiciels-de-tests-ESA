@@ -17,7 +17,7 @@ namespace Projet_GenieLog.View
         {
             InitializeComponent();
             string randomRule = Perception.generateRule();
-            MessageBox.Show(randomRule);            
+            MessageBox.Show(randomRule);    
         }
 
        
@@ -25,6 +25,7 @@ namespace Projet_GenieLog.View
         {
             base.OnPaint(e);
             Perception.generateShapes();
+            Perception.drawNumbers(e);
 
         }
 

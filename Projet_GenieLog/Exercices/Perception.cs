@@ -62,7 +62,7 @@ namespace Projet_GenieLog
         //    new XmlSerializer(typeof(Perception)).Serialize(writer, p);
         //    writer.Close();
         //}
-        public static void generateRandomArray() // méthode static pour pouvoir l'appeler dans FormPerception
+        public static int [,] generateRandomArray() // méthode static pour pouvoir l'appeler dans FormPerception
         {
             Random rnd = new Random();
             int[,] randomNumbers = new int[3, 4];
@@ -74,6 +74,22 @@ namespace Projet_GenieLog
                     randomNumbers[i, j] = rnd.Next(0, 10);
                 }
             }
+
+            return randomNumbers;
+
+        }
+
+        public static void drawNumbers(PaintEventArgs e)
+        {
+            int[,] myArray = generateRandomArray();
+            for (int i=0; i<3; i++)
+            {
+                for (int j=0; j<4; j++)
+                {
+                    e.Graphics.DrawString(myArray[i,j].ToString(), new Font("Arial", 12), new SolidBrush(Color.Black), new PointF(43.0F + 105.0F*j, 43.0F + 95.0F *i));
+                }
+            }
+            
 
         }
 
@@ -125,7 +141,7 @@ namespace Projet_GenieLog
             int color; // nbr aleatoire pour choisir la couleur
             int cpt = 0; // compteur de formes pour la règle choisie
             int nbrShapes;
-            string ruleNumber = ""; // on appelle generateRule donc nouvel entier aleatoire :/
+            string ruleNumber = "1"; // on appelle generateRule donc nouvel entier aleatoire :/
             nbrShapes = rnd.Next(3, 5);  // 3 ou 4 formes max
 
             for (int i = 1; i <= 3; i++) // on parcourt les emplacements des formes (3 lignes x 4 colonnes)
