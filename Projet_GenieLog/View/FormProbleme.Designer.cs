@@ -1,6 +1,6 @@
 ﻿namespace Projet_GenieLog.View
 {
-    partial class FormMaths
+    partial class FormProbleme
     {
         /// <summary>
         /// Required designer variable.

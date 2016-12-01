@@ -43,7 +43,8 @@ namespace Projet_GenieLog
 
         private void btn_maths_Click(object sender, EventArgs e)
         {
-            View.FormMaths f = new View.FormMaths();
+            string matiere = ((Button)(sender)).Text;
+            View.FormProbleme f = new View.FormProbleme(matiere);
             f.Show();
         }
 

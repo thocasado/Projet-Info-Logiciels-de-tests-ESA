@@ -95,6 +95,7 @@
             this.btn_physique.TabIndex = 4;
             this.btn_physique.Text = "Physique";
             this.btn_physique.UseVisualStyleBackColor = true;
+            this.btn_physique.Click += new System.EventHandler(this.btn_maths_Click);
             // 
             // radio_facile
             // 

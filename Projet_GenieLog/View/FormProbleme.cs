@@ -9,11 +9,13 @@ using System.Windows.Forms;
 
 namespace Projet_GenieLog.View
 {
-    public partial class FormMaths : Form
+
+    public partial class FormProbleme : Form
     {
+        //gerer le cas facile/difficile + ajout image 
         int compteur = 0;//compte à quel test on est
         int cpt = 0;//compte le nombre de bonnes réponses
-        Maths[] pbmMaths = Maths.selectionPbm();
+        Probleme [] pbm;
         string bonneRep;
         string repUtilisateur;
         
@@ -22,9 +24,10 @@ namespace Projet_GenieLog.View
    
         
 
-        public FormMaths()
+        public FormProbleme(string matiere)
         {
             InitializeComponent();
+            pbm = Probleme.selectionPbm(matiere);
             lancerTest();
             
         }
@@ -36,12 +39,12 @@ namespace Projet_GenieLog.View
             groupBoxRb.Controls.Add(rbChoix2);
             groupBoxRb.Controls.Add(rbChoix3);
             groupBoxRb.Controls.Add(rbChoix4);
-            labelConsigne.Text = pbmMaths[compteur]._consigne;
-            rbChoix1.Text = pbmMaths[compteur]._choix1;
-            rbChoix2.Text = pbmMaths[compteur]._choix2;
-            rbChoix3.Text = pbmMaths[compteur]._choix3;
-            rbChoix4.Text = pbmMaths[compteur]._choix4;
-            bonneRep= pbmMaths[compteur]._bonneRep;
+            labelConsigne.Text = pbm[compteur]._consigne;
+            rbChoix1.Text = pbm[compteur]._choix1;
+            rbChoix2.Text = pbm[compteur]._choix2;
+            rbChoix3.Text = pbm[compteur]._choix3;
+            rbChoix4.Text = pbm[compteur]._choix4;
+            bonneRep= pbm[compteur]._bonneRep;
             compteur++;
             count.Text=compteur.ToString();
             
