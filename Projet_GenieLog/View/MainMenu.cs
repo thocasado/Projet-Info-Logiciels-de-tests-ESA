@@ -13,40 +13,55 @@ namespace Projet_GenieLog
     public partial class MainMenu : Form
     {
         //voir comment récupérer la difficulté dans les autres form 
-        bool difficile = false;
+        public bool difficile { get; set; }
         public MainMenu()
         {
             InitializeComponent();
+            groupBoxDifficulte.Controls.Add(radio_facile);
+            groupBoxDifficulte.Controls.Add(radio_difficile);
+
             
         }
 
         private void btnPerception_Click(object sender, EventArgs e)
         {
-            View.FormPerception f = new View.FormPerception();
+            difficile=checkDifficulte();
+            View.FormPerception f = new View.FormPerception();//rajouter difficulte en paramètre
             f.Show();
             
         }
 
         private void btnCalcul_Click(object sender, EventArgs e)
         {
-            View.FormCalculMental f = new View.FormCalculMental();
+            difficile=checkDifficulte();
+            View.FormCalculMental f = new View.FormCalculMental(difficile);
             f.Show();
         }
 
-        private void radio_difficile_CheckedChanged(object sender, EventArgs e)
+        
+
+        private void btn_maths_Click(object sender, EventArgs e)
+        {
+            difficile=checkDifficulte();
+            string matiere = ((Button)(sender)).Text;
+            View.FormProbleme f = new View.FormProbleme(matiere,difficile);
+            f.Show();
+
+        }
+
+        private bool checkDifficulte()
         {
             if (radio_difficile.Checked == true)
             {
                 difficile = true;
             }
+            else
+            {
+                difficile = false;
+            }
+            return difficile;
         }
 
-        private void btn_maths_Click(object sender, EventArgs e)
-        {
-            string matiere = ((Button)(sender)).Text;
-            View.FormProbleme f = new View.FormProbleme(matiere);
-            f.Show();
-        }
 
     }
 }

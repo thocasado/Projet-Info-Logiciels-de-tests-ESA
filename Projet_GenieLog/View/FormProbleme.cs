@@ -14,7 +14,7 @@ namespace Projet_GenieLog.View
 
     public partial class FormProbleme : Form
     {
-        //gerer le cas facile/difficile + ajout image 
+        //gerer le cas facile/difficile 
         int compteur = 0;//compte à quel test on est
         int cpt = 0;//compte le nombre de bonnes réponses
         
@@ -28,10 +28,10 @@ namespace Projet_GenieLog.View
         
         
         
-        public FormProbleme(string matiere)
+        public FormProbleme(string matiere, bool difficile)
         {
             InitializeComponent();
-            pbm = Probleme.selectionPbm(matiere);
+            pbm = Probleme.selectionPbm(matiere);//modifier xml suivant difficulte, rajouter un paramètre dans xml avec pbm facile/pbm difficile + faire if dans la classe probleme
             lancerTest();
             
         }

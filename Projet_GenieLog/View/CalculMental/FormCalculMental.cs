@@ -12,16 +12,19 @@ namespace Projet_GenieLog.View
     public partial class FormCalculMental : Form
     {
         string type;
+        bool _difficile;
         
-        public FormCalculMental()
+        public FormCalculMental(bool difficile)
         {
             InitializeComponent();
+            _difficile = difficile;
+
         }
 
         private void additionButton_Click(object sender, EventArgs e)
         {
             type = ((Button)(sender)).Text;
-            View.CalculMental.FormOperation f = new View.CalculMental.FormOperation(type);
+            View.CalculMental.FormOperation f = new View.CalculMental.FormOperation(type,_difficile);
             f.Show();
             this.Close();
         }

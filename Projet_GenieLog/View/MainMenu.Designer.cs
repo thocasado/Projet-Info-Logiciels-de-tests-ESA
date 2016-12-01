@@ -36,6 +36,8 @@
             this.radio_facile = new System.Windows.Forms.RadioButton();
             this.radio_difficile = new System.Windows.Forms.RadioButton();
             this.label_difficulte = new System.Windows.Forms.Label();
+            this.groupBoxDifficulte = new System.Windows.Forms.GroupBox();
+            this.groupBoxDifficulte.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPerception
@@ -102,7 +104,7 @@
             this.radio_facile.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radio_facile.AutoSize = true;
             this.radio_facile.Checked = true;
-            this.radio_facile.Location = new System.Drawing.Point(231, 430);
+            this.radio_facile.Location = new System.Drawing.Point(45, 20);
             this.radio_facile.Margin = new System.Windows.Forms.Padding(4);
             this.radio_facile.Name = "radio_facile";
             this.radio_facile.Size = new System.Drawing.Size(66, 21);
@@ -115,14 +117,13 @@
             // 
             this.radio_difficile.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radio_difficile.AutoSize = true;
-            this.radio_difficile.Location = new System.Drawing.Point(333, 430);
+            this.radio_difficile.Location = new System.Drawing.Point(146, 20);
             this.radio_difficile.Margin = new System.Windows.Forms.Padding(4);
             this.radio_difficile.Name = "radio_difficile";
             this.radio_difficile.Size = new System.Drawing.Size(71, 21);
             this.radio_difficile.TabIndex = 6;
             this.radio_difficile.Text = "Dfficile";
             this.radio_difficile.UseVisualStyleBackColor = true;
-            this.radio_difficile.CheckedChanged += new System.EventHandler(this.radio_difficile_CheckedChanged);
             // 
             // label_difficulte
             // 
@@ -135,14 +136,24 @@
             this.label_difficulte.TabIndex = 7;
             this.label_difficulte.Text = "Difficulté";
             // 
+            // groupBoxDifficulte
+            // 
+            this.groupBoxDifficulte.Controls.Add(this.radio_facile);
+            this.groupBoxDifficulte.Controls.Add(this.radio_difficile);
+            this.groupBoxDifficulte.Location = new System.Drawing.Point(214, 426);
+            this.groupBoxDifficulte.Name = "groupBoxDifficulte";
+            this.groupBoxDifficulte.Size = new System.Drawing.Size(234, 47);
+            this.groupBoxDifficulte.TabIndex = 8;
+            this.groupBoxDifficulte.TabStop = false;
+            this.groupBoxDifficulte.Text = "groupBoxDifficulte";
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 501);
+            this.Controls.Add(this.groupBoxDifficulte);
             this.Controls.Add(this.label_difficulte);
-            this.Controls.Add(this.radio_difficile);
-            this.Controls.Add(this.radio_facile);
             this.Controls.Add(this.btn_physique);
             this.Controls.Add(this.btn_maths);
             this.Controls.Add(this.btnCalcul);
@@ -152,6 +163,8 @@
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
+            this.groupBoxDifficulte.ResumeLayout(false);
+            this.groupBoxDifficulte.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,6 +180,7 @@
         private System.Windows.Forms.RadioButton radio_facile;
         private System.Windows.Forms.RadioButton radio_difficile;
         private System.Windows.Forms.Label label_difficulte;
+        private System.Windows.Forms.GroupBox groupBoxDifficulte;
     }
 }
 

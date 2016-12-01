@@ -16,16 +16,17 @@ namespace Projet_GenieLog.View.CalculMental
         //Ameliorer affichage
         string result;
         int cpt = 0;//compteur de bonne réponse; 
-        int compteur = 0; // Compteur du nombre de calcul effectué
-        bool difficile = true; // faut récuperer le bool du main menu 
+        int compteur = 0; // Compteur du nombre de calcul effectué 
         int temps_difficulte = 5000; // temps de la difficulte difficile en ms
         //int temps_affichage = 3000; //temps affichage resultat
         string _type;
+        bool _difficile;
         
-            public FormOperation(string type)
+            public FormOperation(string type, bool difficile)
             {
                 InitializeComponent();
                 _type = type;
+                _difficile = difficile;
                 lancerTest();
 
             
@@ -82,7 +83,7 @@ namespace Projet_GenieLog.View.CalculMental
                 chiffre2.Text = b.ToString();
 
 
-                if (difficile)
+                if (_difficile)
                 {
                     timerDifficile.Interval = temps_difficulte;
                     timerDifficile.Start();
