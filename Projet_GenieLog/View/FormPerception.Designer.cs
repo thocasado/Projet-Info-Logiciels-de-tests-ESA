@@ -40,7 +40,6 @@
             this.labelJ = new System.Windows.Forms.Label();
             this.labelK = new System.Windows.Forms.Label();
             this.labelL = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelA
@@ -151,22 +150,12 @@
             this.labelL.TabIndex = 0;
             this.labelL.Text = "L";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
-            // 
             // FormPerception
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(459, 318);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelC);
             this.Controls.Add(this.labelD);
             this.Controls.Add(this.labelB);
@@ -179,6 +168,7 @@
             this.Controls.Add(this.labelI);
             this.Controls.Add(this.labelE);
             this.Controls.Add(this.labelA);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormPerception";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Test de perception";
@@ -202,6 +192,5 @@
         private System.Windows.Forms.Label labelJ;
         private System.Windows.Forms.Label labelK;
         private System.Windows.Forms.Label labelL;
-        private System.Windows.Forms.Label label1;
     }
 }

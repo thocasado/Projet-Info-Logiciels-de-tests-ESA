@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +7,19 @@ using System.Text;
 
 namespace Projet_GenieLog
 {
+    [Serializable()]
     public class Exercices 
     {
-
+        public List<Rule> Rules{ get; set; }
+      
         public Exercices()
         {
-            
+            this.Rules = new List<Rule>();
+        }
+
+        public Exercices(List<Rule> rules)
+        {
+            Rules = rules;
         }
 
         public string showRule()
@@ -33,5 +41,7 @@ namespace Projet_GenieLog
         {
             throw new System.NotImplementedException();
         }
+
+        
     }
 }

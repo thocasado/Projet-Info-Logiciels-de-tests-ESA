@@ -8,6 +8,6 @@ namespace Projet_GenieLog
 {
     public class MyView
     {
-        public Presenter p;
+        
     }
 }
