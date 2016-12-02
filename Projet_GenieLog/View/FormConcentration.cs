@@ -11,6 +11,7 @@ namespace Projet_GenieLog.View
 {
     public partial class FormConcentration : Form
     {
+        //reste à prendre en compte difficulte, générer formes, points, couleurs, récuperer toutes les infos et bonne rép le tout mis dans un xml
         int compteur =0;//compte à quel test on est d'une serie
         int cptSerie=1;//compte à quelle serie on est
         int cpt = 0;//compte le nombre de bonnes réponses dans une série
