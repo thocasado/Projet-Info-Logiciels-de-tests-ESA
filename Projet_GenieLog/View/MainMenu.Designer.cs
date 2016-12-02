@@ -62,6 +62,7 @@
             this.btnConcentration.TabIndex = 1;
             this.btnConcentration.Text = "Concentration";
             this.btnConcentration.UseVisualStyleBackColor = true;
+            this.btnConcentration.Click += new System.EventHandler(this.btnConcentration_Click);
             // 
             // btnCalcul
             // 

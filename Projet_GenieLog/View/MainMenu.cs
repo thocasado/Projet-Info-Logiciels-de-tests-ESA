@@ -62,6 +62,13 @@ namespace Projet_GenieLog
             return difficile;
         }
 
+        private void btnConcentration_Click(object sender, EventArgs e)
+        {
+            difficile = checkDifficulte();
+            View.FormConcentration f = new View.FormConcentration();//rajouter difficulte en paramètre
+            f.Show();
+        }
+
 
     }
 }

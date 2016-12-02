@@ -65,6 +65,12 @@
     <Compile Include="View\CalculMental\FormCalculMental.Designer.cs">
       <DependentUpon>FormCalculMental.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormConcentration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormConcentration.Designer.cs">
+      <DependentUpon>FormConcentration.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormProbleme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\CalculMental\FormCalculMental.resx">
       <DependentUpon>FormCalculMental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormConcentration.resx">
+      <DependentUpon>FormConcentration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormProbleme.resx">
       <DependentUpon>FormProbleme.cs</DependentUpon>
