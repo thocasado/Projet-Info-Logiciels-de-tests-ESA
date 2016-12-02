@@ -31,7 +31,7 @@ namespace Projet_GenieLog.View
         public FormProbleme(string matiere, bool difficile)
         {
             InitializeComponent();
-            pbm = Probleme.selectionPbm(matiere);//modifier xml suivant difficulte, rajouter un paramètre dans xml avec pbm facile/pbm difficile + faire if dans la classe probleme
+            pbm = Probleme.selectionPbm(matiere, difficile);//modifier xml suivant difficulte, rajouter un paramètre dans xml avec pbm facile/pbm difficile + faire if dans la classe probleme
             lancerTest();
             
         }

@@ -87,7 +87,6 @@
     <Compile Include="MenuPrincipal.cs" />
     <Compile Include="Exercices\Niveau.cs" />
     <Compile Include="Exercices\Perception.cs" />
-    <Compile Include="Exercices\Physique.cs" />
     <Compile Include="Exercices\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Exercices\Exercices.cs" />

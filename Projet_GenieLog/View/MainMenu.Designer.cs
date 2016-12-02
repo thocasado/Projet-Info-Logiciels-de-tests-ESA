@@ -145,7 +145,6 @@
             this.groupBoxDifficulte.Size = new System.Drawing.Size(234, 47);
             this.groupBoxDifficulte.TabIndex = 8;
             this.groupBoxDifficulte.TabStop = false;
-            this.groupBoxDifficulte.Text = "groupBoxDifficulte";
             // 
             // MainMenu
             // 

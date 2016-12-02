@@ -35,21 +35,27 @@ namespace Projet_GenieLog
             _image = image;
         }
 
-        public  static Probleme[]  selectionPbm(string matiere)
+        public  static Probleme[]  selectionPbm(string matiere,bool difficile)
         {
 
-            int nbDePbmTotal=20;
+            int nbDePbmTotal=12;
             int nbDePbmAselectionner=10;
 #region Deserialisation
             Probleme[] problemes = new Probleme [nbDePbmTotal];
             XDocument doc = XDocument.Load("probleme.xml");
-            var ensemblePbms = doc.Descendants("Problemes").First();//on initialise pbms avec les problemes de physiques
-            var pbms = ensemblePbms.Descendants("problemesPhysique");
+            var ensemblePbm = doc.Descendants("Problemes").First();
+            var ensemblePbms = ensemblePbm.Descendants("problemesPhysique");//on initialise ensemblePbms avec les problemes de physiques
+            
             if (matiere == "Mathématiques")//si la matiere est mathématique on change pbms, sinon ca reste physique
             {
-                pbms = ensemblePbms.Descendants("problemesMaths");
+                ensemblePbms= ensemblePbm.Descendants("problemesMaths");
             }
-            var pbm = pbms.Descendants("pbm");
+            var pbmsDifficulte = ensemblePbms.Descendants("facile");// on initialise pbmsDifficulte avec les problemes de physiques/maths faciles
+            if (difficile)
+            {
+                pbmsDifficulte = ensemblePbms.Descendants("difficile");
+            }
+                var pbm = pbmsDifficulte.Descendants("pbm");
             
 
 #endregion

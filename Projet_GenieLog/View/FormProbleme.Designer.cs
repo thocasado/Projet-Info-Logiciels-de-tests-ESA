@@ -126,7 +126,6 @@
             this.groupBoxRb.Size = new System.Drawing.Size(549, 48);
             this.groupBoxRb.TabIndex = 7;
             this.groupBoxRb.TabStop = false;
-            this.groupBoxRb.Text = "groupBoxRb";
             // 
             // pictureBox
             // 
