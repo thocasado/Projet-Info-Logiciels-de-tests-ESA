@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelA = new System.Windows.Forms.Label();
             this.labelB = new System.Windows.Forms.Label();
             this.labelD = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.labelJ = new System.Windows.Forms.Label();
             this.labelK = new System.Windows.Forms.Label();
             this.labelL = new System.Windows.Forms.Label();
+            this.timerPerception = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // labelA
@@ -150,6 +152,12 @@
             this.labelL.TabIndex = 0;
             this.labelL.Text = "L";
             // 
+            // timerPerception
+            // 
+            this.timerPerception.Enabled = true;
+            this.timerPerception.Interval = 4000;
+            this.timerPerception.Tick += new System.EventHandler(this.timerPerception_Tick);
+            // 
             // FormPerception
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,6 +181,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Test de perception";
             this.Load += new System.EventHandler(this.FormPerception_Load);
+            this.Shown += new System.EventHandler(this.FormPerception_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +201,6 @@
         private System.Windows.Forms.Label labelJ;
         private System.Windows.Forms.Label labelK;
         private System.Windows.Forms.Label labelL;
+        private System.Windows.Forms.Timer timerPerception;
     }
 }

@@ -20,7 +20,6 @@ namespace Projet_GenieLog
         static Random rnd = new Random();
         static string ruleNumber;
             
-
         public Perception()
         {
             
@@ -99,6 +98,7 @@ namespace Projet_GenieLog
             SolidBrush blueBrush = new SolidBrush(Color.Blue);
             SolidBrush yellowBrush = new SolidBrush(Color.Yellow);
             Graphics formGraphics = form.CreateGraphics();
+
             if (color == "Blue")
             {
                 if (shape == "Rectangle")
