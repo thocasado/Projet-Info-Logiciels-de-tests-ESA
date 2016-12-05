@@ -12,9 +12,26 @@ namespace Projet_GenieLog.View
 {
     public partial class MyMessageBox : Form
     {
+        private int nbrAnswer = Perception.rndNumberShapes;
+        public void displayAnswers()
+        {
+            if (nbrAnswer == 4)
+            {
+                label4MMB.Visible = true;
+                textBox4MMB.Visible = true;
+
+            }
+            else
+            {
+                label4MMB.Visible = false;
+                textBox4MMB.Visible = false;
+            }
+        }
         public MyMessageBox()
         {
             InitializeComponent();
+            
         }
+
     }
 }

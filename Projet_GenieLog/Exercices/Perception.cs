@@ -17,25 +17,27 @@ namespace Projet_GenieLog
     [Serializable()]
     public class Perception : Exercices
     {
-        static Random rnd = new Random();
-        static string ruleNumber;
-            
+        private static Random rnd = new Random();
+        private static string ruleNumber;
+        public static int rndNumberShapes;
+        
+
         public Perception()
         {
-            
+
         }
 
-        public Perception(List<Rule> ruleList):base(ruleList)
+        public Perception(List<Rule> ruleList) : base(ruleList)
         {
 
         }
-        
+
 
         public static Perception deserializeXML()
         {
             // Lit le fichier "rulePerception.xml et le cast dans un objet perception"
             StreamReader reader = new StreamReader("rulePerception.xml");
-            Perception p = (Perception) new XmlSerializer(typeof(Perception)).Deserialize(reader);            
+            Perception p = (Perception)new XmlSerializer(typeof(Perception)).Deserialize(reader);
             reader.Close();
 
             return p;
@@ -65,13 +67,13 @@ namespace Projet_GenieLog
         //    new XmlSerializer(typeof(Perception)).Serialize(writer, p);
         //    writer.Close();
         //}
-        public static int [,] generateRandomArray() // méthode static pour pouvoir l'appeler dans FormPerception
+        public static int[,] generateRandomArray() // méthode static pour pouvoir l'appeler dans FormPerception
         {
             int[,] randomNumbers = new int[3, 4];
 
-            for (int i= 0; i<3; i++) // génère un tableau 3*4 d'entiers aléatoires
+            for (int i = 0; i < 3; i++) // génère un tableau 3*4 d'entiers aléatoires
             {
-                for (int j=0; j<4; j++)
+                for (int j = 0; j < 4; j++)
                 {
                     randomNumbers[i, j] = rnd.Next(0, 10);
                 }
@@ -84,16 +86,16 @@ namespace Projet_GenieLog
         public static void drawNumbers(PaintEventArgs e) // dessine des chiffres aléatoires 
         {
             int[,] myArray = generateRandomArray();
-            for (int i=0; i<3; i++)
+            for (int i = 0; i < 3; i++)
             {
-                for (int j=0; j<4; j++)
+                for (int j = 0; j < 4; j++)
                 {
-                    e.Graphics.DrawString(myArray[i,j].ToString(), new Font("Arial", 12), new SolidBrush(Color.Black), new PointF(43.0F + 105.0F*j, 43.0F + 95.0F *i));
+                    e.Graphics.DrawString(myArray[i, j].ToString(), new Font("Arial", 12), new SolidBrush(Color.Black), new PointF(43.0F + 105.0F * j, 43.0F + 95.0F * i));
                 }
-            }           
+            }
         }
 
-        public static void createColoredShape(int x, int y, int width, int height, string color, string shape,Form form) // permet de créer soit un rectangle soit un rond de couleur bleue ou jaune
+        public static void createColoredShape(int x, int y, int width, int height, string color, string shape, Form form) // permet de créer soit un rectangle soit un rond de couleur bleue ou jaune
         {
             SolidBrush blueBrush = new SolidBrush(Color.Blue);
             SolidBrush yellowBrush = new SolidBrush(Color.Yellow);
@@ -135,14 +137,13 @@ namespace Projet_GenieLog
         }
 
 
-        public static void generateShapes() // génère les formes aléatoirement en fonction de la règle
+        public static void drawShapes() // génère les formes aléatoirement en fonction de la règle
         {
             int nbr; //nbr aleatoire pour choisir la forme
             int color; // nbr aleatoire pour choisir la couleur
             int cpt = 0; // compteur de formes pour la règle choisie
-            int nbrShapes;
             //string ruleNumber = ruleNumber; // on appelle generateRule donc nouvel entier aleatoire :/
-            nbrShapes = rnd.Next(3, 5);  // 3 ou 4 formes max
+            rndNumberShapes = rnd.Next(3, 5);  // 3 ou 4 formes max
 
             for (int i = 1; i <= 3; i++) // on parcourt les emplacements des formes (3 lignes x 4 colonnes)
             {
@@ -158,7 +159,7 @@ namespace Projet_GenieLog
                             if (nbr == 1) //1 -> carré
                             {
                                 color = rnd.Next(0, 2);
-                                if (color == 0 || cpt == nbrShapes) // 0 -> bleu
+                                if (color == 0 || cpt == rndNumberShapes) // 0 -> bleu
                                 { createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Blue", "Rectangle", Form.ActiveForm); }
 
                                 else  // 1 -> jaune
@@ -193,7 +194,7 @@ namespace Projet_GenieLog
                             if (nbr == 1) //1 -> carré
                             {
                                 color = rnd.Next(0, 2);
-                                if (color == 1 || cpt == nbrShapes) // 1 -> jaune
+                                if (color == 1 || cpt == rndNumberShapes) // 1 -> jaune
                                 { createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Yellow", "Rectangle", Form.ActiveForm); }
                                 else  // 0 -> bleu
                                 {
@@ -242,7 +243,7 @@ namespace Projet_GenieLog
                             else
                             {
                                 color = rnd.Next(0, 2);
-                                if (color == 0 || cpt == nbrShapes)
+                                if (color == 0 || cpt == rndNumberShapes)
                                 { createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Blue", "Ellipse", Form.ActiveForm); }
                                 else
                                 {
@@ -275,9 +276,9 @@ namespace Projet_GenieLog
                             else
                             {
                                 color = rnd.Next(0, 2);
-                                if (color == 1 || cpt == nbrShapes)
+                                if (color == 1 || cpt == rndNumberShapes)
                                 {
-                                    createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Yellow", "Ellipse",Form.ActiveForm);
+                                    createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
                                 }
                                 else
                                 {
@@ -293,7 +294,8 @@ namespace Projet_GenieLog
 
                 }
             }
-        }
-    }
 
-}
+        }
+
+    }
+} 

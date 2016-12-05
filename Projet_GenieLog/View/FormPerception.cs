@@ -12,10 +12,12 @@ namespace Projet_GenieLog.View
 {
     public partial class FormPerception : Form
     {
+        
 
         public FormPerception()
         {
             InitializeComponent();
+            
 
         }
 
@@ -23,7 +25,7 @@ namespace Projet_GenieLog.View
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            Perception.generateShapes();
+            Perception.drawShapes();
             Perception.drawNumbers(e);
             timerPerception.Start();
 
@@ -40,15 +42,16 @@ namespace Projet_GenieLog.View
         {
             timerPerception.Stop();
             MyMessageBox mb = new MyMessageBox();
+            mb.displayAnswers();            
             mb.ShowDialog();           
             Invalidate(); // appeler cette méthode sinon bug d'affichage (appelle OnPaint) 
-
 
         }
 
         private void FormPerception_Shown(object sender, EventArgs e)
         {
-
-        }
+            
+        }       
+        
     }
 }
