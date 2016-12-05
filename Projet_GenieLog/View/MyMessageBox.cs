@@ -13,7 +13,7 @@ namespace Projet_GenieLog.View
     public partial class MyMessageBox : Form
     {
         private int nbrAnswer = Perception.rndNumberShapes;
-        public void displayAnswers()
+        public void setAnswerVisibility()
         {
             if (nbrAnswer == 4)
             {
