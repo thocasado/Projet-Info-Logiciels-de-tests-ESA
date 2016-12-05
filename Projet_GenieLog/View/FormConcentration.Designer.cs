@@ -40,11 +40,11 @@
             // labelConsigne
             // 
             this.labelConsigne.AutoSize = true;
-            this.labelConsigne.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.labelConsigne.Location = new System.Drawing.Point(222, 89);
-            this.labelConsigne.MaximumSize = new System.Drawing.Size(0, 530);
+            this.labelConsigne.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelConsigne.Location = new System.Drawing.Point(12, 59);
+            this.labelConsigne.MaximumSize = new System.Drawing.Size(500, 530);
             this.labelConsigne.Name = "labelConsigne";
-            this.labelConsigne.Size = new System.Drawing.Size(123, 29);
+            this.labelConsigne.Size = new System.Drawing.Size(85, 20);
             this.labelConsigne.TabIndex = 0;
             this.labelConsigne.Text = "consignes";
             // 
@@ -81,7 +81,7 @@
             // count
             // 
             this.count.AutoSize = true;
-            this.count.Location = new System.Drawing.Point(466, 439);
+            this.count.Location = new System.Drawing.Point(455, 407);
             this.count.Name = "count";
             this.count.Size = new System.Drawing.Size(67, 17);
             this.count.TabIndex = 10;
@@ -92,7 +92,7 @@
             this.groupBoxButton.Controls.Add(this.button3);
             this.groupBoxButton.Controls.Add(this.button2);
             this.groupBoxButton.Controls.Add(this.button1);
-            this.groupBoxButton.Location = new System.Drawing.Point(404, 192);
+            this.groupBoxButton.Location = new System.Drawing.Point(405, 153);
             this.groupBoxButton.Name = "groupBoxButton";
             this.groupBoxButton.Size = new System.Drawing.Size(117, 164);
             this.groupBoxButton.TabIndex = 11;

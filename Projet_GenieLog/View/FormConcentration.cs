@@ -16,13 +16,14 @@ namespace Projet_GenieLog.View
         int cptSerie=1;//compte à quelle serie on est
         int cpt = 0;//compte le nombre de bonnes réponses dans une série
         int cptTotal=0;//compte le nombre de bonnes réponses dans toute les séries mélangées
-
+        Concentration regle;
         string bonneRep="button3";
         string repUtilisateur;
 
         public FormConcentration()
         {
             InitializeComponent();
+            regle = Concentration.selectionRègle();
             lancerTest();
         }
 
@@ -31,13 +32,15 @@ namespace Projet_GenieLog.View
 
        public void lancerTest()
         {
-
+            Random rnd = new Random();
+            int a = rnd.Next(0, 5);
+            Concentration.createColoredShape("red", "Rond", 3, this);
+            Concentration.createPoint(a, this);
             groupBoxButton.Controls.Add(button1);
             groupBoxButton.Controls.Add(button2);
             groupBoxButton.Controls.Add(button3);
             
-            //labelConsigne.Text = pbm[compteur]._consigne;
-            //bonneRep = pbm[compteur]._bonneRep;
+            labelConsigne.Text = regle._consigne;
             compteur++;
             count.Text = compteur.ToString()+ "/10";
             if (compteur == 1)
@@ -122,5 +125,19 @@ namespace Projet_GenieLog.View
 
         
         }
+
+        /*private void FormConcentration_Paint(object sender, PaintEventArgs e)
+        {
+            Random rnd=new Random();
+            int a =rnd.Next(0,5);
+            Concentration.createColoredShape("red", "Rond", 3, this);
+            Concentration.createPoint(a, this);
+        }*/
+
+       
+
+       
+
+        
     }
 }
