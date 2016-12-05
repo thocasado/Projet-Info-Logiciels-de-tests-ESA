@@ -30,11 +30,11 @@ namespace Projet_GenieLog.View
         
 
 
-       public void lancerTest()
+       public void lancerTest()//voir pourquoi ca ne dessine pas au premier tour 
         {
             Random rnd = new Random();
             int a = rnd.Next(0, 5);
-            Concentration.createColoredShape("red", "Rond", 3, this);
+            Concentration.createColoredShape("red", "Rond", this);
             Concentration.createPoint(a, this);
             groupBoxButton.Controls.Add(button1);
             groupBoxButton.Controls.Add(button2);
@@ -42,7 +42,7 @@ namespace Projet_GenieLog.View
             
             labelConsigne.Text = regle._consigne;
             compteur++;
-            count.Text = compteur.ToString()+ "/10";
+            count.Text = compteur.ToString()+ "/5";
             if (compteur == 1)
             {
                 button1.Visible = false;

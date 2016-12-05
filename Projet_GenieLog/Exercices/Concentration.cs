@@ -17,7 +17,7 @@ namespace Projet_GenieLog
 {
     public class Concentration : Exercices
     {
-        
+        //voir comment faire un triangle
         public string _consigne { get; set; }
         public string _boutonForme { get; set; }
         public string _boutonCouleur { get; set; }
@@ -55,7 +55,7 @@ namespace Projet_GenieLog
 
         }
 
-        public static void createColoredShape(string color, string shape,int nbPoint, Form form) // permet de créer soit un rectangle soit un rond de couleur bleue ou jaune
+        public static void createColoredShape(string color, string shape, Form form) // permet de créer soit un rectangle soit un rond de couleur bleue ou jaune
         {
             int x = 129;//abs forme(fixe)
             int y = 229;//ord forme(fixe)
@@ -70,7 +70,7 @@ namespace Projet_GenieLog
 
             switch(color)
             {
-                case "blue":
+                case "Blue":
                 switch(shape)
                 {
                     case "Rectangle" :
@@ -92,7 +92,7 @@ namespace Projet_GenieLog
                 
                     
                 break;
-                case "yellow" :
+                case "Yellow" :
                 switch (shape)
                 {
                     case "Rectangle" :
@@ -113,7 +113,7 @@ namespace Projet_GenieLog
 
                 break;
                 
-                case "red" :
+                case "Red" :
                 switch (shape)
                 {
                     case "Rectangle" :
@@ -174,8 +174,162 @@ namespace Projet_GenieLog
             formGraphics.Dispose();
         }
 
-        public static void generateShape()
+        public static void generateShape(int compteur, Form form) 
         {
+            Random r = new Random();
+            string forme="";
+            string couleur="";
+            int nbPoints = 0; 
+            string[] valAux = new string[3];//tableau qui conserve les valeurs du tirage précédent pour les 3 paramètres.
+            int conserve = r.Next(1, 4); //premier random pour savoir quel paramètre on conserve.
+
+            if (compteur != 1)
+            {
+                switch (conserve)
+                {
+                    case 1:
+                        do
+                        {
+                            int rF = r.Next(1, 4);
+
+                            switch (rF)
+                            {
+                                case 1:
+                                    forme = "Rectangle";
+                                    break;
+                                case 2:
+                                    forme = "Rond";
+                                    break;
+                                case 3:
+                                    forme = "Triangle";
+                                    break;
+                            }
+                        }
+                        while (valAux[0] == forme);
+                        valAux[0] = forme;
+                        break;
+
+                    case 2:
+
+                        do
+                        {
+                            int rC = r.Next(1, 4);
+                            switch (rC)
+                            {
+                                case 1:
+                                    couleur = "Blue";
+                                    break;
+                                case 2:
+                                    couleur = "Yellow";
+                                    break;
+                                case 3:
+                                    couleur = "Red";
+                                    break;
+                            }
+                        }
+                        while (valAux[1] == couleur);
+                        valAux[1] = couleur;
+                        break;
+
+                    case 3:
+                        do
+                        {
+                            int rP = r.Next(0, 5);
+                            switch (rP)
+                            {
+                                case 1:
+                                    nbPoints = 1;
+                                    break;
+                                case 2:
+                                    nbPoints = 2;
+                                    break;
+                                case 3:
+                                    nbPoints = 3;
+                                    break;
+                                case 4:
+                                    nbPoints = 4;
+                                    break;
+                                default:
+                                    nbPoints = 0;
+                                    break;
+                            }
+                        }
+                        while (valAux[2] == nbPoints.ToString());
+                        valAux[2] = nbPoints.ToString();
+
+                        break;
+                }
+            }
+
+            else 
+            {
+                            int rF = r.Next(1, 4);
+
+                            switch (rF)
+                            {
+                                case 1:
+                                    forme = "Rectangle";
+                                    break;
+                                case 2:
+                                    forme = "Rond";
+                                    break;
+                                case 3:
+                                    forme = "Triangle";
+                                    break;
+                            }
+                        
+                        valAux[0] = forme;
+                       
+
+                        
+                            int rC = r.Next(1, 4);
+                            switch (rC)
+                            {
+                                case 1:
+                                    couleur = "Blue";
+                                    break;
+                                case 2:
+                                    couleur = "Yellow";
+                                    break;
+                                case 3:
+                                    couleur = "Red";
+                                    break;
+                            }
+                        
+                        valAux[1] = couleur;
+                       
+                     
+                            int rP = r.Next(0, 5);
+                            switch (rP)
+                            {
+                                case 1:
+                                    nbPoints = 1;
+                                    break;
+                                case 2:
+                                    nbPoints = 2;
+                                    break;
+                                case 3:
+                                    nbPoints = 3;
+                                    break;
+                                case 4:
+                                    nbPoints = 4;
+                                    break;
+                                default:
+                                    nbPoints = 0;
+                                    break;
+                            }
+                        
+                        valAux[2] = nbPoints.ToString();
+     
+                }
+
+            createColoredShape(couleur, forme, form);
+            createPoint(nbPoints, form);
+           
+                   
+
+
+
 
         }
     }
