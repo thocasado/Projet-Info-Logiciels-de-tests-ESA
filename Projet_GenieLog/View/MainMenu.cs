@@ -65,7 +65,7 @@ namespace Projet_GenieLog
         private void btnConcentration_Click(object sender, EventArgs e)
         {
             difficile = checkDifficulte();
-            View.FormConcentration f = new View.FormConcentration();//rajouter difficulte en paramètre
+            View.FormConcentration f = new View.FormConcentration(difficile);//rajouter difficulte en paramètre
             f.Show();
         }
 
