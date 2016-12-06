@@ -17,7 +17,7 @@ namespace Projet_GenieLog
 {
     public class Concentration : Exercices
     {
-        //voir comment faire un triangle
+        //voir comment effacer le dessin
         public string _consigne { get; set; }
         public string _boutonForme { get; set; }
         public string _boutonCouleur { get; set; }
@@ -25,7 +25,7 @@ namespace Projet_GenieLog
         
 
 
-        public Concentration(string consigne, string boutonF, string boutonC, string boutonNbP)
+        public Concentration(string consigne, string boutonF, string boutonNbP, string boutonC)
         {
             _consigne = consigne;
             _boutonForme = boutonF;
@@ -33,6 +33,10 @@ namespace Projet_GenieLog
             _boutonNbPoint = boutonNbP;
 
         }
+
+        
+
+
 
         public static Concentration selectionRègle()
         {
@@ -67,6 +71,7 @@ namespace Projet_GenieLog
             SolidBrush blackBrush= new SolidBrush(Color.Black);
 
             Graphics formGraphics = form.CreateGraphics();
+            Point[] triangle = new Point[] { new Point(129, 279), new Point(179, 279), new Point(154, 229) };//sommet gauche, sommet droite, sommet haut
 
             switch(color)
             {
@@ -83,12 +88,12 @@ namespace Projet_GenieLog
                         break;
 
                     case "Triangle":
-                        formGraphics.FillEllipse(blueBrush, new Rectangle(x, y, width, height)); //Chercher pour faire triangle
+                        formGraphics.FillPolygon(blueBrush,triangle);//(blueBrush, new Rectangle(x, y, width, height)); //Chercher pour faire triangle
                         break;
                 }
-                
-                    blueBrush.Dispose();
                     formGraphics.Dispose();
+                    blueBrush.Dispose();
+                    
                 
                     
                 break;
@@ -105,11 +110,12 @@ namespace Projet_GenieLog
                         break;
 
                     case "Triangle":
-                        formGraphics.FillEllipse(yellowBrush, new Rectangle(x, y, width, height)); //Chercher pour faire triangle
+                        formGraphics.FillPolygon(yellowBrush, triangle);
                         break;
                 }
-                    yellowBrush.Dispose();
+                    
                     formGraphics.Dispose();
+                    yellowBrush.Dispose();
 
                 break;
                 
@@ -126,11 +132,12 @@ namespace Projet_GenieLog
                         break;
 
                     case "Triangle":
-                        formGraphics.FillEllipse(redBrush, new Rectangle(x, y, width, height)); //Chercher pour faire triangle
+                        formGraphics.FillPolygon(redBrush, triangle); 
                         break;
                 }
-                    redBrush.Dispose();
+                    
                     formGraphics.Dispose();
+                    redBrush.Dispose();
                 break;
             }
 
@@ -174,20 +181,55 @@ namespace Projet_GenieLog
             formGraphics.Dispose();
         }
 
-        public static void generateShape(int compteur, Form form) 
+        public static string[] generateShape(int compteur,string []valAuxRep, Form form) //le tableau valAuxRep contient les paramètres de la forme précédente et la valeur du paramètre conservé
         {
             Random r = new Random();
             string forme="";
             string couleur="";
             int nbPoints = 0; 
-            string[] valAux = new string[3];//tableau qui conserve les valeurs du tirage précédent pour les 3 paramètres.
-            int conserve = r.Next(1, 4); //premier random pour savoir quel paramètre on conserve.
-
+            //string[] valAux = new string[3];//tableau qui conserve les valeurs du tirage précédent pour les 3 paramètres.
+            int conserve = r.Next(1, 4); //premier random pour savoir quel paramètre on conserve entre forme,couleur et nbPoint
+                                         //1=forme, 2= couleur 3=nbPoint  -> va nous permettre de savoir la bonne réponse.
+            // C'est ce que la fonction va renvoyer 
+            #region traitement des images suivants la première 
             if (compteur != 1)
             {
                 switch (conserve)
                 {
-                    case 1:
+                    case 1: // on conserve la forme donc on change les autres paramètres 
+                        do
+                        {
+                            int rC = r.Next(1, 4);
+                            switch (rC)
+                            {
+                                case 1:
+                                    couleur = "Blue";
+                                    break;
+                                case 2:
+                                    couleur = "Yellow";
+                                    break;
+                                case 3:
+                                    couleur = "Red";
+                                    break;
+                            }
+                        }
+                        while (valAuxRep[1] == couleur);
+                        valAuxRep[1] = couleur;
+
+                        do
+                        {
+                            int rP = r.Next(0, 5);
+                            nbPoints = rP;
+                        }
+                        while (valAuxRep[2] == nbPoints.ToString());
+                        valAuxRep[2] = nbPoints.ToString();
+
+                        
+                        break;
+                            
+
+                    case 2://on conserve la couleur donc on change les autres paramètres
+
                         do
                         {
                             int rF = r.Next(1, 4);
@@ -205,11 +247,39 @@ namespace Projet_GenieLog
                                     break;
                             }
                         }
-                        while (valAux[0] == forme);
-                        valAux[0] = forme;
+                        while (valAuxRep[0] == forme);
+                        valAuxRep[0] = forme;
+                        
+                        do
+                        {
+                            int rP = r.Next(0, 5);
+                            nbPoints = rP;
+                        }
+                        while (valAuxRep[2] == nbPoints.ToString());
+                        valAuxRep[2] = nbPoints.ToString();
                         break;
 
-                    case 2:
+                    case 3: //on conserve le nombre de points donc on change les autres paramètres
+                        
+                        do
+                        {
+                            int rF = r.Next(1, 4);
+
+                            switch (rF)
+                            {
+                                case 1:
+                                    forme = "Rectangle";
+                                    break;
+                                case 2:
+                                    forme = "Rond";
+                                    break;
+                                case 3:
+                                    forme = "Triangle";
+                                    break;
+                            }
+                        }
+                        while (valAuxRep[0] == forme);
+                        valAuxRep[0] = forme;
 
                         do
                         {
@@ -227,42 +297,16 @@ namespace Projet_GenieLog
                                     break;
                             }
                         }
-                        while (valAux[1] == couleur);
-                        valAux[1] = couleur;
-                        break;
-
-                    case 3:
-                        do
-                        {
-                            int rP = r.Next(0, 5);
-                            switch (rP)
-                            {
-                                case 1:
-                                    nbPoints = 1;
-                                    break;
-                                case 2:
-                                    nbPoints = 2;
-                                    break;
-                                case 3:
-                                    nbPoints = 3;
-                                    break;
-                                case 4:
-                                    nbPoints = 4;
-                                    break;
-                                default:
-                                    nbPoints = 0;
-                                    break;
-                            }
-                        }
-                        while (valAux[2] == nbPoints.ToString());
-                        valAux[2] = nbPoints.ToString();
-
+                        while (valAuxRep[1] == couleur);
+                        valAuxRep[1] = couleur;
                         break;
                 }
             }
-
+            #endregion
+            #region traitement première image
             else 
             {
+                            
                             int rF = r.Next(1, 4);
 
                             switch (rF)
@@ -278,7 +322,7 @@ namespace Projet_GenieLog
                                     break;
                             }
                         
-                        valAux[0] = forme;
+                        valAuxRep[0] = forme;
                        
 
                         
@@ -296,40 +340,23 @@ namespace Projet_GenieLog
                                     break;
                             }
                         
-                        valAux[1] = couleur;
+                        valAuxRep[1] = couleur;
                        
                      
                             int rP = r.Next(0, 5);
-                            switch (rP)
-                            {
-                                case 1:
-                                    nbPoints = 1;
-                                    break;
-                                case 2:
-                                    nbPoints = 2;
-                                    break;
-                                case 3:
-                                    nbPoints = 3;
-                                    break;
-                                case 4:
-                                    nbPoints = 4;
-                                    break;
-                                default:
-                                    nbPoints = 0;
-                                    break;
-                            }
+                            nbPoints = rP;
                         
-                        valAux[2] = nbPoints.ToString();
+                        valAuxRep[2] = nbPoints.ToString();
+                        
      
                 }
 
             createColoredShape(couleur, forme, form);
             createPoint(nbPoints, form);
+            #endregion 
+            valAuxRep[3] = conserve.ToString();
+            return valAuxRep;
            
-                   
-
-
-
 
         }
     }

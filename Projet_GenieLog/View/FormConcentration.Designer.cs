@@ -34,6 +34,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.count = new System.Windows.Forms.Label();
             this.groupBoxButton = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBoxButton.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +42,7 @@
             // 
             this.labelConsigne.AutoSize = true;
             this.labelConsigne.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelConsigne.Location = new System.Drawing.Point(12, 59);
+            this.labelConsigne.Location = new System.Drawing.Point(12, 60);
             this.labelConsigne.MaximumSize = new System.Drawing.Size(500, 530);
             this.labelConsigne.Name = "labelConsigne";
             this.labelConsigne.Size = new System.Drawing.Size(85, 20);
@@ -81,7 +82,7 @@
             // count
             // 
             this.count.AutoSize = true;
-            this.count.Location = new System.Drawing.Point(455, 407);
+            this.count.Location = new System.Drawing.Point(415, 433);
             this.count.Name = "count";
             this.count.Size = new System.Drawing.Size(67, 17);
             this.count.TabIndex = 10;
@@ -92,22 +93,33 @@
             this.groupBoxButton.Controls.Add(this.button3);
             this.groupBoxButton.Controls.Add(this.button2);
             this.groupBoxButton.Controls.Add(this.button1);
-            this.groupBoxButton.Location = new System.Drawing.Point(405, 153);
+            this.groupBoxButton.Location = new System.Drawing.Point(387, 157);
             this.groupBoxButton.Name = "groupBoxButton";
             this.groupBoxButton.Size = new System.Drawing.Size(117, 164);
             this.groupBoxButton.TabIndex = 11;
             this.groupBoxButton.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 470);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "label1";
             // 
             // FormConcentration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 497);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBoxButton);
-            this.Controls.Add(this.count);
             this.Controls.Add(this.labelConsigne);
+            this.Controls.Add(this.count);
             this.Name = "FormConcentration";
             this.Text = "FormConcentration";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormConcentration_Paint);
             this.groupBoxButton.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -122,5 +134,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label count;
         private System.Windows.Forms.GroupBox groupBoxButton;
+        private System.Windows.Forms.Label label1;
     }
 }
