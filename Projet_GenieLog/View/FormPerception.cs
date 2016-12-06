@@ -27,16 +27,16 @@ namespace Projet_GenieLog.View
             p.generateRandomArray();// on doit générer le tableau de valeurs avant de dessiner les formes
             p.drawShapes();
             p.drawNumbers(e); // on doit dessiner les chiffres après les formes sinon on ne les voit pas
-                     
-
-
+            timerPerception.Start();
+                    
         }
 
         private void FormPerception_Load(object sender, EventArgs e)
         {
-            timerPerception.Start();
+            
             string randomRule = Perception.generateRule();
             MessageBox.Show(randomRule);
+
         }
 
         private void timerPerception_Tick(object sender, EventArgs e)

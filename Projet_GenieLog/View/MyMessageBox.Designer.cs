@@ -64,6 +64,7 @@
             this.buttonValider.TabIndex = 2;
             this.buttonValider.Text = "Valider";
             this.buttonValider.UseVisualStyleBackColor = true;
+            this.buttonValider.Click += new System.EventHandler(this.buttonValider_Click);
             // 
             // label2MMB
             // 

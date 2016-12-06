@@ -13,6 +13,8 @@ namespace Projet_GenieLog.View
     public partial class MyMessageBox : Form
     {
         private int nbrAnswer = Perception.rndNumberShapes;
+        private Perception.Forme[,] arrayF = Perception.arrayFormes;
+        public int badAnswers;
         public void setAnswerVisibility()
         {
             if (nbrAnswer == 4)
@@ -33,5 +35,32 @@ namespace Projet_GenieLog.View
             
         }
 
+        public void setLabelText()
+        {
+            foreach(Label l in Controls)
+            {
+                foreach(Perception.Forme f in Perception.arrayFormes)
+                {
+                    switch (Perception.ruleNumber)
+                    {
+                        case "1":
+                            if (f.Color == "Yellow" && f.Shape == "Rectangle")
+                    }
+                }
+            }
+        }
+
+        public void getResults()
+        {
+            foreach(Label l in this.Controls)
+            {
+
+            }
+        }
+
+        private void buttonValider_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
