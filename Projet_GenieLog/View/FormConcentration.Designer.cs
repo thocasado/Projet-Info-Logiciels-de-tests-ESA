@@ -119,7 +119,7 @@
             this.Controls.Add(this.count);
             this.Name = "FormConcentration";
             this.Text = "FormConcentration";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormConcentration_Paint);
+            
             this.groupBoxButton.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -91,8 +91,9 @@ namespace Projet_GenieLog
                         formGraphics.FillPolygon(blueBrush,triangle);//(blueBrush, new Rectangle(x, y, width, height)); //Chercher pour faire triangle
                         break;
                 }
-                    formGraphics.Dispose();
+                    
                     blueBrush.Dispose();
+                    formGraphics.Dispose();
                     
                 
                     
@@ -114,8 +115,9 @@ namespace Projet_GenieLog
                         break;
                 }
                     
-                    formGraphics.Dispose();
+                    
                     yellowBrush.Dispose();
+                    formGraphics.Dispose();
 
                 break;
                 
@@ -136,8 +138,8 @@ namespace Projet_GenieLog
                         break;
                 }
                     
-                    formGraphics.Dispose();
                     redBrush.Dispose();
+                    formGraphics.Dispose();
                 break;
             }
 
@@ -351,8 +353,8 @@ namespace Projet_GenieLog
      
                 }
 
-            createColoredShape(couleur, forme, form);
-            createPoint(nbPoints, form);
+            //createColoredShape(couleur, forme, form);
+            //createPoint(nbPoints, form);
             #endregion 
             valAuxRep[3] = conserve.ToString();
             return valAuxRep;

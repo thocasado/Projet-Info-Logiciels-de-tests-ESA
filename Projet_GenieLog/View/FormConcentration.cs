@@ -11,6 +11,7 @@ namespace Projet_GenieLog.View
 {
     public partial class FormConcentration : Form
     {
+
         //reste à prendre en compte difficulte, traitement marche parfaitement, génération de dessins plantent, chercher commment effacer les dessins de l'image précédente
         int compteur =0;//compte à quel test on est d'une serie
         int cptSerie=1;//compte à quelle serie on est
@@ -30,140 +31,122 @@ namespace Projet_GenieLog.View
             lancerTest();
         }
 
-        
 
 
-       public void lancerTest()//voir pourquoi ca ne dessine pas au premier tour 
-        {
+
+         public void lancerTest()//voir pourquoi ca ne dessine pas au premier tour 
+          {
+              Invalidate();//permet d'effacer les dessins précédents pour éviter une superposition des formes
+              bonneRep = "button";//on va ajouter l'indice correspondant à BoutonReponse
+              groupBoxButton.Controls.Add(button1);
+              groupBoxButton.Controls.Add(button2);
+              groupBoxButton.Controls.Add(button3);
             
-            bonneRep = "button";//on va ajouter l'indice correspondant à BoutonReponse
-            groupBoxButton.Controls.Add(button1);
-            groupBoxButton.Controls.Add(button2);
-            groupBoxButton.Controls.Add(button3);
-            
-            labelConsigne.Text = regle._consigne;
-            compteur++;
-            count.Text = compteur.ToString()+ "/5";
-            if (compteur == 1)
-            {
-                button1.Visible = false;
-                button2.Visible = false;
-            }
-            else
-            {
-                button1.Visible = true;
-                button2.Visible = true;
-            }
+              labelConsigne.Text = regle._consigne;
+              compteur++;
+              count.Text = compteur.ToString()+ "/5";
+              if (compteur == 1)
+              {
+                  button1.Visible = false;
+                  button2.Visible = false;
+              }
+              else
+              {
+                  button1.Visible = true;
+                  button2.Visible = true;
+              }
+
+              valeurs = Concentration.generateShape(compteur,valeurs, this);// la génération des dessins se fait dans OnPaint, on récupère ici les paramètres necessaires
+              
 
             
 
-            valeurs = Concentration.generateShape(compteur,valeurs, this);
+              if (compteur != 1)
+              {
+                  switch (valeurs[3])
+                  {
+                      case "1"://c'est la forme qui est conservée
+                          bonneRep += regle._boutonForme;
+                          break;
+                      case "2"://c'est la couleur qui est conservée 
+                          bonneRep += regle._boutonCouleur;
+                          break;
+                      case "3"://c'est le nbDePoint 
+                          bonneRep += regle._boutonNbPoint;
+                          break;
+                  }
+              }
+              else
+              {
+                  bonneRep += "3";
+              }
             
-
-            if (compteur != 1)
-            {
-                switch (valeurs[3])
-                {
-                    case "1"://c'est la forme qui est conservée
-                        bonneRep += regle._boutonForme;
-                        break;
-                    case "2"://c'est la couleur qui est conservée 
-                        bonneRep += regle._boutonCouleur;
-                        break;
-                    case "3"://c'est le nbDePoint 
-                        bonneRep += regle._boutonNbPoint;
-                        break;
-                }
-            }
-            else
-            {
-                bonneRep += "3";
-            }
-            label1.Text = bonneRep;
-            MessageBox.Show("Forme: " + valeurs[0] + "\nCouleur: " + valeurs[1] + "\nbPoint: " + valeurs[2]);
-                    
+              label1.Text = bonneRep;
+              MessageBox.Show("Forme: " + valeurs[0] + "\nCouleur: " + valeurs[1] + "\nbPoint: " + valeurs[2]);
+                  
            
 
        
 
-        }
+          }
 
-        
 
-       /* private void afficheResultat()
-        {
-            repUtilisateur=((Button)(sender)).Text;
-            foreach (Button b in groupBoxButton.Controls)
-            {
-                if (rb.Checked == true)
-                {
-                    repUtilisateur = rb.Text;
-                }
-            }
 
-            if (repUtilisateur == bonneRep)
-            {
-                MessageBox.Show("Juste!");
-                cpt++;
 
-            }
-            else
-            {
-                MessageBox.Show("Faux\n" + bonneRep);
-            }
-            if (compteur != 10)
-            {
-                lancerTest();
-            }
-            else
-            {
-                MessageBox.Show("Vous avez eu un total de" + cpt + "/10 !");
-                this.Close();
-            }
-
-        }*/
 
         private void button_Click(object sender, EventArgs e)
         {
-            repUtilisateur=((Button)(sender)).Text;
-            if (bonneRep==repUtilisateur)
+            repUtilisateur = ((Button)(sender)).Text;
+            afficheResultat();
+
+        
+        }
+
+        private void afficheResultat()
+        {
+
+            if (bonneRep == repUtilisateur)
             {
                 cpt++;
             }
-            if(compteur!=5)
+            if (compteur != 5)
             {
                 lancerTest();
-                
-
             }
             else
             {
                 cptTotal += cpt;
-                if(cptSerie!=3)
+                if (cptSerie != 3)
                 {
-                    MessageBox.Show("Vous avez eu un total de" + cpt + "/5 ! à la serie "+cptSerie+"\n Prêt pour la suivante ?");
-                    compteur=0;
+                    MessageBox.Show("Vous avez eu un total de" + cpt + "/5 ! à la serie " + cptSerie + "\n Prêt pour la suivante ?");
+                    compteur = 0;
                     cptSerie++;
-                    cpt=0;
+                    cpt = 0;
                     lancerTest();
 
                 }
                 else
                 {
-                    MessageBox.Show("Vous avez eu un total de" + cpt + "/5 ! à la serie " + cptSerie );
-                    MessageBox.Show("Fin de l'exercice. Vous avez eu un total de "+cptTotal +"/ 15");
+                    MessageBox.Show("Vous avez eu un total de" + cpt + "/5 ! à la serie " + cptSerie);
+                    MessageBox.Show("Fin de l'exercice. Vous avez eu un total de " + cptTotal + "/ 15");
                     this.Close();
                 }
             }
 
-        
         }
 
-        /*private void FormConcentration_Paint(object sender, PaintEventArgs p)
+        
+
+        protected override void OnPaint(PaintEventArgs e)
         {
-           
-            
-        }*/
+
+            base.OnPaint(e);
+            int nbpoint = int.Parse(valeurs[2]);
+            Concentration.createColoredShape(valeurs[1], valeurs[0], this);
+            Concentration.createPoint(nbpoint, this);
+            //timerPerception.Start();*/
+
+        }
 
 
 
