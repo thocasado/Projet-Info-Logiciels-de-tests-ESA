@@ -24,15 +24,17 @@ namespace Projet_GenieLog.View
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
+            p.generateRandomArray();// on doit générer le tableau de valeurs avant de dessiner les formes
             p.drawShapes();
-            p.generateRandomArray(e);          
+            p.drawNumbers(e); // on doit dessiner les chiffres après les formes sinon on ne les voit pas
+                     
 
 
         }
 
         private void FormPerception_Load(object sender, EventArgs e)
         {
-            
+            timerPerception.Start();
             string randomRule = Perception.generateRule();
             MessageBox.Show(randomRule);
         }
@@ -49,7 +51,7 @@ namespace Projet_GenieLog.View
 
         private void FormPerception_Shown(object sender, EventArgs e)
         {
-            timerPerception.Start();
+            
         }       
         
     }

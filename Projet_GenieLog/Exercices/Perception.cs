@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
+using System.Diagnostics;
 
 namespace Projet_GenieLog
 {
@@ -21,14 +22,13 @@ namespace Projet_GenieLog
         private static string ruleNumber;
         public static int rndNumberShapes;
         public static int[,] rndNumbersTab = new int[3, 4];
-        private Forme[,] myArray = new Forme[3, 4];
+        public Forme[,] formArray = new Forme[3, 4];
         
 
         public Perception()
         {
-            
-        }
 
+        }
         public Perception(List<Rule> ruleList) : base(ruleList)
         {
             
@@ -40,9 +40,7 @@ namespace Projet_GenieLog
             // Lit le fichier "rulePerception.xml et le cast dans un objet perception"
             StreamReader reader = new StreamReader("rulePerception.xml");
             Perception p = (Perception)new XmlSerializer(typeof(Perception)).Deserialize(reader);
-            reader.Close();
-            
-
+            reader.Close();          
             return p;
 
         }
@@ -57,7 +55,6 @@ namespace Projet_GenieLog
             return rule;
         }
 
-
         //public static void generateXML()
         //{
         //    Perception p = new Perception();
@@ -70,21 +67,31 @@ namespace Projet_GenieLog
         //    new XmlSerializer(typeof(Perception)).Serialize(writer, p);
         //    writer.Close();
         //}
-        public int[,] generateRandomArray(PaintEventArgs e) // méthode static pour pouvoir l'appeler dans FormPerception, dessine des entiers aléatoires
+        public int[,] generateRandomArray() // génère le tableau d'entiers
         {            
 
             for (int i = 0; i < 3; i++) // génère un tableau 3*4 d'entiers aléatoires
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    rndNumbersTab[i, j] = rnd.Next(0, 10);
-                    e.Graphics.DrawString(rndNumbersTab[i, j].ToString(), new Font("Arial", 12), new SolidBrush(Color.Black), new PointF(43.0F + 105.0F * j, 43.0F + 95.0F * i));
-
+                    rndNumbersTab[i, j] = rnd.Next(0, 10);                    
                 }
             }
 
             return rndNumbersTab;
 
+        }
+
+        public void drawNumbers(PaintEventArgs e)// dessine les nombres 
+        {
+            for (int i =0; i<3; i++)
+            {
+                for (int j =0; j<4;j++)
+                {
+                    e.Graphics.DrawString(rndNumbersTab[i, j].ToString(), new Font("Arial", 12), new SolidBrush(Color.Black), new PointF(43.0F + 105.0F * j, 43.0F + 95.0F * i));
+
+                }
+            }
         }
 
 
@@ -136,11 +143,8 @@ namespace Projet_GenieLog
             int nbr; //nbr aleatoire pour choisir la forme
             int color; // nbr aleatoire pour choisir la couleur
             int cpt = 0; // compteur de formes pour la règle choisie
-            //string ruleNumber = ruleNumber; // on appelle generateRule donc nouvel entier aleatoire :/
-            rndNumberShapes = rnd.Next(3, 5);  // 3 ou 4 formes max
-            Forme [,] formTab = new Forme[3,4];           
-            
-
+            rndNumberShapes = rnd.Next(3, 5);  // 3 ou 4 formes max                     
+            Forme[,] array = new Forme[3, 4];
             for (int i = 0; i < 3; i++) // on parcourt les emplacements des formes (3 lignes x 4 colonnes)
             {
                 for (int j = 0; j < 4; j++)
@@ -158,14 +162,14 @@ namespace Projet_GenieLog
                                 if (color == 0 || cpt == rndNumberShapes) // 0 -> bleu
                                 {
                                     createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Rectangle", Form.ActiveForm);
-                                    formTab[i, j] = new Forme("Blue","Rectangle", rndNumbersTab[i, j], i, j); 
+                                    array[i, j] = new Forme("Blue","Rectangle", rndNumbersTab[i, j], i, j); 
 
                                 }
 
                                 else  // 1 -> jaune
                                 {
                                     createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
-                                    formTab[i, j] = new Forme("Yellow","Rectangle", rndNumbersTab[i, j], i, j);
+                                    array[i, j] = new Forme("Yellow","Rectangle", rndNumbersTab[i, j], i, j);
                                     cpt++;
                                 }
 
@@ -174,7 +178,7 @@ namespace Projet_GenieLog
                             else if (cpt < i+1)
                             {
                                 createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
-                                formTab[i, j] = new Forme("Yellow","Rectangle", rndNumbersTab[i, j], i, j);
+                                array[i, j] = new Forme("Yellow","Rectangle", rndNumbersTab[i, j], i, j);
                                 cpt++;
                             }
                             else
@@ -183,12 +187,12 @@ namespace Projet_GenieLog
                                 if (color == 0)
                                 {
                                     createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Ellipse", Form.ActiveForm);
-                                    formTab[i, j] = new Forme("Blue","Ellipse", rndNumbersTab[i, j], i, j);
+                                    array[i, j] = new Forme("Blue","Ellipse", rndNumbersTab[i, j], i, j);
                                 }
                                 else
                                 {
                                     createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
-                                    formTab[i, j] = new Forme("Yellow","Ellipse", rndNumbersTab[i, j], i, j);
+                                    array[i, j] = new Forme("Yellow","Ellipse", rndNumbersTab[i, j], i, j);
                                 }
 
                             }
@@ -203,12 +207,12 @@ namespace Projet_GenieLog
                                 if (color == 1 || cpt == rndNumberShapes) // 1 -> jaune
                                 {
                                     createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
-                                    formTab[i, j] = new Forme("Yellow", "Rectangle", rndNumbersTab[i, j], i, j);
+                                    array[i, j] = new Forme("Yellow", "Rectangle", rndNumbersTab[i, j], i, j);
                                 }
                                 else  // 0 -> bleu
                                 {
                                     createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Rectangle", Form.ActiveForm);
-                                    formTab[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], i, j);
+                                    array[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], i, j);
                                     cpt++;
                                 }
 
@@ -216,7 +220,7 @@ namespace Projet_GenieLog
                             else if (cpt < i+1)
                             {
                                 createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Rectangle", Form.ActiveForm);
-                                formTab[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], i, j);
+                                array[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], i, j);
                                 cpt++;
                             }
                             else
@@ -225,12 +229,12 @@ namespace Projet_GenieLog
                                 if (color == 0)
                                 {
                                     createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Ellipse", Form.ActiveForm);
-                                    formTab[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], i, j);
+                                    array[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], i, j);
                                 }
                                 else
                                 {
                                     createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
-                                    formTab[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], i, j);
+                                    array[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], i, j);
                                 }
 
                             }
@@ -245,19 +249,19 @@ namespace Projet_GenieLog
                                 if (color == 0) // 0 -> bleu
                                 {
                                     createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Rectangle", Form.ActiveForm);
-                                    formTab[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], i, j);
+                                    array[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], i, j);
                                 }
                                 else  // 1 -> jaune
                                 {
                                     createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
-                                    formTab[i, j] = new Forme("Yellow", "Rectangle", rndNumbersTab[i, j], i, j);
+                                    array[i, j] = new Forme("Yellow", "Rectangle", rndNumbersTab[i, j], i, j);
                                 }
 
                             }
                             else if (cpt < i+1)
                             {
                                 createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
-                                formTab[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], i, j);
+                                array[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], i, j);
                                 cpt++;
                             }
                             else
@@ -266,12 +270,12 @@ namespace Projet_GenieLog
                                 if (color == 0 || cpt == rndNumberShapes)
                                 {
                                     createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Ellipse", Form.ActiveForm);
-                                    formTab[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], i, j);
+                                    array[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], i, j);
                                 }
                                 else
                                 {
                                     createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
-                                    formTab[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], i, j);
+                                    array[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], i, j);
                                     cpt++;
                                 }
 
@@ -287,19 +291,19 @@ namespace Projet_GenieLog
                                 if (color == 0) // 0 -> bleu
                                 {
                                     createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Rectangle", Form.ActiveForm);
-                                    formTab[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], i, j);
+                                    array[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], i, j);
                                 }
                                 else  // 1 -> jaune
                                 {
                                     createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
-                                    formTab[i, j] = new Forme("Yellow", "Rectangle", rndNumbersTab[i, j], i, j);
+                                    array[i, j] = new Forme("Yellow", "Rectangle", rndNumbersTab[i, j], i, j);
                                 }
-
+                                
                             }
                             else if (cpt < i+1)
                             {
                                 createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Ellipse", Form.ActiveForm);
-                                formTab[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], i, j);
+                                array[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], i, j);
                                 cpt++;
                             }
                             else
@@ -308,12 +312,12 @@ namespace Projet_GenieLog
                                 if (color == 1 || cpt == rndNumberShapes)
                                 {
                                     createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
-                                    formTab[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], i, j);
+                                    array[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], i, j);
                                 }
                                 else
                                 {
                                     createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Ellipse", Form.ActiveForm);
-                                    formTab[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], i, j);
+                                    array[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], i, j);
                                     cpt++;
 
                                 }
@@ -324,11 +328,13 @@ namespace Projet_GenieLog
                     }
 
                 }
+                
             }
+            
 
         }
 
-        internal class Forme
+        public class Forme
         {
             private string Color { get; set; }
             private string Shape { get; set; }
@@ -336,6 +342,10 @@ namespace Projet_GenieLog
             private int PositionX { get; set; }
             private int PositionY { get; set; }
 
+            public Forme()
+            {
+
+            }
             public Forme(string color, string shape, int value, int posX, int posY)
             {
                 Color = color;
@@ -345,6 +355,10 @@ namespace Projet_GenieLog
                 PositionY = posY;
             }
 
+            public override string ToString()
+            {
+                return Value.ToString();
+            }
         }
 
     }
