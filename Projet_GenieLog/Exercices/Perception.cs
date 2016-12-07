@@ -23,7 +23,8 @@ namespace Projet_GenieLog
         public static int rndNumberShapes;
         public static int[,] rndNumbersTab = new int[3, 4];
         public static Forme[,] arrayFormes;
-        private char[,] arrayLetters = new char[3, 4] { { 'A', 'B', 'C', 'D' }, { 'E', 'F', 'G', 'H' }, { 'I', 'J', 'K', 'L' } };
+        public static List<Forme> listFormes = new List<Forme>();
+        private string[,] arrayLetters = new string[3, 4] { { "A", "B", "C", "D" }, { "E", "F", "G", "H" }, { "I", "J", "K", "L" } };
 
 
         public Perception()
@@ -83,242 +84,260 @@ namespace Projet_GenieLog
         }
 
 
-        public static void createColoredShape(int x, int y, int width, int height, string color, string shape, Form form) // permet de créer soit un rectangle soit un rond de couleur bleue ou jaune
+        public static void createColoredShape(Forme f, Form form) // permet de créer soit un rectangle soit un rond de couleur bleue ou jaune
         {
+            int width = 50;
+            int height = 50;
             SolidBrush blueBrush = new SolidBrush(Color.Blue);
             SolidBrush yellowBrush = new SolidBrush(Color.Yellow);
             Graphics formGraphics = form.CreateGraphics();           
-
-            if (color == "Blue")
+            
+            if (f.Color == "Blue")
             {
-                if (shape == "Rectangle")
+                if (f.Shape == "Rectangle")
                 {
-                    formGraphics.FillRectangle(blueBrush, new Rectangle(x, y, width, height));
-                    blueBrush.Dispose();
-                    formGraphics.Dispose();
+                    formGraphics.FillRectangle(blueBrush, new Rectangle(f.PositionX, f.PositionY, width, height));                   
                 }
 
                 else
                 {
-                    formGraphics.FillEllipse(blueBrush, new Rectangle(x, y, width, height));
-                    blueBrush.Dispose();
-                    formGraphics.Dispose();
+                    formGraphics.FillEllipse(blueBrush, new Rectangle(f.PositionX, f.PositionY, width, height));
+                    
                 }
+                blueBrush.Dispose();
+                formGraphics.Dispose();
             }
 
             else
             {
-                if (shape == "Rectangle")
+                if (f.Shape == "Rectangle")
                 {
-                    formGraphics.FillRectangle(yellowBrush, new Rectangle(x, y, width, height));
-                    yellowBrush.Dispose();
-                    formGraphics.Dispose();
+                    formGraphics.FillRectangle(yellowBrush, new Rectangle(f.PositionX, f.PositionY, width, height));
+                    
                 }
 
                 else
                 {
-                    formGraphics.FillEllipse(yellowBrush, new Rectangle(x, y, width, height));
-                    yellowBrush.Dispose();
-                    formGraphics.Dispose();
+                    formGraphics.FillEllipse(yellowBrush, new Rectangle(f.PositionX, f.PositionY, width, height));                   
                     
                 }
+                yellowBrush.Dispose();
+                formGraphics.Dispose();
+
             }
         }
 
 
-        public void drawShapes() // génère les formes aléatoirement en fonction de la règle
+        public List<Forme> drawShapes() // génère les formes aléatoirement en fonction de la règle
         {
             int nbr; //nbr aleatoire pour choisir la forme
             int color; // nbr aleatoire pour choisir la couleur
             int cpt = 0; // compteur de formes pour la règle choisie
             rndNumberShapes = rnd.Next(3, 5);  // 3 ou 4 formes max                     
             arrayFormes = new Forme[3, 4];
-            for (int i = 0; i < 3; i++) // on parcourt les emplacements des formes (3 lignes x 4 colonnes)
+            while (cpt < rndNumberShapes)
             {
-                for (int j = 0; j < 4; j++)
+                for (int i = 0; i < 3; i++) // on parcourt les emplacements des formes (3 lignes x 4 colonnes)
                 {
-
-                    switch (ruleNumber)
+                    for (int j = 0; j < 4; j++)
                     {
 
-                        case "1": // l'utilisateur doit regarder les carrés jaunes
-                        case "Regle1":
-                            nbr = rnd.Next(1, 3);
-                            if (nbr == 1) //1 -> carré
-                            {
-                                color = rnd.Next(0, 2);
-                                if (color == 0 || cpt == rndNumberShapes) // 0 -> bleu
+                        switch (ruleNumber)
+                        {
+
+                            case "1": // l'utilisateur doit regarder les carrés jaunes
+                            case "Regle1":
+                                nbr = rnd.Next(1, 3);
+                                if (nbr == 1) //1 -> carré
                                 {
-                                    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Rectangle", Form.ActiveForm);
-                                    arrayFormes[i, j] = new Forme("Blue","Rectangle", rndNumbersTab[i, j], i, j,arrayLetters[i,j]); 
+                                    color = rnd.Next(0, 2);
+                                    if (color == 0 || cpt == rndNumberShapes) // 0 -> bleu
+                                    {
+                                        //createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Rectangle", Form.ActiveForm);
+                                        arrayFormes[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);
+
+                                    }
+
+                                    else  // 1 -> jaune
+                                    {
+                                        //createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
+                                        arrayFormes[i, j] = new Forme("Yellow", "Rectangle", rndNumbersTab[i, j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);
+                                        listFormes.Add(new Forme("Yellow", "Rectangle", rndNumbersTab[i, j], i, j, arrayLetters[i, j]));
+                                        cpt++;
+                                    }
 
                                 }
 
-                                else  // 1 -> jaune
-                                {
-                                    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
-                                    arrayFormes[i, j] = new Forme("Yellow","Rectangle", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
-                                    cpt++;
-                                }
-
-                            }
-
-                            else if (cpt < i+1)
-                            {
-                                createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
-                                arrayFormes[i, j] = new Forme("Yellow","Rectangle", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
-                                cpt++;
-                            }
-                            else
-                            {
-                                color = rnd.Next(0, 2);
-                                if (color == 0)
-                                {
-                                    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Ellipse", Form.ActiveForm);
-                                    arrayFormes[i, j] = new Forme("Blue","Ellipse", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
-                                }
+                                //else if (cpt < i + 1)
+                                //{
+                                //    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
+                                //    arrayFormes[i, j] = new Forme("Yellow", "Rectangle", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
+                                //    listFormes.Add(new Forme("Yellow", "Rectangle", rndNumbersTab[i, j], i, j, arrayLetters[i, j]));
+                                //    cpt++;
+                                //}
                                 else
                                 {
-                                    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
-                                    arrayFormes[i, j] = new Forme("Yellow","Ellipse", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
-                                }
+                                    color = rnd.Next(0, 2);
+                                    if (color == 0)
+                                    {
+                                        //createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Ellipse", Form.ActiveForm);
+                                        arrayFormes[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);
+                                    }
+                                    else
+                                    {
+                                        //createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
+                                        arrayFormes[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);
+                                    }
 
-                            }
-                            break;
+                                }
+                                break;
 
-                        case "2": // L'utilisateur doit regarder les carrés bleus
-                        case "Regle2":
-                            nbr = rnd.Next(1, 3);
-                            if (nbr == 1) //1 -> carré
-                            {
-                                color = rnd.Next(0, 2);
-                                if (color == 1 || cpt == rndNumberShapes) // 1 -> jaune
+                            case "2": // L'utilisateur doit regarder les carrés bleus
+                            case "Regle2":
+                                nbr = rnd.Next(1, 3);
+                                if (nbr == 1) //1 -> carré
                                 {
-                                    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
-                                    arrayFormes[i, j] = new Forme("Yellow", "Rectangle", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
-                                }
-                                else  // 0 -> bleu
-                                {
-                                    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Rectangle", Form.ActiveForm);
-                                    arrayFormes[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
-                                    cpt++;
-                                }
+                                    color = rnd.Next(0, 2);
+                                    if (color == 1 || cpt == rndNumberShapes) // 1 -> jaune
+                                    {
+                                        //createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
+                                        arrayFormes[i, j] = new Forme("Yellow", "Rectangle", rndNumbersTab[i, j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);
+                                    }
+                                    else  // 0 -> bleu
+                                    {
+                                        //createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Rectangle", Form.ActiveForm);
+                                        arrayFormes[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);
+                                        listFormes.Add(new Forme("Blue", "Rectangle", rndNumbersTab[i, j], i, j, arrayLetters[i, j]));
 
-                            }
-                            else if (cpt < i+1)
-                            {
-                                createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Rectangle", Form.ActiveForm);
-                                arrayFormes[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
-                                cpt++;
-                            }
-                            else
-                            {
-                                color = rnd.Next(0, 2);
-                                if (color == 0)
-                                {
-                                    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Ellipse", Form.ActiveForm);
-                                    arrayFormes[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
+                                        cpt++;
+                                    }
+
                                 }
+                                //else if (cpt < i + 1)
+                                //{
+                                //    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Rectangle", Form.ActiveForm);
+                                //    arrayFormes[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
+                                //    listFormes.Add(new Forme("Blue", "Rectangle", rndNumbersTab[i, j], i, j, arrayLetters[i, j]));
+                                //    cpt++;
+                                //}
                                 else
                                 {
-                                    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
-                                    arrayFormes[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
-                                }
+                                    color = rnd.Next(0, 2);
+                                    if (color == 0)
+                                    {
+                                        //createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Ellipse", Form.ActiveForm);
+                                        arrayFormes[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);
+                                    }
+                                    else
+                                    {
+                                        //createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
+                                        arrayFormes[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);
+                                    }
 
-                            }
-                            break;
+                                }
+                                break;
 
-                        case "3": // L'utilisateur doit regarder les ronds jaunes
-                        case "Regle3":
-                            nbr = rnd.Next(1, 3);
-                            if (nbr == 1) //1 -> carré
-                            {
-                                color = rnd.Next(0, 2);
-                                if (color == 0) // 0 -> bleu
+                            case "3": // L'utilisateur doit regarder les ronds jaunes
+                            case "Regle3":
+                                nbr = rnd.Next(1, 3);
+                                if (nbr == 1) //1 -> carré
                                 {
-                                    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Rectangle", Form.ActiveForm);
-                                    arrayFormes[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
-                                }
-                                else  // 1 -> jaune
-                                {
-                                    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
-                                    arrayFormes[i, j] = new Forme("Yellow", "Rectangle", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
-                                }
+                                    color = rnd.Next(0, 2);
+                                    if (color == 0) // 0 -> bleu
+                                    {
+                                        //createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Rectangle", Form.ActiveForm);
+                                        arrayFormes[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);
+                                    }
+                                    else  // 1 -> jaune
+                                    {
+                                        //createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
+                                        arrayFormes[i, j] = new Forme("Yellow", "Rectangle", rndNumbersTab[i, j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);
+                                    }
 
-                            }
-                            else if (cpt < i+1)
-                            {
-                                createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
-                                arrayFormes[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
-                                cpt++;
-                            }
-                            else
-                            {
-                                color = rnd.Next(0, 2);
-                                if (color == 0 || cpt == rndNumberShapes)
-                                {
-                                    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Ellipse", Form.ActiveForm);
-                                    arrayFormes[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
                                 }
+                                //else if (cpt < i + 1)
+                                //{
+                                //    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
+                                //    arrayFormes[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
+                                //    listFormes.Add(new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], i, j, arrayLetters[i, j]));
+                                //    cpt++;
+                                //}
                                 else
                                 {
-                                    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
-                                    arrayFormes[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
-                                    cpt++;
-                                }
+                                    color = rnd.Next(0, 2);
+                                    if (color == 0 || cpt == rndNumberShapes)
+                                    {
+                                        //createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Ellipse", Form.ActiveForm);
+                                        arrayFormes[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);
+                                    }
+                                    else
+                                    {
+                                        //createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
+                                        arrayFormes[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);
+                                        listFormes.Add(new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], i, j, arrayLetters[i, j]));
 
-                            }
-                            break;
+                                        cpt++;
+                                    }
 
-                        case "4": // L'utilisateur doit regarder les ronds bleus
-                        case "Regle4":
-                            nbr = rnd.Next(1, 3);
-                            if (nbr == 1) //1 -> carré
-                            {
-                                color = rnd.Next(0, 2);
-                                if (color == 0) // 0 -> bleu
-                                {
-                                    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Rectangle", Form.ActiveForm);
-                                    arrayFormes[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
                                 }
-                                else  // 1 -> jaune
+                                break;
+
+                            case "4": // L'utilisateur doit regarder les ronds bleus
+                            case "Regle4":
+                                nbr = rnd.Next(1, 3);
+                                if (nbr == 1) //1 -> carré
                                 {
-                                    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
-                                    arrayFormes[i, j] = new Forme("Yellow", "Rectangle", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
+                                    color = rnd.Next(0, 2);
+                                    if (color == 0) // 0 -> bleu
+                                    {
+                                        //createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Rectangle", Form.ActiveForm);
+                                        arrayFormes[i, j] = new Forme("Blue", "Rectangle", rndNumbersTab[i, j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);
+                                    }
+                                    else  // 1 -> jaune
+                                    {
+                                        //createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
+                                        arrayFormes[i, j] = new Forme("Yellow", "Rectangle", rndNumbersTab[i, j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);
+                                    }
+
                                 }
-                                
-                            }
-                            else if (cpt < i+1)
-                            {
-                                createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Ellipse", Form.ActiveForm);
-                                arrayFormes[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
-                                cpt++;
-                            }
-                            else
-                            {
-                                color = rnd.Next(0, 2);
-                                if (color == 1 || cpt == rndNumberShapes)
-                                {
-                                    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
-                                    arrayFormes[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
-                                }
+                                //else if (cpt < i + 1)
+                                //{
+                                //    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Ellipse", Form.ActiveForm);
+                                //    arrayFormes[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
+                                //    listFormes.Add(new Forme("Blue", "Ellipse", rndNumbersTab[i, j], i, j, arrayLetters[i, j]));
+                                //    cpt++;
+                                //}
                                 else
                                 {
-                                    createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Ellipse", Form.ActiveForm);
-                                    arrayFormes[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], i, j, arrayLetters[i, j]);
-                                    cpt++;
+                                    color = rnd.Next(0, 2);
+                                    if (color == 1 || cpt == rndNumberShapes)
+                                    {
+                                        //createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
+                                        arrayFormes[i, j] = new Forme("Yellow", "Ellipse", rndNumbersTab[i, j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);
+                                    }
+                                    else
+                                    {
+                                        //createColoredShape(25 + 105 * j, 30 + 95 * i, 50, 50, "Blue", "Ellipse", Form.ActiveForm);
+                                        arrayFormes[i, j] = new Forme("Blue", "Ellipse", rndNumbersTab[i, j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);
+                                        listFormes.Add(new Forme("Blue", "Ellipse", rndNumbersTab[i, j], i, j, arrayLetters[i, j]));
+                                        cpt++;
+
+                                    }
 
                                 }
+                                break;
 
-                            }
-                            break;
+
+                        }
 
                     }
 
                 }
-                
             }
+
             
+            //Debug.WriteLine(listFormes[0] + " " + listFormes[1] + " " + listFormes[2]);
+            return listFormes;            
 
         }
 
@@ -329,13 +348,13 @@ namespace Projet_GenieLog
             public int Value { get; set; }
             public int PositionX { get; set; }
             public int PositionY { get; set; }
-            public char Letter { get; set; }
+            public string Letter { get; set; }
 
             public Forme()
             {
 
             }
-            public Forme(string color, string shape, int value, int posX, int posY, char letter)
+            public Forme(string color, string shape, int value, int posX, int posY, string letter)
             {
                 Color = color;
                 Shape = shape;
@@ -346,8 +365,9 @@ namespace Projet_GenieLog
             }
 
             public override string ToString()
-            {               
-                return Value.ToString();
+            {
+                string ch = "forme:" + Shape + " color:" + Color + " value:" + Value + " letter: " + Letter;
+                return ch;
             }
         }
 

@@ -12,11 +12,16 @@ namespace Projet_GenieLog.View
 {
     public partial class FormPerception : Form
     {
+        MyMessageBox mb = new MyMessageBox();
         Perception p = new Perception();
 
         public FormPerception()
         {
+
             InitializeComponent();
+            string randomRule = Perception.generateRule();
+            MessageBox.Show(randomRule);
+            lancerTest();
             
         }
 
@@ -24,30 +29,43 @@ namespace Projet_GenieLog.View
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            p.generateRandomArray();// on doit générer le tableau de valeurs avant de dessiner les formes
-            p.drawShapes();
+            for (int i=0; i<3;i++)
+            {
+                for (int j=0;j<4;j++)
+                {
+                    Perception.createColoredShape(Perception.arrayFormes[i, j], this);
+                }
+            }
             p.drawNumbers(e); // on doit dessiner les chiffres après les formes sinon on ne les voit pas
             timerPerception.Start();
+            //var test = Perception.listFormes;
+
                     
         }
 
-        private void FormPerception_Load(object sender, EventArgs e)
+        public void lancerTest()
         {
-            
-            string randomRule = Perception.generateRule();
-            MessageBox.Show(randomRule);
-
+            p.generateRandomArray();// on doit générer le tableau de valeurs avant de dessiner les formes
+            p.drawShapes();
         }
+
+        //private void FormPerception_Load(object sender, EventArgs e)
+        //{
+            
+        //    string randomRule = Perception.generateRule();
+        //    MessageBox.Show(randomRule);
+
+        //}
 
         private void timerPerception_Tick(object sender, EventArgs e)
         {
             timerPerception.Stop();
-            MyMessageBox mb = new MyMessageBox();
+            
             mb.setAnswerVisibility();
             mb.setLabelText();
             mb.ShowDialog();
-                
-            Invalidate(); // appeler cette méthode sinon bug d'affichage (appelle OnPaint) 
+
+            Refresh(); // appeler cette méthode sinon bug d'affichage (appelle OnPaint) 
 
         }
 

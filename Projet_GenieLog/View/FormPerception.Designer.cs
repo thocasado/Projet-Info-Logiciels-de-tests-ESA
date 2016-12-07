@@ -180,7 +180,7 @@
             this.Name = "FormPerception";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Test de perception";
-            this.Load += new System.EventHandler(this.FormPerception_Load);
+            //this.Load += new System.EventHandler(this.FormPerception_Load);
             this.Shown += new System.EventHandler(this.FormPerception_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
