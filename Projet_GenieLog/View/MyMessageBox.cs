@@ -13,7 +13,6 @@ namespace Projet_GenieLog.View
     public partial class MyMessageBox : Form
     {
         private int nbrAnswer = Perception.rndNumberShapes;
-        private Perception.Forme[,] arrayF = Perception.arrayFormes;
         public int badAnswers;
         public void setAnswerVisibility()
         {
@@ -37,25 +36,123 @@ namespace Projet_GenieLog.View
 
         public void setLabelText()
         {
-            foreach(Label l in Controls)
+            int cpti = 0;
+            int cptj = 0;
+            foreach (Control c in Controls)
             {
-                foreach(Perception.Forme f in Perception.arrayFormes)
+                if (c is Label)
                 {
-                    switch (Perception.ruleNumber)
-                    {
-                        case "1":
-                            if (f.Color == "Yellow" && f.Shape == "Rectangle")
+                    
+                    bool keepGoing = true;
+                    for (int i =cpti; i<3 && keepGoing ;i++)
+                    { 
+                        for (int j=cptj; j<4 && keepGoing ;j++)
+                        {
+                            switch (Perception.ruleNumber)
+                            {
+                                case "1":
+                                    if (Perception.arrayFormes[cpti,cptj].Color == "Yellow" && Perception.arrayFormes[cpti, cptj].Shape == "Rectangle")
+                                    {
+                                        c.Text = Perception.arrayFormes[cpti, cptj].Letter.ToString();
+                                        keepGoing = false;
+                                    }
+                                    else
+                                    {
+                                        cptj++;
+                                    }
+                                    break;
+
+                                case "2":
+                                    if (Perception.arrayFormes[cpti, cptj].Color == "Blue" && Perception.arrayFormes[cpti, cptj].Shape == "Rectangle")
+                                    {
+                                        c.Text = Perception.arrayFormes[cpti, cptj].Letter.ToString();
+                                        keepGoing = false;
+                                    }
+                                    else
+                                    {
+                                        cptj++;
+                                    }
+                                    break;
+
+                                case "3":
+                                    if (Perception.arrayFormes[cpti, cptj].Color == "Yellow" && Perception.arrayFormes[cpti, cptj].Shape == "Ellipse")
+                                    {
+                                        c.Text = Perception.arrayFormes[cpti, cptj].Letter.ToString();
+                                        keepGoing = false;
+                                    }
+                                    else
+                                    {
+                                        cptj++;
+                                    }
+                                    break;
+
+                                case "4":
+                                    if (Perception.arrayFormes[cpti, cptj].Color == "Yellow" && Perception.arrayFormes[cpti, cptj].Shape == "Ellipse")
+                                    {
+                                        c.Text = Perception.arrayFormes[cpti, cptj].Letter.ToString();
+                                        keepGoing = false;
+                                    }
+                                    else
+                                    {
+                                        cptj++;
+                                    }
+                                    break;
+                                default: break;
+
+                            }
+                            cptj++;
+                            
+                        }
+                        
+                        cpti++;
                     }
+                    //foreach (Perception.Forme f in Perception.arrayFormes)
+                    //{
+                    //    switch (Perception.ruleNumber)
+                    //    {
+                    //        case "1":
+                    //            if (f.Color == "Yellow" && f.Shape == "Rectangle")
+                    //            {
+                    //                c.Text = f.Letter.ToString();
+                    //            }
+                    //            break;
+
+                    //        case "2":
+                    //            if (f.Color == "Blue" && f.Shape == "Rectangle")
+                    //            {
+                    //                c.Text = f.Letter.ToString();
+                    //            }
+                    //            break;
+
+                    //        case "3":
+                    //            if (f.Color == "Yellow" && f.Shape == "Ellipse")
+                    //            {
+                    //                c.Text = f.Letter.ToString();
+                    //            }
+                    //            break;
+
+                    //        case "4":
+                    //            if (f.Color == "Yellow" && f.Shape == "Ellipse")
+                    //            {
+                    //                c.Text = f.Letter.ToString();
+                    //            }
+                    //            break;
+
+                    //    }
+                        
+                    //}
+                
                 }
             }
         }
 
+
         public void getResults()
         {
-            foreach(Label l in this.Controls)
-            {
-
-            }
+            //foreach(TextBox t in this.Controls)
+            //{
+            //    if (t.Visible == true && t.Text == )
+            //}
         }
 
         private void buttonValider_Click(object sender, EventArgs e)

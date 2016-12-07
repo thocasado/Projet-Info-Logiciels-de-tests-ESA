@@ -43,8 +43,10 @@ namespace Projet_GenieLog.View
         {
             timerPerception.Stop();
             MyMessageBox mb = new MyMessageBox();
-            mb.setAnswerVisibility();            
-            mb.ShowDialog();           
+            mb.setAnswerVisibility();
+            mb.setLabelText();
+            mb.ShowDialog();
+                
             Invalidate(); // appeler cette méthode sinon bug d'affichage (appelle OnPaint) 
 
         }
