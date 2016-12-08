@@ -125,6 +125,7 @@
             this.radio_difficile.TabIndex = 6;
             this.radio_difficile.Text = "Dfficile";
             this.radio_difficile.UseVisualStyleBackColor = true;
+            this.radio_difficile.CheckedChanged += new System.EventHandler(this.radio_difficile_CheckedChanged);
             // 
             // label_difficulte
             // 

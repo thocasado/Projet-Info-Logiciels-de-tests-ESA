@@ -10,262 +10,220 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Xml;
-using System.Xml.Serialization;
+using System.Xml.Linq;
 
 namespace Projet_GenieLog
 {
-    [Serializable()]
+    
     public class Perception : Exercices
     {
-            
+        public static Forme[] tableauFormeVoulue;
+        public static int nbFormeVoulue;
+        public static int[,] rndNumbersTab = new int[3, 4];
+        public string _consigne { get; set; }
+        public string _forme { get; set; }
+        public string _couleur { get; set; }
 
-        public Perception()
+        public Perception(string consigne, string forme, string couleur)
         {
-            
+            _consigne = consigne;
+            _forme = forme;
+            _couleur = couleur;
         }
 
-        public Perception(List<Rule> ruleList):base(ruleList)
+        
+        
+
+        public static Perception selectionRegle()
         {
+            int nbDeRègleTotal =4 ;
+            #region Deserialisation
+            Perception[] regles = new Perception[nbDeRègleTotal];
+            XDocument doc = XDocument.Load("rulePerception.xml");
+            var ensembleRegles = doc.Descendants("Regles").First();
+            var regle = ensembleRegles.Descendants("regle");
+
+            foreach (var r in regle)
+            {
+                regles[(int)r.Attribute("id") - 1] = new Perception((string)r.Attribute("consigne"), (string)r.Attribute("forme"), (string)r.Attribute("couleur"));
+            }
+
+            #endregion
+            Random rnd = new Random();
+            int a = rnd.Next(0, nbDeRègleTotal);
+            return regles[a];
 
         }
         
-
-        public static void deserializeXML()
-        {
-            // Sauvegarde l'objet hotel dans le fichier "rulePerception.xml"
-            StreamReader reader = new StreamReader("rulePerception.xml");
-            Perception p = (Perception) new XmlSerializer(typeof(Perception)).Deserialize(reader);            
-            reader.Close();
-            MessageBox.Show(p.Rules[3].Text.ToString());
-        }
-        //public static void generateXML()
-        //{
-        //    Perception p = new Perception();
-        //    p.Rules.Add(new Rule(1, "Regle 1 haha"));
-        //    p.Rules.Add(new Rule(2, "Regle 2 hiihih"));
-        //    p.Rules.Add(new Rule(5, "Regle 5 hiihih"));
-
-        //    // Sauvegarde l'objet hotel dans le fichier "rulePerception.xml"
-        //    StreamWriter writer = new StreamWriter("rulePerception.xml");
-        //    new XmlSerializer(typeof(Perception)).Serialize(writer, p);
-        //    writer.Close();
-        //}
         public static void generateRandomArray() // méthode static pour pouvoir l'appeler dans FormPerception
         {
             Random rnd = new Random();
-            int[,] randomNumbers = new int[3, 4];
 
             for (int i= 0; i<3; i++)
             {
                 for (int j=0; j<4; j++)
                 {
-                    randomNumbers[i, j] = rnd.Next(0, 10);
+                    rndNumbersTab[i, j] = rnd.Next(0, 10);
                 }
             }
 
         }
 
-        public static void createColoredShape(int x, int y, int width, int height, string color, string shape,Form form)
+        public static void createColoredShape(Forme f, Form form)
         {
+            int width = 50;
+            int height = 50;
             SolidBrush blueBrush = new SolidBrush(Color.Blue);
             SolidBrush yellowBrush = new SolidBrush(Color.Yellow);
             Graphics formGraphics = form.CreateGraphics();
-            if (color == "Blue")
+
+            string color = f.Color;
+            string shape = f.Shape;
+            int x = f.PositionX;
+            int y = f.PositionY;
+
+            switch (color)
             {
-                if (shape == "Rectangle")
-                {
-                    formGraphics.FillRectangle(blueBrush, new Rectangle(x, y, width, height));
-                    blueBrush.Dispose();
-                    formGraphics.Dispose();
-                }
-
-                else
-                {
-                    formGraphics.FillEllipse(blueBrush, new Rectangle(x, y, width, height));
-                    blueBrush.Dispose();
-                    formGraphics.Dispose();
-                }
-            }
-
-            else
-            {
-                if (shape == "Rectangle")
-                {
-                    formGraphics.FillRectangle(yellowBrush, new Rectangle(x, y, width, height));
-                    yellowBrush.Dispose();
-                    formGraphics.Dispose();
-                }
-
-                else
-                {
-                    formGraphics.FillEllipse(yellowBrush, new Rectangle(x, y, width, height));
-                    yellowBrush.Dispose();
-                    formGraphics.Dispose();
-                }
-            }
-        }
-
-
-        public static void generateShapes()
-        {
-            Random rnd = new Random();
-            int nbr; //nbr aleatoire pour choisir la forme
-            int color; // nbr aleatoire pour choisir la couleur
-            int cpt = 0; // compteur de formes pour la règle choisie
-            int nbrShapes;
-            string ruleNumber = "Regle4";
-            nbrShapes = rnd.Next(3, 5);  // 3 ou 4 formes max
-
-            for (int i = 1; i <= 3; i++) // on parcourt les emplacements des formes (3 lignes x 4 colonnes)
-            {
-                for (int j = 1; j <= 4; j++)
-                {
-
-                    switch (ruleNumber)
+                case "Blue":
+                    switch (shape)
                     {
+                        case "Rectangle":
 
-                        case "1": // l'utilisateur doit regarder les carrés jaunes
-                        case "Regle1":
-                            nbr = rnd.Next(1, 3);
-                            if (nbr == 1) //1 -> carré
-                            {
-                                color = rnd.Next(0, 2);
-                                if (color == 0 || cpt == nbrShapes) // 0 -> bleu
-                                { createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Blue", "Rectangle", Form.ActiveForm); }
-
-                                else  // 1 -> jaune
-                                {
-                                    createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
-                                    cpt++;
-                                }
-
-                            }
-
-                            else if (cpt < i)
-                            {
-                                createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
-                                cpt++;
-                            }
-                            else
-                            {
-                                color = rnd.Next(0, 2);
-                                if (color == 0)
-                                { createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Blue", "Ellipse", Form.ActiveForm); }
-                                else
-                                {
-                                    createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
-                                }
-
-                            }
+                            formGraphics.FillRectangle(blueBrush, new Rectangle(x, y, width, height));
                             break;
 
-                        case "2": // L'utilisateur doit regarder les carrés bleus
-                        case "Regle2":
-                            nbr = rnd.Next(1, 3);
-                            if (nbr == 1) //1 -> carré
-                            {
-                                color = rnd.Next(0, 2);
-                                if (color == 1 || cpt == nbrShapes) // 1 -> jaune
-                                { createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Yellow", "Rectangle", Form.ActiveForm); }
-                                else  // 0 -> bleu
-                                {
-                                    createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Blue", "Rectangle", Form.ActiveForm);
-                                    cpt++;
-                                }
-
-                            }
-                            else if (cpt < i)
-                            {
-                                createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Blue", "Rectangle", Form.ActiveForm);
-                                cpt++;
-                            }
-                            else
-                            {
-                                color = rnd.Next(0, 2);
-                                if (color == 0)
-                                { createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Blue", "Ellipse", Form.ActiveForm); }
-                                else
-                                {
-                                    createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
-                                }
-
-                            }
+                        case "Rond":
+                            formGraphics.FillEllipse(blueBrush, new Rectangle(x, y, width, height));
                             break;
-
-                        case "3": // L'utilisateur doit regarder les ronds jaunes
-                        case "Regle3":
-                            nbr = rnd.Next(1, 3);
-                            if (nbr == 1) //1 -> carré
-                            {
-                                color = rnd.Next(0, 2);
-                                if (color == 0) // 0 -> bleu
-                                { createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Blue", "Rectangle", Form.ActiveForm); }
-                                else  // 1 -> jaune
-                                {
-                                    createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
-                                }
-
-                            }
-                            else if (cpt < i)
-                            {
-                                createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
-                                cpt++;
-                            }
-                            else
-                            {
-                                color = rnd.Next(0, 2);
-                                if (color == 0 || cpt == nbrShapes)
-                                { createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Blue", "Ellipse", Form.ActiveForm); }
-                                else
-                                {
-                                    createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Yellow", "Ellipse", Form.ActiveForm);
-                                    cpt++;
-                                }
-
-                            }
-                            break;
-
-                        case "4": // L'utilisateur doit regarder les ronds bleus
-                        case "Regle4":
-                            nbr = rnd.Next(1, 3);
-                            if (nbr == 1) //1 -> carré
-                            {
-                                color = rnd.Next(0, 2);
-                                if (color == 0) // 0 -> bleu
-                                { createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Blue", "Rectangle", Form.ActiveForm); }
-                                else  // 1 -> jaune
-                                {
-                                    createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Yellow", "Rectangle", Form.ActiveForm);
-                                }
-
-                            }
-                            else if (cpt < i)
-                            {
-                                createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Blue", "Ellipse", Form.ActiveForm);
-                                cpt++;
-                            }
-                            else
-                            {
-                                color = rnd.Next(0, 2);
-                                if (color == 1 || cpt == nbrShapes)
-                                {
-                                    createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Yellow", "Ellipse",Form.ActiveForm);
-                                }
-                                else
-                                {
-                                    createColoredShape(25 + 105 * (j - 1), 30 + 95 * (i - 1), 50, 50, "Blue", "Ellipse", Form.ActiveForm);
-                                    cpt++;
-
-                                }
-
-                            }
-                            break;
-
                     }
 
+                    blueBrush.Dispose();
+                    formGraphics.Dispose();
+
+                    break;
+                case "Yellow":
+                    switch (shape)
+                    {
+                        case "Rectangle":
+
+                            formGraphics.FillRectangle(yellowBrush, new Rectangle(x, y, width, height));
+                            break;
+
+                        case "Rond":
+                            formGraphics.FillEllipse(yellowBrush, new Rectangle(x, y, width, height));
+                            break;
+
+                      
+                    }
+
+
+                    yellowBrush.Dispose();
+                    formGraphics.Dispose();
+
+                    break;
+
+                
+            }
+        }
+
+        public static Forme[,] generateShapes(Perception regle)
+        {
+            Forme [,] tableauForme = new Forme[3, 4];
+            Random rnd = new Random();
+            string[,] arrayLetters = new string[3, 4] { { "A", "B", "C", "D" }, { "E", "F", "G", "H" }, { "I", "J", "K", "L" } };
+            string formeVoulue = regle._forme;
+            string couleurVoulue = regle._couleur;
+            string couleur="";
+            string forme="";
+            
+           
+
+            //on place aléatoirement les 3 ou 4 formes à reperer
+               nbFormeVoulue = rnd.Next(3, 5);
+               int cptFormeVoulue = 0;
+               tableauFormeVoulue=new Forme[nbFormeVoulue];
+
+               while(cptFormeVoulue<nbFormeVoulue)
+               {
+                   
+                   int i=rnd.Next(0,3);
+                   int j=rnd.Next(0,4);
+                   if (tableauForme[i, j] == null)//on crée une nouvelle forme qu'a un emplacement ou il n'y en a pas déjà
+                   {
+                       tableauForme[i, j] = new Forme(couleurVoulue, formeVoulue,rndNumbersTab[i,j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);//changer valeur avec tableau de valeurs et changer lettre avec tableau de lettres
+                       tableauFormeVoulue[cptFormeVoulue] = tableauForme[i, j];
+                       cptFormeVoulue++;//on change d'indice que si on crée une nouvelle forme
+                   }
+                   
+
+                   
+               }
+
+            //on place toute les autres
+               for (int i = 0; i < 3; i++)
+               {
+                   for (int j = 0; j < 4; j++)
+                   {
+                       if (tableauForme[i, j] == null)// on ne remplit le tableau que s'il est vide, soit s'il y a pas de forme voulue deja à cette position
+                       {
+                           
+                           int rndCouleur = rnd.Next(1, 3); //1=Bleu, 2=jaune
+                           int rndForme = rnd.Next(1, 3);
+                           switch (rndCouleur)
+                           {
+                               case 1:
+                                   couleur = "Blue";
+                                   break;
+                               case 2:
+                                   couleur = "Yellow";
+                                   break;
+                           }
+                           switch (rndForme)
+                           {
+                               case 1:
+                                   forme = "Rectangle";
+                                   break;
+                               case 2:
+                                   forme = "Rond";
+                                   break;
+                           }
+                           if (couleur != couleurVoulue)
+                           {
+                               tableauForme[i, j] = new Forme(couleur, forme, rndNumbersTab[i,j], 25 + 105 * j, 30 + 95 * i,arrayLetters[i,j]);
+                           }
+                           else
+                           {
+                               if (forme != formeVoulue)
+                               {
+                                   tableauForme[i, j] = new Forme(couleur, forme, rndNumbersTab[i,j], 25 + 105 * j, 30 + 95 * i,arrayLetters[i,j]);
+                               }
+                               else// on ne crée aucune forme car c'était une "formeVoulue" qui a été tiré donc on passe pas à la colonne suivante
+                               {
+                                   j--;   
+                               }
+                           }
+                       }
+                   }
+               }
+               return tableauForme;                                                       
+            
+      }//probleme boucle while, propose que 2 formes voulues parfois
+
+
+        public static void drawNumbers(PaintEventArgs e)// dessine les chiffres aléatoirement 
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    e.Graphics.DrawString(rndNumbersTab[i, j].ToString(), new Font("Arial", 12), new SolidBrush(Color.Black), new PointF(43.0F + 105.0F * j, 43.0F + 95.0F * i));
+
                 }
             }
         }
+
+
+        
     }
 
 }

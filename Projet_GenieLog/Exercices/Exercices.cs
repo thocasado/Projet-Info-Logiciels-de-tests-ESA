@@ -10,7 +10,7 @@ namespace Projet_GenieLog
     [Serializable()]
     public class Exercices 
     {
-        public List<Rule> Rules{ get; set; }
+        /*public List<Rule> Rules{ get; set; }
       
         public Exercices()
         {
@@ -40,7 +40,7 @@ namespace Projet_GenieLog
         public void getResponse()
         {
             throw new System.NotImplementedException();
-        }
+        }*/
 
         
     }

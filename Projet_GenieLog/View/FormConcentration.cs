@@ -24,11 +24,11 @@ namespace Projet_GenieLog.View
         bool _difficile;
         int tempsDifficulte = 5000; //on définit ici l'intervalle de temps entre chaque écran 
 
-        public FormConcentration(bool difficile)
+        public FormConcentration()
         {
             InitializeComponent();
             regle = Concentration.selectionRègle();
-            _difficile = difficile;
+            _difficile = MainMenu.difficile;
             MessageBox.Show(regle._consigne);
             lancerTest();
         }
@@ -36,10 +36,10 @@ namespace Projet_GenieLog.View
 
 
 
-        public void lancerTest()//voir pourquoi ca ne dessine pas au premier tour 
+        public void lancerTest()
         {
             Invalidate();//permet d'effacer les dessins précédents pour éviter une superposition des formes
-            bonneRep = "button";//on va ajouter l'indice correspondant à BoutonReponse
+            bonneRep = "button";//on va ajouter l'indice correspondant au bouton attendu 
             groupBoxButton.Controls.Add(button1);
             groupBoxButton.Controls.Add(button2);
             groupBoxButton.Controls.Add(button3);
@@ -123,6 +123,11 @@ namespace Projet_GenieLog.View
                     compteur = 0;
                     cptSerie++;
                     cpt = 0;
+                    if (_difficile)
+                    {
+                        regle = Concentration.selectionRègle();
+                        MessageBox.Show(regle._consigne);
+                    }
                     lancerTest();
 
                 }

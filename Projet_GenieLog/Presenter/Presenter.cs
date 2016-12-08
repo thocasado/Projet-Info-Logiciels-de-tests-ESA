@@ -9,7 +9,7 @@ namespace Projet_GenieLog
 {
     public class Presenter
     {
-        private MyView view { get; set; }
+        /*private MyView view { get; set; }
         private Exercices tests { get; set; }
         public Niveau difficile = Niveau.Difficile;
         public Niveau facile = Niveau.Facile;
@@ -33,7 +33,7 @@ namespace Projet_GenieLog
                 case "btnPhysique": break;
 
             }
-        }
+        }*/
 
 
     }

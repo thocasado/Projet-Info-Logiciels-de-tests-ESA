@@ -17,7 +17,6 @@ namespace Projet_GenieLog
 {
     public class Concentration : Exercices
     {
-        //voir comment effacer le dessin
         public string _consigne { get; set; }
         public string _boutonForme { get; set; }
         public string _boutonCouleur { get; set; }

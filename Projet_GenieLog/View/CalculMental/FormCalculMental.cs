@@ -14,10 +14,10 @@ namespace Projet_GenieLog.View
         string type;
         bool _difficile;
         
-        public FormCalculMental(bool difficile)
+        public FormCalculMental()
         {
             InitializeComponent();
-            _difficile = difficile;
+            _difficile = MainMenu.difficile;
 
         }
 

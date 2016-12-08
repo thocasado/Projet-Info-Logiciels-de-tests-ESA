@@ -12,29 +12,25 @@ namespace Projet_GenieLog
 {
     public partial class MainMenu : Form
     {
-        //voir comment récupérer la difficulté dans les autres form 
-        public bool difficile { get; set; }
+       
+        public static bool difficile { get; set; }
         public MainMenu()
         {
             InitializeComponent();
             groupBoxDifficulte.Controls.Add(radio_facile);
             groupBoxDifficulte.Controls.Add(radio_difficile);
-
-            
         }
 
         private void btnPerception_Click(object sender, EventArgs e)
         {
-            difficile=checkDifficulte();
-            View.FormPerception f = new View.FormPerception();//rajouter difficulte en paramètre
+            View.FormPerception f = new View.FormPerception();
             f.Show();
             
         }
 
         private void btnCalcul_Click(object sender, EventArgs e)
         {
-            difficile=checkDifficulte();
-            View.FormCalculMental f = new View.FormCalculMental(difficile);
+            View.FormCalculMental f = new View.FormCalculMental();
             f.Show();
         }
 
@@ -42,14 +38,20 @@ namespace Projet_GenieLog
 
         private void btn_maths_Click(object sender, EventArgs e)
         {
-            difficile=checkDifficulte();
             string matiere = ((Button)(sender)).Text;
-            View.FormProbleme f = new View.FormProbleme(matiere,difficile);
+            View.FormProbleme f = new View.FormProbleme(matiere);
             f.Show();
 
         }
 
-        private bool checkDifficulte()
+
+        private void btnConcentration_Click(object sender, EventArgs e)
+        {
+            View.FormConcentration f = new View.FormConcentration();
+            f.Show();
+        }
+
+        private void radio_difficile_CheckedChanged(object sender, EventArgs e)
         {
             if (radio_difficile.Checked == true)
             {
@@ -59,15 +61,9 @@ namespace Projet_GenieLog
             {
                 difficile = false;
             }
-            return difficile;
         }
 
-        private void btnConcentration_Click(object sender, EventArgs e)
-        {
-            difficile = checkDifficulte();
-            View.FormConcentration f = new View.FormConcentration(difficile);//rajouter difficulte en paramètre
-            f.Show();
-        }
+        
 
 
     }
