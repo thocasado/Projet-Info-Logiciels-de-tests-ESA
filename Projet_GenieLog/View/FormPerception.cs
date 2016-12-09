@@ -16,8 +16,8 @@ namespace Projet_GenieLog.View
 
         static Perception regle;
         static Forme[,] tableauForme; 
-        int tempsDifficulte = 4000;//on l'initialise au temps Niveau facile
-        public static int compteur = 0;//compteur pour savoir à quel test on est
+        int tempsDifficulte = 500;//on l'initialise au temps du Niveau facile
+        public static int cptTest = 1;
         
         public FormPerception()
         {
@@ -35,12 +35,13 @@ namespace Projet_GenieLog.View
         {
              
             regle = Perception.selectionRegle();
-            compteur++;
+            
             
              MessageBox.Show(regle._consigne);
-             Perception.generateRandomArray();
+             Perception.generationTableauValeur();
              tableauForme=Perception.generateShapes(regle);
-             count.Text = compteur.ToString() + "/10";
+             count.Text = cptTest.ToString() + "/10";
+             cptTest++;
 
              
             
@@ -50,7 +51,6 @@ namespace Projet_GenieLog.View
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            count.Text = compteur.ToString() + "/10";
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 4; j++)
@@ -59,7 +59,7 @@ namespace Projet_GenieLog.View
                     
                 }
             }
-            Perception.drawNumbers(e);
+            Perception.dessineNombres(e);
             timerReponse.Interval = tempsDifficulte;
             timerReponse.Start();
         }
@@ -68,10 +68,9 @@ namespace Projet_GenieLog.View
         {
             timerReponse.Stop();
             this.SetVisibleCore(false);
-            mb.setAnswerVisibility();
-            mb.setLabelText();
+            mb.reponseVisible();
+            mb.implementationLabel();
             mb.ShowDialog();
-            mb.Close();
 
            
            

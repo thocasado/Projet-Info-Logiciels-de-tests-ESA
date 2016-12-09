@@ -15,7 +15,7 @@ using System.Xml.Linq;
 
 namespace Projet_GenieLog
 {
-    public class Concentration : Exercices
+    public class Concentration 
     {
         public string _consigne { get; set; }
         public string _boutonForme { get; set; }
@@ -58,8 +58,8 @@ namespace Projet_GenieLog
 
         }
 
-        public static void createColoredShape(string color, string shape, Form form) // permet de créer soit un rectangle soit un rond de couleur bleue ou jaune
-        {
+        public static void creationFormeColorée(string color, string shape, Form form) // la mettre dans la classe forme et la généraliser avec celle de perception
+        {//redimensionner taille forme(les faire plus grandes)
             int x = 129;//abs forme(fixe)
             int y = 229;//ord forme(fixe)
             int width = 50;
@@ -146,7 +146,7 @@ namespace Projet_GenieLog
                 
         }
 
-        public static void createPoint(int nbPoint, Form form)
+        public static void creationPoint(int nbPoint, Form form)
         {
             int width = 5;
             int height = 5;
@@ -182,7 +182,7 @@ namespace Projet_GenieLog
             formGraphics.Dispose();
         }
 
-        public static string[] generateShape(int compteur,string []valAuxRep, Form form) //le tableau valAuxRep contient les paramètres de la forme précédente et la valeur du paramètre conservé
+        public static string[] selectionForme(int compteur,string []valAuxRep, Form form) //le tableau valAuxRep contient les paramètres de la forme précédente et la valeur du paramètre conservé
         {
             Random r = new Random();
             string forme="";

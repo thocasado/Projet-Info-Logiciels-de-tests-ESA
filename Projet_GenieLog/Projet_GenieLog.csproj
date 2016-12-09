@@ -103,7 +103,6 @@
       <DependentUpon>MyMessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="View\MyView.cs" />
-    <Compile Include="XML\XMLMaths.cs" />
     <EmbeddedResource Include="View\CalculMental\FormOperation.resx">
       <DependentUpon>FormOperation.cs</DependentUpon>
     </EmbeddedResource>

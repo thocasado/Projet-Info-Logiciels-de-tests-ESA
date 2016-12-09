@@ -21,7 +21,7 @@ namespace Projet_GenieLog.View
 
         }
 
-        private void additionButton_Click(object sender, EventArgs e)
+        private void operationButton_Click(object sender, EventArgs e)
         {
             type = ((Button)(sender)).Text;
             View.CalculMental.FormOperation f = new View.CalculMental.FormOperation(type,_difficile);
@@ -29,29 +29,7 @@ namespace Projet_GenieLog.View
             this.Close();
         }
 
-        /*private void sousButton_Click(object sender, EventArgs e)
-        {
-            type = "-";
-            View.CalculMental.FormSoustraction f = new View.CalculMental.FormSoustraction();
-            f.Show();
-            this.Close();
-        }
-
-        private void multButton_Click(object sender, EventArgs e)
-        {
-            type = "x";
-            View.CalculMental.FormMultiplication f = new View.CalculMental.FormMultiplication();
-            f.Show();
-            this.Close();
-        }
-
-        private void divButton_Click(object sender, EventArgs e)
-        {
-            type = "/";
-            View.CalculMental.FormDivision f = new View.CalculMental.FormDivision();
-            f.Show();
-            this.Close();
-        }*/
+       
 
 
 

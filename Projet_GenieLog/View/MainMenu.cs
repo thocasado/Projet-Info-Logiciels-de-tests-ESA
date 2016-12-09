@@ -23,7 +23,9 @@ namespace Projet_GenieLog
 
         private void btnPerception_Click(object sender, EventArgs e)
         {
+           
             View.FormPerception f = new View.FormPerception();
+            View.FormPerception.cptTest = 1;// cpt test étant static, si on revient au menu puis relance le test de perception, cptTest garde sa valeur précédente;Il faut donc le réinitialiser
             f.Show();
             
         }

@@ -10,7 +10,7 @@ using System.Xml.Linq;
 
 namespace Projet_GenieLog
 {
-    public class Probleme : Exercices
+    public class Probleme 
     {
         public int _id { get; set; }
         public string _consigne { get; set; }
@@ -20,7 +20,7 @@ namespace Projet_GenieLog
         public string _choix4 { get; set; }
         public string _bonneRep { get; set; }
         public string _image { get; set; }
-        //image
+        
         
 
         public Probleme(int id, string consigne, string c1, string c2, string c3, string c4, string br,string image)
@@ -58,12 +58,14 @@ namespace Projet_GenieLog
                 var pbm = pbmsDifficulte.Descendants("pbm");
             
 
-#endregion
+
 
             foreach (var p in pbm)
             {
                 problemes[(int)p.Attribute("id")-1] = new Probleme((int)p.Attribute("id"), (string)p.Attribute("consigne"), (string)p.Attribute("choix1"), (string)p.Attribute("choix2"), (string)p.Attribute("choix3"), (string)p.Attribute("choix4"), (string)p.Attribute("bonnereponse"),(string)p.Attribute("image"));
             }
+#endregion
+
             Random r=new Random();
             Probleme [] selectionPbm= new Probleme[nbDePbmAselectionner];
             int cpt=0;

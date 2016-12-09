@@ -14,11 +14,11 @@ namespace Projet_GenieLog.View
 
     public partial class FormProbleme : Form
     {
-        //gerer le cas facile/difficile 
-        int compteur = 0;//compte à quel test on est
-        int cpt = 0;//compte le nombre de bonnes réponses
+
+        int cptTest = 0;//compte à quel test on est
+        int cptBonneRep = 0;//compte le nombre de bonnes réponses
         
-        Probleme [] pbm;
+        Probleme [] pbm;//tableau permettant de récupérer les problèmes sélectionnés
         string bonneRep;
         string repUtilisateur;
 
@@ -31,7 +31,7 @@ namespace Projet_GenieLog.View
         public FormProbleme(string matiere)
         {
             InitializeComponent();
-            pbm = Probleme.selectionPbm(matiere, MainMenu.difficile);//modifier xml suivant difficulte, rajouter un paramètre dans xml avec pbm facile/pbm difficile + faire if dans la classe probleme
+            pbm = Probleme.selectionPbm(matiere, MainMenu.difficile);
             lancerTest();
             
         }
@@ -44,16 +44,16 @@ namespace Projet_GenieLog.View
             groupBoxRb.Controls.Add(rbChoix3);
             groupBoxRb.Controls.Add(rbChoix4);
             string image = "Images/";//on accede au dossier image du Debug
-            image += pbm[compteur]._image;
+            image += pbm[cptTest]._image;//on lui rajoute le nom de l'image à afficher
             pictureBox.Image = new Bitmap(image);
-            labelConsigne.Text = pbm[compteur]._consigne;
-            rbChoix1.Text = pbm[compteur]._choix1;
-            rbChoix2.Text = pbm[compteur]._choix2;
-            rbChoix3.Text = pbm[compteur]._choix3;
-            rbChoix4.Text = pbm[compteur]._choix4;
-            bonneRep= pbm[compteur]._bonneRep;
-            compteur++;
-            count.Text=compteur.ToString();
+            labelConsigne.Text = pbm[cptTest]._consigne;
+            rbChoix1.Text = pbm[cptTest]._choix1;
+            rbChoix2.Text = pbm[cptTest]._choix2;
+            rbChoix3.Text = pbm[cptTest]._choix3;
+            rbChoix4.Text = pbm[cptTest]._choix4;
+            bonneRep= pbm[cptTest]._bonneRep;
+            cptTest++;
+            count.Text=cptTest.ToString();
             
 
         }
@@ -76,20 +76,20 @@ namespace Projet_GenieLog.View
             if (repUtilisateur == bonneRep)
             {
                 MessageBox.Show("Juste!");
-                cpt++;
+                cptBonneRep++;
 
             }
             else
             {
                 MessageBox.Show("Faux\n" + bonneRep);
             }
-            if (compteur != 10)
+            if (cptTest != 10)
             {
                 lancerTest();
             }
             else
             {
-                MessageBox.Show("Vous avez eu un total de" + cpt + "/10 !");
+                MessageBox.Show("Vous avez eu un total de" + cptBonneRep + "/10 !");
                 this.Close();
             }
             

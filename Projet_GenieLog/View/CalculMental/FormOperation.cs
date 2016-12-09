@@ -11,14 +11,13 @@ namespace Projet_GenieLog.View.CalculMental
 {
     public partial class FormOperation : Form
     {
-        // mettre timer pour fermer messageBox et passer au calcul suivant(geré au clic pour le moment) 
+        // Au lieu de message Box, dire si c'est juste ou faux avec un label direct sur le form.
         //Sauvegarder le taux de résultat; valider avec entrée
         //Ameliorer affichage
         string result;
-        int cpt = 0;//compteur de bonne réponse; 
-        int compteur = 0; // Compteur du nombre de calcul effectué 
-        int temps_difficulte = 5000; // temps de la difficulte difficile en ms
-        //int temps_affichage = 3000; //temps affichage resultat
+        int cptBonneRep = 0;
+        int compteurCalcul = 0;
+        int temps_difficulte = 5000;
         string _type;
         bool _difficile;
         
@@ -34,8 +33,8 @@ namespace Projet_GenieLog.View.CalculMental
 
             private void lancerTest()
             {
-                compteur++;
-                count.Text = compteur.ToString() + "/10";
+                compteurCalcul++;
+                count.Text = compteurCalcul.ToString() + "/10";
                 saisieResultat.Clear();
                 labelSigne.Text = _type;
                 Random r = new Random();
@@ -106,25 +105,24 @@ namespace Projet_GenieLog.View.CalculMental
         private void resultatTest()
         {
             timerDifficile.Stop();
-           /* timerAfficheResultat.Interval = temps_affichage;
-            timerAfficheResultat.Start();*/
+           
             if (saisieResultat.Text == result)
             {
                 MessageBox.Show("Juste!");
-                cpt++;
+                cptBonneRep++;
 
             }
             else
             {
                 MessageBox.Show("Faux\n" + result);
             }
-            if (compteur != 10)
+            if (compteurCalcul != 10)
             {
                 lancerTest();
             }
             else
             {
-                MessageBox.Show("Vous avez eu un total de" + cpt + "/10 !");
+                MessageBox.Show("Vous avez eu un total de" + cptBonneRep + "/10 !");
                 this.Close();
             }
             

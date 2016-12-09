@@ -5,32 +5,32 @@ using System.Text;
 
 namespace Projet_GenieLog
 {
-    public class Forme
+    public class Forme // mettre ici la fonction createShape généralisée + nouveau constructeur pour les formes de Concentration (optimisation)  
     {
-        public string Color { get; set; }
-            public string Shape { get; set; }
-            public int Value { get; set; }
-            public int PositionX { get; set; }
-            public int PositionY { get; set; }
-            public string Letter { get; set; }
+        public string couleur { get; set; }
+            public string forme  { get; set; }
+            public int valeur { get; set; }
+            public int positionX { get; set; }
+            public int positionY { get; set; }
+            public string lettre { get; set; }
 
             public Forme()
             {
 
             }
-            public Forme(string color, string shape, int value, int posX, int posY, string letter)
+            public Forme(string c, string f, int v, int posX, int posY, string l)
             {
-                Color = color;
-                Shape = shape;
-                Value = value;
-                PositionX = posX;
-                PositionY = posY;
-                Letter = letter;
+                couleur = c;
+                forme = f;
+                valeur = v;
+                positionX = posX;
+                positionY = posY;
+                lettre = l;
             }
 
             public override string ToString()
             {
-                string ch = "forme:" + Shape + " color:" + Color + " value:" + Value + " letter: " + Letter;
+                string ch = "forme:" + forme + " color:" + couleur + " value:" + valeur + " letter: " + lettre;
                 return ch;
             }
         }

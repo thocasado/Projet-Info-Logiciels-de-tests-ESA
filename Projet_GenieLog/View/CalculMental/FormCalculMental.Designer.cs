@@ -58,7 +58,7 @@
             this.additionButton.TabIndex = 1;
             this.additionButton.Text = "+";
             this.additionButton.UseVisualStyleBackColor = true;
-            this.additionButton.Click += new System.EventHandler(this.additionButton_Click);
+            this.additionButton.Click += new System.EventHandler(this.operationButton_Click);
             // 
             // sousButton
             // 
@@ -70,7 +70,7 @@
             this.sousButton.TabIndex = 2;
             this.sousButton.Text = "-";
             this.sousButton.UseVisualStyleBackColor = true;
-            this.sousButton.Click += new System.EventHandler(this.additionButton_Click);
+            this.sousButton.Click += new System.EventHandler(this.operationButton_Click);
             // 
             // multButton
             // 
@@ -82,7 +82,7 @@
             this.multButton.TabIndex = 1;
             this.multButton.Text = "x";
             this.multButton.UseVisualStyleBackColor = true;
-            this.multButton.Click += new System.EventHandler(this.additionButton_Click);
+            this.multButton.Click += new System.EventHandler(this.operationButton_Click);
             // 
             // divButton
             // 
@@ -94,7 +94,7 @@
             this.divButton.TabIndex = 2;
             this.divButton.Text = "/";
             this.divButton.UseVisualStyleBackColor = true;
-            this.divButton.Click += new System.EventHandler(this.additionButton_Click);
+            this.divButton.Click += new System.EventHandler(this.operationButton_Click);
             // 
             // FormCalculMental
             // 

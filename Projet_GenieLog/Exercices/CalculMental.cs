@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Projet_GenieLog
 {
-    public class CalculMental : Exercices
+    public class CalculMental 
     {
-
+        //voir si on met le traitement ici plutot que dans le form
     }
 }

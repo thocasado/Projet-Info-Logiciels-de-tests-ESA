@@ -13,7 +13,10 @@ namespace Projet_GenieLog
     {
         string[] bonneReponse=new string [3];//on définit de base avec 3réponses; s'il y en a 4 il sera redéfini
         string[] repUtilisateur=new string[3];
-        int cptBR;//compte le nbre de bonnes réponses
+        int cptBonneReponse;
+        static int cptBonneReponseTotal = 0;
+        static int cptNombreFormeTotal = 0;
+        int cptTest = View.FormPerception.cptTest;
         
 
         public MyMessageBox()
@@ -21,7 +24,7 @@ namespace Projet_GenieLog
             InitializeComponent();
         }
 
-        public void setAnswerVisibility()
+        public void reponseVisible()
         {
             if (Perception.nbFormeVoulue == 3)
             {
@@ -29,7 +32,7 @@ namespace Projet_GenieLog
                 textBox4.Visible = false;
                 
             }
-            else//voir si on ne le met pas et qu'on met de base visible=true si ca marche 
+            else 
             {
                 lettre4LB.Visible = true;
                 textBox4.Visible = true;
@@ -38,7 +41,7 @@ namespace Projet_GenieLog
             }
         }
 
-        public void setLabelText()
+        public void implementationLabel()
         {
             //int cpt=0;
            // var test = Perception.tableauFormeVoulue;
@@ -53,18 +56,18 @@ namespace Projet_GenieLog
             }
 
             */
-            count.Text = View.FormPerception.compteur.ToString() + "/10";
-            lettre1LB.Text = Perception.tableauFormeVoulue[0].Letter;
-            lettre2LB.Text = Perception.tableauFormeVoulue[1].Letter;
-            lettre3LB.Text = Perception.tableauFormeVoulue[2].Letter;
+            count.Text = cptTest.ToString() + "/10";
+            lettre1LB.Text = Perception.tableauFormeVoulue[0].lettre;
+            lettre2LB.Text = Perception.tableauFormeVoulue[1].lettre;
+            lettre3LB.Text = Perception.tableauFormeVoulue[2].lettre;
             if (Perception.nbFormeVoulue == 4)
             {
-                lettre4LB.Text = Perception.tableauFormeVoulue[3].Letter; 
+                lettre4LB.Text = Perception.tableauFormeVoulue[3].lettre; 
             }
 
             for (int i = 0; i < bonneReponse.Length; i++)
             {
-                bonneReponse[i] = Perception.tableauFormeVoulue[i].Value.ToString();
+                bonneReponse[i] = Perception.tableauFormeVoulue[i].valeur.ToString();
             }
 
             
@@ -76,7 +79,7 @@ namespace Projet_GenieLog
 
         private void validButton_Click(object sender, EventArgs e)
         {
-            cptBR = 0;
+            cptBonneReponse = 0;
             repUtilisateur[0]=textBox1.Text;
             repUtilisateur[1]=textBox2.Text;
             repUtilisateur[2]=textBox3.Text;
@@ -88,7 +91,7 @@ namespace Projet_GenieLog
             {
                     if (repUtilisateur[cpt] == bonneReponse[cpt])
                     {
-                        cptBR++;
+                        cptBonneReponse++;
                     }
             }
                 
@@ -96,12 +99,24 @@ namespace Projet_GenieLog
                 
                 
             
-            MessageBox.Show(cptBR.ToString() + "/" + Perception.nbFormeVoulue);
+            MessageBox.Show(cptBonneReponse.ToString() + "/" + Perception.nbFormeVoulue);
+            cptNombreFormeTotal += Perception.nbFormeVoulue;
+            cptBonneReponseTotal += cptBonneReponse;
             this.SetVisibleCore(false);
-            View.FormPerception fp = new View.FormPerception();
-            fp.ShowDialog();
             
-           // fp.Show();
+            if (cptTest != 10)
+            {
+                View.FormPerception fp = new View.FormPerception();
+                fp.ShowDialog();
+            }
+            else
+            {
+                
+                MessageBox.Show("Vous avez eu un score total de " + cptBonneReponseTotal + "/" + cptNombreFormeTotal);
+                View.FormPerception.cptTest = 1;
+            }
+            
+           
             
         }
 

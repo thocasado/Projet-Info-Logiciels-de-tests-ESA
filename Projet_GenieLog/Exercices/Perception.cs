@@ -15,7 +15,7 @@ using System.Xml.Linq;
 namespace Projet_GenieLog
 {
     
-    public class Perception : Exercices
+    public class Perception 
     {
         public static Forme[] tableauFormeVoulue;
         public static int nbFormeVoulue;
@@ -55,7 +55,7 @@ namespace Projet_GenieLog
 
         }
         
-        public static void generateRandomArray() // méthode static pour pouvoir l'appeler dans FormPerception
+        public static void generationTableauValeur() // méthode static pour pouvoir l'appeler dans FormPerception
         {
             Random rnd = new Random();
 
@@ -69,7 +69,7 @@ namespace Projet_GenieLog
 
         }
 
-        public static void createColoredShape(Forme f, Form form)
+        public static void creationFormeColorée(Forme f, Form form)
         {
             int width = 50;
             int height = 50;
@@ -77,10 +77,10 @@ namespace Projet_GenieLog
             SolidBrush yellowBrush = new SolidBrush(Color.Yellow);
             Graphics formGraphics = form.CreateGraphics();
 
-            string color = f.Color;
-            string shape = f.Shape;
-            int x = f.PositionX;
-            int y = f.PositionY;
+            string color = f.couleur;
+            string shape = f.forme;
+            int x = f.positionX;
+            int y = f.positionY;
 
             switch (color)
             {
@@ -126,7 +126,7 @@ namespace Projet_GenieLog
             }
         }
 
-        public static Forme[,] generateShapes(Perception regle)
+        public static Forme[,] selectionFormes(Perception regle)
         {
             Forme [,] tableauForme = new Forme[3, 4];
             Random rnd = new Random();
@@ -210,7 +210,7 @@ namespace Projet_GenieLog
       }//probleme boucle while, propose que 2 formes voulues parfois
 
 
-        public static void drawNumbers(PaintEventArgs e)// dessine les chiffres aléatoirement 
+        public static void dessineNombres(PaintEventArgs e)// dessine les chiffres aléatoirement 
         {
             for (int i = 0; i < 3; i++)
             {
