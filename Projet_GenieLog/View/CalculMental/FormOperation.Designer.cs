@@ -39,13 +39,14 @@
             this.count = new System.Windows.Forms.Label();
             this.timerDifficile = new System.Windows.Forms.Timer(this.components);
             this.timerAfficheResultat = new System.Windows.Forms.Timer(this.components);
+            this.verifLB = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelSigne
             // 
             this.labelSigne.AutoSize = true;
             this.labelSigne.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSigne.Location = new System.Drawing.Point(283, 185);
+            this.labelSigne.Location = new System.Drawing.Point(288, 122);
             this.labelSigne.Name = "labelSigne";
             this.labelSigne.Size = new System.Drawing.Size(60, 69);
             this.labelSigne.TabIndex = 0;
@@ -55,7 +56,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label2.Location = new System.Drawing.Point(235, 95);
+            this.label2.Location = new System.Drawing.Point(235, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 39);
             this.label2.TabIndex = 1;
@@ -65,7 +66,7 @@
             // 
             this.chiffre1.AutoSize = true;
             this.chiffre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.chiffre1.Location = new System.Drawing.Point(15, 179);
+            this.chiffre1.Location = new System.Drawing.Point(0, 116);
             this.chiffre1.Name = "chiffre1";
             this.chiffre1.Size = new System.Drawing.Size(252, 76);
             this.chiffre1.TabIndex = 2;
@@ -75,7 +76,7 @@
             // 
             this.chiffre2.AutoSize = true;
             this.chiffre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.chiffre2.Location = new System.Drawing.Point(382, 179);
+            this.chiffre2.Location = new System.Drawing.Point(392, 122);
             this.chiffre2.Name = "chiffre2";
             this.chiffre2.Size = new System.Drawing.Size(252, 76);
             this.chiffre2.TabIndex = 3;
@@ -85,7 +86,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(283, 270);
+            this.label3.Location = new System.Drawing.Point(283, 207);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 69);
             this.label3.TabIndex = 4;
@@ -94,7 +95,7 @@
             // saisieResultat
             // 
             this.saisieResultat.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.saisieResultat.Location = new System.Drawing.Point(176, 359);
+            this.saisieResultat.Location = new System.Drawing.Point(176, 264);
             this.saisieResultat.Name = "saisieResultat";
             this.saisieResultat.Size = new System.Drawing.Size(283, 45);
             this.saisieResultat.TabIndex = 5;
@@ -102,7 +103,7 @@
             // 
             // validButton
             // 
-            this.validButton.Location = new System.Drawing.Point(273, 441);
+            this.validButton.Location = new System.Drawing.Point(273, 331);
             this.validButton.Name = "validButton";
             this.validButton.Size = new System.Drawing.Size(75, 23);
             this.validButton.TabIndex = 6;
@@ -123,11 +124,25 @@
             // 
             this.timerDifficile.Tick += new System.EventHandler(this.timerDifficile_Tick);
             // 
-            // FormAddition
+            // timerAfficheResultat
+            // 
+            this.timerAfficheResultat.Tick += new System.EventHandler(this.timerAfficheResultat_Tick);
+            // 
+            // verifLB
+            // 
+            this.verifLB.AutoSize = true;
+            this.verifLB.Location = new System.Drawing.Point(197, 435);
+            this.verifLB.Name = "verifLB";
+            this.verifLB.Size = new System.Drawing.Size(35, 17);
+            this.verifLB.TabIndex = 8;
+            this.verifLB.Text = "verif";
+            // 
+            // FormOperation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 501);
+            this.Controls.Add(this.verifLB);
             this.Controls.Add(this.count);
             this.Controls.Add(this.validButton);
             this.Controls.Add(this.saisieResultat);
@@ -136,7 +151,7 @@
             this.Controls.Add(this.chiffre1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelSigne);
-            this.Name = "FormAddition";
+            this.Name = "FormOperation";
             this.Text = "FormAddition";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -155,5 +170,6 @@
         private System.Windows.Forms.Label count;
         private System.Windows.Forms.Timer timerDifficile;
         private System.Windows.Forms.Timer timerAfficheResultat;
+        private System.Windows.Forms.Label verifLB;
     }
 }

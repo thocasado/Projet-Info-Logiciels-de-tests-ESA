@@ -35,8 +35,6 @@ namespace Projet_GenieLog
 
         
 
-
-
         public static Concentration selectionRègle()
         {
             int nbDeRègleTotal = 6;
@@ -58,129 +56,6 @@ namespace Projet_GenieLog
 
         }
 
-        public static void creationFormeColorée(string color, string shape, Form form) // la mettre dans la classe forme et la généraliser avec celle de perception
-        {//redimensionner taille forme(les faire plus grandes)
-            int x = 129;//abs forme(fixe)
-            int y = 229;//ord forme(fixe)
-            int width = 50;
-            int height = 50;
-            SolidBrush blueBrush = new SolidBrush(Color.Blue);
-            SolidBrush yellowBrush = new SolidBrush(Color.Yellow);
-            SolidBrush redBrush = new SolidBrush(Color.Red);
-            SolidBrush blackBrush= new SolidBrush(Color.Black);
-
-            Graphics formGraphics = form.CreateGraphics();
-            Point[] triangle = new Point[] { new Point(129, 279), new Point(179, 279), new Point(154, 229) };//sommet gauche, sommet droite, sommet haut
-
-            switch(color)
-            {
-                case "Blue":
-                switch(shape)
-                {
-                    case "Rectangle" :
-                
-                    formGraphics.FillRectangle(blueBrush, new Rectangle(x, y, width, height));
-                    break;
-
-                    case "Rond" :
-                        formGraphics.FillEllipse(blueBrush, new Rectangle(x, y, width, height));
-                        break;
-
-                    case "Triangle":
-                        formGraphics.FillPolygon(blueBrush,triangle);//(blueBrush, new Rectangle(x, y, width, height)); //Chercher pour faire triangle
-                        break;
-                }
-                    
-                    blueBrush.Dispose();
-                    formGraphics.Dispose();
-                    
-                
-                    
-                break;
-                case "Yellow" :
-                switch (shape)
-                {
-                    case "Rectangle" :
-                
-                    formGraphics.FillRectangle(yellowBrush, new Rectangle(x, y, width, height));
-                    break;
-
-                    case "Rond" :
-                        formGraphics.FillEllipse(yellowBrush, new Rectangle(x, y, width, height));
-                        break;
-
-                    case "Triangle":
-                        formGraphics.FillPolygon(yellowBrush, triangle);
-                        break;
-                }
-                    
-                    
-                    yellowBrush.Dispose();
-                    formGraphics.Dispose();
-
-                break;
-                
-                case "Red" :
-                switch (shape)
-                {
-                    case "Rectangle" :
-                
-                    formGraphics.FillRectangle(redBrush, new Rectangle(x, y, width, height));
-                    break;
-
-                    case "Rond" :
-                        formGraphics.FillEllipse(redBrush, new Rectangle(x, y, width, height));
-                        break;
-
-                    case "Triangle":
-                        formGraphics.FillPolygon(redBrush, triangle); 
-                        break;
-                }
-                    
-                    redBrush.Dispose();
-                    formGraphics.Dispose();
-                break;
-            }
-
-            
-                
-        }
-
-        public static void creationPoint(int nbPoint, Form form)
-        {
-            int width = 5;
-            int height = 5;
-            SolidBrush blackBrush = new SolidBrush(Color.Black);
-            Graphics formGraphics = form.CreateGraphics();
-
-            switch (nbPoint)
-            {
-                case 1:
-                    formGraphics.FillEllipse(blackBrush, new Rectangle(150, 250, width, height));
-                    break;
-
-                case 2:
-                    formGraphics.FillEllipse(blackBrush, new Rectangle(140, 235, width, height));
-                    formGraphics.FillEllipse(blackBrush, new Rectangle(160, 235, width, height));
-                    break;
-                case 3:
-                    formGraphics.FillEllipse(blackBrush, new Rectangle(140, 235, width, height));
-                    formGraphics.FillEllipse(blackBrush, new Rectangle(150, 252, width, height));
-                    formGraphics.FillEllipse(blackBrush, new Rectangle(160, 235, width, height));
-                    break;
-                case 4:
-                    formGraphics.FillEllipse(blackBrush, new Rectangle(160, 270, width, height));
-                    formGraphics.FillEllipse(blackBrush, new Rectangle(140, 235, width, height));
-                    formGraphics.FillEllipse(blackBrush, new Rectangle(140, 270, width, height));
-                    formGraphics.FillEllipse(blackBrush, new Rectangle(160, 235, width, height));
-                    break;
-                default:
-                    break;
-            }
-
-            blackBrush.Dispose();
-            formGraphics.Dispose();
-        }
 
         public static string[] selectionForme(int compteur,string []valAuxRep, Form form) //le tableau valAuxRep contient les paramètres de la forme précédente et la valeur du paramètre conservé
         {

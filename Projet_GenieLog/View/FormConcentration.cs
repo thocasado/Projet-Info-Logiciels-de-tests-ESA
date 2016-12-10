@@ -23,6 +23,7 @@ namespace Projet_GenieLog.View
         string[] valeurs = new string[4];//valeurs[0]=formePrécedente, valeurs[1]=couleurPrécedente, valeurs[2]=nbPoitnsPrécédente, valeurs[3]=paramètreConservé
         bool _difficile;
         int tempsDifficulte = 5000; //on définit ici l'intervalle de temps entre chaque écran 
+        Forme f;
 
         public FormConcentration()
         {
@@ -59,7 +60,7 @@ namespace Projet_GenieLog.View
             }
 
             valeurs = Concentration.selectionForme(cptTest, valeurs, this);// la génération des dessins se fait dans OnPaint, on récupère ici les paramètres necessaires
-
+            f = new Forme(valeurs[1], valeurs[0], 129, 229);
 
 
 
@@ -148,8 +149,8 @@ namespace Projet_GenieLog.View
 
             base.OnPaint(e);
             int nbpoint = int.Parse(valeurs[2]);
-            Concentration.creationFormeColorée(valeurs[1], valeurs[0], this);
-            Concentration.creationPoint(nbpoint, this);
+            Forme.creationFormeColorée(f, this);
+            Forme.creationPoint(nbpoint, this);
             if (_difficile)
             {
                 timerConcentration.Interval = tempsDifficulte;

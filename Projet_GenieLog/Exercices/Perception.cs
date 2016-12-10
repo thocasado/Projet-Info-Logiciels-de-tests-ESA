@@ -69,62 +69,7 @@ namespace Projet_GenieLog
 
         }
 
-        public static void creationFormeColorée(Forme f, Form form)
-        {
-            int width = 50;
-            int height = 50;
-            SolidBrush blueBrush = new SolidBrush(Color.Blue);
-            SolidBrush yellowBrush = new SolidBrush(Color.Yellow);
-            Graphics formGraphics = form.CreateGraphics();
-
-            string color = f.couleur;
-            string shape = f.forme;
-            int x = f.positionX;
-            int y = f.positionY;
-
-            switch (color)
-            {
-                case "Blue":
-                    switch (shape)
-                    {
-                        case "Rectangle":
-
-                            formGraphics.FillRectangle(blueBrush, new Rectangle(x, y, width, height));
-                            break;
-
-                        case "Rond":
-                            formGraphics.FillEllipse(blueBrush, new Rectangle(x, y, width, height));
-                            break;
-                    }
-
-                    blueBrush.Dispose();
-                    formGraphics.Dispose();
-
-                    break;
-                case "Yellow":
-                    switch (shape)
-                    {
-                        case "Rectangle":
-
-                            formGraphics.FillRectangle(yellowBrush, new Rectangle(x, y, width, height));
-                            break;
-
-                        case "Rond":
-                            formGraphics.FillEllipse(yellowBrush, new Rectangle(x, y, width, height));
-                            break;
-
-                      
-                    }
-
-
-                    yellowBrush.Dispose();
-                    formGraphics.Dispose();
-
-                    break;
-
-                
-            }
-        }
+        
 
         public static Forme[,] selectionFormes(Perception regle)
         {

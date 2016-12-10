@@ -16,7 +16,7 @@ namespace Projet_GenieLog.View
 
         static Perception regle;
         static Forme[,] tableauForme; 
-        int tempsDifficulte = 500;//on l'initialise au temps du Niveau facile
+        int tempsDifficulte =4000;//on l'initialise au temps du Niveau facile
         public static int cptTest = 1;
         
         public FormPerception()
@@ -39,7 +39,7 @@ namespace Projet_GenieLog.View
             
              MessageBox.Show(regle._consigne);
              Perception.generationTableauValeur();
-             tableauForme=Perception.generateShapes(regle);
+             tableauForme=Perception.selectionFormes(regle);
              count.Text = cptTest.ToString() + "/10";
              cptTest++;
 
@@ -55,7 +55,7 @@ namespace Projet_GenieLog.View
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    Perception.createColoredShape(tableauForme[i, j], this);
+                    Forme.creationFormeColorée(tableauForme[i, j], this);
                     
                 }
             }

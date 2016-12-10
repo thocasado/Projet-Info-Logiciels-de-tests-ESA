@@ -18,8 +18,10 @@ namespace Projet_GenieLog.View.CalculMental
         int cptBonneRep = 0;
         int compteurCalcul = 0;
         int temps_difficulte = 5000;
+        int tempsAffichage = 2000;
         string _type;
         bool _difficile;
+        int[] valeurs;//valeurs[0] = chiffre1; valeurs[1]=chiffre2; valeurs[2]=resultat
         
             public FormOperation(string type, bool difficile)
             {
@@ -27,6 +29,7 @@ namespace Projet_GenieLog.View.CalculMental
                 _type = type;
                 _difficile = difficile;
                 lancerTest();
+                verifLB.Visible = false;
 
             
             }
@@ -37,49 +40,11 @@ namespace Projet_GenieLog.View.CalculMental
                 count.Text = compteurCalcul.ToString() + "/10";
                 saisieResultat.Clear();
                 labelSigne.Text = _type;
-                Random r = new Random();
-                int a=0; 
-                int b=0;
-
-                switch (_type)
-                {
-                    case "+":
-                        a = r.Next(100, 1000);
-                        b = r.Next(100, 1000);
-                        result = (a + b).ToString();
-                        break;
-                    case "-":
-                        b = r.Next(10, 1000);
-                        a = r.Next(b + 1, 1000);
-                        result = (a - b).ToString();
-                        break;
-                    case "x":
-                        a = r.Next(10, 100);
-                        b = r.Next(1, 10);
-                        result = (a * b).ToString();
-                        break;
-                    case "/":
-                        a = r.Next(10, 100);
-                        b = r.Next(1, 10);
-
-                        int aux;//stockage temporaire du resultat
-                        double reste = a % b;
-                        if (reste > (b / 2))
-                        {
-                            aux = (a / b) + 1;
-                        }
-                        else
-                        {
-                            aux = a / b;
-                        }
-                        result = aux.ToString();
-                        break;
-                }
+                valeurs = Operation.realisationCalcul(_type);  
                 
-                        
-                
-                chiffre1.Text = a.ToString();
-                chiffre2.Text = b.ToString();
+                chiffre1.Text = valeurs[0].ToString();
+                chiffre2.Text = valeurs[1].ToString();
+                result = valeurs[2].ToString();
 
 
                 if (_difficile)
@@ -105,17 +70,32 @@ namespace Projet_GenieLog.View.CalculMental
         private void resultatTest()
         {
             timerDifficile.Stop();
-           
+            verifLB.Visible = true;
+            verifLB.Font = new Font("Calibri", 12);
+            
             if (saisieResultat.Text == result)
             {
-                MessageBox.Show("Juste!");
+                
+                verifLB.ForeColor = Color.Green;
+                verifLB.Text = "Juste !";
                 cptBonneRep++;
 
             }
             else
             {
-                MessageBox.Show("Faux\n" + result);
+                verifLB.ForeColor = Color.Red;
+                verifLB.Text = "Faux\n" + result;
             }
+            timerAfficheResultat.Interval = tempsAffichage;
+            timerAfficheResultat.Start();
+            
+            
+        }
+
+        private void timerAfficheResultat_Tick(object sender, EventArgs e)
+        {
+            verifLB.Visible = false;
+            timerAfficheResultat.Stop();
             if (compteurCalcul != 10)
             {
                 lancerTest();
@@ -125,15 +105,9 @@ namespace Projet_GenieLog.View.CalculMental
                 MessageBox.Show("Vous avez eu un total de" + cptBonneRep + "/10 !");
                 this.Close();
             }
-            
         }
 
-        /*private void timerAfficheResultat_Tick(object sender, EventArgs e)
-        {
-            //impossible de fermer une messageBox sans cliquer sur ok -> mettre affichage juste ou faux dans un label direct
-            //sur l'interface peut être mieux, ou alors on laisse au click avec messageBox, à réfléchir.
-            lancerTest(difficile);
-        }*/
+       
     
 
         
