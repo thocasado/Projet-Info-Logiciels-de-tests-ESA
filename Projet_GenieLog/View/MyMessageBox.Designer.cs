@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lettre1LB = new System.Windows.Forms.Label();
             this.lettre2LB = new System.Windows.Forms.Label();
             this.lettre3LB = new System.Windows.Forms.Label();
@@ -38,6 +39,8 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.validButton = new System.Windows.Forms.Button();
             this.count = new System.Windows.Forms.Label();
+            this.timerAfficheResultat = new System.Windows.Forms.Timer(this.components);
+            this.verifLB = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lettre1LB
@@ -106,7 +109,7 @@
             // 
             // validButton
             // 
-            this.validButton.Location = new System.Drawing.Point(339, 297);
+            this.validButton.Location = new System.Drawing.Point(352, 271);
             this.validButton.Name = "validButton";
             this.validButton.Size = new System.Drawing.Size(75, 23);
             this.validButton.TabIndex = 8;
@@ -123,11 +126,26 @@
             this.count.TabIndex = 10;
             this.count.Text = "compteur";
             // 
+            // timerAfficheResultat
+            // 
+            this.timerAfficheResultat.Tick += new System.EventHandler(this.timerAfficheResultat_Tick);
+            // 
+            // verifLB
+            // 
+            this.verifLB.AutoSize = true;
+            this.verifLB.Location = new System.Drawing.Point(130, 333);
+            this.verifLB.Name = "verifLB";
+            this.verifLB.Size = new System.Drawing.Size(35, 17);
+            this.verifLB.TabIndex = 11;
+            this.verifLB.Text = "verif";
+            //this.verifLB.Click += new System.EventHandler(this.verifLB_Click);
+            // 
             // MyMessageBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(486, 388);
+            this.Controls.Add(this.verifLB);
             this.Controls.Add(this.count);
             this.Controls.Add(this.validButton);
             this.Controls.Add(this.textBox4);
@@ -157,5 +175,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button validButton;
         private System.Windows.Forms.Label count;
+        private System.Windows.Forms.Timer timerAfficheResultat;
+        private System.Windows.Forms.Label verifLB;
     }
 }

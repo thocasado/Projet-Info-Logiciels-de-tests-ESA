@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnPerception = new System.Windows.Forms.Button();
             this.btnConcentration = new System.Windows.Forms.Button();
             this.btnCalcul = new System.Windows.Forms.Button();
@@ -37,7 +38,19 @@
             this.radio_difficile = new System.Windows.Forms.RadioButton();
             this.label_difficulte = new System.Windows.Forms.Label();
             this.groupBoxDifficulte = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nomUtilisateurTB = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rPerceptionLB = new System.Windows.Forms.Label();
+            this.rConcentrationLB = new System.Windows.Forms.Label();
+            this.rCmLB = new System.Windows.Forms.Label();
+            this.rMathsLB = new System.Windows.Forms.Label();
+            this.rPhysiqueLB = new System.Windows.Forms.Label();
+            this.RaffraichissementMenuTimer = new System.Windows.Forms.Timer(this.components);
+            this.timerRentrerNom = new System.Windows.Forms.Timer(this.components);
             this.groupBoxDifficulte.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPerception
@@ -142,17 +155,119 @@
             // 
             this.groupBoxDifficulte.Controls.Add(this.radio_facile);
             this.groupBoxDifficulte.Controls.Add(this.radio_difficile);
-            this.groupBoxDifficulte.Location = new System.Drawing.Point(214, 426);
+            this.groupBoxDifficulte.Location = new System.Drawing.Point(207, 426);
             this.groupBoxDifficulte.Name = "groupBoxDifficulte";
             this.groupBoxDifficulte.Size = new System.Drawing.Size(234, 47);
             this.groupBoxDifficulte.TabIndex = 8;
             this.groupBoxDifficulte.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(247, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 17);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Nom utilisateur testé";
+            // 
+            // nomUtilisateurTB
+            // 
+            this.nomUtilisateurTB.Location = new System.Drawing.Point(246, 38);
+            this.nomUtilisateurTB.Name = "nomUtilisateurTB";
+            this.nomUtilisateurTB.Size = new System.Drawing.Size(138, 22);
+            this.nomUtilisateurTB.TabIndex = 10;
+            this.nomUtilisateurTB.TextChanged += new System.EventHandler(this.nomUtilisateurTB_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Projet_GenieLog.Properties.Resources._checked;
+            this.pictureBox1.InitialImage = global::Projet_GenieLog.Properties.Resources._checked;
+            this.pictureBox1.Location = new System.Drawing.Point(390, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(483, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 17);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Résultat actuel";
+            // 
+            // rPerceptionLB
+            // 
+            this.rPerceptionLB.AutoSize = true;
+            this.rPerceptionLB.Location = new System.Drawing.Point(512, 112);
+            this.rPerceptionLB.Name = "rPerceptionLB";
+            this.rPerceptionLB.Size = new System.Drawing.Size(32, 17);
+            this.rPerceptionLB.TabIndex = 13;
+            this.rPerceptionLB.Text = "...%";
+            // 
+            // rConcentrationLB
+            // 
+            this.rConcentrationLB.AutoSize = true;
+            this.rConcentrationLB.Location = new System.Drawing.Point(512, 170);
+            this.rConcentrationLB.Name = "rConcentrationLB";
+            this.rConcentrationLB.Size = new System.Drawing.Size(32, 17);
+            this.rConcentrationLB.TabIndex = 14;
+            this.rConcentrationLB.Text = "...%";
+            // 
+            // rCmLB
+            // 
+            this.rCmLB.AutoSize = true;
+            this.rCmLB.Location = new System.Drawing.Point(512, 227);
+            this.rCmLB.Name = "rCmLB";
+            this.rCmLB.Size = new System.Drawing.Size(32, 17);
+            this.rCmLB.TabIndex = 15;
+            this.rCmLB.Text = "...%";
+            // 
+            // rMathsLB
+            // 
+            this.rMathsLB.AutoSize = true;
+            this.rMathsLB.Location = new System.Drawing.Point(512, 285);
+            this.rMathsLB.Name = "rMathsLB";
+            this.rMathsLB.Size = new System.Drawing.Size(32, 17);
+            this.rMathsLB.TabIndex = 16;
+            this.rMathsLB.Text = "...%";
+            // 
+            // rPhysiqueLB
+            // 
+            this.rPhysiqueLB.AutoSize = true;
+            this.rPhysiqueLB.Location = new System.Drawing.Point(512, 343);
+            this.rPhysiqueLB.Name = "rPhysiqueLB";
+            this.rPhysiqueLB.Size = new System.Drawing.Size(32, 17);
+            this.rPhysiqueLB.TabIndex = 17;
+            this.rPhysiqueLB.Text = "...%";
+            // 
+            // RaffraichissementMenuTimer
+            // 
+            this.RaffraichissementMenuTimer.Interval = 1000;
+            this.RaffraichissementMenuTimer.Tick += new System.EventHandler(this.RaffraichissementMenuTimer_Tick);
+            // 
+            // timerRentrerNom
+            // 
+            this.timerRentrerNom.Interval = 10000;
+            this.timerRentrerNom.Tick += new System.EventHandler(this.timerRentrerNom_Tick);
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 501);
+            this.Controls.Add(this.rPhysiqueLB);
+            this.Controls.Add(this.rMathsLB);
+            this.Controls.Add(this.rCmLB);
+            this.Controls.Add(this.rConcentrationLB);
+            this.Controls.Add(this.rPerceptionLB);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.nomUtilisateurTB);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBoxDifficulte);
             this.Controls.Add(this.label_difficulte);
             this.Controls.Add(this.btn_physique);
@@ -164,8 +279,10 @@
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.groupBoxDifficulte.ResumeLayout(false);
             this.groupBoxDifficulte.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,6 +299,17 @@
         private System.Windows.Forms.RadioButton radio_difficile;
         private System.Windows.Forms.Label label_difficulte;
         private System.Windows.Forms.GroupBox groupBoxDifficulte;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox nomUtilisateurTB;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label rPerceptionLB;
+        public System.Windows.Forms.Label rConcentrationLB;
+        public System.Windows.Forms.Label rCmLB;
+        public System.Windows.Forms.Label rMathsLB;
+        public System.Windows.Forms.Label rPhysiqueLB;
+        private System.Windows.Forms.Timer RaffraichissementMenuTimer;
+        private System.Windows.Forms.Timer timerRentrerNom;
     }
 }
 

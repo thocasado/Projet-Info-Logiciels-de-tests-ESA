@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exercices\Forme.cs" />
+    <Compile Include="Exercices\Sauvegarde.cs" />
     <Compile Include="Presenter\Presenter.cs" />
     <Compile Include="Exercices\Operation.cs" />
     <Compile Include="Exercices\Concentration.cs" />
@@ -148,6 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\test.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

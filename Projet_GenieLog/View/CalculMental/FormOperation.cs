@@ -11,7 +11,6 @@ namespace Projet_GenieLog.View.CalculMental
 {
     public partial class FormOperation : Form
     {
-        // Au lieu de message Box, dire si c'est juste ou faux avec un label direct sur le form.
         //Sauvegarder le taux de résultat; valider avec entrée
         //Ameliorer affichage
         string result;
@@ -103,12 +102,13 @@ namespace Projet_GenieLog.View.CalculMental
             else
             {
                 MessageBox.Show("Vous avez eu un total de" + cptBonneRep + "/10 !");
+                string resultatFinal = cptBonneRep * 10 + "%";
+                Sauvegarde.rCm = resultatFinal;
                 this.Close();
             }
         }
 
        
-    
 
         
 

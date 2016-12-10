@@ -136,6 +136,8 @@ namespace Projet_GenieLog.View
                 {
                     MessageBox.Show("Vous avez eu un total de" + cptBonneRep + "/5 ! à la serie " + cptSerie);
                     MessageBox.Show("Fin de l'exercice. Vous avez eu un total de " + cptTotalBonneRep + "/ 15");
+                    string resultatFinal = cptTotalBonneRep / 15 * 100 + "%";
+                    Sauvegarde.rConcentration = resultatFinal;
                     this.Close();
                 }
             }

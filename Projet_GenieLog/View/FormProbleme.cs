@@ -14,13 +14,15 @@ namespace Projet_GenieLog.View
 
     public partial class FormProbleme : Form
     {
-
+       
         int cptTest = 0;//compte à quel test on est
         int cptBonneRep = 0;//compte le nombre de bonnes réponses
         
         Probleme [] pbm;//tableau permettant de récupérer les problèmes sélectionnés
         string bonneRep;
         string repUtilisateur;
+        string _matiere;
+        int tempsAffichage = 2000;
 
         
        
@@ -30,9 +32,11 @@ namespace Projet_GenieLog.View
         
         public FormProbleme(string matiere)
         {
+            _matiere = matiere;
             InitializeComponent();
             pbm = Probleme.selectionPbm(matiere, MainMenu.difficile);
             lancerTest();
+            verifLB.Visible = false;
             
         }
 
@@ -72,30 +76,56 @@ namespace Projet_GenieLog.View
                     repUtilisateur = rb.Text;
                 }
             }
+            verifLB.Visible = true;
+            verifLB.Font = new Font("Calibri", 12);
 
             if (repUtilisateur == bonneRep)
             {
-                MessageBox.Show("Juste!");
+                verifLB.ForeColor = Color.Green;
+                verifLB.Text = "Juste !";
                 cptBonneRep++;
 
             }
             else
             {
-                MessageBox.Show("Faux\n" + bonneRep);
+                verifLB.ForeColor = Color.Red;
+                verifLB.Text = "Faux\n" + bonneRep;
             }
+            timerAfficheResultat.Interval = tempsAffichage;
+            timerAfficheResultat.Start();
+        }
+
+        private void timerAfficheResultat_Tick(object sender, EventArgs e)
+        {
+            verifLB.Visible = false;
+            timerAfficheResultat.Stop();
             if (cptTest != 10)
             {
                 lancerTest();
             }
             else
             {
+                
                 MessageBox.Show("Vous avez eu un total de" + cptBonneRep + "/10 !");
-                this.Close();
+                string resultatFinal = cptBonneRep * 10 + "%";
+                if (_matiere == "Physique")
+                {
+                    Sauvegarde.rPhysique = resultatFinal;
+                }
+                else
+                {
+                    Sauvegarde.rMaths = resultatFinal;
+                    this.Close();
+                    
+                }
+
+
+
             }
-            
         }
 
         
+               
         
 
         

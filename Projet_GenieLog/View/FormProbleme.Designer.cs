@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelConsigne = new System.Windows.Forms.Label();
             this.rbChoix4 = new System.Windows.Forms.RadioButton();
             this.validButton = new System.Windows.Forms.Button();
@@ -37,6 +38,8 @@
             this.rbChoix3 = new System.Windows.Forms.RadioButton();
             this.groupBoxRb = new System.Windows.Forms.GroupBox();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.verifLB = new System.Windows.Forms.Label();
+            this.timerAfficheResultat = new System.Windows.Forms.Timer(this.components);
             this.groupBoxRb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +68,7 @@
             // 
             // validButton
             // 
-            this.validButton.Location = new System.Drawing.Point(238, 429);
+            this.validButton.Location = new System.Drawing.Point(248, 384);
             this.validButton.Name = "validButton";
             this.validButton.Size = new System.Drawing.Size(75, 23);
             this.validButton.TabIndex = 6;
@@ -137,11 +140,25 @@
             this.pictureBox.TabIndex = 1;
             this.pictureBox.TabStop = false;
             // 
+            // verifLB
+            // 
+            this.verifLB.AutoSize = true;
+            this.verifLB.Location = new System.Drawing.Point(190, 442);
+            this.verifLB.Name = "verifLB";
+            this.verifLB.Size = new System.Drawing.Size(35, 17);
+            this.verifLB.TabIndex = 9;
+            this.verifLB.Text = "verif";
+            // 
+            // timerAfficheResultat
+            // 
+            this.timerAfficheResultat.Tick += new System.EventHandler(this.timerAfficheResultat_Tick);
+            // 
             // FormProbleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(574, 483);
+            this.Controls.Add(this.verifLB);
             this.Controls.Add(this.count);
             this.Controls.Add(this.groupBoxRb);
             this.Controls.Add(this.validButton);
@@ -168,5 +185,7 @@
         private System.Windows.Forms.RadioButton rbChoix2;
         private System.Windows.Forms.RadioButton rbChoix3;
         private System.Windows.Forms.GroupBox groupBoxRb;
+        private System.Windows.Forms.Label verifLB;
+        private System.Windows.Forms.Timer timerAfficheResultat;
     }
 }

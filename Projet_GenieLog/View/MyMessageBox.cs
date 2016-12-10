@@ -17,11 +17,13 @@ namespace Projet_GenieLog
         static int cptBonneReponseTotal = 0;
         static int cptNombreFormeTotal = 0;
         int cptTest = View.FormPerception.cptTest;
+        int tempsAffichage = 1000;
         
 
         public MyMessageBox()
         {
             InitializeComponent();
+            verifLB.Visible = false;
         }
 
         public void reponseVisible()
@@ -43,19 +45,7 @@ namespace Projet_GenieLog
 
         public void implementationLabel()
         {
-            //int cpt=0;
-           // var test = Perception.tableauFormeVoulue;
-           /* foreach (Control c in Controls)
-            {
-                if (c is Label && cpt<Perception.nbFormeVoulue)// si trop le bordel pour savoir qui est qui -> implémentation de label 1 à 1 
-                {
-                    c.Text = Perception.tableauFormeVoulue[cpt].Letter;
-                    bonneReponse[cpt] = Perception.tableauFormeVoulue[cpt].Value.ToString();//on récupère la réponse attendue ici
-                    cpt++;
-                }
-            }
-
-            */
+           
             count.Text = cptTest.ToString() + "/10";
             lettre1LB.Text = Perception.tableauFormeVoulue[0].lettre;
             lettre2LB.Text = Perception.tableauFormeVoulue[1].lettre;
@@ -94,16 +84,33 @@ namespace Projet_GenieLog
                         cptBonneReponse++;
                     }
             }
-                
-                
-                
-                
-            
-            MessageBox.Show(cptBonneReponse.ToString() + "/" + Perception.nbFormeVoulue);
+
+
+
+
+            verifLB.Visible = true;
+            verifLB.Text=cptBonneReponse.ToString() + "/" + Perception.nbFormeVoulue;
+            timerAfficheResultat.Interval = tempsAffichage;
+            timerAfficheResultat.Start();
             cptNombreFormeTotal += Perception.nbFormeVoulue;
             cptBonneReponseTotal += cptBonneReponse;
-            this.SetVisibleCore(false);
             
+            
+            
+            
+           
+            
+        }
+
+        
+
+        private void timerAfficheResultat_Tick(object sender, EventArgs e)
+        {
+
+            timerAfficheResultat.Stop();
+            verifLB.Visible = false;
+            this.SetVisibleCore(false);
+
             if (cptTest != 10)
             {
                 View.FormPerception fp = new View.FormPerception();
@@ -111,13 +118,13 @@ namespace Projet_GenieLog
             }
             else
             {
-                
+
                 MessageBox.Show("Vous avez eu un score total de " + cptBonneReponseTotal + "/" + cptNombreFormeTotal);
+                string resultatFinal = cptBonneReponseTotal / cptNombreFormeTotal * 100 + "%";
+                Sauvegarde.rConcentration = resultatFinal;
+                this.Close();
                 View.FormPerception.cptTest = 1;
             }
-            
-           
-            
         }
 
 
