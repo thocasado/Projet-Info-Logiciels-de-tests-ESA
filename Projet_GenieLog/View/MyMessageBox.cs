@@ -17,7 +17,7 @@ namespace Projet_GenieLog
         static int cptBonneReponseTotal = 0;
         static int cptNombreFormeTotal = 0;
         int cptTest = View.FormPerception.cptTest;
-        int tempsAffichage = 1000;
+        int tempsAffichage = 1500;
         
 
         public MyMessageBox()
@@ -89,7 +89,7 @@ namespace Projet_GenieLog
 
 
             verifLB.Visible = true;
-            verifLB.Text=cptBonneReponse.ToString() + "/" + Perception.nbFormeVoulue;
+            verifLB.Text="Nombre de bonne(s) réponse(s) :\n"+cptBonneReponse.ToString() + "/" + Perception.nbFormeVoulue;
             timerAfficheResultat.Interval = tempsAffichage;
             timerAfficheResultat.Start();
             cptNombreFormeTotal += Perception.nbFormeVoulue;
@@ -127,9 +127,21 @@ namespace Projet_GenieLog
             }
         }
 
+        
 
+        private void textBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+            if (e.KeyCode == Keys.Enter)//valide les réponses
+            {
+                validButton_Click(null, null);
+            }
+            if (e.KeyCode==Keys.Tab)//permet de passer d'un textBox à l'autre en appuyant sur tab (raccourci usuel)
+            {
 
-
-       
+                Cursor.Position = GetNextControl(this, true).Location;//passe d'un controle à l'autre en récupérant la position du textBox actuel. Le
+                                                                      //true permet d'accèder à l'élement suivant, false élément précédent
+            }
+        }
     }
 }

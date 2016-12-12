@@ -66,6 +66,7 @@
             this.rbChoix4.TabStop = true;
             this.rbChoix4.Text = "radioButton4";
             this.rbChoix4.UseVisualStyleBackColor = true;
+            this.rbChoix4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.choixReponse_KeyDown);
             // 
             // validButton
             // 
@@ -98,6 +99,7 @@
             this.rbChoix1.TabStop = true;
             this.rbChoix1.Text = "choix1";
             this.rbChoix1.UseVisualStyleBackColor = true;
+            this.rbChoix1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.choixReponse_KeyDown);
             // 
             // rbChoix2
             // 
@@ -109,6 +111,7 @@
             this.rbChoix2.TabStop = true;
             this.rbChoix2.Text = "radioButton2";
             this.rbChoix2.UseVisualStyleBackColor = true;
+            this.rbChoix2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.choixReponse_KeyDown);
             // 
             // rbChoix3
             // 
@@ -120,6 +123,7 @@
             this.rbChoix3.TabStop = true;
             this.rbChoix3.Text = "radioButton3";
             this.rbChoix3.UseVisualStyleBackColor = true;
+            this.rbChoix3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.choixReponse_KeyDown);
             // 
             // groupBoxRb
             // 

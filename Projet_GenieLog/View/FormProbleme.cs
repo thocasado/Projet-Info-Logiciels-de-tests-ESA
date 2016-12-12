@@ -59,6 +59,7 @@ namespace Projet_GenieLog.View
             cptTest++;
             count.Text=cptTest.ToString();
             
+            
 
         }
 
@@ -124,11 +125,19 @@ namespace Projet_GenieLog.View
             }
         }
 
-        
-               
-        
+        private void choixReponse_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                afficheResultat();
+            }
+        }
+
+
 
         
+
+
 
 
     }

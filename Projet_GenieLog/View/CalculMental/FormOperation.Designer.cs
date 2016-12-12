@@ -46,7 +46,7 @@
             // 
             this.labelSigne.AutoSize = true;
             this.labelSigne.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSigne.Location = new System.Drawing.Point(288, 122);
+            this.labelSigne.Location = new System.Drawing.Point(298, 122);
             this.labelSigne.Name = "labelSigne";
             this.labelSigne.Size = new System.Drawing.Size(60, 69);
             this.labelSigne.TabIndex = 0;
@@ -56,7 +56,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label2.Location = new System.Drawing.Point(235, 36);
+            this.label2.Location = new System.Drawing.Point(246, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 39);
             this.label2.TabIndex = 1;
@@ -66,7 +66,7 @@
             // 
             this.chiffre1.AutoSize = true;
             this.chiffre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.chiffre1.Location = new System.Drawing.Point(0, 116);
+            this.chiffre1.Location = new System.Drawing.Point(0, 122);
             this.chiffre1.Name = "chiffre1";
             this.chiffre1.Size = new System.Drawing.Size(252, 76);
             this.chiffre1.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             this.chiffre2.AutoSize = true;
             this.chiffre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.chiffre2.Location = new System.Drawing.Point(392, 122);
+            this.chiffre2.Location = new System.Drawing.Point(403, 122);
             this.chiffre2.Name = "chiffre2";
             this.chiffre2.Size = new System.Drawing.Size(252, 76);
             this.chiffre2.TabIndex = 3;
@@ -86,7 +86,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(283, 207);
+            this.label3.Location = new System.Drawing.Point(296, 207);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 69);
             this.label3.TabIndex = 4;
@@ -95,17 +95,18 @@
             // saisieResultat
             // 
             this.saisieResultat.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.saisieResultat.Location = new System.Drawing.Point(176, 264);
+            this.saisieResultat.Location = new System.Drawing.Point(187, 279);
             this.saisieResultat.Name = "saisieResultat";
             this.saisieResultat.Size = new System.Drawing.Size(283, 45);
             this.saisieResultat.TabIndex = 5;
             this.saisieResultat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.saisieResultat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.saisieResultat_KeyDown);
             // 
             // validButton
             // 
-            this.validButton.Location = new System.Drawing.Point(273, 331);
+            this.validButton.Location = new System.Drawing.Point(275, 349);
             this.validButton.Name = "validButton";
-            this.validButton.Size = new System.Drawing.Size(75, 23);
+            this.validButton.Size = new System.Drawing.Size(107, 44);
             this.validButton.TabIndex = 6;
             this.validButton.Text = "Valider";
             this.validButton.UseVisualStyleBackColor = true;
@@ -114,7 +115,7 @@
             // count
             // 
             this.count.AutoSize = true;
-            this.count.Location = new System.Drawing.Point(571, 432);
+            this.count.Location = new System.Drawing.Point(577, 475);
             this.count.Name = "count";
             this.count.Size = new System.Drawing.Size(67, 17);
             this.count.TabIndex = 7;
@@ -131,7 +132,7 @@
             // verifLB
             // 
             this.verifLB.AutoSize = true;
-            this.verifLB.Location = new System.Drawing.Point(197, 435);
+            this.verifLB.Location = new System.Drawing.Point(311, 435);
             this.verifLB.Name = "verifLB";
             this.verifLB.Size = new System.Drawing.Size(35, 17);
             this.verifLB.TabIndex = 8;

@@ -110,17 +110,12 @@ namespace Projet_GenieLog.View.CalculMental
 
        
 
-        
-
-        
-
-
-        
-        
-      
-
-      
-
-        
+        private void saisieResultat_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Enter)
+            {
+                resultatTest();
+            }
+        }
     }
 }
