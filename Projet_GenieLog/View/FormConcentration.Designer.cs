@@ -112,6 +112,7 @@
             this.Controls.Add(this.groupBoxButton);
             this.Controls.Add(this.labelConsigne);
             this.Controls.Add(this.count);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormConcentration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormConcentration";

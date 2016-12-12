@@ -120,8 +120,8 @@ namespace Projet_GenieLog
             {
 
                 MessageBox.Show("Vous avez eu un score total de " + cptBonneReponseTotal + "/" + cptNombreFormeTotal);
-                string resultatFinal = cptBonneReponseTotal / cptNombreFormeTotal * 100 + "%";
-                Sauvegarde.rConcentration = resultatFinal;
+                string resultatFinal = 100*cptBonneReponseTotal / cptNombreFormeTotal + "%";
+                Sauvegarde.rPerception = resultatFinal;
                 this.Close();
                 View.FormPerception.cptTest = 1;
             }
