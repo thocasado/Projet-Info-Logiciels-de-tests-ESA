@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <Regles>
+      <regle id="1" consigne="Observez et m&#233;morisez les chiffres &#224; l'int&#233;rieur des carr&#233;s jaunes" forme="Rectangle" couleur="Yellow"/>4
+      <regle id="2" consigne="Observez et m&#233;morisez les chiffres &#224; l'int&#233;rieur des carr&#233;s bleus" forme="Rectangle" couleur="Blue"/>
+      <regle id="3" consigne="Observez et m&#233;morisez les chiffres &#224; l'int&#233;rieur des ronds jaunes" forme="Rond" couleur="Yellow"/>
+      <regle id="4" consigne="Observez et m&#233;morisez les chiffres &#224; l'int&#233;rieur des ronds bleus" forme="Rond" couleur="Blue"/>
+   </Regles> 
+ 

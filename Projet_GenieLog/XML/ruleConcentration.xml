@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Regles>
+    <regle id="1" consigne="Appuyez sur le bouton 1 si deux objets consecutifs ont la meme forme. Appuyez sur le bouton 2 si deux objets consecutifs ont la meme couleur. Appuyez sur le bouton 3 dans tous les autres cas." boutonForme="1" boutonNbP="3" boutonCouleur="2"/>
+    <regle id="2" consigne="Appuyez sur le bouton 1 si deux objets consecutifs ont la meme forme. Appuyez sur le bouton 2 si deux objets consecutifs ont le meme nombre de points. Appuyez sur le bouton 3 dans tous les autres cas." boutonForme="1" boutonNbP="2" boutonCouleur="3"/>
+    <regle id="3" consigne="Appuyez sur le bouton 1 si deux objets consecutifs ont la meme couleur. Appuyez sur le bouton 2 si deux objets consecutifs ont la meme forme. Appuyez sur le bouton 3 dans tous les autres cas." boutonForme="2" boutonNbP="3" boutonCouleur="1"/>
+    <regle id="4" consigne="Appuyez sur le bouton 1 si deux objets consecutifs ont le meme nombre de points. Appuyez sur le bouton 2 si deux objets consecutifs ont la meme forme. Appuyez sur le bouton 3 dans tous les autres cas." boutonForme="2" boutonNbP="1" boutonCouleur="3"/>
+    <regle id="5" consigne="Appuyez sur le bouton 1 si deux objets consecutifs ont la meme couleur. Appuyez sur le bouton 2 si deux objets consecutifs ont le meme nombre de points. Appuyez sur le bouton 3 dans tous les autres cas." boutonForme="3" boutonNbP="2" boutonCouleur="1"/>
+    <regle id="6" consigne="Appuyez sur le bouton 1 si deux objets consecutifs ont le meme nombre de points. Appuyez sur le bouton 2 si deux objets consecutifs ont la meme couleur. Appuyez sur le bouton 3 dans tous les autres cas." boutonForme="3" boutonNbP="1" boutonCouleur="2"/>
+</Regles>
+    

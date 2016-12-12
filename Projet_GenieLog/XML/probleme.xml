@@ -1,0 +1,66 @@
+<Problemes>
+<problemesMaths>
+<facile>
+			<pbm id="1" consigne="Comment ca va ? " choix1="Bien" choix2="mal" choix3="ca va" choix4="tb" bonnereponse="tb" image="PhotoGroupe1.jpg"/>
+			<pbm id="2" consigne="Comment ca va ?2 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe2.jpg"/>
+			<pbm id="3" consigne="Comment ca va ?3 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe3.jpg"/>
+			<pbm id="4" consigne="Comment ca va ?4 " choix1="Bien" choix2="mal" choix3="ca va" choix4="tb" bonnereponse="tb" image="PhotoGroupe4.jpg"/>
+			<pbm id="5" consigne="Comment ca va ?5 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe5.jpg"/>
+			<pbm id="6" consigne="Comment ca va ?6 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe6.jpg"/>
+			<pbm id="7" consigne="Comment ca va ?7 " choix1="Bien" choix2="mal" choix3="ca va" choix4="tb" bonnereponse="tb" image="PhotoGroupe7.jpg"/>
+			<pbm id="8" consigne="Comment ca va ?8 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe8.jpg"/>
+			<pbm id="9" consigne="Comment ca va ?9 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe9.jpg"/>
+			<pbm id="10" consigne="Comment ca va ?10 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe10.jpg"/>
+			<pbm id="11" consigne="Comment ca va ?11 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe11.jpg"/>
+			<pbm id="12" consigne="Comment ca va ?12 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe12.jpg"/>
+
+</facile>
+<difficile>
+			<pbm id="1" consigne="Comment ca va ?13 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe13.jpg"/>
+			<pbm id="2" consigne="Comment ca va ?14 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe14.jpg"/>
+			<pbm id="3" consigne="Comment ca va ?15 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe15.jpg"/>
+			<pbm id="4" consigne="Comment ca va ?16 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe16.jpg"/>
+			<pbm id="5" consigne="Comment ca va ?17 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe17.jpg"/>
+			<pbm id="6" consigne="Comment ca va ?18 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe18.jpg"/>
+			<pbm id="7" consigne="Comment ca va ?19 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe19.jpg"/>
+			<pbm id="8" consigne="Comment ca va ?20 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+			<pbm id="9" consigne="Comment ca va ?21 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe19.jpg"/>
+			<pbm id="10" consigne="Comment ca va ?22 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+			<pbm id="11" consigne="Comment ca va ?23 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe19.jpg"/>
+			<pbm id="12" consigne="Comment ca va ?24 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+			
+</difficile>
+</problemesMaths>
+
+<problemesPhysique>
+<facile>
+			<pbm id="1" consigne="Comment ca va ??? " choix1="Bien" choix2="mal" choix3="ca va" choix4="tb" bonnereponse="tb" image="none.jpg"/>
+			<pbm id="2" consigne="Comment ca va ???2 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe1.jpg"/>
+			<pbm id="3" consigne="Comment ca va ???3 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+			<pbm id="4" consigne="Comment ca va ???4 " choix1="Bien" choix2="mal" choix3="ca va" choix4="tb" bonnereponse="tb" image="none.jpg"/>
+			<pbm id="5" consigne="Comment ca va ???5 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe1.jpg"/>
+			<pbm id="6" consigne="Comment ca va ???6 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+			<pbm id="7" consigne="Comment ca va ???7 " choix1="Bien" choix2="mal" choix3="ca va" choix4="tb" bonnereponse="tb" image="none.jpg"/>
+			<pbm id="8" consigne="Comment ca va ???8 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="none.jpg"/>
+			<pbm id="9" consigne="Comment ca va ???9 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe9.jpg"/>
+			<pbm id="10" consigne="Comment ca va ???10 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+			<pbm id="11" consigne="Comment ca va ???11 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+			<pbm id="12" consigne="Comment ca va ???12 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+</facile>
+<difficile>
+			<pbm id="1" consigne="Comment ca va ???13 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+			<pbm id="2" consigne="Comment ca va ???14 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+			<pbm id="3" consigne="Comment ca va ???15 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+			<pbm id="4" consigne="Comment ca va ???16 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+			<pbm id="5" consigne="Comment ca va ???17 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+			<pbm id="6" consigne="Comment ca va ???18 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe1.jpg"/>
+			<pbm id="7" consigne="Comment ca va ???19 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+			<pbm id="8" consigne="Comment ca va ???20 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+			<pbm id="9" consigne="Comment ca va ???21 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe1.jpg"/>
+			<pbm id="10" consigne="Comment ca va ???22 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe1.jpg"/>
+			<pbm id="11" consigne="Comment ca va ???23 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe1.jpg"/>
+			<pbm id="12" consigne="Comment ca va ???24 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe1.jpg"/>
+</difficile>
+</problemesPhysique>
+</Problemes>
+
