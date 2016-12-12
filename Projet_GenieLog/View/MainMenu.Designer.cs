@@ -153,6 +153,7 @@
             // 
             // groupBoxDifficulte
             // 
+            this.groupBoxDifficulte.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBoxDifficulte.Controls.Add(this.radio_facile);
             this.groupBoxDifficulte.Controls.Add(this.radio_difficile);
             this.groupBoxDifficulte.Location = new System.Drawing.Point(207, 426);
@@ -163,6 +164,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(247, 9);
             this.label1.Name = "label1";
@@ -172,6 +174,7 @@
             // 
             // nomUtilisateurTB
             // 
+            this.nomUtilisateurTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nomUtilisateurTB.Location = new System.Drawing.Point(246, 38);
             this.nomUtilisateurTB.Name = "nomUtilisateurTB";
             this.nomUtilisateurTB.Size = new System.Drawing.Size(138, 22);
@@ -180,6 +183,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::Projet_GenieLog.Properties.Resources._checked;
             this.pictureBox1.InitialImage = global::Projet_GenieLog.Properties.Resources._checked;
             this.pictureBox1.Location = new System.Drawing.Point(390, 33);
@@ -192,6 +196,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(483, 70);
             this.label2.Name = "label2";
@@ -201,6 +206,7 @@
             // 
             // rPerceptionLB
             // 
+            this.rPerceptionLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rPerceptionLB.AutoSize = true;
             this.rPerceptionLB.Location = new System.Drawing.Point(512, 112);
             this.rPerceptionLB.Name = "rPerceptionLB";
@@ -210,6 +216,7 @@
             // 
             // rConcentrationLB
             // 
+            this.rConcentrationLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rConcentrationLB.AutoSize = true;
             this.rConcentrationLB.Location = new System.Drawing.Point(512, 170);
             this.rConcentrationLB.Name = "rConcentrationLB";
@@ -219,6 +226,7 @@
             // 
             // rCmLB
             // 
+            this.rCmLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rCmLB.AutoSize = true;
             this.rCmLB.Location = new System.Drawing.Point(512, 227);
             this.rCmLB.Name = "rCmLB";
@@ -228,6 +236,7 @@
             // 
             // rMathsLB
             // 
+            this.rMathsLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rMathsLB.AutoSize = true;
             this.rMathsLB.Location = new System.Drawing.Point(512, 285);
             this.rMathsLB.Name = "rMathsLB";
@@ -237,6 +246,7 @@
             // 
             // rPhysiqueLB
             // 
+            this.rPhysiqueLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rPhysiqueLB.AutoSize = true;
             this.rPhysiqueLB.Location = new System.Drawing.Point(512, 343);
             this.rPhysiqueLB.Name = "rPhysiqueLB";
