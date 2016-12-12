@@ -80,7 +80,8 @@ namespace Projet_GenieLog
             string couleurVoulue = regle._couleur;
             string couleur="";
             string forme="";
-            
+            int largeur = 50;
+            int hauteur = 50;
            
 
             //on place aléatoirement les 3 ou 4 formes à reperer
@@ -95,7 +96,7 @@ namespace Projet_GenieLog
                    int j=rnd.Next(0,4);
                    if (tableauForme[i, j] == null)//on crée une nouvelle forme qu'a un emplacement ou il n'y en a pas déjà
                    {
-                       tableauForme[i, j] = new Forme(couleurVoulue, formeVoulue,rndNumbersTab[i,j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j]);//changer valeur avec tableau de valeurs et changer lettre avec tableau de lettres
+                       tableauForme[i, j] = new Forme(couleurVoulue, formeVoulue,rndNumbersTab[i,j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j],largeur,hauteur);
                        tableauFormeVoulue[cptFormeVoulue] = tableauForme[i, j];
                        cptFormeVoulue++;//on change d'indice que si on crée une nouvelle forme
                    }
@@ -114,6 +115,7 @@ namespace Projet_GenieLog
                            
                            int rndCouleur = rnd.Next(1, 3); //1=Bleu, 2=jaune
                            int rndForme = rnd.Next(1, 3);
+                           
                            switch (rndCouleur)
                            {
                                case 1:
@@ -134,13 +136,13 @@ namespace Projet_GenieLog
                            }
                            if (couleur != couleurVoulue)
                            {
-                               tableauForme[i, j] = new Forme(couleur, forme, rndNumbersTab[i,j], 25 + 105 * j, 30 + 95 * i,arrayLetters[i,j]);
+                               tableauForme[i, j] = new Forme(couleur, forme, rndNumbersTab[i,j], 25 + 105 * j, 30 + 95 * i,arrayLetters[i,j],largeur,hauteur);
                            }
                            else
                            {
                                if (forme != formeVoulue)
                                {
-                                   tableauForme[i, j] = new Forme(couleur, forme, rndNumbersTab[i,j], 25 + 105 * j, 30 + 95 * i,arrayLetters[i,j]);
+                                   tableauForme[i, j] = new Forme(couleur, forme, rndNumbersTab[i,j], 25 + 105 * j, 30 + 95 * i,arrayLetters[i,j],largeur,hauteur);
                                }
                                else// on ne crée aucune forme car c'était une "formeVoulue" qui a été tiré donc on passe pas à la colonne suivante
                                {

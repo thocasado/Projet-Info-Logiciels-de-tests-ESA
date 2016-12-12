@@ -138,7 +138,6 @@
             this.verifLB.Size = new System.Drawing.Size(35, 17);
             this.verifLB.TabIndex = 11;
             this.verifLB.Text = "verif";
-            //this.verifLB.Click += new System.EventHandler(this.verifLB_Click);
             // 
             // MyMessageBox
             // 
@@ -157,6 +156,7 @@
             this.Controls.Add(this.lettre2LB);
             this.Controls.Add(this.lettre1LB);
             this.Name = "MyMessageBox";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyMessageBox";
             this.ResumeLayout(false);
             this.PerformLayout();

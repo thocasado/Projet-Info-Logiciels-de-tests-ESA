@@ -83,7 +83,7 @@
             // count
             // 
             this.count.AutoSize = true;
-            this.count.Location = new System.Drawing.Point(415, 433);
+            this.count.Location = new System.Drawing.Point(577, 475);
             this.count.Name = "count";
             this.count.Size = new System.Drawing.Size(67, 17);
             this.count.TabIndex = 10;
@@ -94,7 +94,7 @@
             this.groupBoxButton.Controls.Add(this.button3);
             this.groupBoxButton.Controls.Add(this.button2);
             this.groupBoxButton.Controls.Add(this.button1);
-            this.groupBoxButton.Location = new System.Drawing.Point(387, 157);
+            this.groupBoxButton.Location = new System.Drawing.Point(459, 182);
             this.groupBoxButton.Name = "groupBoxButton";
             this.groupBoxButton.Size = new System.Drawing.Size(117, 164);
             this.groupBoxButton.TabIndex = 11;
@@ -108,11 +108,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 497);
+            this.ClientSize = new System.Drawing.Size(656, 501);
             this.Controls.Add(this.groupBoxButton);
             this.Controls.Add(this.labelConsigne);
             this.Controls.Add(this.count);
             this.Name = "FormConcentration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormConcentration";
             this.groupBoxButton.ResumeLayout(false);
             this.ResumeLayout(false);

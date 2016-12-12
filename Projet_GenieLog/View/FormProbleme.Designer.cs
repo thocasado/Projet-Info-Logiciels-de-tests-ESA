@@ -46,9 +46,10 @@
             // 
             // labelConsigne
             // 
+            this.labelConsigne.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelConsigne.AutoSize = true;
             this.labelConsigne.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.labelConsigne.Location = new System.Drawing.Point(206, 52);
+            this.labelConsigne.Location = new System.Drawing.Point(264, 41);
             this.labelConsigne.MaximumSize = new System.Drawing.Size(0, 530);
             this.labelConsigne.Name = "labelConsigne";
             this.labelConsigne.Size = new System.Drawing.Size(128, 29);
@@ -68,9 +69,10 @@
             // 
             // validButton
             // 
-            this.validButton.Location = new System.Drawing.Point(248, 384);
+            this.validButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.validButton.Location = new System.Drawing.Point(275, 403);
             this.validButton.Name = "validButton";
-            this.validButton.Size = new System.Drawing.Size(75, 23);
+            this.validButton.Size = new System.Drawing.Size(106, 44);
             this.validButton.TabIndex = 6;
             this.validButton.Text = "Valider";
             this.validButton.UseVisualStyleBackColor = true;
@@ -78,8 +80,9 @@
             // 
             // count
             // 
+            this.count.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.count.AutoSize = true;
-            this.count.Location = new System.Drawing.Point(494, 432);
+            this.count.Location = new System.Drawing.Point(577, 475);
             this.count.Name = "count";
             this.count.Size = new System.Drawing.Size(67, 17);
             this.count.TabIndex = 8;
@@ -120,11 +123,12 @@
             // 
             // groupBoxRb
             // 
+            this.groupBoxRb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBoxRb.Controls.Add(this.rbChoix3);
             this.groupBoxRb.Controls.Add(this.rbChoix2);
             this.groupBoxRb.Controls.Add(this.rbChoix1);
             this.groupBoxRb.Controls.Add(this.rbChoix4);
-            this.groupBoxRb.Location = new System.Drawing.Point(13, 320);
+            this.groupBoxRb.Location = new System.Drawing.Point(47, 342);
             this.groupBoxRb.Name = "groupBoxRb";
             this.groupBoxRb.Size = new System.Drawing.Size(549, 48);
             this.groupBoxRb.TabIndex = 7;
@@ -132,18 +136,20 @@
             // 
             // pictureBox
             // 
+            this.pictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox.ErrorImage = null;
-            this.pictureBox.Location = new System.Drawing.Point(110, 84);
+            this.pictureBox.Location = new System.Drawing.Point(144, 97);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(345, 215);
+            this.pictureBox.Size = new System.Drawing.Size(369, 239);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 1;
             this.pictureBox.TabStop = false;
             // 
             // verifLB
             // 
+            this.verifLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.verifLB.AutoSize = true;
-            this.verifLB.Location = new System.Drawing.Point(190, 442);
+            this.verifLB.Location = new System.Drawing.Point(141, 456);
             this.verifLB.Name = "verifLB";
             this.verifLB.Size = new System.Drawing.Size(35, 17);
             this.verifLB.TabIndex = 9;
@@ -157,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 483);
+            this.ClientSize = new System.Drawing.Size(656, 501);
             this.Controls.Add(this.verifLB);
             this.Controls.Add(this.count);
             this.Controls.Add(this.groupBoxRb);
@@ -165,7 +171,8 @@
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.labelConsigne);
             this.Name = "FormProbleme";
-            this.Text = "FormMaths";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Problemes";
             this.groupBoxRb.ResumeLayout(false);
             this.groupBoxRb.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

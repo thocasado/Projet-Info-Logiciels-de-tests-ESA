@@ -37,6 +37,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.Location = new System.Drawing.Point(16, 70);
@@ -50,6 +51,7 @@
             // 
             // additionButton
             // 
+            this.additionButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.additionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
             this.additionButton.Location = new System.Drawing.Point(84, 172);
             this.additionButton.Margin = new System.Windows.Forms.Padding(4);
@@ -62,6 +64,7 @@
             // 
             // sousButton
             // 
+            this.sousButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.sousButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
             this.sousButton.Location = new System.Drawing.Point(401, 172);
             this.sousButton.Margin = new System.Windows.Forms.Padding(4);
@@ -74,6 +77,7 @@
             // 
             // multButton
             // 
+            this.multButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.multButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
             this.multButton.Location = new System.Drawing.Point(84, 335);
             this.multButton.Margin = new System.Windows.Forms.Padding(4);
@@ -86,6 +90,7 @@
             // 
             // divButton
             // 
+            this.divButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.divButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
             this.divButton.Location = new System.Drawing.Point(401, 335);
             this.divButton.Margin = new System.Windows.Forms.Padding(4);
@@ -108,6 +113,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCalculMental";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCalculMental";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -60,7 +60,7 @@ namespace Projet_GenieLog.View
             }
 
             valeurs = Concentration.selectionForme(cptTest, valeurs, this);// la génération des dessins se fait dans OnPaint, on récupère ici les paramètres necessaires
-            f = new Forme(valeurs[1], valeurs[0], 129, 229);
+            f = new Forme(valeurs[1], valeurs[0], 129, 199,100,100);
 
 
 

@@ -26,6 +26,7 @@ namespace Projet_GenieLog
             rCmLB.Text = Sauvegarde.rCm;
             rPhysiqueLB.Text = Sauvegarde.rPhysique;
             rMathsLB.Text = Sauvegarde.rMaths;
+            
            
             
         }

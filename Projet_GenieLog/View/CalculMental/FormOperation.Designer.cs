@@ -152,6 +152,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelSigne);
             this.Name = "FormOperation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAddition";
             this.ResumeLayout(false);
             this.PerformLayout();
