@@ -48,72 +48,89 @@
             this.rPhysiqueLB = new System.Windows.Forms.Label();
             this.RaffraichissementMenuTimer = new System.Windows.Forms.Timer(this.components);
             this.timerRentrerNom = new System.Windows.Forms.Timer(this.components);
-            this.pictureBoxAccueil = new System.Windows.Forms.PictureBox();
             this.pictureBoxChecked = new System.Windows.Forms.PictureBox();
             this.timerChargementMenu = new System.Windows.Forms.Timer(this.components);
+            this.pictureBoxAccueil = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBoxDifficulte.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccueil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChecked)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccueil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPerception
             // 
             this.btnPerception.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPerception.Location = new System.Drawing.Point(231, 95);
+            this.btnPerception.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnPerception.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.btnPerception.ForeColor = System.Drawing.Color.White;
+            this.btnPerception.Location = new System.Drawing.Point(235, 95);
             this.btnPerception.Margin = new System.Windows.Forms.Padding(4);
             this.btnPerception.Name = "btnPerception";
             this.btnPerception.Size = new System.Drawing.Size(179, 50);
             this.btnPerception.TabIndex = 0;
             this.btnPerception.Text = "Perception";
-            this.btnPerception.UseVisualStyleBackColor = true;
+            this.btnPerception.UseVisualStyleBackColor = false;
             this.btnPerception.Click += new System.EventHandler(this.btnPerception_Click);
             // 
             // btnConcentration
             // 
             this.btnConcentration.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnConcentration.Location = new System.Drawing.Point(231, 153);
+            this.btnConcentration.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnConcentration.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.btnConcentration.ForeColor = System.Drawing.Color.White;
+            this.btnConcentration.Location = new System.Drawing.Point(235, 153);
             this.btnConcentration.Margin = new System.Windows.Forms.Padding(4);
             this.btnConcentration.Name = "btnConcentration";
             this.btnConcentration.Size = new System.Drawing.Size(179, 50);
             this.btnConcentration.TabIndex = 1;
             this.btnConcentration.Text = "Concentration";
-            this.btnConcentration.UseVisualStyleBackColor = true;
+            this.btnConcentration.UseVisualStyleBackColor = false;
             this.btnConcentration.Click += new System.EventHandler(this.btnConcentration_Click);
             // 
             // btnCalcul
             // 
             this.btnCalcul.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCalcul.Location = new System.Drawing.Point(231, 210);
+            this.btnCalcul.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnCalcul.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.btnCalcul.ForeColor = System.Drawing.Color.White;
+            this.btnCalcul.Location = new System.Drawing.Point(235, 210);
             this.btnCalcul.Margin = new System.Windows.Forms.Padding(4);
             this.btnCalcul.Name = "btnCalcul";
             this.btnCalcul.Size = new System.Drawing.Size(179, 50);
             this.btnCalcul.TabIndex = 2;
             this.btnCalcul.Text = "Calcul Mental";
-            this.btnCalcul.UseVisualStyleBackColor = true;
+            this.btnCalcul.UseVisualStyleBackColor = false;
             this.btnCalcul.Click += new System.EventHandler(this.btnCalcul_Click);
             // 
             // btn_maths
             // 
             this.btn_maths.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_maths.Location = new System.Drawing.Point(231, 268);
+            this.btn_maths.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_maths.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_maths.ForeColor = System.Drawing.Color.White;
+            this.btn_maths.Location = new System.Drawing.Point(235, 268);
             this.btn_maths.Margin = new System.Windows.Forms.Padding(4);
             this.btn_maths.Name = "btn_maths";
             this.btn_maths.Size = new System.Drawing.Size(179, 50);
             this.btn_maths.TabIndex = 3;
             this.btn_maths.Text = "Mathématiques";
-            this.btn_maths.UseVisualStyleBackColor = true;
+            this.btn_maths.UseVisualStyleBackColor = false;
             this.btn_maths.Click += new System.EventHandler(this.btn_maths_Click);
             // 
             // btn_physique
             // 
             this.btn_physique.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_physique.Location = new System.Drawing.Point(231, 326);
+            this.btn_physique.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_physique.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_physique.ForeColor = System.Drawing.Color.White;
+            this.btn_physique.Location = new System.Drawing.Point(235, 326);
             this.btn_physique.Margin = new System.Windows.Forms.Padding(4);
             this.btn_physique.Name = "btn_physique";
             this.btn_physique.Size = new System.Drawing.Size(179, 50);
             this.btn_physique.TabIndex = 4;
             this.btn_physique.Text = "Physique";
-            this.btn_physique.UseVisualStyleBackColor = true;
+            this.btn_physique.UseVisualStyleBackColor = false;
             this.btn_physique.Click += new System.EventHandler(this.btn_maths_Click);
             // 
             // radio_facile
@@ -121,10 +138,10 @@
             this.radio_facile.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radio_facile.AutoSize = true;
             this.radio_facile.Checked = true;
-            this.radio_facile.Location = new System.Drawing.Point(45, 20);
+            this.radio_facile.Location = new System.Drawing.Point(7, 20);
             this.radio_facile.Margin = new System.Windows.Forms.Padding(4);
             this.radio_facile.Name = "radio_facile";
-            this.radio_facile.Size = new System.Drawing.Size(66, 21);
+            this.radio_facile.Size = new System.Drawing.Size(71, 25);
             this.radio_facile.TabIndex = 5;
             this.radio_facile.TabStop = true;
             this.radio_facile.Text = "Facile";
@@ -137,7 +154,7 @@
             this.radio_difficile.Location = new System.Drawing.Point(147, 20);
             this.radio_difficile.Margin = new System.Windows.Forms.Padding(4);
             this.radio_difficile.Name = "radio_difficile";
-            this.radio_difficile.Size = new System.Drawing.Size(71, 21);
+            this.radio_difficile.Size = new System.Drawing.Size(80, 25);
             this.radio_difficile.TabIndex = 6;
             this.radio_difficile.Text = "Dfficile";
             this.radio_difficile.UseVisualStyleBackColor = true;
@@ -147,19 +164,25 @@
             // 
             this.label_difficulte.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_difficulte.AutoSize = true;
-            this.label_difficulte.Location = new System.Drawing.Point(291, 406);
+            this.label_difficulte.BackColor = System.Drawing.Color.Transparent;
+            this.label_difficulte.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_difficulte.ForeColor = System.Drawing.Color.White;
+            this.label_difficulte.Location = new System.Drawing.Point(295, 406);
             this.label_difficulte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_difficulte.Name = "label_difficulte";
-            this.label_difficulte.Size = new System.Drawing.Size(62, 17);
+            this.label_difficulte.Size = new System.Drawing.Size(74, 21);
             this.label_difficulte.TabIndex = 7;
             this.label_difficulte.Text = "Difficulté";
             // 
             // groupBoxDifficulte
             // 
             this.groupBoxDifficulte.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxDifficulte.BackColor = System.Drawing.Color.Transparent;
             this.groupBoxDifficulte.Controls.Add(this.radio_facile);
             this.groupBoxDifficulte.Controls.Add(this.radio_difficile);
-            this.groupBoxDifficulte.Location = new System.Drawing.Point(207, 426);
+            this.groupBoxDifficulte.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxDifficulte.ForeColor = System.Drawing.Color.White;
+            this.groupBoxDifficulte.Location = new System.Drawing.Point(211, 426);
             this.groupBoxDifficulte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxDifficulte.Name = "groupBoxDifficulte";
             this.groupBoxDifficulte.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -171,9 +194,12 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(247, 9);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(234, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 17);
+            this.label1.Size = new System.Drawing.Size(180, 23);
             this.label1.TabIndex = 9;
             this.label1.Text = "Nom utilisateur testé";
             // 
@@ -191,9 +217,12 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(483, 70);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(468, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 17);
+            this.label2.Size = new System.Drawing.Size(130, 23);
             this.label2.TabIndex = 12;
             this.label2.Text = "Résultat actuel";
             // 
@@ -201,9 +230,12 @@
             // 
             this.rPerceptionLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rPerceptionLB.AutoSize = true;
+            this.rPerceptionLB.BackColor = System.Drawing.Color.Transparent;
+            this.rPerceptionLB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rPerceptionLB.ForeColor = System.Drawing.Color.White;
             this.rPerceptionLB.Location = new System.Drawing.Point(512, 112);
             this.rPerceptionLB.Name = "rPerceptionLB";
-            this.rPerceptionLB.Size = new System.Drawing.Size(32, 17);
+            this.rPerceptionLB.Size = new System.Drawing.Size(40, 24);
             this.rPerceptionLB.TabIndex = 13;
             this.rPerceptionLB.Text = "...%";
             // 
@@ -211,9 +243,12 @@
             // 
             this.rConcentrationLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rConcentrationLB.AutoSize = true;
+            this.rConcentrationLB.BackColor = System.Drawing.Color.Transparent;
+            this.rConcentrationLB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rConcentrationLB.ForeColor = System.Drawing.Color.White;
             this.rConcentrationLB.Location = new System.Drawing.Point(512, 170);
             this.rConcentrationLB.Name = "rConcentrationLB";
-            this.rConcentrationLB.Size = new System.Drawing.Size(32, 17);
+            this.rConcentrationLB.Size = new System.Drawing.Size(40, 24);
             this.rConcentrationLB.TabIndex = 14;
             this.rConcentrationLB.Text = "...%";
             // 
@@ -221,9 +256,12 @@
             // 
             this.rCmLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rCmLB.AutoSize = true;
+            this.rCmLB.BackColor = System.Drawing.Color.Transparent;
+            this.rCmLB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rCmLB.ForeColor = System.Drawing.Color.White;
             this.rCmLB.Location = new System.Drawing.Point(512, 226);
             this.rCmLB.Name = "rCmLB";
-            this.rCmLB.Size = new System.Drawing.Size(32, 17);
+            this.rCmLB.Size = new System.Drawing.Size(40, 24);
             this.rCmLB.TabIndex = 15;
             this.rCmLB.Text = "...%";
             // 
@@ -231,9 +269,12 @@
             // 
             this.rMathsLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rMathsLB.AutoSize = true;
+            this.rMathsLB.BackColor = System.Drawing.Color.Transparent;
+            this.rMathsLB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rMathsLB.ForeColor = System.Drawing.Color.White;
             this.rMathsLB.Location = new System.Drawing.Point(512, 286);
             this.rMathsLB.Name = "rMathsLB";
-            this.rMathsLB.Size = new System.Drawing.Size(32, 17);
+            this.rMathsLB.Size = new System.Drawing.Size(40, 24);
             this.rMathsLB.TabIndex = 16;
             this.rMathsLB.Text = "...%";
             // 
@@ -241,9 +282,12 @@
             // 
             this.rPhysiqueLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rPhysiqueLB.AutoSize = true;
+            this.rPhysiqueLB.BackColor = System.Drawing.Color.Transparent;
+            this.rPhysiqueLB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rPhysiqueLB.ForeColor = System.Drawing.Color.White;
             this.rPhysiqueLB.Location = new System.Drawing.Point(512, 343);
             this.rPhysiqueLB.Name = "rPhysiqueLB";
-            this.rPhysiqueLB.Size = new System.Drawing.Size(32, 17);
+            this.rPhysiqueLB.Size = new System.Drawing.Size(40, 24);
             this.rPhysiqueLB.TabIndex = 17;
             this.rPhysiqueLB.Text = "...%";
             // 
@@ -257,21 +301,11 @@
             this.timerRentrerNom.Interval = 10000;
             this.timerRentrerNom.Tick += new System.EventHandler(this.timerRentrerNom_Tick);
             // 
-            // pictureBoxAccueil
-            // 
-            this.pictureBoxAccueil.Image = global::Projet_GenieLog.Properties.Resources.loadingPage;
-            this.pictureBoxAccueil.Location = new System.Drawing.Point(-2, 0);
-            this.pictureBoxAccueil.Name = "pictureBoxAccueil";
-            this.pictureBoxAccueil.Size = new System.Drawing.Size(659, 502);
-            this.pictureBoxAccueil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxAccueil.TabIndex = 19;
-            this.pictureBoxAccueil.TabStop = false;
-            this.pictureBoxAccueil.UseWaitCursor = true;
-            // 
             // pictureBoxChecked
             // 
             this.pictureBoxChecked.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxChecked.Image = global::Projet_GenieLog.Properties.Resources._checked;
+            this.pictureBoxChecked.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxChecked.Image = global::Projet_GenieLog.Properties.Resources.checked1;
             this.pictureBoxChecked.InitialImage = global::Projet_GenieLog.Properties.Resources._checked;
             this.pictureBoxChecked.Location = new System.Drawing.Point(389, 33);
             this.pictureBoxChecked.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -286,12 +320,36 @@
             // 
             this.timerChargementMenu.Tick += new System.EventHandler(this.timerChargementMenu_Tick);
             // 
+            // pictureBoxAccueil
+            // 
+            this.pictureBoxAccueil.Image = global::Projet_GenieLog.Properties.Resources.loadingPage;
+            this.pictureBoxAccueil.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBoxAccueil.Name = "pictureBoxAccueil";
+            this.pictureBoxAccueil.Size = new System.Drawing.Size(659, 502);
+            this.pictureBoxAccueil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxAccueil.TabIndex = 20;
+            this.pictureBoxAccueil.TabStop = false;
+            this.pictureBoxAccueil.UseWaitCursor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Projet_GenieLog.Properties.Resources.eesa;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 189);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Projet_GenieLog.Properties.Resources.BackGround;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(656, 501);
             this.Controls.Add(this.pictureBoxAccueil);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.rPhysiqueLB);
             this.Controls.Add(this.rMathsLB);
             this.Controls.Add(this.rCmLB);
@@ -315,8 +373,9 @@
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.groupBoxDifficulte.ResumeLayout(false);
             this.groupBoxDifficulte.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccueil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChecked)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccueil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,8 +403,9 @@
         public System.Windows.Forms.Label rPhysiqueLB;
         private System.Windows.Forms.Timer RaffraichissementMenuTimer;
         private System.Windows.Forms.Timer timerRentrerNom;
-        private System.Windows.Forms.PictureBox pictureBoxAccueil;
         private System.Windows.Forms.Timer timerChargementMenu;
+        private System.Windows.Forms.PictureBox pictureBoxAccueil;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
