@@ -18,6 +18,8 @@ namespace Projet_GenieLog
         public MainMenu()
         {
             InitializeComponent();
+            timerChargementMenu.Interval = 5000;
+            timerChargementMenu.Start();
             groupBoxDifficulte.Controls.Add(radio_facile);
             groupBoxDifficulte.Controls.Add(radio_difficile);
             nomUtilisateurTB.Text = Sauvegarde.nomUtilisateur;
@@ -80,13 +82,13 @@ namespace Projet_GenieLog
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Sauvegarde.nomUtilisateur = nomUtilisateurTB.Text;
-            pictureBox1.Visible = false;
+            pictureBoxChecked.Visible = false;
             RaffraichissementMenuTimer.Start();
         }
 
         private void nomUtilisateurTB_TextChanged(object sender, EventArgs e)
         {
-            pictureBox1.Visible = true;
+            pictureBoxChecked.Visible = true;
             RaffraichissementMenuTimer.Stop();
             timerRentrerNom.Start();
         }
@@ -117,7 +119,11 @@ namespace Projet_GenieLog
             MainMenu_Load(null, null);
         }
 
-        
+        private void timerChargementMenu_Tick(object sender, EventArgs e)
+        {
+            pictureBoxAccueil.Visible = false;
+        }
+
         
     }
 }
