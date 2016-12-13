@@ -76,10 +76,15 @@ namespace Projet_GenieLog.View
            
             
         }
-            
 
-       
+        private void FormPerception_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var window = MessageBox.Show(
+            "Souhaitez-vous vraiment fermer l'application ?",
+                "Confirmez la fermeture",
+            MessageBoxButtons.YesNo);
 
-        
+            e.Cancel = (window == DialogResult.No);
+        }
     }
 }

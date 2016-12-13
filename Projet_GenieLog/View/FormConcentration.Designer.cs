@@ -43,18 +43,20 @@
             // 
             this.labelConsigne.AutoSize = true;
             this.labelConsigne.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelConsigne.Location = new System.Drawing.Point(12, 60);
-            this.labelConsigne.MaximumSize = new System.Drawing.Size(500, 530);
+            this.labelConsigne.Location = new System.Drawing.Point(9, 49);
+            this.labelConsigne.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelConsigne.MaximumSize = new System.Drawing.Size(375, 431);
             this.labelConsigne.Name = "labelConsigne";
-            this.labelConsigne.Size = new System.Drawing.Size(85, 20);
+            this.labelConsigne.Size = new System.Drawing.Size(72, 17);
             this.labelConsigne.TabIndex = 0;
             this.labelConsigne.Text = "consignes";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(20, 20);
+            this.button1.Location = new System.Drawing.Point(15, 16);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -62,9 +64,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(20, 68);
+            this.button2.Location = new System.Drawing.Point(15, 55);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(56, 19);
             this.button2.TabIndex = 2;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -72,9 +75,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(20, 121);
+            this.button3.Location = new System.Drawing.Point(15, 98);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(56, 19);
             this.button3.TabIndex = 3;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
@@ -83,9 +87,10 @@
             // count
             // 
             this.count.AutoSize = true;
-            this.count.Location = new System.Drawing.Point(577, 475);
+            this.count.Location = new System.Drawing.Point(433, 386);
+            this.count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.count.Name = "count";
-            this.count.Size = new System.Drawing.Size(67, 17);
+            this.count.Size = new System.Drawing.Size(51, 13);
             this.count.TabIndex = 10;
             this.count.Text = "compteur";
             // 
@@ -94,9 +99,11 @@
             this.groupBoxButton.Controls.Add(this.button3);
             this.groupBoxButton.Controls.Add(this.button2);
             this.groupBoxButton.Controls.Add(this.button1);
-            this.groupBoxButton.Location = new System.Drawing.Point(459, 182);
+            this.groupBoxButton.Location = new System.Drawing.Point(344, 148);
+            this.groupBoxButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxButton.Name = "groupBoxButton";
-            this.groupBoxButton.Size = new System.Drawing.Size(117, 164);
+            this.groupBoxButton.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxButton.Size = new System.Drawing.Size(88, 133);
             this.groupBoxButton.TabIndex = 11;
             this.groupBoxButton.TabStop = false;
             // 
@@ -106,16 +113,18 @@
             // 
             // FormConcentration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(656, 501);
+            this.ClientSize = new System.Drawing.Size(492, 407);
             this.Controls.Add(this.groupBoxButton);
             this.Controls.Add(this.labelConsigne);
             this.Controls.Add(this.count);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormConcentration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormConcentration";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormConcentration_FormClosing);
             this.groupBoxButton.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -143,5 +143,15 @@ namespace Projet_GenieLog
                                                                       //true permet d'accèder à l'élement suivant, false élément précédent
             }
         }
+
+        private void MyMessageBox_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var window = MessageBox.Show(
+            "Souhaitez-vous vraiment fermer l'application ?",
+                "Confirmez la fermeture",
+            MessageBoxButtons.YesNo);
+
+            e.Cancel = (window == DialogResult.No);
+        }
     }
 }

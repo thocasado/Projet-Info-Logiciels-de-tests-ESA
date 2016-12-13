@@ -124,6 +124,14 @@ namespace Projet_GenieLog
             pictureBoxAccueil.Visible = false;
         }
 
-        
+        private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var window = MessageBox.Show(
+            "Souhaitez-vous vraiment fermer l'application ?",
+                "Confirmez la fermeture",
+            MessageBoxButtons.YesNo);
+
+            e.Cancel = (window == DialogResult.No);
+        }
     }
 }
