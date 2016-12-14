@@ -33,40 +33,35 @@ namespace Projet_GenieLog
             
         }
 
-        
-
-        private void btnPerception_Click(object sender, EventArgs e)
+        public void loadTest(object sender, EventArgs eventargs)
         {
-           
-            View.FormPerception f = new View.FormPerception();
-            View.FormPerception.cptTest = 1;// cpt test étant static, si on revient au menu puis relance le test de perception, cptTest garde sa valeur précédente;Il faut donc le réinitialiser
-            f.Show();
-            
+            switch (((Button)sender).Name)
+            {
+                case "btnPerception":
+                    View.FormPerception p = new View.FormPerception();
+                    View.FormPerception.cptTest = 1;// cpt test étant static, si on revient au menu puis relance le test de perception, cptTest garde sa valeur précédente;Il faut donc le réinitialiser
+                    p.Show();
+                    break;
+                case "btnConcentration":
+                    View.FormConcentration con = new View.FormConcentration();
+                    con.Show();
+                    break;
+                case "btnCalcul":
+                    View.FormCalculMental cm = new View.FormCalculMental();
+                    cm.Show();
+                    break;
+                case "btnMaths":
+                    View.FormProbleme pbM = new View.FormProbleme("Mathématiques");
+                    pbM.Show();
+                    break;
+                case "btnPhysique":
+                    View.FormProbleme pbPhy = new View.FormProbleme("Physique");
+                    pbPhy.Show();
+                    break;
+
+            }
         }
-
-        private void btnCalcul_Click(object sender, EventArgs e)
-        {
-            View.FormCalculMental f = new View.FormCalculMental();
-            f.Show();
-        }
-
-        
-
-        private void btn_maths_Click(object sender, EventArgs e)
-        {
-            string matiere = ((Button)(sender)).Text;
-            View.FormProbleme f = new View.FormProbleme(matiere);
-            f.Show();
-
-        }
-
-
-        private void btnConcentration_Click(object sender, EventArgs e)
-        {
-            View.FormConcentration f = new View.FormConcentration();
-            f.Show();
-        }
-
+       
         private void radio_difficile_CheckedChanged(object sender, EventArgs e)
         {
             if (radio_difficile.Checked == true)

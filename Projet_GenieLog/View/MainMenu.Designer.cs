@@ -32,8 +32,8 @@
             this.btnPerception = new System.Windows.Forms.Button();
             this.btnConcentration = new System.Windows.Forms.Button();
             this.btnCalcul = new System.Windows.Forms.Button();
-            this.btn_maths = new System.Windows.Forms.Button();
-            this.btn_physique = new System.Windows.Forms.Button();
+            this.btnMaths = new System.Windows.Forms.Button();
+            this.btnPhysique = new System.Windows.Forms.Button();
             this.radio_facile = new System.Windows.Forms.RadioButton();
             this.radio_difficile = new System.Windows.Forms.RadioButton();
             this.label_difficulte = new System.Windows.Forms.Label();
@@ -70,7 +70,7 @@
             this.btnPerception.TabIndex = 0;
             this.btnPerception.Text = "Perception";
             this.btnPerception.UseVisualStyleBackColor = false;
-            this.btnPerception.Click += new System.EventHandler(this.btnPerception_Click);
+            this.btnPerception.Click += new System.EventHandler(this.loadTest);
             // 
             // btnConcentration
             // 
@@ -86,7 +86,7 @@
             this.btnConcentration.TabIndex = 1;
             this.btnConcentration.Text = "Concentration";
             this.btnConcentration.UseVisualStyleBackColor = false;
-            this.btnConcentration.Click += new System.EventHandler(this.btnConcentration_Click);
+            this.btnConcentration.Click += new System.EventHandler(this.loadTest);
             // 
             // btnCalcul
             // 
@@ -102,39 +102,39 @@
             this.btnCalcul.TabIndex = 2;
             this.btnCalcul.Text = "Calcul Mental";
             this.btnCalcul.UseVisualStyleBackColor = false;
-            this.btnCalcul.Click += new System.EventHandler(this.btnCalcul_Click);
+            this.btnCalcul.Click += new System.EventHandler(this.loadTest);
             // 
-            // btn_maths
+            // btnMaths
             // 
-            this.btn_maths.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_maths.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.btn_maths.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_maths.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_maths.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.btn_maths.ForeColor = System.Drawing.Color.White;
-            this.btn_maths.Location = new System.Drawing.Point(176, 218);
-            this.btn_maths.Name = "btn_maths";
-            this.btn_maths.Size = new System.Drawing.Size(134, 41);
-            this.btn_maths.TabIndex = 3;
-            this.btn_maths.Text = "Mathématiques";
-            this.btn_maths.UseVisualStyleBackColor = false;
-            this.btn_maths.Click += new System.EventHandler(this.btn_maths_Click);
+            this.btnMaths.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnMaths.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnMaths.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnMaths.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaths.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.btnMaths.ForeColor = System.Drawing.Color.White;
+            this.btnMaths.Location = new System.Drawing.Point(176, 218);
+            this.btnMaths.Name = "btnMaths";
+            this.btnMaths.Size = new System.Drawing.Size(134, 41);
+            this.btnMaths.TabIndex = 3;
+            this.btnMaths.Text = "Mathématiques";
+            this.btnMaths.UseVisualStyleBackColor = false;
+            this.btnMaths.Click += new System.EventHandler(this.loadTest);
             // 
-            // btn_physique
+            // btnPhysique
             // 
-            this.btn_physique.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_physique.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.btn_physique.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_physique.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_physique.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.btn_physique.ForeColor = System.Drawing.Color.White;
-            this.btn_physique.Location = new System.Drawing.Point(176, 265);
-            this.btn_physique.Name = "btn_physique";
-            this.btn_physique.Size = new System.Drawing.Size(134, 41);
-            this.btn_physique.TabIndex = 4;
-            this.btn_physique.Text = "Physique";
-            this.btn_physique.UseVisualStyleBackColor = false;
-            this.btn_physique.Click += new System.EventHandler(this.btn_maths_Click);
+            this.btnPhysique.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPhysique.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnPhysique.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPhysique.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhysique.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.btnPhysique.ForeColor = System.Drawing.Color.White;
+            this.btnPhysique.Location = new System.Drawing.Point(176, 265);
+            this.btnPhysique.Name = "btnPhysique";
+            this.btnPhysique.Size = new System.Drawing.Size(134, 41);
+            this.btnPhysique.TabIndex = 4;
+            this.btnPhysique.Text = "Physique";
+            this.btnPhysique.UseVisualStyleBackColor = false;
+            this.btnPhysique.Click += new System.EventHandler(this.loadTest);
             // 
             // radio_facile
             // 
@@ -183,9 +183,9 @@
             this.groupBoxDifficulte.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxDifficulte.ForeColor = System.Drawing.Color.White;
             this.groupBoxDifficulte.Location = new System.Drawing.Point(158, 346);
-            this.groupBoxDifficulte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxDifficulte.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxDifficulte.Name = "groupBoxDifficulte";
-            this.groupBoxDifficulte.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxDifficulte.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxDifficulte.Size = new System.Drawing.Size(176, 38);
             this.groupBoxDifficulte.TabIndex = 8;
             this.groupBoxDifficulte.TabStop = false;
@@ -208,7 +208,7 @@
             // 
             this.nomUtilisateurTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nomUtilisateurTB.Location = new System.Drawing.Point(184, 31);
-            this.nomUtilisateurTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nomUtilisateurTB.Margin = new System.Windows.Forms.Padding(2);
             this.nomUtilisateurTB.Name = "nomUtilisateurTB";
             this.nomUtilisateurTB.Size = new System.Drawing.Size(104, 20);
             this.nomUtilisateurTB.TabIndex = 10;
@@ -315,7 +315,7 @@
             this.pictureBoxChecked.Image = global::Projet_GenieLog.Properties.Resources.checked1;
             this.pictureBoxChecked.InitialImage = global::Projet_GenieLog.Properties.Resources._checked;
             this.pictureBoxChecked.Location = new System.Drawing.Point(292, 27);
-            this.pictureBoxChecked.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxChecked.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxChecked.Name = "pictureBoxChecked";
             this.pictureBoxChecked.Size = new System.Drawing.Size(23, 22);
             this.pictureBoxChecked.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -330,10 +330,10 @@
             // pictureBoxAccueil
             // 
             this.pictureBoxAccueil.Image = global::Projet_GenieLog.Properties.Resources.loadingPage;
-            this.pictureBoxAccueil.Location = new System.Drawing.Point(-2, -2);
-            this.pictureBoxAccueil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxAccueil.Location = new System.Drawing.Point(-2, 171);
+            this.pictureBoxAccueil.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxAccueil.Name = "pictureBoxAccueil";
-            this.pictureBoxAccueil.Size = new System.Drawing.Size(494, 409);
+            this.pictureBoxAccueil.Size = new System.Drawing.Size(302, 236);
             this.pictureBoxAccueil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxAccueil.TabIndex = 20;
             this.pictureBoxAccueil.TabStop = false;
@@ -358,8 +358,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBoxDifficulte);
             this.Controls.Add(this.label_difficulte);
-            this.Controls.Add(this.btn_physique);
-            this.Controls.Add(this.btn_maths);
+            this.Controls.Add(this.btnPhysique);
+            this.Controls.Add(this.btnMaths);
             this.Controls.Add(this.btnCalcul);
             this.Controls.Add(this.btnConcentration);
             this.Controls.Add(this.btnPerception);
@@ -382,8 +382,8 @@
         private System.Windows.Forms.Button btnPerception;
         private System.Windows.Forms.Button btnConcentration;
         private System.Windows.Forms.Button btnCalcul;
-        private System.Windows.Forms.Button btn_maths;
-        private System.Windows.Forms.Button btn_physique;
+        private System.Windows.Forms.Button btnMaths;
+        private System.Windows.Forms.Button btnPhysique;
         private System.Windows.Forms.RadioButton radio_facile;
         private System.Windows.Forms.RadioButton radio_difficile;
         private System.Windows.Forms.Label label_difficulte;
