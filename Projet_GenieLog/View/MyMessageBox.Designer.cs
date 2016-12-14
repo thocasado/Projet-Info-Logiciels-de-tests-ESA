@@ -185,7 +185,6 @@
             this.Name = "MyMessageBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyMessageBox";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MyMessageBox_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

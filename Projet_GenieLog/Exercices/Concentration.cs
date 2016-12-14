@@ -31,9 +31,7 @@ namespace Projet_GenieLog
             _boutonCouleur = boutonC;
             _boutonNbPoint = boutonNbP;
 
-        }
-
-        
+        }       
 
         public static Concentration selectionRègle()
         {
@@ -55,7 +53,6 @@ namespace Projet_GenieLog
             return regles[a];
 
         }
-
 
         public static string[] selectionForme(int compteur,string []valAuxRep, Form form) //le tableau valAuxRep contient les paramètres de la forme précédente et la valeur du paramètre conservé
         {
@@ -198,9 +195,7 @@ namespace Projet_GenieLog
                                     break;
                             }
                         
-                        valAuxRep[0] = forme;
-                       
-
+                        valAuxRep[0] = forme;                      
                         
                             int rC = r.Next(1, 4);
                             switch (rC)
@@ -216,14 +211,12 @@ namespace Projet_GenieLog
                                     break;
                             }
                         
-                        valAuxRep[1] = couleur;
-                       
+                        valAuxRep[1] = couleur;                       
                      
                             int rP = r.Next(0, 5);
                             nbPoints = rP;
                         
-                        valAuxRep[2] = nbPoints.ToString();
-                        
+                        valAuxRep[2] = nbPoints.ToString();                        
      
                 }
 
@@ -231,8 +224,7 @@ namespace Projet_GenieLog
             //createPoint(nbPoints, form);
             #endregion 
             valAuxRep[3] = conserve.ToString();
-            return valAuxRep;
-           
+            return valAuxRep;          
 
         }
     }

@@ -8,8 +8,6 @@ namespace Projet_GenieLog
     public class Operation 
     {
 
-
-
         public static int[] realisationCalcul(string type)
         {
             int[] valeurs = new int[3];
@@ -57,7 +55,6 @@ namespace Projet_GenieLog
             valeurs[2] = result;
 
             return valeurs;
-
 
         }
     }

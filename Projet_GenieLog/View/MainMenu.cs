@@ -64,7 +64,7 @@ namespace Projet_GenieLog
        
         private void radio_difficile_CheckedChanged(object sender, EventArgs e)
         {
-            if (radio_difficile.Checked == true)
+            if (radio_difficile.Checked)
             {
                 difficile = true;
             }

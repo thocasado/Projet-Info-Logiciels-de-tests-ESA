@@ -34,9 +34,6 @@ namespace Projet_GenieLog.View
             lancerTest();
         }
 
-
-
-
         public void lancerTest()
         {
             Invalidate();//permet d'effacer les dessins précédents pour éviter une superposition des formes
@@ -62,8 +59,6 @@ namespace Projet_GenieLog.View
             valeurs = Concentration.selectionForme(cptTest, valeurs, this);// la génération des dessins se fait dans OnPaint, on récupère ici les paramètres necessaires
             f = new Forme(valeurs[1], valeurs[0], 129, 199,100,100);
 
-
-
             if (cptTest != 1)
             {
                 switch (valeurs[3])
@@ -84,17 +79,7 @@ namespace Projet_GenieLog.View
                 bonneRep += "3";
             }
 
-            
-
-
-
-
-
         }
-
-
-
-
 
         private void button_Click(object sender, EventArgs e)
         {
@@ -144,8 +129,6 @@ namespace Projet_GenieLog.View
 
         }
 
-
-
         protected override void OnPaint(PaintEventArgs e)
         {
 
@@ -161,22 +144,20 @@ namespace Projet_GenieLog.View
 
         }
 
-
-
         private void timerConcentration_Tick(object sender, EventArgs e)
         {
             afficheResultat();
 
         }
 
-        private void FormConcentration_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            var window = MessageBox.Show(
-            "Souhaitez-vous vraiment fermer l'application ?",
-                "Confirmez la fermeture",
-            MessageBoxButtons.YesNo);
+        //private void FormConcentration_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    var window = MessageBox.Show(
+        //    "Souhaitez-vous vraiment fermer l'application ?",
+        //        "Confirmez la fermeture",
+        //    MessageBoxButtons.YesNo);
 
-            e.Cancel = (window == DialogResult.No);
-        }
+        //    e.Cancel = (window == DialogResult.No);
+        //}
     }
 }

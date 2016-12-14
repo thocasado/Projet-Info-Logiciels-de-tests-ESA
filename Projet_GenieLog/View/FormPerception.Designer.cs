@@ -190,7 +190,7 @@
             this.Name = "FormPerception";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Test de perception";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPerception_FormClosing);
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPerception_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

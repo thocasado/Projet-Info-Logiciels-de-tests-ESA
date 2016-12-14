@@ -16,7 +16,7 @@ namespace Projet_GenieLog.View
 
         static Perception regle;
         static Forme[,] tableauForme; 
-        int tempsDifficulte =4000;//on l'initialise au temps du Niveau facile
+        int tempsDifficulte =1000;//on l'initialise au temps du Niveau facile
         public static int cptTest = 1;
         
         public FormPerception()
@@ -31,21 +31,15 @@ namespace Projet_GenieLog.View
         }
 
        
-        public  void lancerTest()
-        {
-             
-            regle = Perception.selectionRegle();
-            
+        public void lancerTest()
+        {             
+             regle = Perception.selectionRegle();            
             
              MessageBox.Show(regle._consigne);
              Perception.generationTableauValeur();
              tableauForme=Perception.selectionFormes(regle);
              count.Text = cptTest.ToString() + "/10";
-             cptTest++;
-
-             
-            
-            
+             cptTest++;         
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -70,21 +64,17 @@ namespace Projet_GenieLog.View
             this.SetVisibleCore(false);
             mb.reponseVisible();
             mb.implementationLabel();
-            mb.ShowDialog();
-
-           
-           
-            
+            mb.ShowDialog();             
         }
 
-        private void FormPerception_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            var window = MessageBox.Show(
-            "Souhaitez-vous vraiment fermer l'application ?",
-                "Confirmez la fermeture",
-            MessageBoxButtons.YesNo);
+        //private void FormPerception_FormClosing(object sender, FormClosingEventArgs e) 
+        //{
+        //    var window = MessageBox.Show(
+        //    "Souhaitez-vous vraiment fermer l'application ?",
+        //        "Confirmez la fermeture",
+        //    MessageBoxButtons.YesNo);
 
-            e.Cancel = (window == DialogResult.No);
-        }
+        //    e.Cancel = (window == DialogResult.No);
+        //}
     }
 }

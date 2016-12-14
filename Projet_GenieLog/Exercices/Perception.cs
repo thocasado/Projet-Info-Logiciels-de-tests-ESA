@@ -31,9 +31,6 @@ namespace Projet_GenieLog
             _couleur = couleur;
         }
 
-        
-        
-
         public static Perception selectionRegle()
         {
             int nbDeRègleTotal =4 ;
@@ -105,7 +102,7 @@ namespace Projet_GenieLog
                    
                }
 
-            //on place toute les autres
+            //on place toutes les autres
                for (int i = 0; i < 3; i++)
                {
                    for (int j = 0; j < 4; j++)

@@ -124,7 +124,7 @@
             this.Name = "FormConcentration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormConcentration";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormConcentration_FormClosing);
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormConcentration_FormClosing);
             this.groupBoxButton.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
