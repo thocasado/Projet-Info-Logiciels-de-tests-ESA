@@ -35,6 +35,7 @@ namespace Projet_GenieLog.View.CalculMental
 
             private void lancerTest()
             {
+                validButton.Enabled = true;
                 compteurCalcul++;
                 count.Text = compteurCalcul.ToString() + "/10";
                 saisieResultat.Clear();
@@ -87,6 +88,7 @@ namespace Projet_GenieLog.View.CalculMental
             }
             timerAfficheResultat.Interval = tempsAffichage;
             timerAfficheResultat.Start();
+            validButton.Enabled = false;
             
             
         }
@@ -114,18 +116,14 @@ namespace Projet_GenieLog.View.CalculMental
         {
             if(e.KeyCode==Keys.Enter)
             {
-                resultatTest();
+                if (validButton.Enabled == true)
+                {
+                    validButton_Click(null, null);
+                }
             }
         }
 
-        private void FormOperation_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            var window = MessageBox.Show(
-            "Souhaitez-vous vraiment fermer l'application ?",
-                "Confirmez la fermeture",
-            MessageBoxButtons.YesNo);
-
-            e.Cancel = (window == DialogResult.No);
-        }
+       
+        
     }
 }

@@ -189,7 +189,6 @@
             this.Name = "FormProbleme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Problemes";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormProbleme_FormClosing);
             this.groupBoxRb.ResumeLayout(false);
             this.groupBoxRb.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

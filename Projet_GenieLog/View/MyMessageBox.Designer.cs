@@ -91,7 +91,7 @@
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Location = new System.Drawing.Point(22, 129);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(47, 20);
             this.textBox1.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Location = new System.Drawing.Point(114, 129);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(47, 20);
             this.textBox2.TabIndex = 5;
@@ -111,7 +111,7 @@
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.Location = new System.Drawing.Point(196, 129);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(47, 20);
             this.textBox3.TabIndex = 6;
@@ -121,7 +121,7 @@
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox4.Location = new System.Drawing.Point(281, 129);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(47, 20);
             this.textBox4.TabIndex = 7;
@@ -131,7 +131,7 @@
             // 
             this.validButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.validButton.Location = new System.Drawing.Point(264, 220);
-            this.validButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.validButton.Margin = new System.Windows.Forms.Padding(2);
             this.validButton.Name = "validButton";
             this.validButton.Size = new System.Drawing.Size(70, 31);
             this.validButton.TabIndex = 8;
@@ -181,10 +181,10 @@
             this.Controls.Add(this.lettre3LB);
             this.Controls.Add(this.lettre2LB);
             this.Controls.Add(this.lettre1LB);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MyMessageBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MyMessageBox";
+            this.Text = "MyMessageBox";     
             this.ResumeLayout(false);
             this.PerformLayout();
 

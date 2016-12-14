@@ -35,6 +35,7 @@ namespace Projet_GenieLog.View
             _matiere = matiere;
             InitializeComponent();
             pbm = Probleme.selectionPbm(matiere, MainMenu.difficile);
+            MessageBox.Show("Vous allez avoir une série de 10 problèmes de "+_matiere+" sous forme de QCM.\nUne seule réponse est possible à chaque fois.\nAucune limite de temps pour répondre.\nAppuyer sur OK quand vous êtes prêt.");
             lancerTest();
             verifLB.Visible = false;
             
@@ -42,7 +43,7 @@ namespace Projet_GenieLog.View
 
         public void lancerTest()
         {
-            
+            validButton.Enabled = true;
             groupBoxRb.Controls.Add(rbChoix1);
             groupBoxRb.Controls.Add(rbChoix2);
             groupBoxRb.Controls.Add(rbChoix3);
@@ -70,6 +71,7 @@ namespace Projet_GenieLog.View
 
         private void afficheResultat()
         {
+            
             foreach (RadioButton rb in groupBoxRb.Controls)
             {
                 if (rb.Checked == true)
@@ -92,6 +94,7 @@ namespace Projet_GenieLog.View
                 verifLB.ForeColor = Color.Red;
                 verifLB.Text = "Faux\n" + bonneRep;
             }
+            validButton.Enabled = false;
             timerAfficheResultat.Interval = tempsAffichage;
             timerAfficheResultat.Start();
         }
@@ -129,18 +132,13 @@ namespace Projet_GenieLog.View
         {
             if (e.KeyCode == Keys.Enter)
             {
-                afficheResultat();
+                if (validButton.Enabled == true)
+                {
+                    validButton_Click(null, null);
+                }
             }
         }
 
-        private void FormProbleme_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            var window = MessageBox.Show(
-            "Souhaitez-vous vraiment fermer l'application ?",
-                "Confirmez la fermeture",
-            MessageBoxButtons.YesNo);
-
-            e.Cancel = (window == DialogResult.No);
-        }
+       
     }
 }

@@ -16,7 +16,7 @@ namespace Projet_GenieLog.View
 
         static Perception regle;
         static Forme[,] tableauForme; 
-        int tempsDifficulte =1000;//on l'initialise au temps du Niveau facile
+        int tempsDifficulte =4000;//on l'initialise au temps du Niveau facile
         public static int cptTest = 1;
         
         public FormPerception()
@@ -33,9 +33,10 @@ namespace Projet_GenieLog.View
        
         public void lancerTest()
         {             
-             regle = Perception.selectionRegle();            
-            
-             MessageBox.Show(regle._consigne);
+             regle = Perception.selectionRegle();
+             string consigne = regle._consigne;
+             consigne += "\nLes formes seront apparentes pendant "+tempsDifficulte/1000+" secondes.\nCliquez sur Ok quand vous êtes pret.";
+             MessageBox.Show(consigne);
              Perception.generationTableauValeur();
              tableauForme=Perception.selectionFormes(regle);
              count.Text = cptTest.ToString() + "/10";
@@ -67,14 +68,6 @@ namespace Projet_GenieLog.View
             mb.ShowDialog();             
         }
 
-        //private void FormPerception_FormClosing(object sender, FormClosingEventArgs e) 
-        //{
-        //    var window = MessageBox.Show(
-        //    "Souhaitez-vous vraiment fermer l'application ?",
-        //        "Confirmez la fermeture",
-        //    MessageBoxButtons.YesNo);
-
-        //    e.Cancel = (window == DialogResult.No);
-        //}
+        
     }
 }

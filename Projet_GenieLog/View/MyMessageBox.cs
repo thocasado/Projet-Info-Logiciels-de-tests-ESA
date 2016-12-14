@@ -41,6 +41,7 @@ namespace Projet_GenieLog
                 bonneReponse = new string[4];
                 repUtilisateur = new string[4];
             }
+            validButton.Enabled = true;
         }
 
         public void implementationLabel()
@@ -106,7 +107,7 @@ namespace Projet_GenieLog
 
         private void timerAfficheResultat_Tick(object sender, EventArgs e)
         {
-
+            validButton.Enabled = false;
             timerAfficheResultat.Stop();
             verifLB.Visible = false;
             this.SetVisibleCore(false);
@@ -134,7 +135,10 @@ namespace Projet_GenieLog
             
             if (e.KeyCode == Keys.Enter)//valide les réponses
             {
-                validButton_Click(null, null);
+                if (validButton.Enabled)
+                {
+                    validButton_Click(null, null);
+                }
             }
             if (e.KeyCode==Keys.Tab)//permet de passer d'un textBox à l'autre en appuyant sur tab (raccourci usuel)
             {
@@ -143,6 +147,8 @@ namespace Projet_GenieLog
                                                                       //true permet d'accèder à l'élement suivant, false élément précédent
             }
         }
+
+       
 
     }
 }

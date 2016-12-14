@@ -44,6 +44,7 @@
             // 
             // labelSigne
             // 
+            this.labelSigne.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelSigne.AutoSize = true;
             this.labelSigne.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSigne.Location = new System.Drawing.Point(224, 99);
@@ -55,6 +56,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label2.Location = new System.Drawing.Point(184, 29);
@@ -66,6 +68,7 @@
             // 
             // chiffre1
             // 
+            this.chiffre1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chiffre1.AutoSize = true;
             this.chiffre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
             this.chiffre1.Location = new System.Drawing.Point(0, 99);
@@ -74,20 +77,24 @@
             this.chiffre1.Size = new System.Drawing.Size(205, 63);
             this.chiffre1.TabIndex = 2;
             this.chiffre1.Text = "chiffre1";
+            this.chiffre1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // chiffre2
             // 
+            this.chiffre2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chiffre2.AutoSize = true;
             this.chiffre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.chiffre2.Location = new System.Drawing.Point(302, 99);
+            this.chiffre2.Location = new System.Drawing.Point(379, 99);
             this.chiffre2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.chiffre2.Name = "chiffre2";
-            this.chiffre2.Size = new System.Drawing.Size(205, 63);
+            this.chiffre2.Size = new System.Drawing.Size(114, 63);
             this.chiffre2.TabIndex = 3;
-            this.chiffre2.Text = "chiffre2";
+            this.chiffre2.Text = "ch2";
+            this.chiffre2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(222, 168);
@@ -99,9 +106,10 @@
             // 
             // saisieResultat
             // 
+            this.saisieResultat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.saisieResultat.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.saisieResultat.Location = new System.Drawing.Point(140, 227);
-            this.saisieResultat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saisieResultat.Margin = new System.Windows.Forms.Padding(2);
             this.saisieResultat.Name = "saisieResultat";
             this.saisieResultat.Size = new System.Drawing.Size(213, 38);
             this.saisieResultat.TabIndex = 5;
@@ -110,8 +118,9 @@
             // 
             // validButton
             // 
+            this.validButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.validButton.Location = new System.Drawing.Point(206, 284);
-            this.validButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.validButton.Margin = new System.Windows.Forms.Padding(2);
             this.validButton.Name = "validButton";
             this.validButton.Size = new System.Drawing.Size(80, 36);
             this.validButton.TabIndex = 6;
@@ -121,6 +130,7 @@
             // 
             // count
             // 
+            this.count.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.count.AutoSize = true;
             this.count.Location = new System.Drawing.Point(433, 386);
             this.count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -139,6 +149,7 @@
             // 
             // verifLB
             // 
+            this.verifLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.verifLB.AutoSize = true;
             this.verifLB.Location = new System.Drawing.Point(233, 353);
             this.verifLB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -161,11 +172,10 @@
             this.Controls.Add(this.chiffre1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelSigne);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormOperation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAddition";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormOperation_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

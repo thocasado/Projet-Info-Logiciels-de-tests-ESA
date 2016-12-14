@@ -18,7 +18,7 @@ namespace Projet_GenieLog
         public MainMenu()
         {
             InitializeComponent();
-            timerChargementMenu.Interval = 5000;
+            timerChargementMenu.Interval = 1000;
             timerChargementMenu.Start();
             groupBoxDifficulte.Controls.Add(radio_facile);
             groupBoxDifficulte.Controls.Add(radio_difficile);

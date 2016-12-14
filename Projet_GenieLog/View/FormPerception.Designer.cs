@@ -172,7 +172,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(459, 318);
+            this.ClientSize = new System.Drawing.Size(452, 323);
             this.Controls.Add(this.count);
             this.Controls.Add(this.labelC);
             this.Controls.Add(this.labelD);
@@ -190,7 +190,6 @@
             this.Name = "FormPerception";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Test de perception";
-            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPerception_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

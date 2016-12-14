@@ -30,7 +30,14 @@ namespace Projet_GenieLog.View
             InitializeComponent();
             regle = Concentration.selectionRègle();
             _difficile = MainMenu.difficile;
-            MessageBox.Show(regle._consigne);
+            string consigne = regle._consigne;
+            if (_difficile)
+            {
+                consigne+="\nVous avez "+tempsDifficulte+ "pour choisir le bon bouton.";
+            }
+            consigne += "\nAppuyer sur OK quand vous êtes prêt.";
+
+            MessageBox.Show(consigne);
             lancerTest();
         }
 
@@ -150,14 +157,6 @@ namespace Projet_GenieLog.View
 
         }
 
-        //private void FormConcentration_FormClosing(object sender, FormClosingEventArgs e)
-        //{
-        //    var window = MessageBox.Show(
-        //    "Souhaitez-vous vraiment fermer l'application ?",
-        //        "Confirmez la fermeture",
-        //    MessageBoxButtons.YesNo);
-
-        //    e.Cancel = (window == DialogResult.No);
-        //}
+       
     }
 }

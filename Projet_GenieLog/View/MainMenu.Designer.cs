@@ -330,10 +330,10 @@
             // pictureBoxAccueil
             // 
             this.pictureBoxAccueil.Image = global::Projet_GenieLog.Properties.Resources.loadingPage;
-            this.pictureBoxAccueil.Location = new System.Drawing.Point(-2, 171);
+            this.pictureBoxAccueil.Location = new System.Drawing.Point(-2, -3);
             this.pictureBoxAccueil.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxAccueil.Name = "pictureBoxAccueil";
-            this.pictureBoxAccueil.Size = new System.Drawing.Size(302, 236);
+            this.pictureBoxAccueil.Size = new System.Drawing.Size(498, 410);
             this.pictureBoxAccueil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxAccueil.TabIndex = 20;
             this.pictureBoxAccueil.TabStop = false;
