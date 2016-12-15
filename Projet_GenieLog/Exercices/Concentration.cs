@@ -35,21 +35,23 @@ namespace Projet_GenieLog
 
         public static Concentration selectionRègle()
         {
-            int nbDeRègleTotal = 6;
+            
             #region Deserialisation
-            Concentration[] regles = new Concentration[nbDeRègleTotal];
+            
+            List<Concentration> regles = new List<Concentration>();
             XDocument doc = XDocument.Load("ruleConcentration.xml");
             var ensembleRegles = doc.Descendants("Regles").First();
             var regle = ensembleRegles.Descendants("regle");
 
             foreach (var r in regle)
             {
-                regles[(int)r.Attribute("id") - 1] = new Concentration((string)r.Attribute("consigne"), (string)r.Attribute("boutonForme"), (string)r.Attribute("boutonNbP"), (string)r.Attribute("boutonCouleur"));
+                regles.Add(new Concentration((string)r.Attribute("consigne"), (string)r.Attribute("boutonForme"), (string)r.Attribute("boutonNbP"), (string)r.Attribute("boutonCouleur")));
             }
+            int nbDeRegleTotal = regles.Count();
 
             #endregion
             Random rnd = new Random();
-            int a= rnd.Next(0, nbDeRègleTotal);
+            int a= rnd.Next(0, nbDeRegleTotal);
             return regles[a];
 
         }

@@ -33,21 +33,23 @@ namespace Projet_GenieLog
 
         public static Perception selectionRegle()
         {
-            int nbDeRègleTotal =4 ;
+            
             #region Deserialisation
-            Perception[] regles = new Perception[nbDeRègleTotal];
+            
+            List<Perception> regles = new List<Perception>();
             XDocument doc = XDocument.Load("rulePerception.xml");
             var ensembleRegles = doc.Descendants("Regles").First();
             var regle = ensembleRegles.Descendants("regle");
 
             foreach (var r in regle)
             {
-                regles[(int)r.Attribute("id") - 1] = new Perception((string)r.Attribute("consigne"), (string)r.Attribute("forme"), (string)r.Attribute("couleur"));
+                regles.Add(new Perception((string)r.Attribute("consigne"), (string)r.Attribute("forme"), (string)r.Attribute("couleur")));
             }
+            int nbDeRegleTotal = regles.Count();
 
             #endregion
             Random rnd = new Random();
-            int a = rnd.Next(0, nbDeRègleTotal);
+            int a = rnd.Next(0, nbDeRegleTotal);
             return regles[a];
 
         }

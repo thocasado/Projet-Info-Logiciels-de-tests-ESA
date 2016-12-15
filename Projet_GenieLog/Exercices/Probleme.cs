@@ -38,10 +38,12 @@ namespace Projet_GenieLog
         public  static Probleme[]  selectionPbm(string matiere,bool difficile)
         {
 
-            int nbDePbmTotal=12;
+            
             int nbDePbmAselectionner=10;
 #region Deserialisation
-            Probleme[] problemes = new Probleme [nbDePbmTotal];
+            
+            List<Probleme> problemes = new List<Probleme>();
+            
             XDocument doc = XDocument.Load("probleme.xml");
             var ensemblePbm = doc.Descendants("Problemes").First();
             var ensemblePbms = ensemblePbm.Descendants("problemesPhysique");//on initialise ensemblePbms avec les problemes de physiques
@@ -62,8 +64,9 @@ namespace Projet_GenieLog
 
             foreach (var p in pbm)
             {
-                problemes[(int)p.Attribute("id")-1] = new Probleme((int)p.Attribute("id"), (string)p.Attribute("consigne"), (string)p.Attribute("choix1"), (string)p.Attribute("choix2"), (string)p.Attribute("choix3"), (string)p.Attribute("choix4"), (string)p.Attribute("bonnereponse"),(string)p.Attribute("image"));
+                problemes.Add(new Probleme((int)p.Attribute("id"), (string)p.Attribute("consigne"), (string)p.Attribute("choix1"), (string)p.Attribute("choix2"), (string)p.Attribute("choix3"), (string)p.Attribute("choix4"), (string)p.Attribute("bonnereponse"),(string)p.Attribute("image")));
             }
+            int nbDePbmTotal = problemes.Count;
 #endregion
 
             Random r=new Random();
