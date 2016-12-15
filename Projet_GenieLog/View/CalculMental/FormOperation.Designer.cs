@@ -71,12 +71,12 @@
             this.chiffre1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chiffre1.AutoSize = true;
             this.chiffre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.chiffre1.Location = new System.Drawing.Point(0, 99);
+            this.chiffre1.Location = new System.Drawing.Point(75, 99);
             this.chiffre1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.chiffre1.Name = "chiffre1";
-            this.chiffre1.Size = new System.Drawing.Size(205, 63);
+            this.chiffre1.Size = new System.Drawing.Size(114, 63);
             this.chiffre1.TabIndex = 2;
-            this.chiffre1.Text = "chiffre1";
+            this.chiffre1.Text = "ch1";
             this.chiffre1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // chiffre2
@@ -84,7 +84,7 @@
             this.chiffre2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chiffre2.AutoSize = true;
             this.chiffre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.chiffre2.Location = new System.Drawing.Point(379, 99);
+            this.chiffre2.Location = new System.Drawing.Point(300, 99);
             this.chiffre2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.chiffre2.Name = "chiffre2";
             this.chiffre2.Size = new System.Drawing.Size(114, 63);

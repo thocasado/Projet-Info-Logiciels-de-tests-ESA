@@ -44,7 +44,7 @@ namespace Projet_GenieLog.View
             groupBoxRb.Controls.Add(rbChoix4);
             string image = "Images/";//on accede au dossier image du Debug
             image += pbm[cptTest]._image;//on lui rajoute le nom de l'image à afficher
-            pictureBox.Image = new Bitmap(image);
+            imgPbm.Image = new Bitmap(image);
             labelConsigne.Text = pbm[cptTest]._consigne;
             rbChoix1.Text = pbm[cptTest]._choix1;
             rbChoix2.Text = pbm[cptTest]._choix2;

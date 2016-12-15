@@ -116,6 +116,6 @@ namespace Projet_GenieLog.View.CalculMental
                     validButton_Click(null, null);
                 }
             }
-        }              
+        }
     }
 }
