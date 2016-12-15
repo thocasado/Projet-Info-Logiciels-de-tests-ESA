@@ -23,13 +23,7 @@ namespace Projet_GenieLog.View
         string repUtilisateur;
         string _matiere;
         int tempsAffichage = 2000;
-
-        
-       
-        
-        
-        
-        
+                
         public FormProbleme(string matiere)
         {
             _matiere = matiere;
@@ -58,9 +52,7 @@ namespace Projet_GenieLog.View
             rbChoix4.Text = pbm[cptTest]._choix4;
             bonneRep= pbm[cptTest]._bonneRep;
             cptTest++;
-            count.Text=cptTest.ToString();
-            
-            
+            count.Text=cptTest.ToString();                       
 
         }
 
@@ -122,9 +114,6 @@ namespace Projet_GenieLog.View
                     this.Close();
                     
                 }
-
-
-
             }
         }
 
@@ -137,8 +126,6 @@ namespace Projet_GenieLog.View
                     validButton_Click(null, null);
                 }
             }
-        }
-
-       
+        }       
     }
 }

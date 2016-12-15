@@ -92,8 +92,6 @@ namespace Projet_GenieLog.View
         {
             repUtilisateur = ((Button)(sender)).Text;
             afficheResultat();
-
-
         }
 
         private void afficheResultat()
@@ -155,8 +153,6 @@ namespace Projet_GenieLog.View
         {
             afficheResultat();
 
-        }
-
-       
+        }       
     }
 }

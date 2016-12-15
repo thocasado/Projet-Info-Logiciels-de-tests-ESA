@@ -22,8 +22,6 @@ namespace Projet_GenieLog
         public string _boutonCouleur { get; set; }
         public string _boutonNbPoint { get; set; }
         
-
-
         public Concentration(string consigne, string boutonF, string boutonNbP, string boutonC)
         {
             _consigne = consigne;

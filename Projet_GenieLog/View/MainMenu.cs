@@ -27,13 +27,11 @@ namespace Projet_GenieLog
             rConcentrationLB.Text = Sauvegarde.rConcentration;
             rCmLB.Text = Sauvegarde.rCm;
             rPhysiqueLB.Text = Sauvegarde.rPhysique;
-            rMathsLB.Text = Sauvegarde.rMaths;
-            
-           
+            rMathsLB.Text = Sauvegarde.rMaths;                       
             
         }
 
-        public void loadTest(object sender, EventArgs eventargs)
+        public void loadTest(object sender, EventArgs eventargs) // méthode commune pour tous les boutons du menu
         {
             switch (((Button)sender).Name)
             {
@@ -104,8 +102,7 @@ namespace Projet_GenieLog
             rPhysiqueLB.Text = Sauvegarde.rPhysique;
             rMathsLB.Text = Sauvegarde.rMaths;
             compteur++;
-            
-          
+                     
         }
 
         private void timerRentrerNom_Tick(object sender, EventArgs e)
@@ -119,7 +116,7 @@ namespace Projet_GenieLog
             pictureBoxAccueil.Visible = false;
         }
 
-        private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        private void MainMenu_FormClosing(object sender, FormClosingEventArgs e) //demande la confirmation de la fermetrure du menu
         {
             var window = MessageBox.Show(
             "Souhaitez-vous vraiment fermer l'application ?",

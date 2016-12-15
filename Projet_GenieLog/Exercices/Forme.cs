@@ -45,7 +45,6 @@ namespace Projet_GenieLog
                 hauteur = h;
             }
 
-
             public static void creationFormeColorée(Forme f, Form form) // la mettre dans la classe forme et la généraliser avec celle de perception
             {
                 int largeur = f.largeur;
@@ -80,8 +79,6 @@ namespace Projet_GenieLog
                         blueBrush.Dispose();
                         formGraphics.Dispose();
 
-
-
                         break;
                     case "Yellow":
                         switch (f.forme)
@@ -99,7 +96,6 @@ namespace Projet_GenieLog
                                 formGraphics.FillPolygon(yellowBrush, triangle);
                                 break;
                         }
-
 
                         yellowBrush.Dispose();
                         formGraphics.Dispose();
@@ -127,8 +123,6 @@ namespace Projet_GenieLog
                         formGraphics.Dispose();
                         break;
                 }
-
-
 
             }
 
@@ -173,9 +167,5 @@ namespace Projet_GenieLog
                 string ch = "forme:" + forme + " color:" + couleur + " value:" + valeur + " letter: " + lettre;
                 return ch;
             }
-        }
-
-
-
-    
+        }   
 }

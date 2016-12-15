@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Projet_GenieLog</RootNamespace>
     <AssemblyName>Projet_GenieLog</AssemblyName>
-    <TargetFrameworkVersion>v4.0.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -51,7 +51,6 @@
   <ItemGroup>
     <Compile Include="Exercices\Forme.cs" />
     <Compile Include="Exercices\Sauvegarde.cs" />
-    <Compile Include="Presenter\Presenter.cs" />
     <Compile Include="Exercices\Operation.cs" />
     <Compile Include="Exercices\Concentration.cs" />
     <Compile Include="View\CalculMental\FormOperation.cs">
@@ -91,7 +90,6 @@
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Exercices\Probleme.cs" />
-    <Compile Include="MenuPrincipal.cs" />
     <Compile Include="Exercices\Perception.cs" />
     <Compile Include="Exercices\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,7 +99,6 @@
     <Compile Include="View\MyMessageBox.Designer.cs">
       <DependentUpon>MyMessageBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\MyView.cs" />
     <EmbeddedResource Include="View\CalculMental\FormOperation.resx">
       <DependentUpon>FormOperation.cs</DependentUpon>
     </EmbeddedResource>

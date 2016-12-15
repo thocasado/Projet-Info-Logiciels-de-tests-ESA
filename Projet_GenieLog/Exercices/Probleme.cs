@@ -19,9 +19,7 @@ namespace Projet_GenieLog
         public string _choix3 { get; set; }
         public string _choix4 { get; set; }
         public string _bonneRep { get; set; }
-        public string _image { get; set; }
-        
-        
+        public string _image { get; set; }               
 
         public Probleme(int id, string consigne, string c1, string c2, string c3, string c4, string br,string image)
         {
@@ -37,7 +35,6 @@ namespace Projet_GenieLog
 
         public  static Probleme[]  selectionPbm(string matiere,bool difficile)
         {
-
             
             int nbDePbmAselectionner=10;
 #region Deserialisation
@@ -96,9 +93,6 @@ namespace Projet_GenieLog
                 }
             }
             return selectionPbm;
-
-
         }
-
     }
 }

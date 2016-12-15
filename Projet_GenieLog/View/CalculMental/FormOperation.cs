@@ -60,13 +60,11 @@ namespace Projet_GenieLog.View.CalculMental
             
         }
 
-
         private void timerDifficile_Tick(object sender, EventArgs e)
         {
             resultatTest();
         }
          
-
         private void resultatTest()
         {
             timerDifficile.Stop();
@@ -108,9 +106,7 @@ namespace Projet_GenieLog.View.CalculMental
                 Sauvegarde.rCm = resultatFinal;
                 this.Close();
             }
-        }
-
-       
+        }       
 
         private void saisieResultat_KeyDown(object sender, KeyEventArgs e)
         {
@@ -121,9 +117,6 @@ namespace Projet_GenieLog.View.CalculMental
                     validButton_Click(null, null);
                 }
             }
-        }
-
-       
-        
+        }              
     }
 }

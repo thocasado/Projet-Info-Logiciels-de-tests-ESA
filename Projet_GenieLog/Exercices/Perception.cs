@@ -68,8 +68,6 @@ namespace Projet_GenieLog
 
         }
 
-        
-
         public static Forme[,] selectionFormes(Perception regle)
         {
             Forme [,] tableauForme = new Forme[3, 4];
@@ -82,7 +80,6 @@ namespace Projet_GenieLog
             int largeur = 50;
             int hauteur = 50;
            
-
             //on place aléatoirement les 3 ou 4 formes à reperer
                nbFormeVoulue = rnd.Next(3, 5);
                int cptFormeVoulue = 0;
@@ -98,15 +95,12 @@ namespace Projet_GenieLog
                        tableauForme[i, j] = new Forme(couleurVoulue, formeVoulue,rndNumbersTab[i,j], 25 + 105 * j, 30 + 95 * i, arrayLetters[i, j],largeur,hauteur);
                        tableauFormeVoulue[cptFormeVoulue] = tableauForme[i, j];
                        cptFormeVoulue++;//on change d'indice que si on crée une nouvelle forme
-                   }
-                   
-
+                   }                   
                    
                }
-
-            //on place toutes les autres
-               for (int i = 0; i < 3; i++)
-               {
+            
+               for (int i = 0; i < 3; i++) //on place toutes les autres
+            {
                    for (int j = 0; j < 4; j++)
                    {
                        if (tableauForme[i, j] == null)// on ne remplit le tableau que s'il est vide, soit s'il y a pas de forme voulue deja à cette position
@@ -153,8 +147,7 @@ namespace Projet_GenieLog
                }
                return tableauForme;                                                       
             
-      }//probleme boucle while, propose que 2 formes voulues parfois
-
+      }
 
         public static void dessineNombres(PaintEventArgs e)// dessine les chiffres aléatoirement 
         {
@@ -167,8 +160,6 @@ namespace Projet_GenieLog
                 }
             }
         }
-
-
         
     }
 

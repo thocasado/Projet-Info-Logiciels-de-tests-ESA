@@ -29,7 +29,6 @@ namespace Projet_GenieLog.View
             lancerTest();
 
         }
-
        
         public void lancerTest()
         {             
@@ -66,8 +65,6 @@ namespace Projet_GenieLog.View
             mb.reponseVisible();
             mb.implementationLabel();
             mb.ShowDialog();             
-        }
-
-        
+        }        
     }
 }
