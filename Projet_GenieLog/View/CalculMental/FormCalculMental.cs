@@ -27,7 +27,6 @@ namespace Projet_GenieLog.View
             View.CalculMental.FormOperation f = new View.CalculMental.FormOperation(type,_difficile);
             f.Show();
             this.Close();
-        }
-        
+        }        
     }
 }

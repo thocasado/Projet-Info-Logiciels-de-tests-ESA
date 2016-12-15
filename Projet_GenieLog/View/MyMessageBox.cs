@@ -100,7 +100,7 @@ namespace Projet_GenieLog
             else
             {
 
-                MessageBox.Show("Vous avez eu un score total de " + cptBonneReponseTotal + "/" + cptNombreFormeTotal);
+                MessageBox.Show("Vous avez eu un score total de " + 100 * cptBonneReponseTotal / cptNombreFormeTotal + "%");
                 string resultatFinal = 100 * cptBonneReponseTotal / cptNombreFormeTotal + "%";
                 Sauvegarde.rPerception = resultatFinal;
                 this.Close();

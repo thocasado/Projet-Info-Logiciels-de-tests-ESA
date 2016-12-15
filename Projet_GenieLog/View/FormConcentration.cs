@@ -110,7 +110,7 @@ namespace Projet_GenieLog.View
                 cptTotalBonneRep += cptBonneRep;
                 if (cptSerie != 3)
                 {
-                    MessageBox.Show("Vous avez eu un total de" + cptBonneRep + "/5 ! à la serie " + cptSerie + "\n Prêt pour la suivante ?");
+                    MessageBox.Show("Vous avez eu un total de" + cptBonneRep*20 + "% de bonnes réponses à la serie " + cptSerie + "\n Prêt pour la suivante ?");
                     cptTest = 0;
                     cptSerie++;
                     cptBonneRep = 0;
@@ -125,7 +125,7 @@ namespace Projet_GenieLog.View
                 else
                 {
                     MessageBox.Show("Vous avez eu un total de" + cptBonneRep + "/5 ! à la serie " + cptSerie);
-                    MessageBox.Show("Fin de l'exercice. Vous avez eu un total de " + cptTotalBonneRep + "/ 15");
+                    MessageBox.Show("Fin de l'exercice. Vous avez eu un total de " + 100 * cptTotalBonneRep / 15 + " % de bonnes réponses !");
                     string resultatFinal = 100*cptTotalBonneRep / 15 + "%";
                     Sauvegarde.rConcentration = resultatFinal;
                     this.Close();

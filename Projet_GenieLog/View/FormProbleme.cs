@@ -100,9 +100,8 @@ namespace Projet_GenieLog.View
                 lancerTest();
             }
             else
-            {
-                
-                MessageBox.Show("Vous avez eu un total de" + cptBonneRep + "/10 !");
+            {             
+                MessageBox.Show("Vous avez eu un total de " + cptBonneRep*10 + "% de bonnes réponses !");
                 string resultatFinal = cptBonneRep * 10 + "%";
                 if (_matiere == "Physique")
                 {

@@ -38,7 +38,7 @@
             this.radio_difficile = new System.Windows.Forms.RadioButton();
             this.label_difficulte = new System.Windows.Forms.Label();
             this.groupBoxDifficulte = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelNomUtilisateur = new System.Windows.Forms.Label();
             this.nomUtilisateurTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.rPerceptionLB = new System.Windows.Forms.Label();
@@ -190,19 +190,19 @@
             this.groupBoxDifficulte.TabIndex = 8;
             this.groupBoxDifficulte.TabStop = false;
             // 
-            // label1
+            // labelNomUtilisateur
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(176, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 18);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Nom utilisateur testé";
+            this.labelNomUtilisateur.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelNomUtilisateur.AutoSize = true;
+            this.labelNomUtilisateur.BackColor = System.Drawing.Color.Transparent;
+            this.labelNomUtilisateur.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
+            this.labelNomUtilisateur.ForeColor = System.Drawing.Color.White;
+            this.labelNomUtilisateur.Location = new System.Drawing.Point(181, 7);
+            this.labelNomUtilisateur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelNomUtilisateur.Name = "labelNomUtilisateur";
+            this.labelNomUtilisateur.Size = new System.Drawing.Size(117, 18);
+            this.labelNomUtilisateur.TabIndex = 9;
+            this.labelNomUtilisateur.Text = "Nom d\'utilisateur";
             // 
             // nomUtilisateurTB
             // 
@@ -325,15 +325,16 @@
             // 
             // timerChargementMenu
             // 
+            this.timerChargementMenu.Interval = 1000;
             this.timerChargementMenu.Tick += new System.EventHandler(this.timerChargementMenu_Tick);
             // 
             // pictureBoxAccueil
             // 
             this.pictureBoxAccueil.Image = global::Projet_GenieLog.Properties.Resources.loadingPage;
-            this.pictureBoxAccueil.Location = new System.Drawing.Point(-2, -3);
+            this.pictureBoxAccueil.Location = new System.Drawing.Point(-2, -5);
             this.pictureBoxAccueil.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxAccueil.Name = "pictureBoxAccueil";
-            this.pictureBoxAccueil.Size = new System.Drawing.Size(498, 410);
+            this.pictureBoxAccueil.Size = new System.Drawing.Size(494, 412);
             this.pictureBoxAccueil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxAccueil.TabIndex = 20;
             this.pictureBoxAccueil.TabStop = false;
@@ -355,7 +356,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBoxChecked);
             this.Controls.Add(this.nomUtilisateurTB);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelNomUtilisateur);
             this.Controls.Add(this.groupBoxDifficulte);
             this.Controls.Add(this.label_difficulte);
             this.Controls.Add(this.btnPhysique);
@@ -388,7 +389,7 @@
         private System.Windows.Forms.RadioButton radio_difficile;
         private System.Windows.Forms.Label label_difficulte;
         private System.Windows.Forms.GroupBox groupBoxDifficulte;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelNomUtilisateur;
         private System.Windows.Forms.TextBox nomUtilisateurTB;
         private System.Windows.Forms.PictureBox pictureBoxChecked;
         private System.Windows.Forms.Label label2;

@@ -29,7 +29,6 @@ namespace Projet_GenieLog.View.CalculMental
                 _difficile = difficile;
                 lancerTest();
                 verifLB.Visible = false;
-
             
             }
 
@@ -101,7 +100,7 @@ namespace Projet_GenieLog.View.CalculMental
             }
             else
             {
-                MessageBox.Show("Vous avez eu un total de" + cptBonneRep + "/10 !");
+                MessageBox.Show("Vous avez eu un total de " + cptBonneRep*10 + "% de bonnes réponses !");
                 string resultatFinal = cptBonneRep * 10 + "%";
                 Sauvegarde.rCm = resultatFinal;
                 this.Close();
