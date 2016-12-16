@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.labelConsigne = new System.Windows.Forms.Label();
             this.rbChoix4 = new System.Windows.Forms.RadioButton();
             this.validButton = new System.Windows.Forms.Button();
             this.count = new System.Windows.Forms.Label();
@@ -40,27 +39,15 @@
             this.imgPbm = new System.Windows.Forms.PictureBox();
             this.verifLB = new System.Windows.Forms.Label();
             this.timerAfficheResultat = new System.Windows.Forms.Timer(this.components);
+            this.textBoxConsigne = new System.Windows.Forms.TextBox();
             this.groupBoxRb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPbm)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelConsigne
-            // 
-            this.labelConsigne.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelConsigne.AutoSize = true;
-            this.labelConsigne.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.labelConsigne.Location = new System.Drawing.Point(198, 33);
-            this.labelConsigne.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelConsigne.MaximumSize = new System.Drawing.Size(0, 431);
-            this.labelConsigne.Name = "labelConsigne";
-            this.labelConsigne.Size = new System.Drawing.Size(100, 24);
-            this.labelConsigne.TabIndex = 0;
-            this.labelConsigne.Text = "Consignes";
-            // 
             // rbChoix4
             // 
             this.rbChoix4.AutoSize = true;
-            this.rbChoix4.Location = new System.Drawing.Point(304, 10);
+            this.rbChoix4.Location = new System.Drawing.Point(14, 73);
             this.rbChoix4.Margin = new System.Windows.Forms.Padding(2);
             this.rbChoix4.Name = "rbChoix4";
             this.rbChoix4.Size = new System.Drawing.Size(85, 17);
@@ -109,7 +96,7 @@
             // rbChoix2
             // 
             this.rbChoix2.AutoSize = true;
-            this.rbChoix2.Location = new System.Drawing.Point(120, 10);
+            this.rbChoix2.Location = new System.Drawing.Point(14, 31);
             this.rbChoix2.Margin = new System.Windows.Forms.Padding(2);
             this.rbChoix2.Name = "rbChoix2";
             this.rbChoix2.Size = new System.Drawing.Size(85, 17);
@@ -122,7 +109,7 @@
             // rbChoix3
             // 
             this.rbChoix3.AutoSize = true;
-            this.rbChoix3.Location = new System.Drawing.Point(217, 10);
+            this.rbChoix3.Location = new System.Drawing.Point(14, 52);
             this.rbChoix3.Margin = new System.Windows.Forms.Padding(2);
             this.rbChoix3.Name = "rbChoix3";
             this.rbChoix3.Size = new System.Drawing.Size(85, 17);
@@ -139,11 +126,11 @@
             this.groupBoxRb.Controls.Add(this.rbChoix2);
             this.groupBoxRb.Controls.Add(this.rbChoix1);
             this.groupBoxRb.Controls.Add(this.rbChoix4);
-            this.groupBoxRb.Location = new System.Drawing.Point(35, 278);
+            this.groupBoxRb.Location = new System.Drawing.Point(12, 221);
             this.groupBoxRb.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxRb.Name = "groupBoxRb";
             this.groupBoxRb.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxRb.Size = new System.Drawing.Size(412, 39);
+            this.groupBoxRb.Size = new System.Drawing.Size(469, 102);
             this.groupBoxRb.TabIndex = 7;
             this.groupBoxRb.TabStop = false;
             // 
@@ -151,10 +138,10 @@
             // 
             this.imgPbm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.imgPbm.ErrorImage = null;
-            this.imgPbm.Location = new System.Drawing.Point(108, 79);
+            this.imgPbm.Location = new System.Drawing.Point(127, 79);
             this.imgPbm.Margin = new System.Windows.Forms.Padding(2);
             this.imgPbm.Name = "imgPbm";
-            this.imgPbm.Size = new System.Drawing.Size(277, 194);
+            this.imgPbm.Size = new System.Drawing.Size(229, 138);
             this.imgPbm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPbm.TabIndex = 1;
             this.imgPbm.TabStop = false;
@@ -174,17 +161,28 @@
             // 
             this.timerAfficheResultat.Tick += new System.EventHandler(this.timerAfficheResultat_Tick);
             // 
+            // textBoxConsigne
+            // 
+            this.textBoxConsigne.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxConsigne.Location = new System.Drawing.Point(64, 4);
+            this.textBoxConsigne.Multiline = true;
+            this.textBoxConsigne.Name = "textBoxConsigne";
+            this.textBoxConsigne.ReadOnly = true;
+            this.textBoxConsigne.Size = new System.Drawing.Size(363, 70);
+            this.textBoxConsigne.TabIndex = 10;
+            this.textBoxConsigne.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FormProbleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 407);
+            this.Controls.Add(this.textBoxConsigne);
             this.Controls.Add(this.verifLB);
             this.Controls.Add(this.count);
             this.Controls.Add(this.groupBoxRb);
             this.Controls.Add(this.validButton);
             this.Controls.Add(this.imgPbm);
-            this.Controls.Add(this.labelConsigne);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormProbleme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -198,8 +196,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelConsigne;
         private System.Windows.Forms.PictureBox imgPbm;
         private System.Windows.Forms.RadioButton rbChoix4;
         private System.Windows.Forms.Button validButton;
@@ -210,5 +206,6 @@
         private System.Windows.Forms.GroupBox groupBoxRb;
         private System.Windows.Forms.Label verifLB;
         private System.Windows.Forms.Timer timerAfficheResultat;
+        private System.Windows.Forms.TextBox textBoxConsigne;
     }
 }
