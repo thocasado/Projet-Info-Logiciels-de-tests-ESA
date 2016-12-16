@@ -1,31 +1,31 @@
 <Problemes>
 <problemesMaths>
 <facile>
-			<pbm id="1" consigne="Comment ca va ? " choix1="Bien" choix2="mal" choix3="ca va" choix4="tb" bonnereponse="tb" image="PhotoGroupe1.jpg"/>
-			<pbm id="2" consigne="Comment ca va ?2 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe2.jpg"/>
-			<pbm id="3" consigne="Comment ca va ?3 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe3.jpg"/>
-			<pbm id="4" consigne="Comment ca va ?4 " choix1="Bien" choix2="mal" choix3="ca va" choix4="tb" bonnereponse="tb" image="PhotoGroupe4.jpg"/>
-			<pbm id="5" consigne="Comment ca va ?5 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe5.jpg"/>
-			<pbm id="6" consigne="Comment ca va ?6 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe6.jpg"/>
-			<pbm id="7" consigne="Comment ca va ?7 " choix1="Bien" choix2="mal" choix3="ca va" choix4="tb" bonnereponse="tb" image="PhotoGroupe7.jpg"/>
-			<pbm id="8" consigne="Comment ca va ?8 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe8.jpg"/>
-			<pbm id="9" consigne="Comment ca va ?9 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe9.jpg"/>
-			<pbm id="10" consigne="Comment ca va ?10 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe10.jpg"/>
-			<pbm id="11" consigne="Comment ca va ?11 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe11.jpg"/>
+			<pbm id="1" consigne="Hors-saison, un hôtel propose une chambre double à 80 Euro s. En pleine saison, le prix augmente de 15%" choix1="81,5 Euros" choix2="92 Euros" choix3="95 Euros" choix4="99 Euros" bonnereponse="92 Euros" image="none.jpg"/>
+			<pbm id="2" consigne="La somme des âges de deux enfants est de 23 ans. Sachant que le premier a 5 ans de plus que le deuxième, quel est l'âge du plus jeune ? " choix1="9 ans" choix2="10 ans" choix3="11 ans" choix4="12 ans" bonnereponse="9 ans" image="none.jpg"/>
+			<pbm id="3" consigne="Un rectangle de 12 mètres par 8 mètres a la même surface qu'un autre rectangle dont un des côtés mesure 16 mètres. Quel est la longueur du 2 ème côté de cet autre rectangle ?" choix1="3 metres" choix2="4 metres" choix3="6 metres" choix4="8 metres" bonnereponse="6 metres" image="none.jpg"/>
+			<pbm id="4" consigne="Combien y a-t-il de centimètres cubes dans un mètre cube ?" choix1="100" choix2="1000" choix3="10000" choix4="1000000" bonnereponse="1000000" image="none.jpg"/>
+			<pbm id="5" consigne="Quel est le périmètre d'un carré de 5 cm de côté ?" choix1="20" choix2="10" choix3="5" choix4="15" bonnereponse="20" image="none.jpg"/>
+			<pbm id="6" consigne="Il y a 6 ans, Edouard avait 2 fois l'âge de Lise. Dans 5 ans, ils auront 40 ans à eux 2. Quel est l'âge de Lise ?" choix1="8 ans" choix2="10 ans" choix3="11 ans" choix4="12 ans" bonnereponse="12 ans" image="none.jpg"/>
+			<pbm id="7" consigne="Quel est le nombre auquel, quand on lui ajoute le même nombre, sa moitié, son quart et 1 donne 100 ?" choix1="40" choix2="36" choix3="54" choix4="26" bonnereponse="36" image="none.jpg"/>
+			<pbm id="8" consigne="Combien y a t-il de 7 dans un livre numéroté de 1 à 120 pages ?" choix1="12" choix2="13" choix3="21" choix4="22" bonnereponse="22" image="none.jpg"/>
+			<pbm id="9" consigne="Juliette reçoit 9 amies pour son anniversaire. Elle coupe la tarte pour ses amies et elle-même. Elle met 30 secondes pour couper un morceau. Combien de temps mettra t’elle pour couper toute la tarte ?" choix1="5 min" choix2="6 min" choix3="4 min 30" choix4="5 min 30" bonnereponse="5 min" image="none.jpg"/>
+			<pbm id="10" consigne="Mon frère a 12 ans, j'en ai deux fois plus que lui. Quel âge aurai-je quand il aura 37 ans" choix1="74" choix2="49" choix3="48" choix4="58" bonnereponse="49" image="none.jpg"/>
+			<pbm id="11" consigne="Un père et un fils ont à eux deux 36 ans. Sachant que le père a 30 ans de plus que le fils, quel âge a le fils ?" choix1="10 ans" choix2="6 ans" choix3="3 ans" choix4="8 ans" bonnereponse="3 ans" image="none.jpg"/>
 			<pbm id="12" consigne="Comment ca va ?12 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe12.jpg"/>
 
 </facile>
 <difficile>
-			<pbm id="1" consigne="Comment ca va ?13 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe13.jpg"/>
-			<pbm id="2" consigne="Comment ca va ?14 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe14.jpg"/>
-			<pbm id="3" consigne="Comment ca va ?15 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe15.jpg"/>
-			<pbm id="4" consigne="Comment ca va ?16 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe16.jpg"/>
-			<pbm id="5" consigne="Comment ca va ?17 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe17.jpg"/>
-			<pbm id="6" consigne="Comment ca va ?18 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe18.jpg"/>
-			<pbm id="7" consigne="Comment ca va ?19 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe19.jpg"/>
-			<pbm id="8" consigne="Comment ca va ?20 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
-			<pbm id="9" consigne="Comment ca va ?21 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe19.jpg"/>
-			<pbm id="10" consigne="Comment ca va ?22 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+			<pbm id="1" consigne="Le gérant d'un restaurant scolaire a préparé un dessert pour chacun de ses 170 convives. Il y a deux sortes de dessert : des religieuses au chocolat et des tartes aux pommes. Il sait q'une religieuse lui revient à 2,60F, qu'une tarte lui revient à 2,25F, et qu'il ne peut pas dépenser plus de 400F pour le dessert. Combien peut-il proposer au plus de religieuses ?" choix1="30" choix2="40" choix3="50" choix4="60" bonnereponse="50" image="none.jpg"/>
+			<pbm id="2" consigne="Un nombre de quatre chiffres, diminué de 1 donne le carré de l'age de Joël et diminué de 100, donne le carré de l'âge qu'il avait l'an dernier. Trouver l'âge de Joël." choix1="25" choix2="30" choix3="60" choix4="50" bonnereponse="50" image="none.jpg"/>
+			<pbm id="3" consigne="Si un groupe d'élèves doit être réparti dans une auberge à raison de deux élèves par chambre, il reste deux élèves sans chambre.Par contre si 3 élèves sont placés dans chaque chambre, il reste 2 chambres libres. Combien y a-t-il de chambres dans cette auberge?" choix1="6" choix2="8" choix3="10" choix4="12" bonnereponse="8" image="none.jpg"/>
+			<pbm id="4" consigne="Une bactérie se multiplie à chaque seconde (elle se scinde en deux, en quatre etc.). Au bout d'une minute, on a réussi à remplir un bocal plein de bactéries. Combien de temps faudra-t-il pour remplir ce même bocal si nous avons 4 fois plus de bactéries qu'au départ ?" choix1="58 s" choix2="1 min 02" choix3="1 min 08" choix4="50 s" bonnereponse="58 s" image="none.jpg"/>
+			<pbm id="5" consigne="Quand Francine avait un an de plus que Diane avait quand Francine avait deux fois l'âge que Diane avait quand Francine avait la moitié de l'âge que Diane a maintenant, Diane avait la moitié de l'âge que Francine avait quand Diane avait la moitié de l'âge que Francine a maintenant. Une de ces personnes est dans la soixantaine. Quel est l'âge de Francine ?" choix1="66" choix2="72" choix3="76" choix4="64" bonnereponse="72" image="none.jpg"/>
+			<pbm id="6" consigne="Dans une journée, combien de fois les aiguilles des heures et des minutes d'une horloge font un angle droit entre elles?" choix1="12" choix2="24" choix3="38" choix4="44" bonnereponse="44" image="none.jpg"/>
+			<pbm id="7" consigne="Un ours sort de son abri et marche 5 km vers le sud. Il se tourne ensuite vers l'est et marche 7km dans cette direction. Fatigué il décide ensuite de retourner vers son abri en marchant 5km vers le nord. Il se trouve bel et bien au même abri! Quelle est la couleur de l'ours?" choix1="Brun" choix2="Marron" choix3="Blanc" choix4="Bleu" bonnereponse="Blanc" image="none.jpg"/>
+			<pbm id="8" consigne="Une chèvre broute un champ circulaire. Quelle doit être la longueur de la corde attachée au milieu du jardin pour que la chèvre ne broute que le quart de la surface ? (sachant que R est le rayon du champ)" choix1="R/2" choix2="R/6" choix3="R/4" choix4="R" bonnereponse="R/2" image="none.jpg"/>
+			<pbm id="9" consigne="Les animaux suivants valent: vaches, 1000 F cochons, 300 F poules, 50 F. Vous avez 10 000 F et souhaitez acquérir des animaux de toutes catégories pour un nombre total de 100. Qu'achetez-vous?" choix1="4 vaches, 2 cochons et 85 poules" choix2="2 vaches, 8 cochons et 66 poules" choix3="6 vaches et 106 poules" choix4="5 vaches, 1 cochon et 94 poules" bonnereponse="5 vaches, 1 cochon et 94 poules" image="none.jpg"/>
+			<pbm id="10" consigne="Une planche est posée sur deux rondins de bois de 31,83 cm de haut. De combien aura avancé la planche quand les rondins auront fait un tour ?" choix1="50cm" choix2="1m" choix3="1m50" choix4="75cm" bonnereponse="1m" image="none.jpg"/>
 			<pbm id="11" consigne="Comment ca va ?23 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe19.jpg"/>
 			<pbm id="12" consigne="Comment ca va ?24 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
 			
@@ -34,30 +34,30 @@
 
 <problemesPhysique>
 <facile>
-			<pbm id="1" consigne="Comment ca va ??? " choix1="Bien" choix2="mal" choix3="ca va" choix4="tb" bonnereponse="tb" image="none.jpg"/>
-			<pbm id="2" consigne="Comment ca va ???2 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe1.jpg"/>
-			<pbm id="3" consigne="Comment ca va ???3 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
-			<pbm id="4" consigne="Comment ca va ???4 " choix1="Bien" choix2="mal" choix3="ca va" choix4="tb" bonnereponse="tb" image="none.jpg"/>
-			<pbm id="5" consigne="Comment ca va ???5 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe1.jpg"/>
-			<pbm id="6" consigne="Comment ca va ???6 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
-			<pbm id="7" consigne="Comment ca va ???7 " choix1="Bien" choix2="mal" choix3="ca va" choix4="tb" bonnereponse="tb" image="none.jpg"/>
-			<pbm id="8" consigne="Comment ca va ???8 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="none.jpg"/>
-			<pbm id="9" consigne="Comment ca va ???9 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe9.jpg"/>
-			<pbm id="10" consigne="Comment ca va ???10 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
+			<pbm id="1" consigne="La célérité du son dans l’air, à température ordinaire et à pression normale est de l’ordre de :" choix1="250m/s" choix2="350m/s" choix3="400m/s" choix4="500m/s" bonnereponse="350m/s" image="none.jpg"/>
+			<pbm id="2" consigne="Quelle technologie a besoin de prendre en compte la relativité restreinte pour fonctionner de manière relativement correcte ?" choix1="Internet" choix2="Le GPS" choix3="L'horloge atomique" choix4="Les radars" bonnereponse="Le GPS" image="none.jpg"/>
+			<pbm id="3" consigne="De manière simplifiée, le mouvement de la Lune autour de la Terre est : " choix1="Rectiligne uniforme " choix2="Rectiligne non uniforme" choix3="Circulaire uniforme" choix4="Circulaire non uniforme" bonnereponse="Circulaire uniforme" image="none.jpg"/>
+			<pbm id="4" consigne="Un systeme est isolé si : " choix1="il n’est soumis à aucune force" choix2="il n’est soumis qu’à une seule force" choix3="il est soumis à plusieurs forces qui se compensent" choix4="il est soumis à plusieurs forces qui ne se compensent pas" bonnereponse="il n’est soumis à aucune force" image="none.jpg"/>
+			<pbm id="5" consigne="Les radars sur les bords des routes utilisent l’effet Doppler pour mesurer la vitesse des voitures. Le radar doit prendre en compte :" choix1="la pression" choix2="l’hygrométrie de l’air" choix3="la température de l’air" choix4="l’angle entre la route et la direction de visée du radar" bonnereponse="l’angle entre la route et la direction de visée du radar" image="none.jpg"/>
+			<pbm id="6" consigne="la fonction entropie est symbolisée par" choix1="E" choix2="U" choix3="G" choix4="S" bonnereponse="S" image="none.jpg"/>
+			<pbm id="7" consigne="Combien vaut la tension U si R = 2 kΩ et I = 2 mA ?" choix1="40 V" choix2="200 mV" choix3="2 V" choix4="4 V" bonnereponse="4 V" image="none.jpg"/>
+			<pbm id="8" consigne="Le 16 mars 1999,au Québec, un tremblement de terre a été détecté près de l'épicentre à 7 h 50 min 52 s. Une station de détection située à 61 km l'a détecté à 7 h 51 min 7 s. La célérité moyenne des ondes sismiques de surface est de :" choix1="36 kms-1" choix2="500 kms-1" choix3="2,4 kms-1" choix4="0.5kms-1" bonnereponse="2,4 kms-1" image="none.jpg"/>
+			<pbm id="9" consigne="La viscosité d’un fluide est caractérisée par :" choix1="sa texture" choix2="sa couleur" choix3="sa capacité à s'écouler" choix4="sa température" bonnereponse="sa capacité à s'écouler" image="none.jpg"/>
+			<pbm id="10" consigne="R-OH Cette molécule est : " choix1="Un alcool" choix2="Un acide carboxylique" choix3="Un ester" choix4="Un anhydride d’acide" bonnereponse="Un alcool" image="none.jpg"/>
 			<pbm id="11" consigne="Comment ca va ???11 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
 			<pbm id="12" consigne="Comment ca va ???12 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
 </facile>
 <difficile>
-			<pbm id="1" consigne="Comment ca va ???13 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
-			<pbm id="2" consigne="Comment ca va ???14 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
-			<pbm id="3" consigne="Comment ca va ???15 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
-			<pbm id="4" consigne="Comment ca va ???16 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
-			<pbm id="5" consigne="Comment ca va ???17 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
-			<pbm id="6" consigne="Comment ca va ???18 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="PhotoGroupe1.jpg"/>
-			<pbm id="7" consigne="Comment ca va ???19 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
-			<pbm id="8" consigne="Comment ca va ???20 " choix1="Bien3" choix2="mal3" choix3="ca va3" choix4="tb3" bonnereponse="tb3" image="none.jpg"/>
-			<pbm id="9" consigne="Comment ca va ???21 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe1.jpg"/>
-			<pbm id="10" consigne="Comment ca va ???22 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe1.jpg"/>
+			<pbm id="1" consigne="Dans l’eau, la longueur d’onde d’une radiation de fréquence 5,09E14 Hz vaut 442 nm. Quelle est l’indice de l’eau ? (Donnée : Vitesse de la lumière dans le vide : c=3,0E8 m/s)" choix1="0.76" choix2="1.3" choix3="1.5" choix4="1.7" bonnereponse="1.3" image="none.jpg"/>
+			<pbm id="2" consigne="Un écran est placé à une distance D=1,50 m de la fente. La largeur de la tâche centrale de diffraction observée sur l’écran vaut : " choix1="9,3 mm" choix2="6,2E-3 m" choix3="1,9 cm" choix4="3,8 cm" bonnereponse="1,9 cm" image="none.jpg"/>
+			<pbm id="3" consigne="Pour réaliser le spectre de la lumière blanche, à la place d’un prisme on peut utiliser :" choix1="Un réseau" choix2="Une lentille" choix3="Un miroir" choix4="Un conductimètre" bonnereponse="Un réseau" image="none.jpg"/>
+			<pbm id="4" consigne="Plus un noyau est stable :" choix1=" Plus sa masse est grande" choix2="Plus son énergie de liaison est grande" choix3="Plus son énergie de liaison par nucléon est grande" choix4="Plus son énergie de liaison par nucléon est petite" bonnereponse="Plus son énergie de liaison par nucléon est grande" image="none.jpg"/>
+			<pbm id="5" consigne="Que peut-on dire de la vitesse d’une planète en orbite elliptique autour du Soleil ?" choix1="elle est constante" choix2="elle est nulle" choix3="elle augmente en s’approchant du soleil" choix4="elle diminue en s’approchant du soleil" bonnereponse="elle augmente en s’approchant du soleil" image="none.jpg"/>
+			<pbm id="6" consigne="Quelle sera, en joules, la quantité de chaleur reçue par une mole de gaz parfait évoluant de manière isotherme, à 100 degrés celsius, lorsque sa pression diminue de moitié?" choix1="3120 joules" choix2="5651 joules" choix3="312 joules" choix4="2149 joules" bonnereponse="2149 joules" image="none.jpg"/>
+			<pbm id="7" consigne="Pour une évolution isotherme d'un gaz parfait, la quantité de chaleur reçue Qreçue est:" choix1="Wcédé" choix2="-Wreçu" choix3="0" choix4="-Wcédé" bonnereponse="-Wreçu" image="none.jpg"/>
+			<pbm id="8" consigne="Combien vaut la résistance équivalente totale de ce circuit ?" choix1="133.33 Ohms" choix2="80 Ohms" choix3="120 Ohms" choix4="63.15 Ohms" bonnereponse="120 Ohms" image="circuit.jpg"/>
+			<pbm id="9" consigne="Soit l'artère ci dessous : son débit reste constant, et la perte de charge est 32 fois plus importante dans la portion rétrécie" choix1="r1 = 4*r2" choix2="r1 = 32*r2" choix3="r1 = 0,5*r2" choix4="r1 = 2*r2" bonnereponse="r1 = 2*r2" image="artere.jpg"/>
+			<pbm id="10" consigne="Le nom de cette molécule est : " choix1="Propanoate de méthyl-propyle" choix2="Butanoate de méthyl-propyle" choix3="Propanoate de méthyl-éthyle" choix4="Butanoate de méthyl-éthyle" bonnereponse="Butanoate de méthyl-éthyle" image="molecule.jpg"/>
 			<pbm id="11" consigne="Comment ca va ???23 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe1.jpg"/>
 			<pbm id="12" consigne="Comment ca va ???24 " choix1="Bien2" choix2="mal2" choix3="ca va2" choix4="tb2" bonnereponse="tb2" image="PhotoGroupe1.jpg"/>
 </difficile>
