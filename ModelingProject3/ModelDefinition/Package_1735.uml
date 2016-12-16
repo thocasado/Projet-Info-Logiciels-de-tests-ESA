@@ -1,0 +1,2245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="a98ad87f-4ebc-46e5-8a8f-f74f13337238"
+  name="CalculMental"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="6777868b-c3b6-48d1-96d5-ee0a3196031c"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=Projet_GenieLog.View.CalculMental"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="f6883042-b4cf-434a-ab62-a1432a9f44cc"
+        name="FormOperation"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c880af65-6de1-4cf7-9ca4-5de928956bb6"
+            handle="viewcode://./CodeSchema_Class?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c8a868e4-af0d-4ae6-a28d-2982fd6d98f3"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="be8043c7-f93e-41d7-a935-a8e20dbc520d">
+                <propertyInstance
+                  Id="c672305a-d4d2-4fc5-8dbe-290044016d88"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4b1de23e-4bd5-42d9-a862-c7cb9ae7e84d">
+                <propertyInstance
+                  Id="409e976e-1a3f-41bc-bd56-3ddaf7521bc1"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="31c533bf-dc00-46b9-95bf-0af4410a448a">
+                <propertyInstance
+                  Id="81b2a77f-ba38-4277-8e8d-8433fa09d507"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c56a2c66-a933-425d-8f97-c6165f54cd65">
+                <propertyInstance
+                  Id="df6ec16c-707b-4c7c-893c-b75bbba8091e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="42cb34e9-3f49-4f73-b44d-21c000c4c935">
+                <propertyInstance
+                  Id="01d0da3b-5978-4d12-a820-f269351f2926"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="bb0c54e8-a52f-4fe3-958e-8f163e88b103"
+            isSubstitutable="false">
+            <classMoniker
+              Id="3600405e-59cc-4253-a052-924bdbfaa86c"
+              LastKnownName="Form"
+              LastKnownLocation="Package4_1726.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="73632d1c-4fdd-4758-a376-7c4fb0cd6c06"
+            isDerived="false"
+            sourceEndRoleName="FormOperation"
+            targetEndRoleName="Operation"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="cc48920a-06a6-4470-8ac7-80e2fe3a35d5"
+              LastKnownName="Operation"
+              LastKnownLocation="Package_1726.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cce2c8c4-0865-4ffd-b364-1a7dca61ba50"
+                  name="FormOperation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8bde0818-257d-4472-9add-e635ff582401"
+                  name="Operation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4c9a0ef8-1981-4c72-a70a-a6f6dc01af8a"
+                      name="Lower"
+                      value="10" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="00aa70a6-7410-44c4-80b5-5759d5ca4430"
+                      name="Upper"
+                      value="10" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="195b2f9d-565b-45b4-8a66-270fd8c7c042"
+            name="_difficile"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="71a2a1e4-6b9a-4be7-977c-4828ec4533b4"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=_difficile"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1e539b26-21e0-413b-ba38-cfa632a3c74e"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="92c76e8b-a3ec-4af3-ac79-f3081491fae3">
+                    <propertyInstance
+                      Id="884d321b-1d1a-4792-ab16-f9fda62b4452"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="297733be-5ce2-4a13-bcbc-084cd3172e0d">
+                    <propertyInstance
+                      Id="4a8a86ba-5887-4fa2-86aa-243a2ffa74c4"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4fa04f14-d597-4937-8151-b5f15903d4a5">
+                    <propertyInstance
+                      Id="120e5609-8d8a-4cb5-8bf3-616c39829eb6"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2656ee86-a0d2-468d-82d2-fffe87559206">
+                    <propertyInstance
+                      Id="97f0d3ed-10ce-43d4-b314-62081b6ff144"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b518e69c-90e5-434a-9d90-6f0841578ed4">
+                    <propertyInstance
+                      Id="8f10f909-4012-4425-8fcd-197589f4796e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="ModelingProject3.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="99214802-efef-480b-9a4f-2d2c9bdb40b7"
+            name="_type"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="557ba8fe-9ea5-40cb-b7d4-7ec22b04a2fe"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=_type"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="566028ff-c269-4e75-a8f4-a63e665a086e"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d9a4766-1497-4c97-acf6-68c3117309bd">
+                    <propertyInstance
+                      Id="afe5437e-e1d3-4173-b0fb-8be0a5fc354b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b479b3f0-2a9c-4965-8de0-e7f05e084333">
+                    <propertyInstance
+                      Id="b53f5853-3b66-4aad-9e52-250da3be3870"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a0087b0-e921-42ff-8203-3c72cf06c6ee">
+                    <propertyInstance
+                      Id="4295b4cb-2916-4239-9f00-9e3070f879c5"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31b9976d-3ca4-4b0b-a5f2-d385970facf3">
+                    <propertyInstance
+                      Id="eee0e6c4-1671-4203-a50a-92c7458e5759"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a616582-47a2-4d46-a30d-c6427e5dd9bd">
+                    <propertyInstance
+                      Id="7f9f8b5b-3d47-4896-94ec-5e615ce07e17"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelingProject3.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3c60c9f2-3fe3-4258-bdf3-900912a53ae6"
+            name="chiffre1"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="22d3e35e-cdb2-47f2-aaf7-f75e2a59ba9c"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=chiffre1"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b6ffda3d-85d6-4c06-be76-ce4b35373709"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a70df29a-2fa0-4d9b-94b0-cd88315d732a">
+                    <propertyInstance
+                      Id="0ebfb1b1-57d2-478f-ba9b-4f8a95fb07b2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4360fc96-78dc-490d-abb3-dbfc4d091f56">
+                    <propertyInstance
+                      Id="6949207e-53af-4924-b627-5388d1ee000b"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="95951796-092c-4fef-b9a6-5705bab1e443">
+                    <propertyInstance
+                      Id="30a5326b-044b-4b1a-a3a4-85c8c4439600"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5adbe085-919b-4a34-9905-51997dfe9ea5">
+                    <propertyInstance
+                      Id="c10ae45b-4222-4e28-9e34-c30648a2bc3c"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d13ab49a-59c6-408b-b93b-cfb0cdb3f66c">
+                    <propertyInstance
+                      Id="99ffd792-30a3-4332-a70c-236d1fc92f32"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="528c7777-1c9e-4820-809b-42c2fb535548"
+                LastKnownName="Label"
+                LastKnownLocation="Package4_1726.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="73b5666b-01ed-4b5f-b6a7-4b72bfcc6195"
+            name="chiffre2"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d8c46c07-dd7d-4823-8052-139d0c70f839"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=chiffre2"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4934e2d6-724f-4497-9ff1-783513b54c80"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="183f2bd2-1e90-43b7-9fca-053e1a6a214a">
+                    <propertyInstance
+                      Id="bbfdb289-7dcb-497a-8190-d24a22b345bb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3388059-025c-486d-b6a3-72b1f69b15c2">
+                    <propertyInstance
+                      Id="dbcb93eb-dbab-4bef-b797-c418f6a98957"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3726542b-ad6c-4fab-ba82-988f2c5e3758">
+                    <propertyInstance
+                      Id="acbeeb68-6adb-4874-88f3-37fba82917f7"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5f2c6ce7-da0e-46db-b501-a142c8c829b3">
+                    <propertyInstance
+                      Id="151b5402-73f5-4d4f-8201-efd797049b02"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3db3b78-8ed6-4405-8867-974b5d6b44ec">
+                    <propertyInstance
+                      Id="0fdf443d-d74f-4a56-b1d3-e64d535577b6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="528c7777-1c9e-4820-809b-42c2fb535548"
+                LastKnownName="Label"
+                LastKnownLocation="Package4_1726.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ed76eac4-9bbd-4c26-aa77-bc68e81e9816"
+            name="components"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5271f177-f5eb-478f-8403-fd8d504a6fe5"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=components"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8544d653-7bab-4bc9-b6ab-0553f75b2dd9"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e738ef82-d6ec-4bf3-bb04-1c2583f6283d">
+                    <propertyInstance
+                      Id="a0cc03b0-747f-41ae-a579-ff6440ebfe4c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb9cc950-06c9-4175-bb2c-ab87624bce24">
+                    <propertyInstance
+                      Id="732fc389-dde5-4c78-bad9-1bd87645d6d1"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b4323e4-643a-4fd1-9870-9be9d02ab324">
+                    <propertyInstance
+                      Id="190d5ea7-c44b-4154-b526-2e66baff9256"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ee004bc-aab5-45d8-816f-30828dfaa46d">
+                    <propertyInstance
+                      Id="e71d96e9-4f41-4003-8f3a-db3487c3bae7"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee0eed4e-d096-4fc2-955a-5b3e26e07ddf">
+                    <propertyInstance
+                      Id="6534a6ca-9fe9-4479-a058-5b5839069af6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="75d2bd04-15b0-4cac-ad5c-69ab914d08b7"
+                LastKnownName="IContainer"
+                LastKnownLocation="Package5_1726.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ded8e0ce-643c-4e9f-809c-a14424bfe317"
+            name="compteurCalcul"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d4a31b60-1ca5-4899-b45f-a64f73268ecd"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=compteurCalcul"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c4f045c4-4960-4fd6-b542-1746c3df9509"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="860d03f1-388f-4b4f-905b-5861c614b178">
+                    <propertyInstance
+                      Id="fb252010-b5fb-472d-a87b-75ffa928bd05"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f64cfa34-dc2c-4a58-8582-21b304758730">
+                    <propertyInstance
+                      Id="69805528-0144-44bc-8045-f5e55897d2f1"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bfe2cc7a-056d-4d2a-bbba-4f41b48dfca1">
+                    <propertyInstance
+                      Id="ea46c9af-cd28-4aff-8576-aee877c62c76"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c85f7f64-4189-403d-ba64-8aad7c15c5d3">
+                    <propertyInstance
+                      Id="e5b23abb-d962-4bdd-9082-8e5540fb1bad"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b48767d-df52-4434-a6f2-4e9d89f1f316">
+                    <propertyInstance
+                      Id="fa0a4481-753a-409d-bc30-0fec6d10c7d4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject3.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="776d8270-454b-45b8-ad48-e0be9a078dfb"
+            name="count"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="4d1ae2e3-efd8-4170-9330-b1b193ca8329"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=count"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a95aa32e-9d18-4acf-864f-04741915fd4b"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4ef5160-1193-4930-834c-316682391895">
+                    <propertyInstance
+                      Id="b8b21afb-8ab9-4064-96fa-aa097238181e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5efd5dbb-2aba-49b1-8fa9-5d1a0a8fe77f">
+                    <propertyInstance
+                      Id="eae3759e-cac4-4306-b4dd-5c52ee659060"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d7b88f8-f12c-4a19-8bf2-41e88c0146e2">
+                    <propertyInstance
+                      Id="46657821-19a2-4e38-b1a3-661e299e31f5"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c92bad91-35f7-4faf-867f-6dc80f35c0bb">
+                    <propertyInstance
+                      Id="0c0ccc5e-d9f3-4be8-abef-439e297b75ae"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3b81e368-38d0-49bb-a341-ce195fe6b5a3">
+                    <propertyInstance
+                      Id="16a4ec80-ae59-4138-996e-9dd8cf1dc855"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="528c7777-1c9e-4820-809b-42c2fb535548"
+                LastKnownName="Label"
+                LastKnownLocation="Package4_1726.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f8b125bc-d6b6-4c12-b259-392d49cc6823"
+            name="cptBonneRep"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="cc196a14-d6b0-44ec-9bbc-d47b79ea89d6"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=cptBonneRep"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="97346de5-af75-4f13-b9a9-b41e6cfe1c06"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e0b03ea1-48dd-4bc2-bd0c-b56230c6f094">
+                    <propertyInstance
+                      Id="3e31763d-d3f0-4321-91b4-8afdc3ea3ac9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5e7b842-8e89-462d-911c-07c5bd75d124">
+                    <propertyInstance
+                      Id="7ffb530d-4eab-42fe-a6f1-ba62de52189e"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e4b6715c-f4cd-47e2-971a-8a079582dd23">
+                    <propertyInstance
+                      Id="5e5c5d69-0028-46a0-8832-09c7fd55b5ee"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a898ab9b-50d2-4c5e-bfb0-71dddba854fc">
+                    <propertyInstance
+                      Id="a30aeab4-df0d-4b73-96da-5d8e0c1743f6"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e97cb4d8-1857-4a61-af16-d51b7f97354f">
+                    <propertyInstance
+                      Id="ab00b6a4-dcdb-407c-88bb-7f9993ca53d0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject3.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="78f875e0-0350-4383-9636-d5659f88087f"
+            name="label2"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="469c04fb-3f69-4800-bd0c-5ef0d8080339"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=label2"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1c67d1f4-f821-4fb7-988a-52982e60ffc8"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b16a9c65-5b08-46b9-b6be-83a300e965c8">
+                    <propertyInstance
+                      Id="4b9d8ed1-7057-485d-afdf-678e2b78e0e4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6bd42d06-b895-47a2-9ec2-8c21c9b39601">
+                    <propertyInstance
+                      Id="b9db6d4b-09b1-4a0a-877a-efbeb6ebc355"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="246de698-bc50-4591-9a26-8389bdedc0f6">
+                    <propertyInstance
+                      Id="cb4ba6f5-6137-4425-807d-764378664a9b"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="00658d6f-fb07-4ff9-a659-3a70c4db83fd">
+                    <propertyInstance
+                      Id="d3e7df23-4aea-49a9-a3fb-b31747049c5c"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ceb247e0-ba84-44df-896a-704b9832a131">
+                    <propertyInstance
+                      Id="997be7b3-3200-4efb-a5cc-f9f6b44dbb7a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="528c7777-1c9e-4820-809b-42c2fb535548"
+                LastKnownName="Label"
+                LastKnownLocation="Package4_1726.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="74cfd62c-4da8-4f00-b512-9831b0a3abfe"
+            name="label3"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="dc148097-4e87-4d69-9edf-3f85894d4d9e"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=label3"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="83008391-908e-4182-af61-f324a1a4cd7f"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93177041-aca3-4e7b-bce4-5e9a202d2817">
+                    <propertyInstance
+                      Id="879fe1d4-0017-4d7b-a7a3-11288163534f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5c26bb1-b7e6-48a9-80f8-97f3a0c8c241">
+                    <propertyInstance
+                      Id="a0b43ff7-c4db-4a74-81dc-7db1bd2aa1c2"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="92d62373-c597-4eed-8df6-e62afeb39462">
+                    <propertyInstance
+                      Id="9b52907d-762f-43e1-a1db-da9d0c8b4d11"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="09fa700c-347d-4b04-bd25-e57ee09c9b03">
+                    <propertyInstance
+                      Id="8c0ff4ee-595a-4d61-9cbe-ccb8259d4b86"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ed420cb-5b82-44b1-9168-bf703e855b8c">
+                    <propertyInstance
+                      Id="10c0caea-591c-4763-bc19-8cc6e8e2abb6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="528c7777-1c9e-4820-809b-42c2fb535548"
+                LastKnownName="Label"
+                LastKnownLocation="Package4_1726.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4c6db084-abf4-4af3-8b48-fcabedf03d5f"
+            name="labelSigne"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="8325f4b0-6618-4379-9c0a-3d33de68bf7c"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=labelSigne"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b9520161-4e8d-4084-99d1-e80cbb85f0bd"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ea75942-6795-4439-8c5b-dbd0b2c3a9f7">
+                    <propertyInstance
+                      Id="b32afd7d-80dc-4743-a940-efd4d049977e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3db8a3ed-edf4-4064-86c9-5422c83100e2">
+                    <propertyInstance
+                      Id="a1ee6196-4cbb-4475-b357-a3cd28afc3a4"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f9edab6a-08e7-4095-bc8e-c2f4abdeec17">
+                    <propertyInstance
+                      Id="1e6c2050-804c-4118-a9e6-51066562d55e"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f191c1ac-fe50-439b-a38b-234f273f935c">
+                    <propertyInstance
+                      Id="6e659214-2db5-417d-8e7d-4d0c36b844f3"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52bfba5d-facc-4e84-9099-bce851c0d826">
+                    <propertyInstance
+                      Id="7e429121-9202-4300-9edc-86a4815f9d8d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="528c7777-1c9e-4820-809b-42c2fb535548"
+                LastKnownName="Label"
+                LastKnownLocation="Package4_1726.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f8688c40-4904-4947-bff6-ea29770083b6"
+            name="result"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="732c6f8f-ea43-4262-83c7-38dcf58b83fb"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=result"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f752d0f8-3946-42a2-81e8-6c4384081090"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fbacf398-0d7e-4863-9e17-721e98949ce9">
+                    <propertyInstance
+                      Id="62118504-1506-40dd-8330-ad72e9497ad0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="710fa1b7-1a9b-48eb-a115-372ac9ac6d7e">
+                    <propertyInstance
+                      Id="eb438fa9-50a8-4779-98d0-eaff8985da7f"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7806257-9399-4167-992e-d7029653714c">
+                    <propertyInstance
+                      Id="61768a5f-c9e6-47ba-92d0-971fed6b6fbb"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="563b63ed-7c1a-4369-b274-ce90cfa8e978">
+                    <propertyInstance
+                      Id="b6b88e9d-959e-44d2-aa35-2c60ea0ee2be"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cefbd5c4-723b-46d9-a427-66f69282a484">
+                    <propertyInstance
+                      Id="5b3cca29-24e9-4008-88e5-252bb21b990b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelingProject3.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ad102b6c-65b9-4f9a-8fa9-69a520a138f7"
+            name="saisieResultat"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="55a0d8b2-e9a8-485b-af05-b15a4b9a32e7"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=saisieResultat"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c89bde69-2dad-4feb-8254-16ed562a83cd"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="849d7a66-9469-4440-adeb-a81383fbd601">
+                    <propertyInstance
+                      Id="5b132bb3-4f0d-4ac6-a856-fcc2bc1ff4ef"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8879d87b-3e2c-403b-8f95-9b9a91f80fb1">
+                    <propertyInstance
+                      Id="90588d4b-52d0-4cc8-88f4-879986d9bf5f"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e75a837-a6ec-48e7-93e3-9eb1ab89a426">
+                    <propertyInstance
+                      Id="014d6e66-5397-43a9-8cf1-7ba96370cacf"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="316f8bfe-5919-488d-b8e2-ab2a920b1d10">
+                    <propertyInstance
+                      Id="b0739e62-a558-48b4-9655-9b863c1767dc"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0a6f2685-db0c-458a-b418-bbdcc9a77c2c">
+                    <propertyInstance
+                      Id="6fd9a46a-1f11-4746-afd7-1ea562ed9a80"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="32ddd34d-8edb-49d5-9926-b5d7d3bfb928"
+                LastKnownName="TextBox"
+                LastKnownLocation="Package4_1726.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f4fc229b-71a1-47e1-ad2a-6b0e35ec8d1e"
+            name="tempsAffichage"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6ce5039f-6ca1-4619-85eb-fce0233fed1e"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=tempsAffichage"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2a37a918-c084-44d7-867f-c7b302de59a7"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d2c8460-575d-4b2a-b3da-65749f72c35f">
+                    <propertyInstance
+                      Id="64a6128c-3316-4e4a-835f-191544e09e2f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="48cf3e3d-58a0-4a39-a1e0-220b58850b49">
+                    <propertyInstance
+                      Id="00849e5e-3807-42da-92a0-ef344073205e"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fdae3464-0a38-425c-b223-079201eedd14">
+                    <propertyInstance
+                      Id="b3e96cc7-e6e3-417d-9242-60a5b2323fc2"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bd944026-9f0e-4de5-bcc8-249ce72516fe">
+                    <propertyInstance
+                      Id="36fb6480-48aa-41e4-a916-fa43fe4b1ea5"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eeee667b-5569-411f-bf11-5619cc2fe815">
+                    <propertyInstance
+                      Id="5f5d9ea9-4a3d-4e34-b4b8-f4393d0034e6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject3.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="addaebbc-c79b-46d1-bee1-a77fb5ec6dac"
+            name="temps_difficulte"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="78063437-b5ce-48f3-853f-e355af7dba61"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=temps_difficulte"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1ecaa70c-3186-46dc-807c-784c64dba6d8"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5e2941e-569f-405e-a692-6f52f1b349a2">
+                    <propertyInstance
+                      Id="7e557303-d3ed-43fe-a675-948834fab39c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1fd47055-e1ee-4daa-bb2f-962c54a27e85">
+                    <propertyInstance
+                      Id="59e0848a-6a5d-4270-819b-1c5f8d14f0cc"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a1dccf0-4ba0-40bb-bc14-812e46c4ff14">
+                    <propertyInstance
+                      Id="a7965556-c318-4acb-8634-99f7e633a0a6"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="143c95e9-3b39-4402-86dc-a3d65efc2a71">
+                    <propertyInstance
+                      Id="9cb2a08a-495a-4f22-8da3-2bec1ac93401"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6cc33dcc-20c6-45b4-b6e3-762a1ec0b6c7">
+                    <propertyInstance
+                      Id="91fe4cc0-ff9b-463b-83e1-85a2001951f2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject3.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a6809490-1cf0-42f9-acad-6b1afb898bb3"
+            name="timerAfficheResultat"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="7ab03d11-0704-4b8e-8a1d-053558780f29"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=timerAfficheResultat"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="33089c20-4a1b-425f-a870-b9940673ef0a"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2989d450-d9e7-40c8-857d-0c9a6a27cec7">
+                    <propertyInstance
+                      Id="1074c614-d58f-4ab1-9076-a995724a923d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b0dd648-5869-4ff9-909a-90b6b0236497">
+                    <propertyInstance
+                      Id="29b744a5-de97-4558-81c7-39a2634783d4"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0bf0d917-e3fd-4d7d-bef2-01860fb1ff38">
+                    <propertyInstance
+                      Id="cbd354fa-cbf3-4126-9bf9-dbca9850b2fd"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dac14af7-ec61-4815-8ca7-f1619a7f3b74">
+                    <propertyInstance
+                      Id="b69c8aa5-d208-4880-8778-8d5662af711b"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85c2af08-d5ad-4716-9e38-f4cbe1d5dfb7">
+                    <propertyInstance
+                      Id="8c8d0afe-abff-44fb-80dc-1ad427923dad"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="5dbc2e8e-8956-466c-bb72-1196c5382871"
+                LastKnownName="Timer"
+                LastKnownLocation="Package4_1726.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8489b41b-8379-4355-b7fc-cefdc7bb9a48"
+            name="timerDifficile"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="bdec8a31-05ae-4e4a-9486-edac0b27a30f"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=timerDifficile"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="76bf530d-4784-4971-965f-48ca06de26ee"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f45d4fd8-4401-429d-a5e3-d8845d5421aa">
+                    <propertyInstance
+                      Id="88003723-797a-4db6-9cf6-0713725ec378"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0882565d-2355-4222-b19e-0d64e247cb5f">
+                    <propertyInstance
+                      Id="dfff4407-9635-40ae-9666-1220bc4d4a97"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4666f5a5-e8d1-4c7b-9f5b-18adce66bec4">
+                    <propertyInstance
+                      Id="ec65e6c4-d4ee-4bb2-8651-a15123fdc002"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1f2eb761-1d4f-4503-94d1-d5d559a5ebe3">
+                    <propertyInstance
+                      Id="53f3e8f5-a39f-4bcf-b8fd-046f8adb05d5"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dae71393-9a74-45bb-b102-a9323871ff89">
+                    <propertyInstance
+                      Id="7395b47f-3980-474b-8969-a163fb4e09fc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="5dbc2e8e-8956-466c-bb72-1196c5382871"
+                LastKnownName="Timer"
+                LastKnownLocation="Package4_1726.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b76ad027-c8b6-4825-83a0-8526517d107d"
+            name="valeurs"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isOrdered="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="502fa8cd-f11e-4552-8c1f-9d667c821698"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=valeurs"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d337d02f-d4d8-445c-8eac-891e80a3d724"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5aae514f-da47-42e3-a71b-f47ed2fef94a">
+                    <propertyInstance
+                      Id="93bfeef3-408b-418a-bad2-37c46fe1e6ad"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2c34478-8f22-43d7-b5f6-8682f7655448">
+                    <propertyInstance
+                      Id="676d7bd5-4aeb-49c5-9683-a4521bf4cfa4"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b41cca3a-60ca-4371-b175-00774c26aed1">
+                    <propertyInstance
+                      Id="7f9570f9-50fd-430b-a2a1-b32d24f6fbb4"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f9271fe5-b0c1-423f-8d78-3b77ae554e43">
+                    <propertyInstance
+                      Id="450fe804-b373-46c2-853f-c7f13f652ad8"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5397d0ab-2725-4d9c-b356-65d36537baa2">
+                    <propertyInstance
+                      Id="d21b710e-800b-4e9b-a0d4-7338728d2898"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <lowerValueInternal>
+              <literalString
+                Id="f3353656-5ed8-4148-b4d7-4e06d2df599c"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="d50a24ae-8c77-4828-b2fa-f4b02a7bcd52"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject3.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1a5e56c4-266a-44a5-9cb8-a8e60b88eae7"
+            name="validButton"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="e9463cc4-7cce-454b-bb9f-eefa6b30d038"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=validButton"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="473f4512-a5fb-4c67-8f7c-42d514747b35"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="866a6e46-50db-4c7d-844e-2028daaa317c">
+                    <propertyInstance
+                      Id="a8780833-abf7-4f17-90e1-9d36a705b66a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6bb6f02c-f295-42d6-a5fa-dd89ea62083c">
+                    <propertyInstance
+                      Id="d1a8590b-9ce4-45b1-8775-8af84a747fb9"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="08c24f0e-54be-4114-bfaa-bb549c893292">
+                    <propertyInstance
+                      Id="ada35476-6b4f-4acf-8a68-55646f7dbf4a"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fab407a1-f34e-4164-9922-173a60d61b3c">
+                    <propertyInstance
+                      Id="023a4c5d-f514-4870-b2c2-a185cf8b2c2e"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="036cd1fd-fc15-49ef-bd75-503d49586001">
+                    <propertyInstance
+                      Id="8a2e474f-64ec-4ffd-b269-8841036ac7e4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ee6a1ec7-a0a4-40d5-b7f6-aba67aa9ba3b"
+                LastKnownName="Button"
+                LastKnownLocation="Package4_1726.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e4a22dcc-71c5-42de-9177-60ed413ee7ea"
+            name="verifLB"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0a606a6b-6a2f-4778-a17d-749e60330126"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=verifLB"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="31b23a60-5092-4f75-ad33-6d5de23bf3a8"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="79dc5f6f-55bf-41e6-9dd5-3d6a11416f49">
+                    <propertyInstance
+                      Id="114d88e7-e7e5-427e-bdce-90e01cc60497"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c74f78e8-881a-47d1-8833-f20e6f8a2cf7">
+                    <propertyInstance
+                      Id="008cc2b9-a62b-4ad0-a881-de3848b225d2"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9260e15a-e4e2-42fb-a5f9-f61af3c7ef01">
+                    <propertyInstance
+                      Id="c016c0d9-15f4-4c5a-bbca-b809893f2561"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5d87979-77e4-4882-af1c-e2ea86746a8c">
+                    <propertyInstance
+                      Id="d112efae-c74c-4a23-a178-7943bda0b3a9"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0975c57-37fe-4643-b249-baa46365fc28">
+                    <propertyInstance
+                      Id="b5863ce8-f056-4e07-9834-e1cd9541ce5d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="528c7777-1c9e-4820-809b-42c2fb535548"
+                LastKnownName="Label"
+                LastKnownLocation="Package4_1726.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="59c08ba1-bf87-4a42-8c6e-94e66ddf760f"
+            name="FormOperation"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="acb9cfe1-9a44-4ed2-9780-a06ee36db03b"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=.ctor OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=String),(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Boolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e12da19d-a7ec-4d7d-b8b6-d7ecdebfd9de"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c7167cf0-2e0f-48ca-82bb-a4db1bce742e">
+                    <propertyInstance
+                      Id="d8bd0c2f-f2f3-4661-bcbc-9d767dd5fa42"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dde6ac43-b45c-4971-bd00-eb7fe09aaf53">
+                    <propertyInstance
+                      Id="32da5753-c639-4f76-b7db-a707a0d7499d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ecddda6-9acf-4a05-81c8-669018817b9b">
+                    <propertyInstance
+                      Id="a638ee18-f975-4180-a78c-99efe9c73aac"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dda3dfb3-a0ad-4a3a-8627-a3a206b613fb">
+                    <propertyInstance
+                      Id="3ce2a042-c6ae-49e1-855e-ca4f5c509bf3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6ae05036-89b4-4bca-bbde-83acf5f9bd33">
+                    <propertyInstance
+                      Id="5f73d81f-f4cc-4290-9719-6f7d7cf9438d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3ef8fa99-fac9-4594-8517-e0bd415920ae"
+                  name="type"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="acb9e8e4-5716-4b25-a228-35f42a692e25"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=.ctor OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=String),(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Boolean)]) ParameterIdentifier=type"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject3.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0f9ea2f2-0c74-4694-adf7-ceb63b4998ec"
+                  name="difficile"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="070b8665-edc2-4287-9508-f7698ce8ff1f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=.ctor OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=String),(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Boolean)]) ParameterIdentifier=difficile"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject3.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="34f8ecd2-9d8d-408e-ae89-1d4da50f4523"
+            name="Dispose"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="78cbd7c9-547a-4dc2-b386-633ef3fb6437"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=Dispose OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Boolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e158cdbd-47b4-4ff4-8bf4-c9a98e9c8936"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc3b3a74-cadb-48fd-8219-19e40af81aff">
+                    <propertyInstance
+                      Id="5e0f3c86-a896-4f89-a856-c327bdaf3017"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="700931d2-c31b-4d44-8760-7e860f53a5ee">
+                    <propertyInstance
+                      Id="c1a44bc3-5bf6-4702-b807-1610f25a410a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae25d300-9e0b-493f-983b-6e2165462584">
+                    <propertyInstance
+                      Id="861137cf-5d3b-4f6c-bdf0-5dd8cf76673b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e2469d8-e29e-4b44-9d54-01f806776fd3">
+                    <propertyInstance
+                      Id="4090cb6c-eeef-478c-a3fc-396acc62b82e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="beaeaed5-ac6f-4eb0-9b43-e5eeb5d0cfd1">
+                    <propertyInstance
+                      Id="ddbf08cb-8d0c-4169-b87a-5c896b11f26a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8862d7d1-0f20-49f7-a298-4b1466cc7dab"
+                  name="disposing"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="960420d1-3a6d-45f7-9479-4bdd0776388d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=Dispose OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Boolean)]) ParameterIdentifier=disposing"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject3.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="53726aae-13ae-4a08-80a8-086bbae74f97"
+            name="saisieResultat_KeyDown"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="586a0260-c76c-4b56-b736-4840e1d51a77"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=saisieResultat_KeyDown OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Object),(Assembly=file:///C:/windows/Microsoft.Net/assembly/GAC_MSIL/System.Windows.Forms/v4.0_4.0.0.0__b77a5c561934e089/System.Windows.Forms.dll Namespace=System.Windows.Forms Type=KeyEventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5b8caf37-9351-4cdf-b7ed-7d116cdb88db"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e1f3166-4fc4-45e2-86de-9fadbaa89103">
+                    <propertyInstance
+                      Id="d062cddf-1d78-474e-beb1-1242c011f63d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94d6b1e8-729e-49fb-a0b0-acf9a7d52193">
+                    <propertyInstance
+                      Id="ab0e7fa0-1a8e-4e6f-a945-42b075c83581"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3ca9fa62-03f6-4651-a8b4-292ddc036a26">
+                    <propertyInstance
+                      Id="12616bef-0c08-432e-8a27-23be43d63db3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e80efe8-1e0d-44ac-92cb-7a648829dc04">
+                    <propertyInstance
+                      Id="3a3c7f36-7775-4c1e-a370-617a27c82b34"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2d235234-3690-4e9f-95f8-6c12b6a113d4">
+                    <propertyInstance
+                      Id="8ef61e91-3013-4333-9fb6-1ef21cfb0218"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="145ac348-d304-4fe6-b793-dd85296f0ae1"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1b99df5d-0b73-4e43-a01e-a52c94604fb4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=saisieResultat_KeyDown OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Object),(Assembly=file:///C:/windows/Microsoft.Net/assembly/GAC_MSIL/System.Windows.Forms/v4.0_4.0.0.0__b77a5c561934e089/System.Windows.Forms.dll Namespace=System.Windows.Forms Type=KeyEventArgs)]) ParameterIdentifier=sender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a06f1379-f0f4-4567-81b3-7a136ced5823"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d43bf3f8-0734-41ff-8a50-8d9e36ebf886"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6bb3c60c-cfe2-4cff-be27-baf626052167"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=saisieResultat_KeyDown OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Object),(Assembly=file:///C:/windows/Microsoft.Net/assembly/GAC_MSIL/System.Windows.Forms/v4.0_4.0.0.0__b77a5c561934e089/System.Windows.Forms.dll Namespace=System.Windows.Forms Type=KeyEventArgs)]) ParameterIdentifier=e"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="feb3ce1e-60eb-44b8-8f32-2acb2d9c37df"
+                      LastKnownName="KeyEventArgs"
+                      LastKnownLocation="Package4_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="69629de5-0b94-4125-a1c7-d48a65ea6ecd"
+            name="timerAfficheResultat_Tick"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9c655fea-cc74-40f0-91ad-5baad363411d"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=timerAfficheResultat_Tick OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Object),(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=EventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e2d58446-ceec-4d36-9c88-dc53a180b814"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a74db9d-87f0-4018-ad4b-25c00272c5c0">
+                    <propertyInstance
+                      Id="26e763db-9cb9-4299-9d7e-42619e99655c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b593ca51-7f10-4d3a-96d7-d9855636f0b9">
+                    <propertyInstance
+                      Id="b6a28355-3143-41f5-89f2-19157b1ae157"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71306c4b-4000-40ab-bcf6-e1a871aa5a9c">
+                    <propertyInstance
+                      Id="31ce8bfe-4b42-40bc-8d38-23ef55b80db0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52e054ad-43de-425a-b235-e9cabc2f789c">
+                    <propertyInstance
+                      Id="28de2675-81a9-47ee-97b6-2c9369fbcd3c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0072664-aca9-4641-b8d9-d1f11c7252df">
+                    <propertyInstance
+                      Id="f801f40b-5225-42fe-8105-f780befee59b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="62fedef4-ee2d-4a1d-951b-db0d47171527"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7a063d44-e820-47a4-b724-b22a02bf024d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=timerAfficheResultat_Tick OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Object),(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=EventArgs)]) ParameterIdentifier=sender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a06f1379-f0f4-4567-81b3-7a136ced5823"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5043814e-deb2-4a24-8d2b-42f715723335"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="458746a7-46e6-414e-b249-0e5e5f059be6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=timerAfficheResultat_Tick OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Object),(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=EventArgs)]) ParameterIdentifier=e"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="02266b73-9548-4361-b380-48ff4d063b76"
+                      LastKnownName="EventArgs"
+                      LastKnownLocation="Package2_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="43865692-74d1-42a5-a276-634efa3efcf8"
+            name="timerDifficile_Tick"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="46814d79-a058-41d3-ab79-396744c064a5"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=timerDifficile_Tick OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Object),(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=EventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8b8a4a2a-03e3-4b89-b1d7-fb566f131e8b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52502d5a-05a2-4291-927d-6e9f87fc9cd3">
+                    <propertyInstance
+                      Id="5d8da6f0-da65-4005-973d-78ca6f122694"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="295e0e20-bfcc-4d0a-9c3b-c2a6e0d70c3b">
+                    <propertyInstance
+                      Id="6af6b55a-b90d-42d9-bf65-203aa1f51d34"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="225de3fb-530f-4956-9354-05f04ca3f581">
+                    <propertyInstance
+                      Id="5720fd58-adf8-4a05-bd25-34be81025795"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4014f428-1386-4044-b3cd-d777afda314b">
+                    <propertyInstance
+                      Id="06e159dc-d777-425b-acc2-073c2521005f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd374fb6-7a63-4511-95ca-805e06e5888a">
+                    <propertyInstance
+                      Id="982a1bae-04a6-44bc-a455-863720d080d3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dcf6a3a0-af20-4155-bff3-d844996c9bdf"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="cd50233f-3bf6-4247-915b-24029cbec2fb"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=timerDifficile_Tick OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Object),(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=EventArgs)]) ParameterIdentifier=sender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a06f1379-f0f4-4567-81b3-7a136ced5823"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="73a11b96-5d78-49e1-8b55-c1fc884023d8"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="5976d7fa-a7f3-43ff-9ea2-8ceb8c9de07e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=timerDifficile_Tick OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Object),(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=EventArgs)]) ParameterIdentifier=e"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="02266b73-9548-4361-b380-48ff4d063b76"
+                      LastKnownName="EventArgs"
+                      LastKnownLocation="Package2_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="93860994-3faf-4aec-b8a4-c5fc1858a45c"
+            name="validButton_Click"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7e1e391f-7549-4499-a9ce-8c3ee3a79014"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=validButton_Click OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Object),(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=EventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="154a3fe3-4b9d-47cb-83ca-615c2e55ed3c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c56f16d-71e5-42ed-afa7-0a010d3a11aa">
+                    <propertyInstance
+                      Id="31aef0c4-7b00-4dc8-be77-0f23e6e335d3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c9300ee-5506-40bc-b7a7-e489945a32fa">
+                    <propertyInstance
+                      Id="5314f703-9260-4701-9ff0-03f355d96eab"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f6f5cb98-901d-439e-96f7-aafdad30f8e0">
+                    <propertyInstance
+                      Id="4d008ebe-bceb-454c-86b8-617e93a10c32"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a89ff81c-221f-4306-850d-ac48003e0863">
+                    <propertyInstance
+                      Id="c8151a8e-7d3f-4982-b432-61fa4734582e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c17e40f4-3bc7-46db-b814-4c49b058c39f">
+                    <propertyInstance
+                      Id="c7cba4a9-52d6-47e1-938b-70821b825c73"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7098156a-735c-46ed-b0b4-43bf777dbbac"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9c897bf5-6daa-477d-8998-a2aa0250a179"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=validButton_Click OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Object),(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=EventArgs)]) ParameterIdentifier=sender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a06f1379-f0f4-4567-81b3-7a136ced5823"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bd0844b3-9aae-41bb-b705-40cd14aea803"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="60cad18a-544d-4662-a00f-379b38069809"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=(Name=validButton_Click OverloadingParameters=[(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=Object),(Assembly=file:///C:/windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll Namespace=System Type=EventArgs)]) ParameterIdentifier=e"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="02266b73-9548-4361-b380-48ff4d063b76"
+                      LastKnownName="EventArgs"
+                      LastKnownLocation="Package2_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4a62e91e-fa40-4e3f-819b-259140e7d541"
+            name="InitializeComponent"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3f2e8cda-a7fc-4ad1-9a54-205ead5f4362"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=InitializeComponent"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f4eb77fa-c89d-47a4-bb9c-9451505566ed"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66a768c1-c273-4778-ab37-c65059ce9ad5">
+                    <propertyInstance
+                      Id="78f0482a-5025-4d9c-8c4c-2b1f1df862b2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1bddd043-0e4e-48fa-afe6-684120d47d58">
+                    <propertyInstance
+                      Id="45a6a170-421a-468d-b34f-a2cef188d937"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1379a250-d6ff-4d60-be24-ae5a1bebe7d4">
+                    <propertyInstance
+                      Id="6960bbc8-de68-403a-9420-5bddbeb21775"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a79c3732-315d-41e7-a568-eb55e69f3dd6">
+                    <propertyInstance
+                      Id="55e2b305-63db-4c9f-88a4-8706f001898d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e393e08-67d2-4be7-a6a1-a4f3dc73694b">
+                    <propertyInstance
+                      Id="83abce50-1f29-49b2-b9c4-3e1c1024c51e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="b2acf608-a7d6-4923-8a1e-0a9e260a0754"
+            name="lancerTest"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="bf368f2e-29bf-4282-91cd-3e926f7d1dd9"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=lancerTest"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d64762fc-7736-43f1-a37c-09aff5ac93ae"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="54f24b9b-6078-4a34-89c3-9119b0ffb013">
+                    <propertyInstance
+                      Id="559c38a8-b776-4714-90a3-6c355a7c6dbc"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bd7c5267-7062-4b3a-93d8-7ae5efc56a07">
+                    <propertyInstance
+                      Id="7a5c43e0-17fb-4ae2-a438-6b2f3476d263"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e8621265-0a7c-4c3c-a260-056faa25d7d6">
+                    <propertyInstance
+                      Id="bfa4c332-ec6b-4fc4-b565-d6a6011d33ec"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39e8863c-ecea-46ea-b8ff-8f187e631066">
+                    <propertyInstance
+                      Id="031dc4b5-2e2c-42de-8f25-0440172895ad"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c9eb9e96-7908-45dc-865d-a079c5d57c58">
+                    <propertyInstance
+                      Id="0ba95322-e1e9-4dcd-b516-7404f7f7d038"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="45689a3b-49f0-4330-b229-02002b22b40f"
+            name="resultatTest"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="31222b8d-5e27-4ae5-8952-e4aaed37fdf3"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///H:/Documents/INFO/INFO/2eme Annee/projet-netter_casado/Projet_GenieLog/bin/Debug/Projet_GenieLog.exe&quot; Namespace=Projet_GenieLog.View.CalculMental Type=FormOperation Member=resultatTest"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bbd7decf-62e6-4aa0-b2d7-decd64826dcf"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2cef9e27-f245-42b4-9d5f-258be9f96d9d">
+                    <propertyInstance
+                      Id="60dd4aae-07b3-47f0-b485-c26b7ff83f07"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0802eb70-7936-4c5d-838f-84ea370021f2">
+                    <propertyInstance
+                      Id="6c8b1261-924e-47cf-aec7-2af009078094"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="988f55cd-a285-4f52-a30c-9845bd5e0539">
+                    <propertyInstance
+                      Id="880f702a-35a3-492f-afd5-e4dc3aa40cf4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c250c70b-1d2c-4caa-bd31-a00ec415c6f9">
+                    <propertyInstance
+                      Id="442a9935-2308-480d-a46c-ed8c65fd891d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87198b0e-764a-43ac-a765-2a0f770e091c">
+                    <propertyInstance
+                      Id="a8fb7c78-df3a-4b07-b966-98eb51a10f6d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
