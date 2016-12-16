@@ -106,13 +106,15 @@ namespace Projet_GenieLog.View
                 if (_matiere == "Physique")
                 {
                     Sauvegarde.rPhysique = resultatFinal;
+
                 }
                 else
                 {
                     Sauvegarde.rMaths = resultatFinal;
-                    this.Close();
+                    
                     
                 }
+                this.Close();
             }
         }
 

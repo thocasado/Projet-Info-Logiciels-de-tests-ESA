@@ -14,7 +14,9 @@ namespace Projet_GenieLog
     {
        
         public static bool difficile { get; set; }
-        static int compteur = 0;
+        static int compteurUtilisateur = 0;
+        string resultatRef = "..%";
+        Sauvegarde s = new Sauvegarde(Sauvegarde.nomUtilisateur, Sauvegarde.rPerception, Sauvegarde.rConcentration, Sauvegarde.rCm, Sauvegarde.rMaths, Sauvegarde.rPhysique);
         public MainMenu()
         {
             InitializeComponent();
@@ -33,8 +35,10 @@ namespace Projet_GenieLog
 
         public void loadTest(object sender, EventArgs eventargs) // méthode commune pour tous les boutons du menu
         {
+            compteurUtilisateur++;// l'utilisateur a fait au moins un test, si un autre nom est entré on peut supposer que c'est forcemment un nouvel utilisateur
             switch (((Button)sender).Name)
             {
+                
                 case "btnPerception":
                     View.FormPerception p = new View.FormPerception();
                     View.FormPerception.cptTest = 1;// cpt test étant static, si on revient au menu puis relance le test de perception, cptTest garde sa valeur précédente;Il faut donc le réinitialiser
@@ -76,6 +80,17 @@ namespace Projet_GenieLog
         {
             Sauvegarde.nomUtilisateur = nomUtilisateurTB.Text;
             pictureBoxChecked.Visible = false;
+            if (compteurUtilisateur != 0) //on a un nouvel utilisateur donc on sauvegarde les anciennes performances
+            {
+                Sauvegarde.SauvegardeXML(s);// on sauvegarde les résultats de l'utilisateur précédent
+                Sauvegarde.rPerception=resultatRef;// on redéfinit les résultats static à leurs valeurs de référence
+                Sauvegarde.rConcentration=resultatRef;
+                Sauvegarde.rCm=resultatRef;
+                Sauvegarde.rPhysique=resultatRef;
+                Sauvegarde.rMaths=resultatRef;       
+            }
+            
+            
             RaffraichissementMenuTimer.Start();
         }
 
@@ -101,7 +116,7 @@ namespace Projet_GenieLog
             rCmLB.Text = Sauvegarde.rCm;
             rPhysiqueLB.Text = Sauvegarde.rPhysique;
             rMathsLB.Text = Sauvegarde.rMaths;
-            compteur++;
+            
                      
         }
 
@@ -123,7 +138,13 @@ namespace Projet_GenieLog
                 "Confirmez la fermeture",
             MessageBoxButtons.YesNo);
 
+            
+
             e.Cancel = (window == DialogResult.No);
+            if (window == DialogResult.Yes)
+            {
+                Sauvegarde.SauvegardeXML(s);
+            }
         }
     }
 }
