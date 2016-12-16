@@ -52,7 +52,7 @@ namespace Projet_GenieLog.View
             rbChoix4.Text = pbm[cptTest]._choix4;
             bonneRep= pbm[cptTest]._bonneRep;
             cptTest++;
-            count.Text=cptTest.ToString();                       
+            count.Text=cptTest.ToString() + "/10";                       
 
         }
 
