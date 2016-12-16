@@ -47,6 +47,7 @@
             this.labelSigne.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelSigne.AutoSize = true;
             this.labelSigne.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSigne.ForeColor = System.Drawing.Color.White;
             this.labelSigne.Location = new System.Drawing.Point(224, 99);
             this.labelSigne.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSigne.Name = "labelSigne";
@@ -59,6 +60,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(184, 29);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -70,11 +72,12 @@
             // 
             this.chiffre1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chiffre1.AutoSize = true;
-            this.chiffre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
+            this.chiffre1.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chiffre1.ForeColor = System.Drawing.Color.White;
             this.chiffre1.Location = new System.Drawing.Point(75, 99);
             this.chiffre1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.chiffre1.Name = "chiffre1";
-            this.chiffre1.Size = new System.Drawing.Size(114, 63);
+            this.chiffre1.Size = new System.Drawing.Size(126, 78);
             this.chiffre1.TabIndex = 2;
             this.chiffre1.Text = "ch1";
             this.chiffre1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -83,11 +86,12 @@
             // 
             this.chiffre2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chiffre2.AutoSize = true;
-            this.chiffre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
+            this.chiffre2.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chiffre2.ForeColor = System.Drawing.Color.White;
             this.chiffre2.Location = new System.Drawing.Point(300, 99);
             this.chiffre2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.chiffre2.Name = "chiffre2";
-            this.chiffre2.Size = new System.Drawing.Size(114, 63);
+            this.chiffre2.Size = new System.Drawing.Size(126, 78);
             this.chiffre2.TabIndex = 3;
             this.chiffre2.Text = "ch2";
             this.chiffre2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -96,11 +100,12 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(222, 168);
+            this.label3.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(221, 154);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 55);
+            this.label3.Size = new System.Drawing.Size(65, 78);
             this.label3.TabIndex = 4;
             this.label3.Text = "=";
             // 
@@ -132,6 +137,7 @@
             // 
             this.count.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.count.AutoSize = true;
+            this.count.ForeColor = System.Drawing.Color.White;
             this.count.Location = new System.Drawing.Point(433, 386);
             this.count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.count.Name = "count";
@@ -151,6 +157,7 @@
             // 
             this.verifLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.verifLB.AutoSize = true;
+            this.verifLB.ForeColor = System.Drawing.Color.White;
             this.verifLB.Location = new System.Drawing.Point(233, 353);
             this.verifLB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.verifLB.Name = "verifLB";
@@ -162,6 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(492, 407);
             this.Controls.Add(this.verifLB);
             this.Controls.Add(this.count);
@@ -172,6 +180,7 @@
             this.Controls.Add(this.chiffre1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelSigne);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormOperation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

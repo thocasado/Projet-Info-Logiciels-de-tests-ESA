@@ -65,6 +65,7 @@ namespace Projet_GenieLog.View
             mb.reponseVisible();
             mb.implementationLabel();
             mb.ShowDialog();             
-        }        
+        }
+
     }
 }

@@ -49,9 +49,9 @@ namespace Projet_GenieLog
             {
                 int largeur = f.largeur;
                 int hauteur = f.hauteur;
-                SolidBrush blueBrush = new SolidBrush(Color.Blue);
-                SolidBrush yellowBrush = new SolidBrush(Color.Yellow);
-                SolidBrush redBrush = new SolidBrush(Color.Red);
+                SolidBrush blueBrush = new SolidBrush(Color.FromArgb(63,81,181));
+                SolidBrush yellowBrush = new SolidBrush(Color.FromArgb(255,235,59));
+                SolidBrush redBrush = new SolidBrush(Color.FromArgb(254,67,54));
                 SolidBrush blackBrush = new SolidBrush(Color.Black);
 
                 Graphics formGraphics = form.CreateGraphics();

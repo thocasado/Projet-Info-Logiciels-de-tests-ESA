@@ -47,10 +47,12 @@
             // 
             this.lettre1LB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lettre1LB.AutoSize = true;
+            this.lettre1LB.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lettre1LB.ForeColor = System.Drawing.Color.White;
             this.lettre1LB.Location = new System.Drawing.Point(28, 68);
             this.lettre1LB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lettre1LB.Name = "lettre1LB";
-            this.lettre1LB.Size = new System.Drawing.Size(35, 13);
+            this.lettre1LB.Size = new System.Drawing.Size(42, 14);
             this.lettre1LB.TabIndex = 0;
             this.lettre1LB.Text = "label1";
             // 
@@ -58,10 +60,12 @@
             // 
             this.lettre2LB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lettre2LB.AutoSize = true;
+            this.lettre2LB.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lettre2LB.ForeColor = System.Drawing.Color.White;
             this.lettre2LB.Location = new System.Drawing.Point(118, 68);
             this.lettre2LB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lettre2LB.Name = "lettre2LB";
-            this.lettre2LB.Size = new System.Drawing.Size(35, 13);
+            this.lettre2LB.Size = new System.Drawing.Size(42, 14);
             this.lettre2LB.TabIndex = 1;
             this.lettre2LB.Text = "label2";
             // 
@@ -69,10 +73,12 @@
             // 
             this.lettre3LB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lettre3LB.AutoSize = true;
+            this.lettre3LB.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lettre3LB.ForeColor = System.Drawing.Color.White;
             this.lettre3LB.Location = new System.Drawing.Point(201, 68);
             this.lettre3LB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lettre3LB.Name = "lettre3LB";
-            this.lettre3LB.Size = new System.Drawing.Size(35, 13);
+            this.lettre3LB.Size = new System.Drawing.Size(42, 14);
             this.lettre3LB.TabIndex = 2;
             this.lettre3LB.Text = "label3";
             // 
@@ -80,10 +86,12 @@
             // 
             this.lettre4LB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lettre4LB.AutoSize = true;
+            this.lettre4LB.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lettre4LB.ForeColor = System.Drawing.Color.White;
             this.lettre4LB.Location = new System.Drawing.Point(286, 68);
             this.lettre4LB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lettre4LB.Name = "lettre4LB";
-            this.lettre4LB.Size = new System.Drawing.Size(35, 13);
+            this.lettre4LB.Size = new System.Drawing.Size(42, 14);
             this.lettre4LB.TabIndex = 3;
             this.lettre4LB.Text = "label4";
             // 
@@ -143,10 +151,12 @@
             // 
             this.count.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.count.AutoSize = true;
+            this.count.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.count.ForeColor = System.Drawing.Color.White;
             this.count.Location = new System.Drawing.Point(305, 294);
             this.count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.count.Name = "count";
-            this.count.Size = new System.Drawing.Size(51, 13);
+            this.count.Size = new System.Drawing.Size(53, 13);
             this.count.TabIndex = 10;
             this.count.Text = "compteur";
             // 
@@ -158,10 +168,12 @@
             // 
             this.verifLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.verifLB.AutoSize = true;
+            this.verifLB.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verifLB.ForeColor = System.Drawing.Color.White;
             this.verifLB.Location = new System.Drawing.Point(98, 271);
             this.verifLB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.verifLB.Name = "verifLB";
-            this.verifLB.Size = new System.Drawing.Size(27, 13);
+            this.verifLB.Size = new System.Drawing.Size(28, 13);
             this.verifLB.TabIndex = 11;
             this.verifLB.Text = "verif";
             // 
@@ -169,6 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(364, 315);
             this.Controls.Add(this.verifLB);
             this.Controls.Add(this.count);
@@ -184,7 +197,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MyMessageBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MyMessageBox";     
+            this.Text = "MyMessageBox";
             this.ResumeLayout(false);
             this.PerformLayout();
 

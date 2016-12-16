@@ -42,12 +42,13 @@
             // labelConsigne
             // 
             this.labelConsigne.AutoSize = true;
-            this.labelConsigne.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelConsigne.Location = new System.Drawing.Point(9, 49);
+            this.labelConsigne.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelConsigne.ForeColor = System.Drawing.Color.White;
+            this.labelConsigne.Location = new System.Drawing.Point(2, 42);
             this.labelConsigne.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelConsigne.MaximumSize = new System.Drawing.Size(498, 435);
             this.labelConsigne.Name = "labelConsigne";
-            this.labelConsigne.Size = new System.Drawing.Size(72, 17);
+            this.labelConsigne.Size = new System.Drawing.Size(69, 18);
             this.labelConsigne.TabIndex = 0;
             this.labelConsigne.Text = "consignes";
             // 
@@ -58,7 +59,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "Button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button_Click);
             // 
@@ -69,7 +70,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(56, 19);
             this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
+            this.button2.Text = "Button2";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button_Click);
             // 
@@ -80,17 +81,19 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(56, 19);
             this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
+            this.button3.Text = "Button3";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button_Click);
             // 
             // count
             // 
             this.count.AutoSize = true;
-            this.count.Location = new System.Drawing.Point(433, 386);
+            this.count.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.count.ForeColor = System.Drawing.Color.White;
+            this.count.Location = new System.Drawing.Point(420, 374);
             this.count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.count.Name = "count";
-            this.count.Size = new System.Drawing.Size(51, 13);
+            this.count.Size = new System.Drawing.Size(53, 13);
             this.count.TabIndex = 10;
             this.count.Text = "compteur";
             // 
@@ -115,13 +118,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 407);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.ClientSize = new System.Drawing.Size(489, 396);
             this.Controls.Add(this.groupBoxButton);
             this.Controls.Add(this.labelConsigne);
             this.Controls.Add(this.count);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(498, 435);
+            this.MaximumSize = new System.Drawing.Size(505, 435);
             this.Name = "FormConcentration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormConcentration";

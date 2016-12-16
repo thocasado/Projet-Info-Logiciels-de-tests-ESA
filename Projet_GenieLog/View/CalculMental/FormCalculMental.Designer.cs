@@ -39,11 +39,12 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 57);
             this.label1.MaximumSize = new System.Drawing.Size(508, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(459, 34);
+            this.label1.Size = new System.Drawing.Size(448, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Vous allez devoir réaliser des calculs mentaux. Sélectionner l\'opération souhaité" +
     "e !";
@@ -100,6 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(492, 407);
             this.Controls.Add(this.divButton);
             this.Controls.Add(this.sousButton);

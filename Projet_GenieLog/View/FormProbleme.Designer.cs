@@ -47,6 +47,7 @@
             // rbChoix4
             // 
             this.rbChoix4.AutoSize = true;
+            this.rbChoix4.ForeColor = System.Drawing.Color.White;
             this.rbChoix4.Location = new System.Drawing.Point(14, 73);
             this.rbChoix4.Margin = new System.Windows.Forms.Padding(2);
             this.rbChoix4.Name = "rbChoix4";
@@ -73,16 +74,19 @@
             // 
             this.count.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.count.AutoSize = true;
+            this.count.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.count.ForeColor = System.Drawing.Color.White;
             this.count.Location = new System.Drawing.Point(433, 386);
             this.count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.count.Name = "count";
-            this.count.Size = new System.Drawing.Size(51, 13);
+            this.count.Size = new System.Drawing.Size(53, 13);
             this.count.TabIndex = 8;
             this.count.Text = "compteur";
             // 
             // rbChoix1
             // 
             this.rbChoix1.AutoSize = true;
+            this.rbChoix1.ForeColor = System.Drawing.Color.White;
             this.rbChoix1.Location = new System.Drawing.Point(14, 10);
             this.rbChoix1.Margin = new System.Windows.Forms.Padding(2);
             this.rbChoix1.Name = "rbChoix1";
@@ -96,6 +100,7 @@
             // rbChoix2
             // 
             this.rbChoix2.AutoSize = true;
+            this.rbChoix2.ForeColor = System.Drawing.Color.White;
             this.rbChoix2.Location = new System.Drawing.Point(14, 31);
             this.rbChoix2.Margin = new System.Windows.Forms.Padding(2);
             this.rbChoix2.Name = "rbChoix2";
@@ -109,6 +114,7 @@
             // rbChoix3
             // 
             this.rbChoix3.AutoSize = true;
+            this.rbChoix3.ForeColor = System.Drawing.Color.White;
             this.rbChoix3.Location = new System.Drawing.Point(14, 52);
             this.rbChoix3.Margin = new System.Windows.Forms.Padding(2);
             this.rbChoix3.Name = "rbChoix3";
@@ -137,7 +143,9 @@
             // imgPbm
             // 
             this.imgPbm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.imgPbm.BackColor = System.Drawing.Color.Transparent;
             this.imgPbm.ErrorImage = null;
+            this.imgPbm.InitialImage = null;
             this.imgPbm.Location = new System.Drawing.Point(127, 79);
             this.imgPbm.Margin = new System.Windows.Forms.Padding(2);
             this.imgPbm.Name = "imgPbm";
@@ -150,10 +158,12 @@
             // 
             this.verifLB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.verifLB.AutoSize = true;
+            this.verifLB.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verifLB.ForeColor = System.Drawing.Color.White;
             this.verifLB.Location = new System.Drawing.Point(106, 370);
             this.verifLB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.verifLB.Name = "verifLB";
-            this.verifLB.Size = new System.Drawing.Size(27, 13);
+            this.verifLB.Size = new System.Drawing.Size(28, 13);
             this.verifLB.TabIndex = 9;
             this.verifLB.Text = "verif";
             // 
@@ -163,12 +173,15 @@
             // 
             // textBoxConsigne
             // 
+            this.textBoxConsigne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.textBoxConsigne.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxConsigne.Location = new System.Drawing.Point(64, 4);
+            this.textBoxConsigne.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxConsigne.ForeColor = System.Drawing.Color.White;
+            this.textBoxConsigne.Location = new System.Drawing.Point(12, 4);
             this.textBoxConsigne.Multiline = true;
             this.textBoxConsigne.Name = "textBoxConsigne";
             this.textBoxConsigne.ReadOnly = true;
-            this.textBoxConsigne.Size = new System.Drawing.Size(363, 70);
+            this.textBoxConsigne.Size = new System.Drawing.Size(468, 70);
             this.textBoxConsigne.TabIndex = 10;
             this.textBoxConsigne.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -176,6 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(492, 407);
             this.Controls.Add(this.textBoxConsigne);
             this.Controls.Add(this.verifLB);
